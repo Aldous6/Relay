@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "repository": "../examples/maintenance_demo",
+  "source_files": ["src/labels.py"],
+  "test_files": ["tests/test_labels.py"],
+  "models": {
+    "inspection": "groq/openai/gpt-oss-20b",
+    "editing": "groq/openai/gpt-oss-120b"
+  },
+  "limits": {
+    "max_repairs": 1,
+    "max_output_tokens": 2048,
+    "max_requests": 3,
+    "request_budget": 8000,
+    "minimum_interval_seconds": 60,
+    "request_timeout_seconds": 90,
+    "test_timeout_seconds": 30
+  },
+  "spending": {"account_is_free_tier": true, "max_provider_spend_usd": 0}
+}

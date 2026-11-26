@@ -1,0 +1,90 @@
+{
+  "created_at_utc": "2026-11-17T08:32:59.661583+00:00",
+  "user_facing_date": "2026-11-17",
+  "scope": "authored development pilot, not independent holdout",
+  "tasks": [
+    "interval_difference",
+    "dependency_order",
+    "quoted_record_stream",
+    "rolling_window",
+    "immutable_config_merge",
+    "generation_cache",
+    "decimal_allocation",
+    "scoped_posix_paths"
+  ],
+  "task_count": 8,
+  "acquisition_contract": {
+    "suite_sha256": "50ee37b3e86aff93aca88248d675684d19f55f759a9ed683b7bd82021edbd6fa",
+    "tariffs_sha256": "405df5588448071a19c36f6313390ec594d1cd7ce277ade68b5c7268044f7f42",
+    "sources_sha256": {
+      "maintenance.py": "83dc50767891196a5bd994513912ae04713688567fa3112bb26bc87470be69b0",
+      "maintenance_acceptance.py": "d972e675d78465a87e9a49662c1a4d394f56aadbae61ead178b6cd5fd526d1a6",
+      "maintenance_cli.py": "59b8e94cd453b3bbd56b260b4b398918ccf5f14973e6c1a3fd05b8da77e69e6b",
+      "maintenance_collection.py": "e15aa9a0eb2e114f88d450860ae1b889c7e9036f799e36a4ad349d516f542bb3",
+      "maintenance_comparison.py": "b5a9d4fee4d9dfb8fc2e8105496a329047f85842455b6bab88dcda7dbd2b6ebf",
+      "maintenance_competition.py": "e23ad5794ceddb5d6e4460816095421de1078b33963baedf35527600c6da5996",
+      "maintenance_learning.py": "85380d426b9773443ae646eb5af30feef96d03efb4366ae4841ff0acf6cce954",
+      "maintenance_provider.py": "603b570c9d05de1d8f6c4395fc08606def5eea9b2b43a271b61cf2a55e126889",
+      "maintenance_reference.py": "bef8b944136ded728b10fe4362e97e48ce76c14e9eeef159464e86c44a2f673a",
+      "maintenance_routing.py": "91c74f4684b53c0a0a7a0a566c44939f81107326ac299132db2f8881502cce80",
+      "maintenance_workspace.py": "908be9d21f5bef1819cb31474a4f52d64a10dd239a3c5e3a29a470aa8a2b11bd"
+    },
+    "scope": "diagnostic",
+    "tasks_sha256": "56b90547bf3805689e5a06f04627c07c70bbb3daf4a264d75b86271a3062c901",
+    "models": {
+      "weak": "groq/openai/gpt-oss-20b",
+      "strong": "groq/openai/gpt-oss-120b"
+    },
+    "continuation": {
+      "inspection_model": null,
+      "repair_model": "groq/openai/gpt-oss-120b",
+      "max_repairs": 1,
+      "inspection_mode": "direct"
+    }
+  },
+  "primary_relay": {
+    "name": "relay_verified_cascade_v1",
+    "learned": false,
+    "inspection": null,
+    "first_edit": "20b",
+    "repair": "120b",
+    "max_repairs": 1
+  },
+  "primary_reference": {
+    "name": "published_routellm_bert_transfer_local_wrapper",
+    "threshold": 0.5,
+    "same_candidates_and_continuation": true
+  },
+  "secondary_reference": "BERT threshold selected on these same development tasks; always reported separately",
+  "acceptance": "private tests frozen before generation, never sent to models or used for repairs",
+  "output_tokens": 4096,
+  "request_budget": 8000,
+  "minimum_interval_seconds": 60,
+  "max_acquisition_calls_total": 40,
+  "max_calls_per_invocation": 30,
+  "cost_basis": "noncached public tariff scenario over reported usage; not cash savings or total operating cost",
+  "missing_rule": "no selective exclusion from the preregistered comparison",
+  "api_generation_calls_before_freeze": 14,
+  "technical_revision": 3,
+  "reason": "Remove redundant inspection and enforce JSON locally instead of provider grammar; known malformed outputs receive one strong repair. Same protocol for both candidates. Hidden acceptance remains excluded.",
+  "prior_acquisition_calls": 14,
+  "prior_unknown_usage_calls": 4,
+  "original_run": "outputs/maintenance-comparison/20261117-live-v1",
+  "diagnostic": "outputs/maintenance-comparison/20261117-live-v1-diagnostics/request-20b.json",
+  "selected_run": "outputs/maintenance-comparison/20261117-live-v3",
+  "total_call_ceiling_including_prior": 40,
+  "selection_rule": "Use this new complete protocol prospectively on all eight original development cases; retain both interrupted runs and diagnostic, with their unknown usage. Not an independent holdout or a selection of successful rows.",
+  "max_new_acquisition_calls": 26,
+  "source_evidence": "https://console.groq.com/docs/reasoning",
+  "transport": {
+    "response_format": null,
+    "include_reasoning": false,
+    "local_json_and_path_validation": true
+  },
+  "analysis_plan": {
+    "operational_mode": "verified",
+    "reference_threshold": 0.5,
+    "inspection_mode": "direct",
+    "output_mode": "prompt_json"
+  }
+}

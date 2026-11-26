@@ -1,0 +1,2044 @@
+{
+  "curve": [
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": -93.87345734665577,
+      "grid_position": 0,
+      "weak_fraction": 0.0,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3467,
+        "coverage": 1.0,
+        "success_rate": 0.7868815251929188,
+        "success_rate_on_routed": 0.7868815251929188,
+        "mean_score_on_routed": 0.7870744439400816,
+        "total_cost": 14.54629,
+        "cost_per_1000": 3.3014729913753973,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": -10.5602742105325,
+      "grid_position": 1,
+      "weak_fraction": 0.010213345438039038,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3478,
+        "coverage": 1.0,
+        "success_rate": 0.7893781207444394,
+        "success_rate_on_routed": 0.7893781207444394,
+        "mean_score_on_routed": 0.7881525192918747,
+        "total_cost": 14.3870702,
+        "cost_per_1000": 3.265335950975942,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 11.242883248655563,
+      "grid_position": 2,
+      "weak_fraction": 0.020199727644121653,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3478,
+        "coverage": 1.0,
+        "success_rate": 0.7893781207444394,
+        "success_rate_on_routed": 0.7893781207444394,
+        "mean_score_on_routed": 0.7876985928279618,
+        "total_cost": 14.19799,
+        "cost_per_1000": 3.2224216976849753,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 15.491395542288451,
+      "grid_position": 3,
+      "weak_fraction": 0.030186109850204267,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3476,
+        "coverage": 1.0,
+        "success_rate": 0.7889241942805265,
+        "success_rate_on_routed": 0.7889241942805265,
+        "mean_score_on_routed": 0.7873014071720381,
+        "total_cost": 13.9814308,
+        "cost_per_1000": 3.173270721743078,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 18.514287031636975,
+      "grid_position": 4,
+      "weak_fraction": 0.04017249205628688,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3478,
+        "coverage": 1.0,
+        "success_rate": 0.7893781207444394,
+        "success_rate_on_routed": 0.7893781207444394,
+        "mean_score_on_routed": 0.787244666364049,
+        "total_cost": 13.757414,
+        "cost_per_1000": 3.122427144802542,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 20.499948432259842,
+      "grid_position": 5,
+      "weak_fraction": 0.05015887426236949,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3476,
+        "coverage": 1.0,
+        "success_rate": 0.7889241942805265,
+        "success_rate_on_routed": 0.7889241942805265,
+        "mean_score_on_routed": 0.7862800726282342,
+        "total_cost": 13.439043999999999,
+        "cost_per_1000": 3.0501688606445754,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 22.34375948335702,
+      "grid_position": 6,
+      "weak_fraction": 0.06014525646845211,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3470,
+        "coverage": 1.0,
+        "success_rate": 0.787562414888788,
+        "success_rate_on_routed": 0.787562414888788,
+        "mean_score_on_routed": 0.7848048116205174,
+        "total_cost": 13.161031600000001,
+        "cost_per_1000": 2.9870702678166143,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 23.249505169120646,
+      "grid_position": 7,
+      "weak_fraction": 0.07013163867453473,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3459,
+        "coverage": 1.0,
+        "success_rate": 0.7850658193372674,
+        "success_rate_on_routed": 0.7850658193372674,
+        "mean_score_on_routed": 0.7833862914207899,
+        "total_cost": 12.884685,
+        "cost_per_1000": 2.9243497503404448,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 24.628209331113396,
+      "grid_position": 8,
+      "weak_fraction": 0.08011802088061734,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3458,
+        "coverage": 1.0,
+        "success_rate": 0.7848388561053109,
+        "success_rate_on_routed": 0.7848388561053109,
+        "mean_score_on_routed": 0.7827621425329097,
+        "total_cost": 12.564895400000001,
+        "cost_per_1000": 2.8517692691783934,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 25.486340261276307,
+      "grid_position": 9,
+      "weak_fraction": 0.09010440308669995,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3447,
+        "coverage": 1.0,
+        "success_rate": 0.7823422605537903,
+        "success_rate_on_routed": 0.7823422605537903,
+        "mean_score_on_routed": 0.7807194734453018,
+        "total_cost": 12.27767,
+        "cost_per_1000": 2.786579664094417,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 26.70701744105412,
+      "grid_position": 10,
+      "weak_fraction": 0.10009078529278256,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3440,
+        "coverage": 1.0,
+        "success_rate": 0.7807535179300953,
+        "success_rate_on_routed": 0.7807535179300953,
+        "mean_score_on_routed": 0.779698138901498,
+        "total_cost": 11.976042,
+        "cost_per_1000": 2.7181211983658646,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 27.620492124968283,
+      "grid_position": 11,
+      "weak_fraction": 0.11007716749886519,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3434,
+        "coverage": 1.0,
+        "success_rate": 0.7793917385383567,
+        "success_rate_on_routed": 0.7793917385383567,
+        "mean_score_on_routed": 0.778676804357694,
+        "total_cost": 11.635774600000001,
+        "cost_per_1000": 2.640893009532456,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 28.493020499747868,
+      "grid_position": 12,
+      "weak_fraction": 0.1200635497049478,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3426,
+        "coverage": 1.0,
+        "success_rate": 0.7775760326827054,
+        "success_rate_on_routed": 0.7775760326827054,
+        "mean_score_on_routed": 0.7772582841579664,
+        "total_cost": 11.3526362,
+        "cost_per_1000": 2.576631003177485,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 29.47582066707856,
+      "grid_position": 13,
+      "weak_fraction": 0.13004993191103043,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3424,
+        "coverage": 1.0,
+        "success_rate": 0.7771221062187925,
+        "success_rate_on_routed": 0.7771221062187925,
+        "mean_score_on_routed": 0.7768610985020427,
+        "total_cost": 11.0329258,
+        "cost_per_1000": 2.5040684975034044,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 30.438326580984636,
+      "grid_position": 14,
+      "weak_fraction": 0.14003631411711304,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3424,
+        "coverage": 1.0,
+        "success_rate": 0.7771221062187925,
+        "success_rate_on_routed": 0.7771221062187925,
+        "mean_score_on_routed": 0.7763504312301407,
+        "total_cost": 10.6969786,
+        "cost_per_1000": 2.4278208352246935,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 31.25856218857266,
+      "grid_position": 15,
+      "weak_fraction": 0.15002269632319565,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3417,
+        "coverage": 1.0,
+        "success_rate": 0.7755333635950976,
+        "success_rate_on_routed": 0.7755333635950976,
+        "mean_score_on_routed": 0.7745914661824784,
+        "total_cost": 10.4044738,
+        "cost_per_1000": 2.3614330004539266,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 31.93163326178992,
+      "grid_position": 16,
+      "weak_fraction": 0.16000907852927826,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3403,
+        "coverage": 1.0,
+        "success_rate": 0.7723558783477077,
+        "success_rate_on_routed": 0.7723558783477077,
+        "mean_score_on_routed": 0.7726622787108488,
+        "total_cost": 10.071976,
+        "cost_per_1000": 2.285968225147526,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 32.71393785509714,
+      "grid_position": 17,
+      "weak_fraction": 0.16999546073536087,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3405,
+        "coverage": 1.0,
+        "success_rate": 0.7728098048116205,
+        "success_rate_on_routed": 0.7728098048116205,
+        "mean_score_on_routed": 0.7727190195188379,
+        "total_cost": 9.7488542,
+        "cost_per_1000": 2.212631457103949,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 33.37203919538149,
+      "grid_position": 18,
+      "weak_fraction": 0.17998184294144348,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3394,
+        "coverage": 1.0,
+        "success_rate": 0.7703132092600998,
+        "success_rate_on_routed": 0.7703132092600998,
+        "mean_score_on_routed": 0.7710167952791648,
+        "total_cost": 9.417406,
+        "cost_per_1000": 2.13740490240581,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 34.07934121091002,
+      "grid_position": 19,
+      "weak_fraction": 0.1899682251475261,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3385,
+        "coverage": 1.0,
+        "success_rate": 0.7682705401724921,
+        "success_rate_on_routed": 0.7682705401724921,
+        "mean_score_on_routed": 0.7694280526554698,
+        "total_cost": 9.0747326,
+        "cost_per_1000": 2.0596306400363145,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 34.93327094503899,
+      "grid_position": 20,
+      "weak_fraction": 0.20018157058556513,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3382,
+        "coverage": 1.0,
+        "success_rate": 0.7675896504766228,
+        "success_rate_on_routed": 0.7675896504766228,
+        "mean_score_on_routed": 0.7688039037675897,
+        "total_cost": 8.773527,
+        "cost_per_1000": 1.9912680435769405,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 35.779113301925626,
+      "grid_position": 21,
+      "weak_fraction": 0.21016795279164777,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3374,
+        "coverage": 1.0,
+        "success_rate": 0.7657739446209714,
+        "success_rate_on_routed": 0.7657739446209714,
+        "mean_score_on_routed": 0.7675556059918293,
+        "total_cost": 8.43501,
+        "cost_per_1000": 1.9144371311847481,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 36.38342516669593,
+      "grid_position": 22,
+      "weak_fraction": 0.22015433499773038,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3365,
+        "coverage": 1.0,
+        "success_rate": 0.7637312755333636,
+        "success_rate_on_routed": 0.7637312755333636,
+        "mean_score_on_routed": 0.7661370857921017,
+        "total_cost": 8.1305984,
+        "cost_per_1000": 1.8453468906037223,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 37.251697894555996,
+      "grid_position": 23,
+      "weak_fraction": 0.230140717203813,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3360,
+        "coverage": 1.0,
+        "success_rate": 0.7625964593735814,
+        "success_rate_on_routed": 0.7625964593735814,
+        "mean_score_on_routed": 0.765285973672265,
+        "total_cost": 7.845487200000001,
+        "cost_per_1000": 1.7806371311847482,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 38.06649456549005,
+      "grid_position": 24,
+      "weak_fraction": 0.2401270994098956,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3351,
+        "coverage": 1.0,
+        "success_rate": 0.7605537902859737,
+        "success_rate_on_routed": 0.7605537902859737,
+        "mean_score_on_routed": 0.7634135270086246,
+        "total_cost": 7.5816074,
+        "cost_per_1000": 1.7207461189287334,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 38.87108160695153,
+      "grid_position": 25,
+      "weak_fraction": 0.25011348161597824,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3341,
+        "coverage": 1.0,
+        "success_rate": 0.7582841579664095,
+        "success_rate_on_routed": 0.7582841579664095,
+        "mean_score_on_routed": 0.7621084884248751,
+        "total_cost": 7.323756400000001,
+        "cost_per_1000": 1.662223422605538,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 39.69703042528764,
+      "grid_position": 26,
+      "weak_fraction": 0.26009986382206085,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3337,
+        "coverage": 1.0,
+        "success_rate": 0.7573763050385838,
+        "success_rate_on_routed": 0.7573763050385838,
+        "mean_score_on_routed": 0.7609169314571039,
+        "total_cost": 7.0393084,
+        "cost_per_1000": 1.5976641852019975,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 40.757641867054474,
+      "grid_position": 27,
+      "weak_fraction": 0.27008624602814346,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3324,
+        "coverage": 1.0,
+        "success_rate": 0.7544257830231502,
+        "success_rate_on_routed": 0.7544257830231502,
+        "mean_score_on_routed": 0.7587040399455288,
+        "total_cost": 6.784484800000001,
+        "cost_per_1000": 1.5398285973672268,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 42.04883636085432,
+      "grid_position": 28,
+      "weak_fraction": 0.2800726282342261,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3311,
+        "coverage": 1.0,
+        "success_rate": 0.7514752610077168,
+        "success_rate_on_routed": 0.7514752610077168,
+        "mean_score_on_routed": 0.7568315932818883,
+        "total_cost": 6.5380858,
+        "cost_per_1000": 1.4839050839763959,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 43.37151742856021,
+      "grid_position": 29,
+      "weak_fraction": 0.2900590104403087,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3304,
+        "coverage": 1.0,
+        "success_rate": 0.7498865183840218,
+        "success_rate_on_routed": 0.7498865183840218,
+        "mean_score_on_routed": 0.7558669995460735,
+        "total_cost": 6.2863109999999995,
+        "cost_per_1000": 1.4267614616432138,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 44.67358949864841,
+      "grid_position": 30,
+      "weak_fraction": 0.3000453926463913,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3300,
+        "coverage": 1.0,
+        "success_rate": 0.7489786654561961,
+        "success_rate_on_routed": 0.7489786654561961,
+        "mean_score_on_routed": 0.7543917385383567,
+        "total_cost": 6.082835200000001,
+        "cost_per_1000": 1.380579936450295,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 46.37683592296295,
+      "grid_position": 31,
+      "weak_fraction": 0.3100317748524739,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3294,
+        "coverage": 1.0,
+        "success_rate": 0.7476168860644575,
+        "success_rate_on_routed": 0.7476168860644575,
+        "mean_score_on_routed": 0.7533136631865638,
+        "total_cost": 5.9135042,
+        "cost_per_1000": 1.342148025419882,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 47.94018078228546,
+      "grid_position": 32,
+      "weak_fraction": 0.3200181570585565,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3283,
+        "coverage": 1.0,
+        "success_rate": 0.7451202905129369,
+        "success_rate_on_routed": 0.7451202905129369,
+        "mean_score_on_routed": 0.7508170676350431,
+        "total_cost": 5.7504594,
+        "cost_per_1000": 1.3051428506581935,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 49.79761162373353,
+      "grid_position": 33,
+      "weak_fraction": 0.33000453926463913,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3279,
+        "coverage": 1.0,
+        "success_rate": 0.7442124375851112,
+        "success_rate_on_routed": 0.7442124375851112,
+        "mean_score_on_routed": 0.7498524738992283,
+        "total_cost": 5.6314606,
+        "cost_per_1000": 1.2781344984112573,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 51.655021334050616,
+      "grid_position": 34,
+      "weak_fraction": 0.33999092147072174,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3278,
+        "coverage": 1.0,
+        "success_rate": 0.7439854743531548,
+        "success_rate_on_routed": 0.7439854743531548,
+        "mean_score_on_routed": 0.7495687698592828,
+        "total_cost": 5.5246924,
+        "cost_per_1000": 1.2539020426690877,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 53.56992666892148,
+      "grid_position": 35,
+      "weak_fraction": 0.34997730367680435,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3267,
+        "coverage": 1.0,
+        "success_rate": 0.7414888788016342,
+        "success_rate_on_routed": 0.7414888788016342,
+        "mean_score_on_routed": 0.7471289151157512,
+        "total_cost": 5.4387372,
+        "cost_per_1000": 1.234393372673627,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 55.49175470620255,
+      "grid_position": 36,
+      "weak_fraction": 0.35996368588288696,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3260,
+        "coverage": 1.0,
+        "success_rate": 0.7399001361779391,
+        "success_rate_on_routed": 0.7399001361779391,
+        "mean_score_on_routed": 0.7459940989559691,
+        "total_cost": 5.3409356,
+        "cost_per_1000": 1.2121960054471175,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 57.18649080806273,
+      "grid_position": 37,
+      "weak_fraction": 0.3699500680889696,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3258,
+        "coverage": 1.0,
+        "success_rate": 0.7394462097140263,
+        "success_rate_on_routed": 0.7394462097140263,
+        "mean_score_on_routed": 0.7455401724920563,
+        "total_cost": 5.275669199999999,
+        "cost_per_1000": 1.1973829323649567,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 59.207830678775984,
+      "grid_position": 38,
+      "weak_fraction": 0.3799364502950522,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3246,
+        "coverage": 1.0,
+        "success_rate": 0.7367226509305492,
+        "success_rate_on_routed": 0.7367226509305492,
+        "mean_score_on_routed": 0.7429300953245574,
+        "total_cost": 5.1844376,
+        "cost_per_1000": 1.1766767135724012,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 60.55871487897354,
+      "grid_position": 39,
+      "weak_fraction": 0.3899228325011348,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3239,
+        "coverage": 1.0,
+        "success_rate": 0.7351339083068543,
+        "success_rate_on_routed": 0.7351339083068543,
+        "mean_score_on_routed": 0.7415683159328189,
+        "total_cost": 5.0968344000000005,
+        "cost_per_1000": 1.1567940081706765,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 61.84341821523709,
+      "grid_position": 40,
+      "weak_fraction": 0.40013617793917383,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3230,
+        "coverage": 1.0,
+        "success_rate": 0.7330912392192465,
+        "success_rate_on_routed": 0.7330912392192465,
+        "mean_score_on_routed": 0.7394689060372219,
+        "total_cost": 5.0297976,
+        "cost_per_1000": 1.1415791193826599,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 63.069999940188886,
+      "grid_position": 41,
+      "weak_fraction": 0.41012256014525644,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3224,
+        "coverage": 1.0,
+        "success_rate": 0.7317294598275079,
+        "success_rate_on_routed": 0.7317294598275079,
+        "mean_score_on_routed": 0.7381071266454834,
+        "total_cost": 4.9744002,
+        "cost_per_1000": 1.1290059464366773,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 64.34135450109657,
+      "grid_position": 42,
+      "weak_fraction": 0.4201089423513391,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3217,
+        "coverage": 1.0,
+        "success_rate": 0.730140717203813,
+        "success_rate_on_routed": 0.730140717203813,
+        "mean_score_on_routed": 0.7365183840217885,
+        "total_cost": 4.9183466000000005,
+        "cost_per_1000": 1.116283840217885,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 65.59928376876465,
+      "grid_position": 43,
+      "weak_fraction": 0.4300953245574217,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3206,
+        "coverage": 1.0,
+        "success_rate": 0.7276441216522923,
+        "success_rate_on_routed": 0.7276441216522923,
+        "mean_score_on_routed": 0.7340217884702678,
+        "total_cost": 4.8509298,
+        "cost_per_1000": 1.100982705401725,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 66.74347944841003,
+      "grid_position": 44,
+      "weak_fraction": 0.44008170676350433,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3198,
+        "coverage": 1.0,
+        "success_rate": 0.7258284157966409,
+        "success_rate_on_routed": 0.7258284157966409,
+        "mean_score_on_routed": 0.7323195642305946,
+        "total_cost": 4.7835784,
+        "cost_per_1000": 1.0856964139809349,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 67.61449809056413,
+      "grid_position": 45,
+      "weak_fraction": 0.45006808896958694,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3187,
+        "coverage": 1.0,
+        "success_rate": 0.7233318202451203,
+        "success_rate_on_routed": 0.7233318202451203,
+        "mean_score_on_routed": 0.7299364502950522,
+        "total_cost": 4.727868600000001,
+        "cost_per_1000": 1.0730523377212893,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 68.85133621400252,
+      "grid_position": 46,
+      "weak_fraction": 0.46005447117566955,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3174,
+        "coverage": 1.0,
+        "success_rate": 0.7203812982296868,
+        "success_rate_on_routed": 0.7203812982296868,
+        "mean_score_on_routed": 0.7270994098955968,
+        "total_cost": 4.661103,
+        "cost_per_1000": 1.0578990013617795,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 69.97056514486232,
+      "grid_position": 47,
+      "weak_fraction": 0.47004085338175217,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3166,
+        "coverage": 1.0,
+        "success_rate": 0.7185655923740354,
+        "success_rate_on_routed": 0.7185655923740354,
+        "mean_score_on_routed": 0.7252837040399455,
+        "total_cost": 4.590579400000001,
+        "cost_per_1000": 1.0418927371765778,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 70.89550749517493,
+      "grid_position": 48,
+      "weak_fraction": 0.4800272355878348,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3157,
+        "coverage": 1.0,
+        "success_rate": 0.7165229232864276,
+        "success_rate_on_routed": 0.7165229232864276,
+        "mean_score_on_routed": 0.7232410349523377,
+        "total_cost": 4.522131,
+        "cost_per_1000": 1.0263574670903315,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 72.11702210814829,
+      "grid_position": 49,
+      "weak_fraction": 0.4900136177939174,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3146,
+        "coverage": 1.0,
+        "success_rate": 0.7140263277349069,
+        "success_rate_on_routed": 0.7140263277349069,
+        "mean_score_on_routed": 0.720744439400817,
+        "total_cost": 4.459569200000001,
+        "cost_per_1000": 1.0121582387653203,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 72.99484664518098,
+      "grid_position": 50,
+      "weak_fraction": 0.5,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3134,
+        "coverage": 1.0,
+        "success_rate": 0.7113027689514299,
+        "success_rate_on_routed": 0.7113027689514299,
+        "mean_score_on_routed": 0.7180208806173399,
+        "total_cost": 4.3952798,
+        "cost_per_1000": 0.9975669087607808,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 73.95517668289733,
+      "grid_position": 51,
+      "weak_fraction": 0.5099863822060826,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3125,
+        "coverage": 1.0,
+        "success_rate": 0.7092600998638221,
+        "success_rate_on_routed": 0.7092600998638221,
+        "mean_score_on_routed": 0.7159782115297322,
+        "total_cost": 4.3233446,
+        "cost_per_1000": 0.9812402632773491,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 75.02850754921789,
+      "grid_position": 52,
+      "weak_fraction": 0.5199727644121652,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3110,
+        "coverage": 1.0,
+        "success_rate": 0.7058556513844757,
+        "success_rate_on_routed": 0.7058556513844757,
+        "mean_score_on_routed": 0.7125737630503858,
+        "total_cost": 4.2511446,
+        "cost_per_1000": 0.9648535179300952,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 76.12083266975455,
+      "grid_position": 53,
+      "weak_fraction": 0.5299591466182478,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3103,
+        "coverage": 1.0,
+        "success_rate": 0.7042669087607808,
+        "success_rate_on_routed": 0.7042669087607808,
+        "mean_score_on_routed": 0.7109850204266909,
+        "total_cost": 4.187637199999999,
+        "cost_per_1000": 0.9504396731729458,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 77.0973123101472,
+      "grid_position": 54,
+      "weak_fraction": 0.5401724920562869,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3086,
+        "coverage": 1.0,
+        "success_rate": 0.7004085338175216,
+        "success_rate_on_routed": 0.7004085338175216,
+        "mean_score_on_routed": 0.7071266454834316,
+        "total_cost": 4.1052556000000004,
+        "cost_per_1000": 0.9317420789832048,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 77.76738180082478,
+      "grid_position": 55,
+      "weak_fraction": 0.5499319110304131,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3074,
+        "coverage": 1.0,
+        "success_rate": 0.6976849750340445,
+        "success_rate_on_routed": 0.6976849750340445,
+        "mean_score_on_routed": 0.7044030866999546,
+        "total_cost": 4.0379488,
+        "cost_per_1000": 0.9164659101225601,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 78.8188347119457,
+      "grid_position": 56,
+      "weak_fraction": 0.5599182932364957,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3057,
+        "coverage": 1.0,
+        "success_rate": 0.6938266000907853,
+        "success_rate_on_routed": 0.6938266000907853,
+        "mean_score_on_routed": 0.7005447117566954,
+        "total_cost": 3.9627457999999995,
+        "cost_per_1000": 0.8993975941897412,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 79.72677219382045,
+      "grid_position": 57,
+      "weak_fraction": 0.5699046754425783,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3036,
+        "coverage": 1.0,
+        "success_rate": 0.6890603722197004,
+        "success_rate_on_routed": 0.6890603722197004,
+        "mean_score_on_routed": 0.6957784838856105,
+        "total_cost": 3.8883634000000002,
+        "cost_per_1000": 0.8825155242850659,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 80.72842139016764,
+      "grid_position": 58,
+      "weak_fraction": 0.5798910576486609,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3023,
+        "coverage": 1.0,
+        "success_rate": 0.686109850204267,
+        "success_rate_on_routed": 0.686109850204267,
+        "mean_score_on_routed": 0.692827961870177,
+        "total_cost": 3.8143296,
+        "cost_per_1000": 0.8657125737630504,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 81.73527025972308,
+      "grid_position": 59,
+      "weak_fraction": 0.5898774398547435,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3010,
+        "coverage": 1.0,
+        "success_rate": 0.6831593281888334,
+        "success_rate_on_routed": 0.6831593281888334,
+        "mean_score_on_routed": 0.6898774398547435,
+        "total_cost": 3.7443566,
+        "cost_per_1000": 0.8498312755333636,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 82.82818280045093,
+      "grid_position": 60,
+      "weak_fraction": 0.6000907852927826,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2999,
+        "coverage": 1.0,
+        "success_rate": 0.6806627326373128,
+        "success_rate_on_routed": 0.6806627326373128,
+        "mean_score_on_routed": 0.6873808443032229,
+        "total_cost": 3.6733996,
+        "cost_per_1000": 0.8337266454834317,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 83.69028176600355,
+      "grid_position": 61,
+      "weak_fraction": 0.6100771674988652,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2981,
+        "coverage": 1.0,
+        "success_rate": 0.6765773944620972,
+        "success_rate_on_routed": 0.6765773944620972,
+        "mean_score_on_routed": 0.6832955061280073,
+        "total_cost": 3.597027,
+        "cost_per_1000": 0.8163928733545166,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 84.57312892179735,
+      "grid_position": 62,
+      "weak_fraction": 0.6200635497049478,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2962,
+        "coverage": 1.0,
+        "success_rate": 0.6722650930549251,
+        "success_rate_on_routed": 0.6722650930549251,
+        "mean_score_on_routed": 0.6789832047208352,
+        "total_cost": 3.5133338,
+        "cost_per_1000": 0.7973975941897412,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 85.4241372071303,
+      "grid_position": 63,
+      "weak_fraction": 0.6300499319110304,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2946,
+        "coverage": 1.0,
+        "success_rate": 0.6686336813436223,
+        "success_rate_on_routed": 0.6686336813436223,
+        "mean_score_on_routed": 0.6753517930095324,
+        "total_cost": 3.4330944,
+        "cost_per_1000": 0.779186200635497,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 86.15186874758675,
+      "grid_position": 64,
+      "weak_fraction": 0.640036314117113,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2933,
+        "coverage": 1.0,
+        "success_rate": 0.6656831593281888,
+        "success_rate_on_routed": 0.6656831593281888,
+        "mean_score_on_routed": 0.672401270994099,
+        "total_cost": 3.3593826,
+        "cost_per_1000": 0.7624563322741715,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 86.9070701717435,
+      "grid_position": 65,
+      "weak_fraction": 0.6500226963231956,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2922,
+        "coverage": 1.0,
+        "success_rate": 0.6631865637766682,
+        "success_rate_on_routed": 0.6631865637766682,
+        "mean_score_on_routed": 0.6699046754425783,
+        "total_cost": 3.2785942,
+        "cost_per_1000": 0.7441203359055832,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 87.92394826224155,
+      "grid_position": 66,
+      "weak_fraction": 0.6600090785292783,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2906,
+        "coverage": 1.0,
+        "success_rate": 0.6595551520653654,
+        "success_rate_on_routed": 0.6595551520653654,
+        "mean_score_on_routed": 0.6662732637312755,
+        "total_cost": 3.209633,
+        "cost_per_1000": 0.72846867907399,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 88.58132235083049,
+      "grid_position": 67,
+      "weak_fraction": 0.6699954607353609,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2894,
+        "coverage": 1.0,
+        "success_rate": 0.6568315932818883,
+        "success_rate_on_routed": 0.6568315932818883,
+        "mean_score_on_routed": 0.6635497049477984,
+        "total_cost": 3.1388314,
+        "cost_per_1000": 0.7123993191103042,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 89.417607203589,
+      "grid_position": 68,
+      "weak_fraction": 0.6799818429414435,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2874,
+        "coverage": 1.0,
+        "success_rate": 0.6522923286427599,
+        "success_rate_on_routed": 0.6522923286427599,
+        "mean_score_on_routed": 0.65901044030867,
+        "total_cost": 3.0699776,
+        "cost_per_1000": 0.696772038129823,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 90.25379428023945,
+      "grid_position": 69,
+      "weak_fraction": 0.6899682251475261,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2861,
+        "coverage": 1.0,
+        "success_rate": 0.6493418066273263,
+        "success_rate_on_routed": 0.6493418066273263,
+        "mean_score_on_routed": 0.6561280072628235,
+        "total_cost": 2.9928106000000003,
+        "cost_per_1000": 0.6792579664094417,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 90.98251043053881,
+      "grid_position": 70,
+      "weak_fraction": 0.6999546073536087,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2848,
+        "coverage": 1.0,
+        "success_rate": 0.6463912846118929,
+        "success_rate_on_routed": 0.6463912846118929,
+        "mean_score_on_routed": 0.6531774852473899,
+        "total_cost": 2.9244214,
+        "cost_per_1000": 0.6637361325465275,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 92.05376993165878,
+      "grid_position": 71,
+      "weak_fraction": 0.7099409895596913,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2830,
+        "coverage": 1.0,
+        "success_rate": 0.6423059464366773,
+        "success_rate_on_routed": 0.6423059464366773,
+        "mean_score_on_routed": 0.6490921470721743,
+        "total_cost": 2.8512246,
+        "cost_per_1000": 0.6471231502496596,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 92.86003086308816,
+      "grid_position": 72,
+      "weak_fraction": 0.7199273717657739,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2813,
+        "coverage": 1.0,
+        "success_rate": 0.638447571493418,
+        "success_rate_on_routed": 0.638447571493418,
+        "mean_score_on_routed": 0.6452337721289151,
+        "total_cost": 2.7873792,
+        "cost_per_1000": 0.632632591920109,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 93.78801574662518,
+      "grid_position": 73,
+      "weak_fraction": 0.7299137539718565,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2799,
+        "coverage": 1.0,
+        "success_rate": 0.6352700862460281,
+        "success_rate_on_routed": 0.6352700862460281,
+        "mean_score_on_routed": 0.6420562868815252,
+        "total_cost": 2.7098234,
+        "cost_per_1000": 0.6150302768951429,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 95.07430822028978,
+      "grid_position": 74,
+      "weak_fraction": 0.7399001361779391,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2781,
+        "coverage": 1.0,
+        "success_rate": 0.6311847480708125,
+        "success_rate_on_routed": 0.6311847480708125,
+        "mean_score_on_routed": 0.6379709487063095,
+        "total_cost": 2.633732,
+        "cost_per_1000": 0.597760326827054,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 96.09805637344317,
+      "grid_position": 75,
+      "weak_fraction": 0.7498865183840218,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2768,
+        "coverage": 1.0,
+        "success_rate": 0.628234226055379,
+        "success_rate_on_routed": 0.628234226055379,
+        "mean_score_on_routed": 0.6350204266908761,
+        "total_cost": 2.5619118,
+        "cost_per_1000": 0.5814597821152973,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 97.37784521903811,
+      "grid_position": 76,
+      "weak_fraction": 0.7598729005901044,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2753,
+        "coverage": 1.0,
+        "success_rate": 0.6248297775760326,
+        "success_rate_on_routed": 0.6248297775760326,
+        "mean_score_on_routed": 0.6316159782115297,
+        "total_cost": 2.4856172,
+        "cost_per_1000": 0.5641437131184749,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 98.39089676966978,
+      "grid_position": 77,
+      "weak_fraction": 0.769859282796187,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2738,
+        "coverage": 1.0,
+        "success_rate": 0.6214253290966864,
+        "success_rate_on_routed": 0.6214253290966864,
+        "mean_score_on_routed": 0.6282115297321834,
+        "total_cost": 2.4203958,
+        "cost_per_1000": 0.5493408533817522,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 99.51311056993082,
+      "grid_position": 78,
+      "weak_fraction": 0.7798456650022696,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2721,
+        "coverage": 1.0,
+        "success_rate": 0.6175669541534271,
+        "success_rate_on_routed": 0.6175669541534271,
+        "mean_score_on_routed": 0.6243531547889242,
+        "total_cost": 2.3464884,
+        "cost_per_1000": 0.532566591012256,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 100.79347584525888,
+      "grid_position": 79,
+      "weak_fraction": 0.7898320472083522,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2705,
+        "coverage": 1.0,
+        "success_rate": 0.6139355424421243,
+        "success_rate_on_routed": 0.6139355424421243,
+        "mean_score_on_routed": 0.6207217430776214,
+        "total_cost": 2.272348,
+        "cost_per_1000": 0.515739446209714,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 102.70335525883003,
+      "grid_position": 80,
+      "weak_fraction": 0.8000453926463913,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2694,
+        "coverage": 1.0,
+        "success_rate": 0.6114389468906037,
+        "success_rate_on_routed": 0.6114389468906037,
+        "mean_score_on_routed": 0.6182251475261008,
+        "total_cost": 2.2162924,
+        "cost_per_1000": 0.5030168860644575,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 104.38162059744847,
+      "grid_position": 81,
+      "weak_fraction": 0.8100317748524739,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2673,
+        "coverage": 1.0,
+        "success_rate": 0.6066727190195188,
+        "success_rate_on_routed": 0.6066727190195188,
+        "mean_score_on_routed": 0.6134589196550159,
+        "total_cost": 2.1464932,
+        "cost_per_1000": 0.48717503404448476,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 105.75794030929397,
+      "grid_position": 82,
+      "weak_fraction": 0.8200181570585565,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2650,
+        "coverage": 1.0,
+        "success_rate": 0.6014525646845211,
+        "success_rate_on_routed": 0.6014525646845211,
+        "mean_score_on_routed": 0.6082387653200182,
+        "total_cost": 2.082563,
+        "cost_per_1000": 0.4726652292328643,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 107.72177221437674,
+      "grid_position": 83,
+      "weak_fraction": 0.8300045392646391,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2636,
+        "coverage": 1.0,
+        "success_rate": 0.5982750794371312,
+        "success_rate_on_routed": 0.5982750794371312,
+        "mean_score_on_routed": 0.6050612800726283,
+        "total_cost": 2.0219430000000003,
+        "cost_per_1000": 0.45890671811166595,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 109.70477999594392,
+      "grid_position": 84,
+      "weak_fraction": 0.8399909214707217,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2621,
+        "coverage": 1.0,
+        "success_rate": 0.5948706309577848,
+        "success_rate_on_routed": 0.5948706309577848,
+        "mean_score_on_routed": 0.6016568315932819,
+        "total_cost": 1.9689622,
+        "cost_per_1000": 0.446882024512029,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 111.76333594116556,
+      "grid_position": 85,
+      "weak_fraction": 0.8499773036768044,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2606,
+        "coverage": 1.0,
+        "success_rate": 0.5914661824784385,
+        "success_rate_on_routed": 0.5914661824784385,
+        "mean_score_on_routed": 0.5982523831139356,
+        "total_cost": 1.9180772,
+        "cost_per_1000": 0.4353330004539265,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 114.00462610167345,
+      "grid_position": 86,
+      "weak_fraction": 0.859963685882887,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2587,
+        "coverage": 1.0,
+        "success_rate": 0.5871538810712664,
+        "success_rate_on_routed": 0.5871538810712664,
+        "mean_score_on_routed": 0.5939400817067635,
+        "total_cost": 1.8647909999999999,
+        "cost_per_1000": 0.4232389922832501,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 116.30881882982513,
+      "grid_position": 87,
+      "weak_fraction": 0.8699500680889696,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2569,
+        "coverage": 1.0,
+        "success_rate": 0.5830685428960508,
+        "success_rate_on_routed": 0.5830685428960508,
+        "mean_score_on_routed": 0.5898547435315479,
+        "total_cost": 1.8069465999999998,
+        "cost_per_1000": 0.41011044030866994,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 118.46428397211977,
+      "grid_position": 88,
+      "weak_fraction": 0.8799364502950522,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2556,
+        "coverage": 1.0,
+        "success_rate": 0.5801180208806174,
+        "success_rate_on_routed": 0.5801180208806174,
+        "mean_score_on_routed": 0.5869042215161144,
+        "total_cost": 1.7545592,
+        "cost_per_1000": 0.3982204266908761,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 121.21358275065523,
+      "grid_position": 89,
+      "weak_fraction": 0.8899228325011348,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2538,
+        "coverage": 1.0,
+        "success_rate": 0.5760326827054018,
+        "success_rate_on_routed": 0.5760326827054018,
+        "mean_score_on_routed": 0.5829096686336814,
+        "total_cost": 1.6924638,
+        "cost_per_1000": 0.3841270540172492,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 125.42249263174108,
+      "grid_position": 90,
+      "weak_fraction": 0.8999092147072174,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2530,
+        "coverage": 1.0,
+        "success_rate": 0.5742169768497504,
+        "success_rate_on_routed": 0.5742169768497504,
+        "mean_score_on_routed": 0.58109396277803,
+        "total_cost": 1.6456248,
+        "cost_per_1000": 0.3734963231956423,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 129.9658956241039,
+      "grid_position": 91,
+      "weak_fraction": 0.9098955969133,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2510,
+        "coverage": 1.0,
+        "success_rate": 0.5696777122106219,
+        "success_rate_on_routed": 0.5696777122106219,
+        "mean_score_on_routed": 0.5765546981389016,
+        "total_cost": 1.6019806,
+        "cost_per_1000": 0.3635906945074898,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 135.55371999074436,
+      "grid_position": 92,
+      "weak_fraction": 0.9198819791193826,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2505,
+        "coverage": 1.0,
+        "success_rate": 0.5685428960508397,
+        "success_rate_on_routed": 0.5685428960508397,
+        "mean_score_on_routed": 0.5754198819791194,
+        "total_cost": 1.5541580000000002,
+        "cost_per_1000": 0.3527367226509306,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 142.6327335813268,
+      "grid_position": 93,
+      "weak_fraction": 0.9298683613254652,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2483,
+        "coverage": 1.0,
+        "success_rate": 0.5635497049477984,
+        "success_rate_on_routed": 0.5635497049477984,
+        "mean_score_on_routed": 0.5704266908760781,
+        "total_cost": 1.494587,
+        "cost_per_1000": 0.33921629596005454,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 152.87313925960822,
+      "grid_position": 94,
+      "weak_fraction": 0.9398547435315479,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2473,
+        "coverage": 1.0,
+        "success_rate": 0.5612800726282342,
+        "success_rate_on_routed": 0.5612800726282342,
+        "mean_score_on_routed": 0.5681343622333181,
+        "total_cost": 1.4506062000000002,
+        "cost_per_1000": 0.3292342714480255,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 167.16603669151732,
+      "grid_position": 95,
+      "weak_fraction": 0.9498411257376305,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2467,
+        "coverage": 1.0,
+        "success_rate": 0.5599182932364957,
+        "success_rate_on_routed": 0.5599182932364957,
+        "mean_score_on_routed": 0.5667725828415796,
+        "total_cost": 1.3912898,
+        "cost_per_1000": 0.31577162959600547,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 191.43976663530407,
+      "grid_position": 96,
+      "weak_fraction": 0.9598275079437131,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2456,
+        "coverage": 1.0,
+        "success_rate": 0.5574216976849751,
+        "success_rate_on_routed": 0.5574216976849751,
+        "mean_score_on_routed": 0.564275987290059,
+        "total_cost": 1.3201954,
+        "cost_per_1000": 0.2996358147980027,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 230.39983735771202,
+      "grid_position": 97,
+      "weak_fraction": 0.9698138901497957,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2439,
+        "coverage": 1.0,
+        "success_rate": 0.5535633227417158,
+        "success_rate_on_routed": 0.5535633227417158,
+        "mean_score_on_routed": 0.5604176123467998,
+        "total_cost": 1.2351888,
+        "cost_per_1000": 0.2803424421243758,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 291.2930387129437,
+      "grid_position": 98,
+      "weak_fraction": 0.9798002723558783,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2426,
+        "coverage": 1.0,
+        "success_rate": 0.5506128007262824,
+        "success_rate_on_routed": 0.5506128007262824,
+        "mean_score_on_routed": 0.5574670903313663,
+        "total_cost": 1.1458274,
+        "cost_per_1000": 0.2600606899682251,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 475.19230854245035,
+      "grid_position": 99,
+      "weak_fraction": 0.9902405810258738,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2419,
+        "coverage": 1.0,
+        "success_rate": 0.5490240581025874,
+        "success_rate_on_routed": 0.5490240581025874,
+        "mean_score_on_routed": 0.5558783477076713,
+        "total_cost": 0.8980374,
+        "cost_per_1000": 0.20382147072174306,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "fixed_ensemble",
+      "parameter": 1320.8602651271246,
+      "grid_position": 100,
+      "weak_fraction": 1.0,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2416,
+        "coverage": 1.0,
+        "success_rate": 0.5483431684067182,
+        "success_rate_on_routed": 0.5483431684067182,
+        "mean_score_on_routed": 0.5553109396277802,
+        "total_cost": 0.5952852000000001,
+        "cost_per_1000": 0.1351078529278257,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    }
+  ],
+  "selected_point": {
+    "candidate_id": "fixed_ensemble",
+    "parameter": 25.486340261276307,
+    "grid_position": 9,
+    "weak_fraction": 0.09010440308669995,
+    "metrics": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 3447,
+      "coverage": 1.0,
+      "success_rate": 0.7823422605537903,
+      "success_rate_on_routed": 0.7823422605537903,
+      "mean_score_on_routed": 0.7807194734453018,
+      "total_cost": 12.27767,
+      "cost_per_1000": 2.786579664094417,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  }
+}

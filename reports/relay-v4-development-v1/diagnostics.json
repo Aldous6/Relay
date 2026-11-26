@@ -1,0 +1,309 @@
+{
+  "scope": "post-training diagnostics on repeatedly reused development validation; no refit or new selection",
+  "generated_at_utc": "2026-11-09T01:07:41.388376+00:00",
+  "source_summary_sha256": "23c0ac5f0d0599033bfe86b983cdac9a4ee6f4ace7fe43a4af51365b84745175",
+  "operating_summary_sha256": "59b6b50e090d89c4047595794891b56d673ab4e87c48fdd16b8a36a587b10544",
+  "outer_test_evaluated_here": false,
+  "models_refit": false,
+  "candidates": {
+    "structural_hgb15": {
+      "specification": {
+        "id": "structural_hgb15",
+        "objective": "pairwise",
+        "backend": "hist_gradient_boosting",
+        "representation": "structural",
+        "n_components": 32,
+        "max_leaf_nodes": 15,
+        "max_iter": 150,
+        "min_samples_leaf": 30,
+        "l2_regularization": 1.0
+      },
+      "model_sha256": "b3093f8000183b3142dbe0efbcf0bac00031dc12fe5926e9c0bc228a2e63ef6b",
+      "prediction_sha256": "beebba389c9492814bf945d9c47d713a45934c1f7d58b48af8b2ece502eefd79",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "target_supports": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      },
+      "calibration_notes": {
+        "strong_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "weak_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "equal": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant"
+      },
+      "validation": {
+        "class_order": [
+          "strong_only",
+          "weak_only",
+          "equal"
+        ],
+        "validation_class_counts": {
+          "strong_only": 1337,
+          "weak_only": 286,
+          "equal": 2783
+        },
+        "multiclass_brier_sum_per_row": 0.4707524027072304,
+        "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+        "mean_one_vs_rest_brier": 0.1569174675690768,
+        "multiclass_log_loss": 0.7802022733206829,
+        "per_class": {
+          "strong_only": {
+            "brier": 0.19466048092601845,
+            "observed_prevalence": 0.30344984112573764,
+            "mean_predicted_probability": 0.30234109406816945
+          },
+          "weak_only": {
+            "brier": 0.059533851443229965,
+            "observed_prevalence": 0.064911484339537,
+            "mean_predicted_probability": 0.05553926476928754
+          },
+          "equal": {
+            "brier": 0.21655807033798197,
+            "observed_prevalence": 0.6316386745347253,
+            "mean_predicted_probability": 0.642119641162543
+          }
+        },
+        "expected_quality_gain_mse": 0.29183059440051373,
+        "note": "A multiclass sigmoid calibrator and probability normalization do not guarantee reliability of the final class probabilities. These are reused-validation diagnostics."
+      }
+    },
+    "svd32_hgb15": {
+      "specification": {
+        "id": "svd32_hgb15",
+        "objective": "pairwise",
+        "backend": "hist_gradient_boosting",
+        "representation": "lexical_svd",
+        "n_components": 32,
+        "max_leaf_nodes": 15,
+        "max_iter": 150,
+        "min_samples_leaf": 30,
+        "l2_regularization": 1.0
+      },
+      "model_sha256": "45616e65da792e39c9eabf8789dc92823e92384341b15b4d06da23cab53d62f4",
+      "prediction_sha256": "bfa2965729559cfd9e3882c2bdcb25f6240a8d7fbc76bf7859f6a081ca4ca72b",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "target_supports": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      },
+      "calibration_notes": {
+        "strong_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "weak_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "equal": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant"
+      },
+      "validation": {
+        "class_order": [
+          "strong_only",
+          "weak_only",
+          "equal"
+        ],
+        "validation_class_counts": {
+          "strong_only": 1337,
+          "weak_only": 286,
+          "equal": 2783
+        },
+        "multiclass_brier_sum_per_row": 0.4685300878677791,
+        "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+        "mean_one_vs_rest_brier": 0.15617669595592637,
+        "multiclass_log_loss": 0.7748821477794529,
+        "per_class": {
+          "strong_only": {
+            "brier": 0.19372771287939242,
+            "observed_prevalence": 0.30344984112573764,
+            "mean_predicted_probability": 0.303258505871907
+          },
+          "weak_only": {
+            "brier": 0.059040938210086644,
+            "observed_prevalence": 0.064911484339537,
+            "mean_predicted_probability": 0.05517629097065138
+          },
+          "equal": {
+            "brier": 0.21576143677830006,
+            "observed_prevalence": 0.6316386745347253,
+            "mean_predicted_probability": 0.6415652031574416
+          }
+        },
+        "expected_quality_gain_mse": 0.28977586540065925,
+        "note": "A multiclass sigmoid calibrator and probability normalization do not guarantee reliability of the final class probabilities. These are reused-validation diagnostics."
+      }
+    },
+    "svd64_hgb15": {
+      "specification": {
+        "id": "svd64_hgb15",
+        "objective": "pairwise",
+        "backend": "hist_gradient_boosting",
+        "representation": "lexical_svd",
+        "n_components": 64,
+        "max_leaf_nodes": 15,
+        "max_iter": 150,
+        "min_samples_leaf": 30,
+        "l2_regularization": 1.0
+      },
+      "model_sha256": "ff8d7becba588378d2037e9c8750c0a9157624b823ee27af9a6c1e3c07c6d21c",
+      "prediction_sha256": "b61fe782f997cf93437d7794f86b3f238b661a9e100a1eab3919a23ec1f7befe",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "target_supports": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      },
+      "calibration_notes": {
+        "strong_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "weak_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "equal": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant"
+      },
+      "validation": {
+        "class_order": [
+          "strong_only",
+          "weak_only",
+          "equal"
+        ],
+        "validation_class_counts": {
+          "strong_only": 1337,
+          "weak_only": 286,
+          "equal": 2783
+        },
+        "multiclass_brier_sum_per_row": 0.46807798088089936,
+        "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+        "mean_one_vs_rest_brier": 0.15602599362696645,
+        "multiclass_log_loss": 0.7746398401764748,
+        "per_class": {
+          "strong_only": {
+            "brier": 0.19362210946280892,
+            "observed_prevalence": 0.30344984112573764,
+            "mean_predicted_probability": 0.3038210385693372
+          },
+          "weak_only": {
+            "brier": 0.059200910114129215,
+            "observed_prevalence": 0.064911484339537,
+            "mean_predicted_probability": 0.055611917053043886
+          },
+          "equal": {
+            "brier": 0.21525496130396118,
+            "observed_prevalence": 0.6316386745347253,
+            "mean_predicted_probability": 0.6405670443776189
+          }
+        },
+        "expected_quality_gain_mse": 0.290391077849915,
+        "note": "A multiclass sigmoid calibrator and probability normalization do not guarantee reliability of the final class probabilities. These are reused-validation diagnostics."
+      }
+    },
+    "svd64_hgb31": {
+      "specification": {
+        "id": "svd64_hgb31",
+        "objective": "pairwise",
+        "backend": "hist_gradient_boosting",
+        "representation": "lexical_svd",
+        "n_components": 64,
+        "max_leaf_nodes": 31,
+        "max_iter": 150,
+        "min_samples_leaf": 30,
+        "l2_regularization": 1.0
+      },
+      "model_sha256": "debd12cbb3f9974c913dabc5a47ac803074e5b0a1721d4ff6bcfac8e30fc2521",
+      "prediction_sha256": "81b907dfb2c653ff2be9b54c931d5263fe4558bc1b0443854f0c6feacf964d8c",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "target_supports": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      },
+      "calibration_notes": {
+        "strong_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "weak_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "equal": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant"
+      },
+      "validation": {
+        "class_order": [
+          "strong_only",
+          "weak_only",
+          "equal"
+        ],
+        "validation_class_counts": {
+          "strong_only": 1337,
+          "weak_only": 286,
+          "equal": 2783
+        },
+        "multiclass_brier_sum_per_row": 0.47165375754895456,
+        "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+        "mean_one_vs_rest_brier": 0.15721791918298486,
+        "multiclass_log_loss": 0.7794485320668485,
+        "per_class": {
+          "strong_only": {
+            "brier": 0.194878116676028,
+            "observed_prevalence": 0.30344984112573764,
+            "mean_predicted_probability": 0.3047226136272134
+          },
+          "weak_only": {
+            "brier": 0.059508892849469024,
+            "observed_prevalence": 0.064911484339537,
+            "mean_predicted_probability": 0.05563321292458532
+          },
+          "equal": {
+            "brier": 0.21726674802345752,
+            "observed_prevalence": 0.6316386745347253,
+            "mean_predicted_probability": 0.6396441734482011
+          }
+        },
+        "expected_quality_gain_mse": 0.2915072710275369,
+        "note": "A multiclass sigmoid calibrator and probability normalization do not guarantee reliability of the final class probabilities. These are reused-validation diagnostics."
+      }
+    }
+  },
+  "latency_evidence": {
+    "path": "latency_cpu.json",
+    "sha256": "6b8806c64d383447e5bc160fe11a66643079a011a98a47acf5b6709abb318789",
+    "selected_candidate": "svd64_hgb15",
+    "latency": {
+      "relay": {
+        "n": 60,
+        "median_seconds": 0.03932060000079218,
+        "p95_seconds": 0.048288169987063145,
+        "min_seconds": 0.026972200008458458,
+        "max_seconds": 0.05365940000046976,
+        "total_seconds": 2.2619786999275675
+      },
+      "routellm_bert": {
+        "n": 60,
+        "median_seconds": 0.5091687999956775,
+        "p95_seconds": 1.0337772549988584,
+        "min_seconds": 0.186735299997963,
+        "max_seconds": 1.2046592999977292,
+        "total_seconds": 33.06241050000244
+      }
+    }
+  }
+}

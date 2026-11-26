@@ -1,0 +1,140 @@
+Diapositiva 1
+PROPUESTA  /  05 NOV 2026
+Enrutamiento dinámico
+multiclase de LLMs
+Predicción del Tier de menor costo suficiente
+mediante características estructurales del prompt
+ALDO SANTIAGO MÁRQUEZ
+Proyecto individual  ·  Entrega final: 26 noviembre 2026
+ARQUITECTURA CONCEPTUAL
+01  Prompt recibido
+02  Extraer 14 métricas
+03  Clasificador multiclase
+T0
+Básico
+T1
+Medio
+T2
+Premium
+HARNESS  ·  ROUTING OFFLINE
+Fuente de datos: Martian / RouterBench (2024) · DOI 10.57967/hf/1996
+1 / 4
+
+Diapositiva 2
+01  CONTEXTO Y PREGUNTAS
+El modelo más caro no siempre es la mejor decisión
+Un harness necesita equilibrar calidad y costo. Un enrutador puede evitar gastar de más sin degradar tareas difíciles.
+$
+Enviar todo a Premium
+Calidad potencialmente alta, pero costos innecesarios en consultas simples.
+!
+Enviar todo a Básico
+Menor costo, pero riesgo de fallar en peticiones de mayor dificultad.
+OBJETIVO
+Predecir el Tier del modelo de menor costo con score ≥ 0.75, usando solo el prompt.
+P1
+¿Podemos anticipar el Tier con 14 variables del texto?
+CRITERIO DE RESPUESTA
+Superar a Dummy y a una regla por longitud en F1-macro.
+P2
+¿Qué señales distinguen las solicitudes de Tier 2?
+CRITERIO DE RESPUESTA
+Identificar 3 atributos influyentes y comprobar su estabilidad.
+P3
+¿Compensa el enrutamiento respecto a siempre usar Premium?
+CRITERIO DE RESPUESTA
+Comparar costo/1,000 consultas y calidad obtenida.
+Fuente: Hu et al. (2024), RouterBench  ·  La selección es una simulación offline, no un harness productivo.
+2 / 4
+
+Diapositiva 3
+02  DATOS Y CARACTERIZACIÓN
+RouterBench: cifras reales, no estimaciones
+Archivo descargado y auditado: routerbench_0shot.pkl · una instancia = un prompt evaluado por varios LLMs.
+36,497
+prompts crudos
+37
+columnas originales
+11
+LLMs evaluados
+86
+evaluaciones
+DE LOS DATOS CRUDOS AL TIER
+36,497
+originales
+→
+−1,505
+sin score ≥ 0.75
+→
+−16
+duplicados
+→
+34,976
+muestra final
+DISTRIBUCIÓN DE LA VARIABLE OBJETIVO
+Tier 0
+18,554
+53.0%
+Tier 1
+14,976
+42.8%
+Tier 2
+1,446
+4.1%
+Tier 2 = 4.1 %  →  requiere ponderación y recall específico.
+ETIQUETA: REGLA REPRODUCIBLE
+1
+Agrupar LLMs por mediana de costo: 2 / 6 / 3.
+2
+Filtrar modelos con score ≥ 0.75 por prompt.
+3
+Elegir el elegible más barato y heredar su Tier.
+VARIABLES Y CALIDAD
+14 atributos numéricos:
+longitud, léxico, puntuación, dígitos, código, matemáticas e idioma.
+0 faltantes en scores/costos · 16 duplicados · 7,905 scores parciales.
+Fuente: Martian (2024), Hugging Face · DOI:10.57967/hf/1996 · dataset público; licencia de datos no especificada.
+3 / 4
+
+Diapositiva 4
+03  METODOLOGÍA Y PLAN
+Del prompt a una comparación experimental reproducible
+Clasificación multiclase tabular · sin consultas nuevas a LLMs · todas las decisiones se evalúan fuera de muestra.
+01
+EXTRAER
+14 métricas del prompt
+›
+02
+SEPARAR
+80/20 estratificado
+›
+03
+ENTRENAR
+5-fold CV en train
+›
+04
+EVALUAR
+F1, Tier 2, costo
+TÉCNICAS + LÍNEAS BASE
+BASE 1
+Dummy (clase mayoritaria).
+BASE 2
+Regla simple basada en longitud.
+MODELO A
+Regresión Logística + RobustScaler + pesos.
+MODELO B
+Random Forest + ponderación por clase.
+Si el modelo no lineal falla: Logística multiclase es el plan B.
+PREGUNTA  →  ANÁLISIS QUE RESPONDE
+P1
+Macro-F1 vs baselines; matriz de confusión.
+P2
+Importancia por permutación medida en F1 de T2.
+P3
+Costo/1,000 prompts y tasa score ≥ 0.75.
+Métrica principal: F1-macro. Complementaria: recall T2.
+Evaluación adicional por familia de benchmark y umbral 0.5/0.75/1.0.
+RIESGOS CONTROLADOS
+Desbalance Tier 2 (4.1 %) → pesos por clase · outliers → escalado robusto · scores heterogéneos → análisis de sensibilidad
+Calendario de ejecución: 05–12 nov datos · 13–19 nov modelos · 20–26 nov evaluación y presentación final.
+4 / 4

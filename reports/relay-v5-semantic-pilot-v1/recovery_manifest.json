@@ -1,0 +1,11 @@
+{
+  "reason": "Runtime removed from live object during pickle; metrics had not been calculated. Preserve completed predictions without retraining.",
+  "interrupted_source_archive_sha256": "e12802924195a7f8b0aacef281a14fb6a3a55248438aaf8ee1be69bd79f626ea",
+  "completed_files_sha256": {
+    "development_rows.parquet": "0cc36f5e5f6dba823248ee3682bb686150521e59c3226822f394c29831eab3b3",
+    "e5_hgb15.joblib": "f6c08b112912a331485da75249b3d51e25d2f86abd3c5f626a6ab762bab4a649",
+    "e5_hgb15_actions.parquet": "cd935b89fcb41ee6e25f15c990cb81399909ae4f4a04c6644136da1ad3eed5be",
+    "e5_hgb15_predicted_costs.parquet": "1feef3817b5441094db885aa0751c7eabf0100b59a43f82f87348da6021b98f6",
+    "e5_hgb15_probabilities.parquet": "b4c3003b2f447bc79de95b52d1f35e23aba4ca73a734ed0d03b2b3d3a0453bbf"
+  }
+}

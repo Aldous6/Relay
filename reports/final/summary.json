@@ -1,0 +1,2871 @@
+{
+  "protocol_id": "relay-final-v1",
+  "protocol_sha256": "0a7efdd03ac1b207c7f5120180c23036037ef5d19e46c99b758f7e56d2df10cd",
+  "evaluated_at_utc": "2026-11-08T19:41:19.480206+00:00",
+  "n_test": 7324,
+  "outer_test_performance_evaluated": true,
+  "policy_selection_used_test": false,
+  "routellm_official_evaluated": false,
+  "reference_model": "gpt-4-1106-preview",
+  "fixed_reference": {
+    "n_prompts": 7324,
+    "n_routed": 7324,
+    "n_abstained": 0,
+    "n_successes": 5758,
+    "coverage": 1.0,
+    "success_rate": 0.786182413981431,
+    "success_rate_on_routed": 0.786182413981431,
+    "mean_score_on_routed": 0.7826529219006008,
+    "total_cost": 23.65131,
+    "cost_per_1000": 3.2292886400873835,
+    "quality_score_threshold": 0.75,
+    "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+  },
+  "policies": {
+    "relay_primary": {
+      "variant": "lexical_hybrid",
+      "role": "primary_confirmatory_comparison",
+      "metrics": {
+        "n_prompts": 7324,
+        "n_routed": 7324,
+        "n_abstained": 0,
+        "n_successes": 5644,
+        "coverage": 1.0,
+        "success_rate": 0.770617149098853,
+        "success_rate_on_routed": 0.770617149098853,
+        "mean_score_on_routed": 0.7532359366466411,
+        "total_cost": 12.977765864,
+        "cost_per_1000": 1.7719505548880394,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      },
+      "comparison_vs_fixed": {
+        "n": 7324,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta": -0.015565264882577826,
+        "success_rate_delta_95ci": [
+          -0.02403058438012015,
+          -0.006826870562534134
+        ],
+        "cost_per_1000_delta": -1.4573380851993445,
+        "cost_per_1000_delta_95ci": [
+          -1.5040975024576764,
+          -1.411439589363742
+        ],
+        "relative_call_cost_saving": 0.4512876511279924,
+        "relative_call_cost_saving_95ci": [
+          0.4415760108370304,
+          0.4611978026750502
+        ],
+        "scope": "held-out paired prompt bootstrap; primary or secondary status is declared by policy role; historical selected-call cost excludes router compute and retries"
+      },
+      "cluster_sensitivity": {
+        "resampling_unit": "eval_name",
+        "groups": 86,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta_95ci": [
+          -0.048261169576112976,
+          0.010840823001731188
+        ],
+        "cost_per_1000_delta_95ci": [
+          -2.295688131547973,
+          -0.5204264069471155
+        ],
+        "scope": "secondary sensitivity; eval_name groups need not be independent benchmark families"
+      },
+      "calibration_diagnostics": {
+        "per_model": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "brier": 0.22676448475430133,
+            "log_loss": 0.644391913859992,
+            "observed_success": 0.4188967777170945,
+            "mean_predicted_success": 0.4062080697700771
+          },
+          "claude-instant-v1": {
+            "brier": 0.21725053600349364,
+            "log_loss": 0.6237252577196117,
+            "observed_success": 0.6120972146368104,
+            "mean_predicted_success": 0.5998770801136477
+          },
+          "claude-v1": {
+            "brier": 0.21142185823558726,
+            "log_loss": 0.611467558387827,
+            "observed_success": 0.6459584926269798,
+            "mean_predicted_success": 0.6416528162243693
+          },
+          "claude-v2": {
+            "brier": 0.21195109688301803,
+            "log_loss": 0.6134013847631107,
+            "observed_success": 0.6526488257782632,
+            "mean_predicted_success": 0.638267200348632
+          },
+          "gpt-3.5-turbo-1106": {
+            "brier": 0.2193226175671478,
+            "log_loss": 0.6282892336465424,
+            "observed_success": 0.6178317859093392,
+            "mean_predicted_success": 0.6034889202773167
+          },
+          "gpt-4-1106-preview": {
+            "brier": 0.15377100463556367,
+            "log_loss": 0.4788864586637031,
+            "observed_success": 0.786182413981431,
+            "mean_predicted_success": 0.7753488843902594
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "brier": 0.12038892740879391,
+            "log_loss": 0.36509663459152075,
+            "observed_success": 0.18118514472965594,
+            "mean_predicted_success": 0.17711558685956028
+          },
+          "meta/llama-2-70b-chat": {
+            "brier": 0.15697742508603116,
+            "log_loss": 0.46004503279444436,
+            "observed_success": 0.3063899508465319,
+            "mean_predicted_success": 0.30643476324550817
+          },
+          "mistralai/mistral-7b-chat": {
+            "brier": 0.1926707332726997,
+            "log_loss": 0.5689116990873565,
+            "observed_success": 0.2805843801201529,
+            "mean_predicted_success": 0.2812473495555662
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.21808771536245478,
+            "log_loss": 0.6259556308364244,
+            "observed_success": 0.5350901146914254,
+            "mean_predicted_success": 0.5209320222285203
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "brier": 0.20012765933141827,
+            "log_loss": 0.5835528169224551,
+            "observed_success": 0.6365374112506826,
+            "mean_predicted_success": 0.6319131606637586
+          }
+        },
+        "mean_brier": 0.1935212780491372,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 6591,
+            "mean_prediction": 0.036321545471082926,
+            "observed_success": 0.01775147928994083
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 2775,
+            "mean_prediction": 0.15467839860327479,
+            "observed_success": 0.18414414414414415
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 7665,
+            "mean_prediction": 0.2567449913923859,
+            "observed_success": 0.27501630789302023
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 7950,
+            "mean_prediction": 0.3485368698917835,
+            "observed_success": 0.34628930817610065
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 10068,
+            "mean_prediction": 0.45377633127381756,
+            "observed_success": 0.46781883194278906
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 12364,
+            "mean_prediction": 0.5510893727364276,
+            "observed_success": 0.5626819799417664
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 13745,
+            "mean_prediction": 0.6512016855299102,
+            "observed_success": 0.6504183339396145
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 12909,
+            "mean_prediction": 0.7458117401504418,
+            "observed_success": 0.7603997211247967
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 5967,
+            "mean_prediction": 0.8437683914982785,
+            "observed_success": 0.8629126864420982
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 530,
+            "mean_prediction": 0.9116491212957266,
+            "observed_success": 0.9264150943396227
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "fallback_rate": 0.2336155106499181,
+      "selected_model_counts": {
+        "gpt-4-1106-preview": 2829,
+        "zero-one-ai/Yi-34B-Chat": 1700,
+        "claude-v1": 1013,
+        "mistralai/mixtral-8x7b-chat": 685,
+        "claude-v2": 531,
+        "gpt-3.5-turbo-1106": 270,
+        "claude-instant-v1": 259,
+        "WizardLM/WizardLM-13B-V1.2": 25,
+        "meta/code-llama-instruct-34b-chat": 10,
+        "mistralai/mistral-7b-chat": 2
+      },
+      "batch_prediction_seconds": 19.31541680000373,
+      "by_eval_name": {
+        "Chinese_character_riddles": {
+          "n": 24,
+          "success_rate": 0.08333333333333333,
+          "cost_per_1000": 4.757333333333333
+        },
+        "abstract2title": {
+          "n": 36,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.15072222222222223
+        },
+        "accounting_audit": {
+          "n": 6,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 1.5286666666666668
+        },
+        "arc-challenge": {
+          "n": 304,
+          "success_rate": 0.8848684210526315,
+          "cost_per_1000": 0.36355822368421054
+        },
+        "bias_detection": {
+          "n": 58,
+          "success_rate": 0.22413793103448276,
+          "cost_per_1000": 5.512396551724139
+        },
+        "chinese-lantern-riddles": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 5.581333333333333
+        },
+        "chinese-remainder-theorem": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 28.005000000000003
+        },
+        "chinese_ancient_masterpieces_dynasty": {
+          "n": 4,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.015524999999999997
+        },
+        "chinese_ancient_poetry": {
+          "n": 9,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.09928888888888888
+        },
+        "chinese_chu_ci": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.07498
+        },
+        "chinese_famous_novel": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.35200000000000004
+        },
+        "chinese_hard_translations": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 1.0
+        },
+        "chinese_homonym": {
+          "n": 3,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 0.6293333333333334
+        },
+        "chinese_idioms": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 5.61
+        },
+        "chinese_modern_poem_identification": {
+          "n": 5,
+          "success_rate": 0.4,
+          "cost_per_1000": 0.9550000000000001
+        },
+        "chinese_poem": {
+          "n": 3,
+          "success_rate": 0.3333333333333333,
+          "cost_per_1000": 0.09899999999999998
+        },
+        "chinese_shi_jing": {
+          "n": 6,
+          "success_rate": 0.16666666666666666,
+          "cost_per_1000": 0.1005
+        },
+        "chinese_song_ci": {
+          "n": 5,
+          "success_rate": 0.6,
+          "cost_per_1000": 0.14240000000000003
+        },
+        "chinese_tang_poetries": {
+          "n": 10,
+          "success_rate": 0.5,
+          "cost_per_1000": 0.6759999999999999
+        },
+        "chinese_zodiac": {
+          "n": 81,
+          "success_rate": 0.7037037037037037,
+          "cost_per_1000": 1.151111111111111
+        },
+        "consensus_summary": {
+          "n": 76,
+          "success_rate": 0.7368421052631579,
+          "cost_per_1000": 0.5934907894736844
+        },
+        "grade-school-math": {
+          "n": 1468,
+          "success_rate": 0.7295640326975477,
+          "cost_per_1000": 4.727545231607629
+        },
+        "hellaswag": {
+          "n": 1978,
+          "success_rate": 0.8260869565217391,
+          "cost_per_1000": 0.7842240647118301
+        },
+        "mbpp": {
+          "n": 72,
+          "success_rate": 0.6527777777777778,
+          "cost_per_1000": 5.777542555555557
+        },
+        "mmlu-abstract-algebra": {
+          "n": 16,
+          "success_rate": 0.5625,
+          "cost_per_1000": 1.0768750000000002
+        },
+        "mmlu-anatomy": {
+          "n": 33,
+          "success_rate": 0.6363636363636364,
+          "cost_per_1000": 0.3660787878787879
+        },
+        "mmlu-astronomy": {
+          "n": 25,
+          "success_rate": 0.84,
+          "cost_per_1000": 0.52944
+        },
+        "mmlu-business-ethics": {
+          "n": 18,
+          "success_rate": 0.7222222222222222,
+          "cost_per_1000": 0.5043555555555556
+        },
+        "mmlu-clinical-knowledge": {
+          "n": 51,
+          "success_rate": 0.7647058823529411,
+          "cost_per_1000": 0.5309803921568628
+        },
+        "mmlu-college-biology": {
+          "n": 28,
+          "success_rate": 0.8571428571428571,
+          "cost_per_1000": 0.4972357142857143
+        },
+        "mmlu-college-chemistry": {
+          "n": 16,
+          "success_rate": 0.6875,
+          "cost_per_1000": 0.8736
+        },
+        "mmlu-college-computer-science": {
+          "n": 23,
+          "success_rate": 0.782608695652174,
+          "cost_per_1000": 1.0111304347826089
+        },
+        "mmlu-college-mathematics": {
+          "n": 17,
+          "success_rate": 0.23529411764705882,
+          "cost_per_1000": 1.1129411764705883
+        },
+        "mmlu-college-medicine": {
+          "n": 40,
+          "success_rate": 0.675,
+          "cost_per_1000": 0.5556899999999999
+        },
+        "mmlu-college-physics": {
+          "n": 18,
+          "success_rate": 0.5555555555555556,
+          "cost_per_1000": 1.0967555555555555
+        },
+        "mmlu-computer-security": {
+          "n": 17,
+          "success_rate": 0.8823529411764706,
+          "cost_per_1000": 0.46552941176470597
+        },
+        "mmlu-conceptual-physics": {
+          "n": 45,
+          "success_rate": 0.7333333333333333,
+          "cost_per_1000": 0.43324888888888896
+        },
+        "mmlu-econometrics": {
+          "n": 19,
+          "success_rate": 0.5789473684210527,
+          "cost_per_1000": 1.331578947368421
+        },
+        "mmlu-electrical-engineering": {
+          "n": 29,
+          "success_rate": 0.7241379310344828,
+          "cost_per_1000": 0.7353241379310345
+        },
+        "mmlu-elementary-mathematics": {
+          "n": 80,
+          "success_rate": 0.725,
+          "cost_per_1000": 0.9510899999999999
+        },
+        "mmlu-formal-logic": {
+          "n": 25,
+          "success_rate": 0.64,
+          "cost_per_1000": 1.0125439999999999
+        },
+        "mmlu-global-facts": {
+          "n": 25,
+          "success_rate": 0.48,
+          "cost_per_1000": 0.7287679999999999
+        },
+        "mmlu-high-school-biology": {
+          "n": 70,
+          "success_rate": 0.8428571428571429,
+          "cost_per_1000": 0.3572199999999999
+        },
+        "mmlu-high-school-chemistry": {
+          "n": 34,
+          "success_rate": 0.6764705882352942,
+          "cost_per_1000": 0.9352823529411763
+        },
+        "mmlu-high-school-computer-science": {
+          "n": 27,
+          "success_rate": 0.8518518518518519,
+          "cost_per_1000": 1.1728444444444446
+        },
+        "mmlu-high-school-european-history": {
+          "n": 23,
+          "success_rate": 0.782608695652174,
+          "cost_per_1000": 2.181834782608696
+        },
+        "mmlu-high-school-geography": {
+          "n": 46,
+          "success_rate": 0.9347826086956522,
+          "cost_per_1000": 0.28899565217391304
+        },
+        "mmlu-high-school-government-and-politics": {
+          "n": 44,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.5281727272727272
+        },
+        "mmlu-high-school-macroeconomics": {
+          "n": 85,
+          "success_rate": 0.7294117647058823,
+          "cost_per_1000": 0.5045011764705882
+        },
+        "mmlu-high-school-mathematics": {
+          "n": 55,
+          "success_rate": 0.6727272727272727,
+          "cost_per_1000": 1.0386327272727274
+        },
+        "mmlu-high-school-microeconomics": {
+          "n": 44,
+          "success_rate": 0.8636363636363636,
+          "cost_per_1000": 0.5078954545454547
+        },
+        "mmlu-high-school-physics": {
+          "n": 24,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 1.39025
+        },
+        "mmlu-high-school-psychology": {
+          "n": 118,
+          "success_rate": 0.9322033898305084,
+          "cost_per_1000": 0.40020169491525426
+        },
+        "mmlu-high-school-statistics": {
+          "n": 40,
+          "success_rate": 0.775,
+          "cost_per_1000": 1.5459149999999997
+        },
+        "mmlu-high-school-us-history": {
+          "n": 42,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 1.554014285714286
+        },
+        "mmlu-high-school-world-history": {
+          "n": 47,
+          "success_rate": 0.8936170212765957,
+          "cost_per_1000": 2.455578723404255
+        },
+        "mmlu-human-aging": {
+          "n": 53,
+          "success_rate": 0.7735849056603774,
+          "cost_per_1000": 0.26981509433962264
+        },
+        "mmlu-human-sexuality": {
+          "n": 32,
+          "success_rate": 0.78125,
+          "cost_per_1000": 0.62499375
+        },
+        "mmlu-international-law": {
+          "n": 20,
+          "success_rate": 0.85,
+          "cost_per_1000": 1.00955
+        },
+        "mmlu-jurisprudence": {
+          "n": 17,
+          "success_rate": 0.7647058823529411,
+          "cost_per_1000": 0.45101176470588233
+        },
+        "mmlu-logical-fallacies": {
+          "n": 26,
+          "success_rate": 0.9230769230769231,
+          "cost_per_1000": 0.5907
+        },
+        "mmlu-machine-learning": {
+          "n": 21,
+          "success_rate": 0.9047619047619048,
+          "cost_per_1000": 1.0887238095238092
+        },
+        "mmlu-management": {
+          "n": 18,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 0.21206666666666668
+        },
+        "mmlu-marketing": {
+          "n": 57,
+          "success_rate": 0.8771929824561403,
+          "cost_per_1000": 0.26619649122807015
+        },
+        "mmlu-medical-genetics": {
+          "n": 25,
+          "success_rate": 0.76,
+          "cost_per_1000": 0.342696
+        },
+        "mmlu-miscellaneous": {
+          "n": 162,
+          "success_rate": 0.9135802469135802,
+          "cost_per_1000": 0.3395444444444445
+        },
+        "mmlu-moral-disputes": {
+          "n": 70,
+          "success_rate": 0.7857142857142857,
+          "cost_per_1000": 0.6513028571428571
+        },
+        "mmlu-moral-scenarios": {
+          "n": 204,
+          "success_rate": 0.7843137254901961,
+          "cost_per_1000": 1.4313235294117646
+        },
+        "mmlu-nutrition": {
+          "n": 53,
+          "success_rate": 0.7358490566037735,
+          "cost_per_1000": 0.4753773584905661
+        },
+        "mmlu-philosophy": {
+          "n": 67,
+          "success_rate": 0.7910447761194029,
+          "cost_per_1000": 0.6203850746268658
+        },
+        "mmlu-prehistory": {
+          "n": 65,
+          "success_rate": 0.8,
+          "cost_per_1000": 0.5049292307692307
+        },
+        "mmlu-professional-accounting": {
+          "n": 51,
+          "success_rate": 0.7450980392156863,
+          "cost_per_1000": 1.0866392156862745
+        },
+        "mmlu-professional-law": {
+          "n": 331,
+          "success_rate": 0.6404833836858006,
+          "cost_per_1000": 2.733587311178248
+        },
+        "mmlu-professional-medicine": {
+          "n": 51,
+          "success_rate": 0.8823529411764706,
+          "cost_per_1000": 1.6188196078431372
+        },
+        "mmlu-professional-psychology": {
+          "n": 124,
+          "success_rate": 0.7580645161290323,
+          "cost_per_1000": 0.6153290322580646
+        },
+        "mmlu-public-relations": {
+          "n": 20,
+          "success_rate": 0.8,
+          "cost_per_1000": 0.36184000000000005
+        },
+        "mmlu-security-studies": {
+          "n": 52,
+          "success_rate": 0.75,
+          "cost_per_1000": 0.8255461538461539
+        },
+        "mmlu-sociology": {
+          "n": 33,
+          "success_rate": 0.8787878787878788,
+          "cost_per_1000": 0.4786303030303031
+        },
+        "mmlu-us-foreign-policy": {
+          "n": 20,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.62251
+        },
+        "mmlu-virology": {
+          "n": 29,
+          "success_rate": 0.4482758620689655,
+          "cost_per_1000": 0.5732137931034483
+        },
+        "mmlu-world-religions": {
+          "n": 42,
+          "success_rate": 0.9285714285714286,
+          "cost_per_1000": 0.23735714285714282
+        },
+        "mtbench": {
+          "n": 8,
+          "success_rate": 1.0,
+          "cost_per_1000": 21.33625
+        },
+        "mtbench-math": {
+          "n": 5,
+          "success_rate": 0.4,
+          "cost_per_1000": 16.12
+        },
+        "mtbench-reference": {
+          "n": 3,
+          "success_rate": 0.3333333333333333,
+          "cost_per_1000": 13.753599999999999
+        },
+        "test-match": {
+          "n": 1,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.25
+        },
+        "winogrande": {
+          "n": 272,
+          "success_rate": 0.7683823529411765,
+          "cost_per_1000": 0.4585860294117647
+        }
+      },
+      "by_length": {
+        "0-256": {
+          "unit": "characters",
+          "n": 727,
+          "success_rate": 0.7221458046767538,
+          "cost_per_1000": 1.32544245392022
+        },
+        "257-1024": {
+          "unit": "characters",
+          "n": 3828,
+          "success_rate": 0.7881400208986415,
+          "cost_per_1000": 0.9365741379310346
+        },
+        "1025-4096": {
+          "unit": "characters",
+          "n": 2769,
+          "success_rate": 0.7591188154568437,
+          "cost_per_1000": 3.0440460093896706
+        }
+      }
+    },
+    "structural_secondary": {
+      "variant": "structural",
+      "role": "secondary_descriptive_comparison",
+      "metrics": {
+        "n_prompts": 7324,
+        "n_routed": 7324,
+        "n_abstained": 0,
+        "n_successes": 5734,
+        "coverage": 1.0,
+        "success_rate": 0.7829055161114146,
+        "success_rate_on_routed": 0.7829055161114146,
+        "mean_score_on_routed": 0.7669442927362098,
+        "total_cost": 15.757918415999999,
+        "cost_per_1000": 2.1515453872200982,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      },
+      "comparison_vs_fixed": {
+        "n": 7324,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta": -0.0032768978700163844,
+        "success_rate_delta_95ci": [
+          -0.010922992900054615,
+          0.004096122337520481
+        ],
+        "cost_per_1000_delta": -1.0777432528672857,
+        "cost_per_1000_delta_95ci": [
+          -1.1189583079737868,
+          -1.0380442517886392
+        ],
+        "relative_call_cost_saving": 0.3337401431041239,
+        "relative_call_cost_saving_95ci": [
+          0.32586897872456144,
+          0.34182476850518734
+        ],
+        "scope": "held-out paired prompt bootstrap; primary or secondary status is declared by policy role; historical selected-call cost excludes router compute and retries"
+      },
+      "cluster_sensitivity": {
+        "resampling_unit": "eval_name",
+        "groups": 86,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta_95ci": [
+          -0.02266330030647692,
+          0.02104209252262617
+        ],
+        "cost_per_1000_delta_95ci": [
+          -1.9557496747625966,
+          -0.09416508338972726
+        ],
+        "scope": "secondary sensitivity; eval_name groups need not be independent benchmark families"
+      },
+      "calibration_diagnostics": {
+        "per_model": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "brier": 0.2338793857460897,
+            "log_loss": 0.6594227760680466,
+            "observed_success": 0.4188967777170945,
+            "mean_predicted_success": 0.40601847437718347
+          },
+          "claude-instant-v1": {
+            "brier": 0.22619449015047674,
+            "log_loss": 0.6438577119893605,
+            "observed_success": 0.6120972146368104,
+            "mean_predicted_success": 0.5993701597855305
+          },
+          "claude-v1": {
+            "brier": 0.21772167386138394,
+            "log_loss": 0.6258106010806925,
+            "observed_success": 0.6459584926269798,
+            "mean_predicted_success": 0.6420085181476028
+          },
+          "claude-v2": {
+            "brier": 0.2187117447577991,
+            "log_loss": 0.6284223348986192,
+            "observed_success": 0.6526488257782632,
+            "mean_predicted_success": 0.6405663982608419
+          },
+          "gpt-3.5-turbo-1106": {
+            "brier": 0.2253315898062906,
+            "log_loss": 0.6416938308308142,
+            "observed_success": 0.6178317859093392,
+            "mean_predicted_success": 0.6062417609127896
+          },
+          "gpt-4-1106-preview": {
+            "brier": 0.15795532373828686,
+            "log_loss": 0.49184160564068746,
+            "observed_success": 0.786182413981431,
+            "mean_predicted_success": 0.7766071735401142
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "brier": 0.13808152311596258,
+            "log_loss": 0.433772979045601,
+            "observed_success": 0.18118514472965594,
+            "mean_predicted_success": 0.17804010214833643
+          },
+          "meta/llama-2-70b-chat": {
+            "brier": 0.19026511756486814,
+            "log_loss": 0.5569015959176492,
+            "observed_success": 0.3063899508465319,
+            "mean_predicted_success": 0.3090000216979937
+          },
+          "mistralai/mistral-7b-chat": {
+            "brier": 0.19975129074545558,
+            "log_loss": 0.5881210578114894,
+            "observed_success": 0.2805843801201529,
+            "mean_predicted_success": 0.28210385562303186
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.22914170865050584,
+            "log_loss": 0.6503562893744541,
+            "observed_success": 0.5350901146914254,
+            "mean_predicted_success": 0.5243638328998178
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "brier": 0.21509299559897133,
+            "log_loss": 0.6205445505922467,
+            "observed_success": 0.6365374112506826,
+            "mean_predicted_success": 0.6316636596124803
+          }
+        },
+        "mean_brier": 0.20473880397600822,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 2714,
+            "mean_prediction": 0.06847789861196413,
+            "observed_success": 0.045320560058953574
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 5520,
+            "mean_prediction": 0.14800752077872892,
+            "observed_success": 0.1503623188405797
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 8569,
+            "mean_prediction": 0.26341783582173023,
+            "observed_success": 0.2688761815847824
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 6927,
+            "mean_prediction": 0.3432227310681815,
+            "observed_success": 0.353832828064097
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 11235,
+            "mean_prediction": 0.45294672146554205,
+            "observed_success": 0.4638184245660881
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 11612,
+            "mean_prediction": 0.5490909648898556,
+            "observed_success": 0.5403892524974164
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 19117,
+            "mean_prediction": 0.6535335741115443,
+            "observed_success": 0.6670502693937334
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 10147,
+            "mean_prediction": 0.7343488776233571,
+            "observed_success": 0.7508623238395585
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 4712,
+            "mean_prediction": 0.8334939469502508,
+            "observed_success": 0.8440152801358234
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 11,
+            "mean_prediction": 0.912827343837268,
+            "observed_success": 0.9090909090909091
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "fallback_rate": 0.18746586564718734,
+      "selected_model_counts": {
+        "gpt-4-1106-preview": 4591,
+        "claude-v1": 1514,
+        "zero-one-ai/Yi-34B-Chat": 1118,
+        "claude-v2": 71,
+        "meta/llama-2-70b-chat": 10,
+        "claude-instant-v1": 9,
+        "meta/code-llama-instruct-34b-chat": 4,
+        "WizardLM/WizardLM-13B-V1.2": 3,
+        "gpt-3.5-turbo-1106": 3,
+        "mistralai/mixtral-8x7b-chat": 1
+      },
+      "batch_prediction_seconds": 0.3896865999995498,
+      "by_eval_name": {
+        "Chinese_character_riddles": {
+          "n": 24,
+          "success_rate": 0.08333333333333333,
+          "cost_per_1000": 4.757333333333333
+        },
+        "abstract2title": {
+          "n": 36,
+          "success_rate": 1.0,
+          "cost_per_1000": 3.501466666666666
+        },
+        "accounting_audit": {
+          "n": 6,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 1.8183333333333336
+        },
+        "arc-challenge": {
+          "n": 304,
+          "success_rate": 0.9473684210526315,
+          "cost_per_1000": 0.9013332236842105
+        },
+        "bias_detection": {
+          "n": 58,
+          "success_rate": 0.3620689655172414,
+          "cost_per_1000": 8.514827586206899
+        },
+        "chinese-lantern-riddles": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 4.8773333333333335
+        },
+        "chinese-remainder-theorem": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 28.005000000000003
+        },
+        "chinese_ancient_masterpieces_dynasty": {
+          "n": 4,
+          "success_rate": 0.25,
+          "cost_per_1000": 2.004
+        },
+        "chinese_ancient_poetry": {
+          "n": 9,
+          "success_rate": 0.1111111111111111,
+          "cost_per_1000": 1.167111111111111
+        },
+        "chinese_chu_ci": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.7504000000000001
+        },
+        "chinese_famous_novel": {
+          "n": 3,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 0.4
+        },
+        "chinese_hard_translations": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 1.0
+        },
+        "chinese_homonym": {
+          "n": 3,
+          "success_rate": 0.3333333333333333,
+          "cost_per_1000": 0.023
+        },
+        "chinese_idioms": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 1.884
+        },
+        "chinese_modern_poem_identification": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 1.104
+        },
+        "chinese_poem": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.8426666666666666
+        },
+        "chinese_shi_jing": {
+          "n": 6,
+          "success_rate": 0.16666666666666666,
+          "cost_per_1000": 0.8293333333333333
+        },
+        "chinese_song_ci": {
+          "n": 5,
+          "success_rate": 0.2,
+          "cost_per_1000": 1.232
+        },
+        "chinese_tang_poetries": {
+          "n": 10,
+          "success_rate": 0.5,
+          "cost_per_1000": 0.6759999999999999
+        },
+        "chinese_zodiac": {
+          "n": 81,
+          "success_rate": 0.7037037037037037,
+          "cost_per_1000": 1.151111111111111
+        },
+        "consensus_summary": {
+          "n": 76,
+          "success_rate": 0.5,
+          "cost_per_1000": 3.1644736842105265
+        },
+        "grade-school-math": {
+          "n": 1468,
+          "success_rate": 0.7254768392370572,
+          "cost_per_1000": 4.9363043596730245
+        },
+        "hellaswag": {
+          "n": 1978,
+          "success_rate": 0.8144590495449949,
+          "cost_per_1000": 1.0614721011122343
+        },
+        "mbpp": {
+          "n": 72,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 9.943472222222223
+        },
+        "mmlu-abstract-algebra": {
+          "n": 16,
+          "success_rate": 0.5,
+          "cost_per_1000": 0.69235
+        },
+        "mmlu-anatomy": {
+          "n": 33,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 0.9267878787878788
+        },
+        "mmlu-astronomy": {
+          "n": 25,
+          "success_rate": 0.96,
+          "cost_per_1000": 1.1472000000000002
+        },
+        "mmlu-business-ethics": {
+          "n": 18,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 1.027222222222222
+        },
+        "mmlu-clinical-knowledge": {
+          "n": 51,
+          "success_rate": 0.8431372549019608,
+          "cost_per_1000": 0.9228470588235294
+        },
+        "mmlu-college-biology": {
+          "n": 28,
+          "success_rate": 0.9285714285714286,
+          "cost_per_1000": 1.0721714285714283
+        },
+        "mmlu-college-chemistry": {
+          "n": 16,
+          "success_rate": 0.75,
+          "cost_per_1000": 0.8735
+        },
+        "mmlu-college-computer-science": {
+          "n": 23,
+          "success_rate": 0.782608695652174,
+          "cost_per_1000": 1.0715826086956521
+        },
+        "mmlu-college-mathematics": {
+          "n": 17,
+          "success_rate": 0.35294117647058826,
+          "cost_per_1000": 0.8676
+        },
+        "mmlu-college-medicine": {
+          "n": 40,
+          "success_rate": 0.775,
+          "cost_per_1000": 1.02317
+        },
+        "mmlu-college-physics": {
+          "n": 18,
+          "success_rate": 0.6111111111111112,
+          "cost_per_1000": 1.1777777777777778
+        },
+        "mmlu-computer-security": {
+          "n": 17,
+          "success_rate": 0.8235294117647058,
+          "cost_per_1000": 0.6827764705882354
+        },
+        "mmlu-conceptual-physics": {
+          "n": 45,
+          "success_rate": 0.8444444444444444,
+          "cost_per_1000": 0.7725333333333332
+        },
+        "mmlu-econometrics": {
+          "n": 19,
+          "success_rate": 0.5789473684210527,
+          "cost_per_1000": 0.6968105263157895
+        },
+        "mmlu-electrical-engineering": {
+          "n": 29,
+          "success_rate": 0.7586206896551724,
+          "cost_per_1000": 0.8359586206896551
+        },
+        "mmlu-elementary-mathematics": {
+          "n": 80,
+          "success_rate": 0.75,
+          "cost_per_1000": 0.9842500000000001
+        },
+        "mmlu-formal-logic": {
+          "n": 25,
+          "success_rate": 0.48,
+          "cost_per_1000": 0.30969599999999997
+        },
+        "mmlu-global-facts": {
+          "n": 25,
+          "success_rate": 0.48,
+          "cost_per_1000": 0.9064
+        },
+        "mmlu-high-school-biology": {
+          "n": 70,
+          "success_rate": 0.9142857142857143,
+          "cost_per_1000": 1.02024
+        },
+        "mmlu-high-school-chemistry": {
+          "n": 34,
+          "success_rate": 0.6176470588235294,
+          "cost_per_1000": 0.952070588235294
+        },
+        "mmlu-high-school-computer-science": {
+          "n": 27,
+          "success_rate": 0.9259259259259259,
+          "cost_per_1000": 1.198622222222222
+        },
+        "mmlu-high-school-european-history": {
+          "n": 23,
+          "success_rate": 0.782608695652174,
+          "cost_per_1000": 2.9993391304347825
+        },
+        "mmlu-high-school-geography": {
+          "n": 46,
+          "success_rate": 0.9347826086956522,
+          "cost_per_1000": 0.7673652173913045
+        },
+        "mmlu-high-school-government-and-politics": {
+          "n": 44,
+          "success_rate": 1.0,
+          "cost_per_1000": 1.0463
+        },
+        "mmlu-high-school-macroeconomics": {
+          "n": 85,
+          "success_rate": 0.8235294117647058,
+          "cost_per_1000": 0.8817882352941174
+        },
+        "mmlu-high-school-mathematics": {
+          "n": 55,
+          "success_rate": 0.6363636363636364,
+          "cost_per_1000": 1.0385309090909092
+        },
+        "mmlu-high-school-microeconomics": {
+          "n": 44,
+          "success_rate": 0.8863636363636364,
+          "cost_per_1000": 0.962618181818182
+        },
+        "mmlu-high-school-physics": {
+          "n": 24,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 1.3966666666666667
+        },
+        "mmlu-high-school-psychology": {
+          "n": 118,
+          "success_rate": 0.9745762711864406,
+          "cost_per_1000": 0.9859423728813561
+        },
+        "mmlu-high-school-statistics": {
+          "n": 40,
+          "success_rate": 0.8,
+          "cost_per_1000": 1.62715
+        },
+        "mmlu-high-school-us-history": {
+          "n": 42,
+          "success_rate": 0.9285714285714286,
+          "cost_per_1000": 3.120819047619047
+        },
+        "mmlu-high-school-world-history": {
+          "n": 47,
+          "success_rate": 0.9148936170212766,
+          "cost_per_1000": 2.953591489361702
+        },
+        "mmlu-human-aging": {
+          "n": 53,
+          "success_rate": 0.8490566037735849,
+          "cost_per_1000": 0.8110339622641509
+        },
+        "mmlu-human-sexuality": {
+          "n": 32,
+          "success_rate": 0.84375,
+          "cost_per_1000": 0.9393625
+        },
+        "mmlu-international-law": {
+          "n": 20,
+          "success_rate": 0.85,
+          "cost_per_1000": 1.0668
+        },
+        "mmlu-jurisprudence": {
+          "n": 17,
+          "success_rate": 0.8823529411764706,
+          "cost_per_1000": 1.137058823529412
+        },
+        "mmlu-logical-fallacies": {
+          "n": 26,
+          "success_rate": 0.9615384615384616,
+          "cost_per_1000": 0.9365999999999999
+        },
+        "mmlu-machine-learning": {
+          "n": 21,
+          "success_rate": 0.7619047619047619,
+          "cost_per_1000": 0.9160571428571429
+        },
+        "mmlu-management": {
+          "n": 18,
+          "success_rate": 0.8888888888888888,
+          "cost_per_1000": 0.7922222222222223
+        },
+        "mmlu-marketing": {
+          "n": 57,
+          "success_rate": 0.9649122807017544,
+          "cost_per_1000": 0.9010245614035087
+        },
+        "mmlu-medical-genetics": {
+          "n": 25,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.8188479999999999
+        },
+        "mmlu-miscellaneous": {
+          "n": 162,
+          "success_rate": 0.9382716049382716,
+          "cost_per_1000": 0.7486246913580246
+        },
+        "mmlu-moral-disputes": {
+          "n": 70,
+          "success_rate": 0.8428571428571429,
+          "cost_per_1000": 1.0467657142857143
+        },
+        "mmlu-moral-scenarios": {
+          "n": 204,
+          "success_rate": 0.7843137254901961,
+          "cost_per_1000": 1.4313235294117646
+        },
+        "mmlu-nutrition": {
+          "n": 53,
+          "success_rate": 0.8301886792452831,
+          "cost_per_1000": 0.8939999999999998
+        },
+        "mmlu-philosophy": {
+          "n": 67,
+          "success_rate": 0.7611940298507462,
+          "cost_per_1000": 1.0067164179104477
+        },
+        "mmlu-prehistory": {
+          "n": 65,
+          "success_rate": 0.8923076923076924,
+          "cost_per_1000": 0.9933846153846156
+        },
+        "mmlu-professional-accounting": {
+          "n": 51,
+          "success_rate": 0.7254901960784313,
+          "cost_per_1000": 1.2976470588235294
+        },
+        "mmlu-professional-law": {
+          "n": 331,
+          "success_rate": 0.6616314199395771,
+          "cost_per_1000": 2.827487613293051
+        },
+        "mmlu-professional-medicine": {
+          "n": 51,
+          "success_rate": 0.9411764705882353,
+          "cost_per_1000": 2.137843137254902
+        },
+        "mmlu-professional-psychology": {
+          "n": 124,
+          "success_rate": 0.8145161290322581,
+          "cost_per_1000": 1.082703225806452
+        },
+        "mmlu-public-relations": {
+          "n": 20,
+          "success_rate": 0.8,
+          "cost_per_1000": 1.0236399999999999
+        },
+        "mmlu-security-studies": {
+          "n": 52,
+          "success_rate": 0.8653846153846154,
+          "cost_per_1000": 1.8153692307692308
+        },
+        "mmlu-sociology": {
+          "n": 33,
+          "success_rate": 1.0,
+          "cost_per_1000": 1.0757575757575757
+        },
+        "mmlu-us-foreign-policy": {
+          "n": 20,
+          "success_rate": 0.95,
+          "cost_per_1000": 0.8892799999999998
+        },
+        "mmlu-virology": {
+          "n": 29,
+          "success_rate": 0.3793103448275862,
+          "cost_per_1000": 0.7235172413793103
+        },
+        "mmlu-world-religions": {
+          "n": 42,
+          "success_rate": 0.9285714285714286,
+          "cost_per_1000": 0.6332761904761904
+        },
+        "mtbench": {
+          "n": 8,
+          "success_rate": 1.0,
+          "cost_per_1000": 20.603512499999997
+        },
+        "mtbench-math": {
+          "n": 5,
+          "success_rate": 0.4,
+          "cost_per_1000": 14.462800000000001
+        },
+        "mtbench-reference": {
+          "n": 3,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 13.682933333333333
+        },
+        "test-match": {
+          "n": 1,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.25
+        },
+        "winogrande": {
+          "n": 272,
+          "success_rate": 0.7941176470588235,
+          "cost_per_1000": 0.5339705882352943
+        }
+      },
+      "by_length": {
+        "0-256": {
+          "unit": "characters",
+          "n": 727,
+          "success_rate": 0.7331499312242091,
+          "cost_per_1000": 1.9205262723521324
+        },
+        "257-1024": {
+          "unit": "characters",
+          "n": 3828,
+          "success_rate": 0.8124346917450366,
+          "cost_per_1000": 1.2306956112852663
+        },
+        "1025-4096": {
+          "unit": "characters",
+          "n": 2769,
+          "success_rate": 0.7551462621885157,
+          "cost_per_1000": 3.4852268024557604
+        }
+      }
+    },
+    "semantic_secondary": {
+      "variant": "semantic",
+      "role": "secondary_descriptive_comparison",
+      "metrics": {
+        "n_prompts": 7324,
+        "n_routed": 7324,
+        "n_abstained": 0,
+        "n_successes": 5674,
+        "coverage": 1.0,
+        "success_rate": 0.7747132714363736,
+        "success_rate_on_routed": 0.7747132714363736,
+        "mean_score_on_routed": 0.7564445658110321,
+        "total_cost": 13.309663392,
+        "cost_per_1000": 1.81726698416166,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      },
+      "comparison_vs_fixed": {
+        "n": 7324,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta": -0.011469142545057346,
+        "success_rate_delta_95ci": [
+          -0.020207536865101038,
+          -0.0028672856362643366
+        ],
+        "cost_per_1000_delta": -1.4120216559257235,
+        "cost_per_1000_delta_95ci": [
+          -1.458072146067721,
+          -1.3681473876160584
+        ],
+        "relative_call_cost_saving": 0.4372547063143648,
+        "relative_call_cost_saving_95ci": [
+          0.4281535298774253,
+          0.4467877093940024
+        ],
+        "scope": "held-out paired prompt bootstrap; primary or secondary status is declared by policy role; historical selected-call cost excludes router compute and retries"
+      },
+      "cluster_sensitivity": {
+        "resampling_unit": "eval_name",
+        "groups": 86,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta_95ci": [
+          -0.045085619779204354,
+          0.01696362324064727
+        ],
+        "cost_per_1000_delta_95ci": [
+          -2.1507352485180147,
+          -0.5460335058996316
+        ],
+        "scope": "secondary sensitivity; eval_name groups need not be independent benchmark families"
+      },
+      "calibration_diagnostics": {
+        "per_model": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "brier": 0.22715814814516125,
+            "log_loss": 0.6457119224275788,
+            "observed_success": 0.4188967777170945,
+            "mean_predicted_success": 0.4043532827763724
+          },
+          "claude-instant-v1": {
+            "brier": 0.22033059909575678,
+            "log_loss": 0.6308956195569224,
+            "observed_success": 0.6120972146368104,
+            "mean_predicted_success": 0.5976137680017763
+          },
+          "claude-v1": {
+            "brier": 0.21244519503600434,
+            "log_loss": 0.6137398561538495,
+            "observed_success": 0.6459584926269798,
+            "mean_predicted_success": 0.640475011513193
+          },
+          "claude-v2": {
+            "brier": 0.21250286461058412,
+            "log_loss": 0.6147666637228919,
+            "observed_success": 0.6526488257782632,
+            "mean_predicted_success": 0.6379128286023101
+          },
+          "gpt-3.5-turbo-1106": {
+            "brier": 0.21990226871740545,
+            "log_loss": 0.6294704240218317,
+            "observed_success": 0.6178317859093392,
+            "mean_predicted_success": 0.602290277873934
+          },
+          "gpt-4-1106-preview": {
+            "brier": 0.1545072466562772,
+            "log_loss": 0.48071324722771497,
+            "observed_success": 0.786182413981431,
+            "mean_predicted_success": 0.7746766143805088
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "brier": 0.1255626254705386,
+            "log_loss": 0.38372113124032753,
+            "observed_success": 0.18118514472965594,
+            "mean_predicted_success": 0.17730424788453827
+          },
+          "meta/llama-2-70b-chat": {
+            "brier": 0.16473145789880525,
+            "log_loss": 0.47605860678689305,
+            "observed_success": 0.3063899508465319,
+            "mean_predicted_success": 0.30752963769197866
+          },
+          "mistralai/mistral-7b-chat": {
+            "brier": 0.1937475683516483,
+            "log_loss": 0.5719929628020929,
+            "observed_success": 0.2805843801201529,
+            "mean_predicted_success": 0.2808051533376686
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.2210634029004345,
+            "log_loss": 0.6324272416537119,
+            "observed_success": 0.5350901146914254,
+            "mean_predicted_success": 0.521865571791591
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "brier": 0.20169419331871996,
+            "log_loss": 0.5873236358204538,
+            "observed_success": 0.6365374112506826,
+            "mean_predicted_success": 0.6315752718081569
+          }
+        },
+        "mean_brier": 0.19578596092739417,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 6012,
+            "mean_prediction": 0.04583569105301995,
+            "observed_success": 0.018130405854956753
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 3202,
+            "mean_prediction": 0.15445860054607846,
+            "observed_success": 0.18644597126795753
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 7600,
+            "mean_prediction": 0.25685061920327096,
+            "observed_success": 0.28078947368421053
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 8282,
+            "mean_prediction": 0.3485018224805589,
+            "observed_success": 0.3537792803670611
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 10402,
+            "mean_prediction": 0.45178068682279554,
+            "observed_success": 0.469236685252836
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 12713,
+            "mean_prediction": 0.5516501026028854,
+            "observed_success": 0.5555730354754975
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 13472,
+            "mean_prediction": 0.6518259586819802,
+            "observed_success": 0.6533551068883611
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 12487,
+            "mean_prediction": 0.7435830941527866,
+            "observed_success": 0.7611916393048771
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 5706,
+            "mean_prediction": 0.8455703240377517,
+            "observed_success": 0.8585699263932702
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 688,
+            "mean_prediction": 0.914494544026815,
+            "observed_success": 0.9186046511627907
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "fallback_rate": 0.2725286728563626,
+      "selected_model_counts": {
+        "gpt-4-1106-preview": 2910,
+        "zero-one-ai/Yi-34B-Chat": 1649,
+        "claude-v1": 1015,
+        "mistralai/mixtral-8x7b-chat": 719,
+        "claude-v2": 599,
+        "gpt-3.5-turbo-1106": 263,
+        "claude-instant-v1": 134,
+        "WizardLM/WizardLM-13B-V1.2": 17,
+        "meta/code-llama-instruct-34b-chat": 10,
+        "meta/llama-2-70b-chat": 7,
+        "mistralai/mistral-7b-chat": 1
+      },
+      "batch_prediction_seconds": 1043.2461727000045,
+      "by_eval_name": {
+        "Chinese_character_riddles": {
+          "n": 24,
+          "success_rate": 0.08333333333333333,
+          "cost_per_1000": 4.081874999999999
+        },
+        "abstract2title": {
+          "n": 36,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.23130933333333334
+        },
+        "accounting_audit": {
+          "n": 6,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 1.615666666666667
+        },
+        "arc-challenge": {
+          "n": 304,
+          "success_rate": 0.8947368421052632,
+          "cost_per_1000": 0.3265473684210527
+        },
+        "bias_detection": {
+          "n": 58,
+          "success_rate": 0.41379310344827586,
+          "cost_per_1000": 3.1036586206896555
+        },
+        "chinese-lantern-riddles": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.29166666666666663
+        },
+        "chinese-remainder-theorem": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 28.005000000000003
+        },
+        "chinese_ancient_masterpieces_dynasty": {
+          "n": 4,
+          "success_rate": 0.25,
+          "cost_per_1000": 0.055349999999999996
+        },
+        "chinese_ancient_poetry": {
+          "n": 9,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.2774444444444445
+        },
+        "chinese_chu_ci": {
+          "n": 5,
+          "success_rate": 0.2,
+          "cost_per_1000": 0.508
+        },
+        "chinese_famous_novel": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.153
+        },
+        "chinese_hard_translations": {
+          "n": 5,
+          "success_rate": 0.2,
+          "cost_per_1000": 0.8208
+        },
+        "chinese_homonym": {
+          "n": 3,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 0.6293333333333334
+        },
+        "chinese_idioms": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 5.61
+        },
+        "chinese_modern_poem_identification": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.13340000000000002
+        },
+        "chinese_poem": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.10386666666666666
+        },
+        "chinese_shi_jing": {
+          "n": 6,
+          "success_rate": 0.16666666666666666,
+          "cost_per_1000": 0.1005
+        },
+        "chinese_song_ci": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.79004
+        },
+        "chinese_tang_poetries": {
+          "n": 10,
+          "success_rate": 0.5,
+          "cost_per_1000": 0.5083
+        },
+        "chinese_zodiac": {
+          "n": 81,
+          "success_rate": 0.7037037037037037,
+          "cost_per_1000": 1.151111111111111
+        },
+        "consensus_summary": {
+          "n": 76,
+          "success_rate": 0.7236842105263158,
+          "cost_per_1000": 1.4405324210526316
+        },
+        "grade-school-math": {
+          "n": 1468,
+          "success_rate": 0.7397820163487738,
+          "cost_per_1000": 5.036455585831062
+        },
+        "hellaswag": {
+          "n": 1978,
+          "success_rate": 0.8286147623862488,
+          "cost_per_1000": 0.793766531850354
+        },
+        "mbpp": {
+          "n": 72,
+          "success_rate": 0.5555555555555556,
+          "cost_per_1000": 6.241983222222223
+        },
+        "mmlu-abstract-algebra": {
+          "n": 16,
+          "success_rate": 0.5625,
+          "cost_per_1000": 1.027125
+        },
+        "mmlu-anatomy": {
+          "n": 33,
+          "success_rate": 0.696969696969697,
+          "cost_per_1000": 0.4654787878787879
+        },
+        "mmlu-astronomy": {
+          "n": 25,
+          "success_rate": 0.8,
+          "cost_per_1000": 0.40357600000000005
+        },
+        "mmlu-business-ethics": {
+          "n": 18,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 0.49584444444444453
+        },
+        "mmlu-clinical-knowledge": {
+          "n": 51,
+          "success_rate": 0.7647058823529411,
+          "cost_per_1000": 0.4982117647058824
+        },
+        "mmlu-college-biology": {
+          "n": 28,
+          "success_rate": 0.8928571428571429,
+          "cost_per_1000": 0.5366000000000001
+        },
+        "mmlu-college-chemistry": {
+          "n": 16,
+          "success_rate": 0.6875,
+          "cost_per_1000": 0.9325625
+        },
+        "mmlu-college-computer-science": {
+          "n": 23,
+          "success_rate": 0.782608695652174,
+          "cost_per_1000": 1.0950869565217392
+        },
+        "mmlu-college-mathematics": {
+          "n": 17,
+          "success_rate": 0.23529411764705882,
+          "cost_per_1000": 1.1129411764705883
+        },
+        "mmlu-college-medicine": {
+          "n": 40,
+          "success_rate": 0.75,
+          "cost_per_1000": 0.6338
+        },
+        "mmlu-college-physics": {
+          "n": 18,
+          "success_rate": 0.5555555555555556,
+          "cost_per_1000": 1.1098555555555554
+        },
+        "mmlu-computer-security": {
+          "n": 17,
+          "success_rate": 0.8823529411764706,
+          "cost_per_1000": 0.4327176470588235
+        },
+        "mmlu-conceptual-physics": {
+          "n": 45,
+          "success_rate": 0.6888888888888889,
+          "cost_per_1000": 0.5401333333333334
+        },
+        "mmlu-econometrics": {
+          "n": 19,
+          "success_rate": 0.631578947368421,
+          "cost_per_1000": 1.3542105263157893
+        },
+        "mmlu-electrical-engineering": {
+          "n": 29,
+          "success_rate": 0.7241379310344828,
+          "cost_per_1000": 0.7255103448275861
+        },
+        "mmlu-elementary-mathematics": {
+          "n": 80,
+          "success_rate": 0.7375,
+          "cost_per_1000": 0.9738625000000001
+        },
+        "mmlu-formal-logic": {
+          "n": 25,
+          "success_rate": 0.68,
+          "cost_per_1000": 1.3760000000000001
+        },
+        "mmlu-global-facts": {
+          "n": 25,
+          "success_rate": 0.48,
+          "cost_per_1000": 0.796536
+        },
+        "mmlu-high-school-biology": {
+          "n": 70,
+          "success_rate": 0.8,
+          "cost_per_1000": 0.4212485714285714
+        },
+        "mmlu-high-school-chemistry": {
+          "n": 34,
+          "success_rate": 0.6764705882352942,
+          "cost_per_1000": 1.058735294117647
+        },
+        "mmlu-high-school-computer-science": {
+          "n": 27,
+          "success_rate": 0.8518518518518519,
+          "cost_per_1000": 1.1827851851851852
+        },
+        "mmlu-high-school-european-history": {
+          "n": 23,
+          "success_rate": 0.8260869565217391,
+          "cost_per_1000": 2.881782608695652
+        },
+        "mmlu-high-school-geography": {
+          "n": 46,
+          "success_rate": 0.8913043478260869,
+          "cost_per_1000": 0.27479999999999993
+        },
+        "mmlu-high-school-government-and-politics": {
+          "n": 44,
+          "success_rate": 0.9772727272727273,
+          "cost_per_1000": 0.6029681818181818
+        },
+        "mmlu-high-school-macroeconomics": {
+          "n": 85,
+          "success_rate": 0.7764705882352941,
+          "cost_per_1000": 0.7095035294117649
+        },
+        "mmlu-high-school-mathematics": {
+          "n": 55,
+          "success_rate": 0.6727272727272727,
+          "cost_per_1000": 1.0679999999999998
+        },
+        "mmlu-high-school-microeconomics": {
+          "n": 44,
+          "success_rate": 0.9090909090909091,
+          "cost_per_1000": 0.7727999999999999
+        },
+        "mmlu-high-school-physics": {
+          "n": 24,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 1.362825
+        },
+        "mmlu-high-school-psychology": {
+          "n": 118,
+          "success_rate": 0.9152542372881356,
+          "cost_per_1000": 0.3734423728813559
+        },
+        "mmlu-high-school-statistics": {
+          "n": 40,
+          "success_rate": 0.8,
+          "cost_per_1000": 1.554605
+        },
+        "mmlu-high-school-us-history": {
+          "n": 42,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 1.6546666666666665
+        },
+        "mmlu-high-school-world-history": {
+          "n": 47,
+          "success_rate": 0.8936170212765957,
+          "cost_per_1000": 2.9187893617021277
+        },
+        "mmlu-human-aging": {
+          "n": 53,
+          "success_rate": 0.8301886792452831,
+          "cost_per_1000": 0.3176075471698114
+        },
+        "mmlu-human-sexuality": {
+          "n": 32,
+          "success_rate": 0.75,
+          "cost_per_1000": 0.6205875000000001
+        },
+        "mmlu-international-law": {
+          "n": 20,
+          "success_rate": 0.9,
+          "cost_per_1000": 1.08818
+        },
+        "mmlu-jurisprudence": {
+          "n": 17,
+          "success_rate": 0.8235294117647058,
+          "cost_per_1000": 0.7903529411764706
+        },
+        "mmlu-logical-fallacies": {
+          "n": 26,
+          "success_rate": 0.8846153846153846,
+          "cost_per_1000": 0.7550846153846154
+        },
+        "mmlu-machine-learning": {
+          "n": 21,
+          "success_rate": 0.9047619047619048,
+          "cost_per_1000": 1.1239809523809525
+        },
+        "mmlu-management": {
+          "n": 18,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 0.17398888888888892
+        },
+        "mmlu-marketing": {
+          "n": 57,
+          "success_rate": 0.8771929824561403,
+          "cost_per_1000": 0.25810175438596494
+        },
+        "mmlu-medical-genetics": {
+          "n": 25,
+          "success_rate": 0.88,
+          "cost_per_1000": 0.33524
+        },
+        "mmlu-miscellaneous": {
+          "n": 162,
+          "success_rate": 0.9259259259259259,
+          "cost_per_1000": 0.39892716049382715
+        },
+        "mmlu-moral-disputes": {
+          "n": 70,
+          "success_rate": 0.7571428571428571,
+          "cost_per_1000": 0.6400428571428571
+        },
+        "mmlu-moral-scenarios": {
+          "n": 204,
+          "success_rate": 0.7843137254901961,
+          "cost_per_1000": 1.4313235294117646
+        },
+        "mmlu-nutrition": {
+          "n": 53,
+          "success_rate": 0.7735849056603774,
+          "cost_per_1000": 0.3605396226415094
+        },
+        "mmlu-philosophy": {
+          "n": 67,
+          "success_rate": 0.7164179104477612,
+          "cost_per_1000": 0.5207283582089551
+        },
+        "mmlu-prehistory": {
+          "n": 65,
+          "success_rate": 0.8307692307692308,
+          "cost_per_1000": 0.21741538461538465
+        },
+        "mmlu-professional-accounting": {
+          "n": 51,
+          "success_rate": 0.7647058823529411,
+          "cost_per_1000": 1.152380392156863
+        },
+        "mmlu-professional-law": {
+          "n": 331,
+          "success_rate": 0.6253776435045317,
+          "cost_per_1000": 2.605152265861027
+        },
+        "mmlu-professional-medicine": {
+          "n": 51,
+          "success_rate": 0.8431372549019608,
+          "cost_per_1000": 1.5729764705882354
+        },
+        "mmlu-professional-psychology": {
+          "n": 124,
+          "success_rate": 0.7903225806451613,
+          "cost_per_1000": 0.6849774193548387
+        },
+        "mmlu-public-relations": {
+          "n": 20,
+          "success_rate": 0.8,
+          "cost_per_1000": 0.44783
+        },
+        "mmlu-security-studies": {
+          "n": 52,
+          "success_rate": 0.7884615384615384,
+          "cost_per_1000": 0.7117115384615386
+        },
+        "mmlu-sociology": {
+          "n": 33,
+          "success_rate": 0.8787878787878788,
+          "cost_per_1000": 0.33857575757575753
+        },
+        "mmlu-us-foreign-policy": {
+          "n": 20,
+          "success_rate": 0.95,
+          "cost_per_1000": 0.15988
+        },
+        "mmlu-virology": {
+          "n": 29,
+          "success_rate": 0.41379310344827586,
+          "cost_per_1000": 0.5275103448275861
+        },
+        "mmlu-world-religions": {
+          "n": 42,
+          "success_rate": 0.8571428571428571,
+          "cost_per_1000": 0.27583809523809527
+        },
+        "mtbench": {
+          "n": 8,
+          "success_rate": 0.875,
+          "cost_per_1000": 11.058675000000001
+        },
+        "mtbench-math": {
+          "n": 5,
+          "success_rate": 0.4,
+          "cost_per_1000": 13.5068
+        },
+        "mtbench-reference": {
+          "n": 3,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 12.079766666666664
+        },
+        "test-match": {
+          "n": 1,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.25
+        },
+        "winogrande": {
+          "n": 272,
+          "success_rate": 0.7757352941176471,
+          "cost_per_1000": 0.4543080882352941
+        }
+      },
+      "by_length": {
+        "0-256": {
+          "unit": "characters",
+          "n": 727,
+          "success_rate": 0.7097661623108665,
+          "cost_per_1000": 1.206351158184319
+        },
+        "257-1024": {
+          "unit": "characters",
+          "n": 3828,
+          "success_rate": 0.7894461859979102,
+          "cost_per_1000": 0.9683335642633228
+        },
+        "1025-4096": {
+          "unit": "characters",
+          "n": 2769,
+          "success_rate": 0.771397616468039,
+          "cost_per_1000": 3.151269489346334
+        }
+      }
+    },
+    "semantic_hybrid_secondary": {
+      "variant": "semantic_hybrid",
+      "role": "secondary_descriptive_comparison",
+      "metrics": {
+        "n_prompts": 7324,
+        "n_routed": 7324,
+        "n_abstained": 0,
+        "n_successes": 5671,
+        "coverage": 1.0,
+        "success_rate": 0.7743036592026216,
+        "success_rate_on_routed": 0.7743036592026216,
+        "mean_score_on_routed": 0.7553659202621519,
+        "total_cost": 13.291336836000001,
+        "cost_per_1000": 1.8147647236482798,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      },
+      "comparison_vs_fixed": {
+        "n": 7324,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta": -0.011878754778809394,
+        "success_rate_delta_95ci": [
+          -0.02034407427635172,
+          -0.0032768978700163844
+        ],
+        "cost_per_1000_delta": -1.4145239164391044,
+        "cost_per_1000_delta_95ci": [
+          -1.4606773312124532,
+          -1.3694064171491003
+        ],
+        "relative_call_cost_saving": 0.43802957062420633,
+        "relative_call_cost_saving_95ci": [
+          0.42885693520393325,
+          0.4470910286264783
+        ],
+        "scope": "held-out paired prompt bootstrap; primary or secondary status is declared by policy role; historical selected-call cost excludes router compute and retries"
+      },
+      "cluster_sensitivity": {
+        "resampling_unit": "eval_name",
+        "groups": 86,
+        "replicates": 5000,
+        "seed": 42,
+        "success_rate_delta_95ci": [
+          -0.049289895626192036,
+          0.017880925221627406
+        ],
+        "cost_per_1000_delta_95ci": [
+          -2.1718427586641655,
+          -0.49374824429528497
+        ],
+        "scope": "secondary sensitivity; eval_name groups need not be independent benchmark families"
+      },
+      "calibration_diagnostics": {
+        "per_model": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "brier": 0.22606697727739403,
+            "log_loss": 0.6431334256729937,
+            "observed_success": 0.4188967777170945,
+            "mean_predicted_success": 0.40517892546965445
+          },
+          "claude-instant-v1": {
+            "brier": 0.21891304638243445,
+            "log_loss": 0.6279256462960711,
+            "observed_success": 0.6120972146368104,
+            "mean_predicted_success": 0.598797856464655
+          },
+          "claude-v1": {
+            "brier": 0.21141726528415608,
+            "log_loss": 0.6114089721010216,
+            "observed_success": 0.6459584926269798,
+            "mean_predicted_success": 0.6413570427682381
+          },
+          "claude-v2": {
+            "brier": 0.21191834440781201,
+            "log_loss": 0.613656600657108,
+            "observed_success": 0.6526488257782632,
+            "mean_predicted_success": 0.6390883952932445
+          },
+          "gpt-3.5-turbo-1106": {
+            "brier": 0.21797956872965393,
+            "log_loss": 0.6250265371626293,
+            "observed_success": 0.6178317859093392,
+            "mean_predicted_success": 0.6035880560539998
+          },
+          "gpt-4-1106-preview": {
+            "brier": 0.15382980987127254,
+            "log_loss": 0.4790541351613571,
+            "observed_success": 0.786182413981431,
+            "mean_predicted_success": 0.7755798413970078
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "brier": 0.12569253638740813,
+            "log_loss": 0.3844816074466497,
+            "observed_success": 0.18118514472965594,
+            "mean_predicted_success": 0.1769575064009029
+          },
+          "meta/llama-2-70b-chat": {
+            "brier": 0.1650178679320878,
+            "log_loss": 0.4769576262139401,
+            "observed_success": 0.3063899508465319,
+            "mean_predicted_success": 0.3065842634223257
+          },
+          "mistralai/mistral-7b-chat": {
+            "brier": 0.193421946853395,
+            "log_loss": 0.5716592511914286,
+            "observed_success": 0.2805843801201529,
+            "mean_predicted_success": 0.2812947251697752
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.21946142446032785,
+            "log_loss": 0.6290752770227381,
+            "observed_success": 0.5350901146914254,
+            "mean_predicted_success": 0.5228637125882547
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "brier": 0.20092183357592647,
+            "log_loss": 0.5857869131908765,
+            "observed_success": 0.6365374112506826,
+            "mean_predicted_success": 0.6319415120471569
+          }
+        },
+        "mean_brier": 0.1949673291965335,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 6151,
+            "mean_prediction": 0.04632836356723329,
+            "observed_success": 0.02373597788977402
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 3516,
+            "mean_prediction": 0.1508735511657302,
+            "observed_success": 0.18060295790671219
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 7310,
+            "mean_prediction": 0.25832073902438263,
+            "observed_success": 0.28194254445964434
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 7750,
+            "mean_prediction": 0.34763147464254696,
+            "observed_success": 0.352
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 10581,
+            "mean_prediction": 0.4510839093101565,
+            "observed_success": 0.4613930630375201
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 12545,
+            "mean_prediction": 0.5511389099984514,
+            "observed_success": 0.558070944599442
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 13191,
+            "mean_prediction": 0.6514299536301347,
+            "observed_success": 0.6463497839435979
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 13233,
+            "mean_prediction": 0.7450720500580629,
+            "observed_success": 0.7650570543338623
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 5790,
+            "mean_prediction": 0.8465283196761061,
+            "observed_success": 0.8620034542314335
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 497,
+            "mean_prediction": 0.9110218828384126,
+            "observed_success": 0.9215291750503019
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "fallback_rate": 0.22678864008738395,
+      "selected_model_counts": {
+        "gpt-4-1106-preview": 2931,
+        "zero-one-ai/Yi-34B-Chat": 1730,
+        "claude-v1": 1228,
+        "mistralai/mixtral-8x7b-chat": 604,
+        "claude-v2": 391,
+        "gpt-3.5-turbo-1106": 334,
+        "claude-instant-v1": 68,
+        "meta/code-llama-instruct-34b-chat": 33,
+        "WizardLM/WizardLM-13B-V1.2": 5
+      },
+      "batch_prediction_seconds": 3.2932706999999937,
+      "by_eval_name": {
+        "Chinese_character_riddles": {
+          "n": 24,
+          "success_rate": 0.08333333333333333,
+          "cost_per_1000": 4.382958333333334
+        },
+        "abstract2title": {
+          "n": 36,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.6344133333333334
+        },
+        "accounting_audit": {
+          "n": 6,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 1.615666666666667
+        },
+        "arc-challenge": {
+          "n": 304,
+          "success_rate": 0.8848684210526315,
+          "cost_per_1000": 0.30882763157894744
+        },
+        "bias_detection": {
+          "n": 58,
+          "success_rate": 0.39655172413793105,
+          "cost_per_1000": 6.952258620689656
+        },
+        "chinese-lantern-riddles": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 1.9983333333333333
+        },
+        "chinese-remainder-theorem": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 28.005000000000003
+        },
+        "chinese_ancient_masterpieces_dynasty": {
+          "n": 4,
+          "success_rate": 0.25,
+          "cost_per_1000": 0.055349999999999996
+        },
+        "chinese_ancient_poetry": {
+          "n": 9,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.6261111111111112
+        },
+        "chinese_chu_ci": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.6214000000000001
+        },
+        "chinese_famous_novel": {
+          "n": 3,
+          "success_rate": 0.3333333333333333,
+          "cost_per_1000": 0.26663333333333333
+        },
+        "chinese_hard_translations": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.9676000000000001
+        },
+        "chinese_homonym": {
+          "n": 3,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 0.6293333333333334
+        },
+        "chinese_idioms": {
+          "n": 2,
+          "success_rate": 0.0,
+          "cost_per_1000": 1.884
+        },
+        "chinese_modern_poem_identification": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.6925600000000001
+        },
+        "chinese_poem": {
+          "n": 3,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.10386666666666666
+        },
+        "chinese_shi_jing": {
+          "n": 6,
+          "success_rate": 0.16666666666666666,
+          "cost_per_1000": 0.4953333333333333
+        },
+        "chinese_song_ci": {
+          "n": 5,
+          "success_rate": 0.0,
+          "cost_per_1000": 0.79004
+        },
+        "chinese_tang_poetries": {
+          "n": 10,
+          "success_rate": 0.4,
+          "cost_per_1000": 0.19175999999999999
+        },
+        "chinese_zodiac": {
+          "n": 81,
+          "success_rate": 0.7037037037037037,
+          "cost_per_1000": 1.151111111111111
+        },
+        "consensus_summary": {
+          "n": 76,
+          "success_rate": 0.7105263157894737,
+          "cost_per_1000": 1.539415789473684
+        },
+        "grade-school-math": {
+          "n": 1468,
+          "success_rate": 0.7445504087193461,
+          "cost_per_1000": 4.969387465940055
+        },
+        "hellaswag": {
+          "n": 1978,
+          "success_rate": 0.8291203235591507,
+          "cost_per_1000": 0.7408850353892822
+        },
+        "mbpp": {
+          "n": 72,
+          "success_rate": 0.5,
+          "cost_per_1000": 4.138390888888889
+        },
+        "mmlu-abstract-algebra": {
+          "n": 16,
+          "success_rate": 0.5625,
+          "cost_per_1000": 1.027125
+        },
+        "mmlu-anatomy": {
+          "n": 33,
+          "success_rate": 0.6363636363636364,
+          "cost_per_1000": 0.379339393939394
+        },
+        "mmlu-astronomy": {
+          "n": 25,
+          "success_rate": 0.8,
+          "cost_per_1000": 0.3569520000000001
+        },
+        "mmlu-business-ethics": {
+          "n": 18,
+          "success_rate": 0.7222222222222222,
+          "cost_per_1000": 0.6324111111111113
+        },
+        "mmlu-clinical-knowledge": {
+          "n": 51,
+          "success_rate": 0.7450980392156863,
+          "cost_per_1000": 0.5219568627450981
+        },
+        "mmlu-college-biology": {
+          "n": 28,
+          "success_rate": 0.8928571428571429,
+          "cost_per_1000": 0.44258571428571436
+        },
+        "mmlu-college-chemistry": {
+          "n": 16,
+          "success_rate": 0.6875,
+          "cost_per_1000": 0.7461625000000001
+        },
+        "mmlu-college-computer-science": {
+          "n": 23,
+          "success_rate": 0.7391304347826086,
+          "cost_per_1000": 1.1232956521739133
+        },
+        "mmlu-college-mathematics": {
+          "n": 17,
+          "success_rate": 0.23529411764705882,
+          "cost_per_1000": 1.1129411764705883
+        },
+        "mmlu-college-medicine": {
+          "n": 40,
+          "success_rate": 0.725,
+          "cost_per_1000": 0.50816
+        },
+        "mmlu-college-physics": {
+          "n": 18,
+          "success_rate": 0.5555555555555556,
+          "cost_per_1000": 1.059722222222222
+        },
+        "mmlu-computer-security": {
+          "n": 17,
+          "success_rate": 0.8823529411764706,
+          "cost_per_1000": 0.6264941176470589
+        },
+        "mmlu-conceptual-physics": {
+          "n": 45,
+          "success_rate": 0.6888888888888889,
+          "cost_per_1000": 0.5077999999999999
+        },
+        "mmlu-econometrics": {
+          "n": 19,
+          "success_rate": 0.631578947368421,
+          "cost_per_1000": 1.3542105263157893
+        },
+        "mmlu-electrical-engineering": {
+          "n": 29,
+          "success_rate": 0.6896551724137931,
+          "cost_per_1000": 0.6797862068965516
+        },
+        "mmlu-elementary-mathematics": {
+          "n": 80,
+          "success_rate": 0.7375,
+          "cost_per_1000": 0.9874999999999999
+        },
+        "mmlu-formal-logic": {
+          "n": 25,
+          "success_rate": 0.68,
+          "cost_per_1000": 1.4000000000000001
+        },
+        "mmlu-global-facts": {
+          "n": 25,
+          "success_rate": 0.44,
+          "cost_per_1000": 0.760344
+        },
+        "mmlu-high-school-biology": {
+          "n": 70,
+          "success_rate": 0.8142857142857143,
+          "cost_per_1000": 0.43042857142857144
+        },
+        "mmlu-high-school-chemistry": {
+          "n": 34,
+          "success_rate": 0.6764705882352942,
+          "cost_per_1000": 0.8667058823529412
+        },
+        "mmlu-high-school-computer-science": {
+          "n": 27,
+          "success_rate": 0.8518518518518519,
+          "cost_per_1000": 1.1696
+        },
+        "mmlu-high-school-european-history": {
+          "n": 23,
+          "success_rate": 0.782608695652174,
+          "cost_per_1000": 2.6836347826086953
+        },
+        "mmlu-high-school-geography": {
+          "n": 46,
+          "success_rate": 0.9347826086956522,
+          "cost_per_1000": 0.2127478260869565
+        },
+        "mmlu-high-school-government-and-politics": {
+          "n": 44,
+          "success_rate": 0.9772727272727273,
+          "cost_per_1000": 0.5698136363636365
+        },
+        "mmlu-high-school-macroeconomics": {
+          "n": 85,
+          "success_rate": 0.7647058823529411,
+          "cost_per_1000": 0.6362258823529413
+        },
+        "mmlu-high-school-mathematics": {
+          "n": 55,
+          "success_rate": 0.6727272727272727,
+          "cost_per_1000": 1.0679999999999998
+        },
+        "mmlu-high-school-microeconomics": {
+          "n": 44,
+          "success_rate": 0.9090909090909091,
+          "cost_per_1000": 0.582709090909091
+        },
+        "mmlu-high-school-physics": {
+          "n": 24,
+          "success_rate": 0.6666666666666666,
+          "cost_per_1000": 1.4075000000000002
+        },
+        "mmlu-high-school-psychology": {
+          "n": 118,
+          "success_rate": 0.9067796610169492,
+          "cost_per_1000": 0.40439322033898306
+        },
+        "mmlu-high-school-statistics": {
+          "n": 40,
+          "success_rate": 0.8,
+          "cost_per_1000": 1.554605
+        },
+        "mmlu-high-school-us-history": {
+          "n": 42,
+          "success_rate": 0.8571428571428571,
+          "cost_per_1000": 2.01622380952381
+        },
+        "mmlu-high-school-world-history": {
+          "n": 47,
+          "success_rate": 0.8936170212765957,
+          "cost_per_1000": 2.832234042553192
+        },
+        "mmlu-human-aging": {
+          "n": 53,
+          "success_rate": 0.8113207547169812,
+          "cost_per_1000": 0.2988981132075472
+        },
+        "mmlu-human-sexuality": {
+          "n": 32,
+          "success_rate": 0.75,
+          "cost_per_1000": 0.56975
+        },
+        "mmlu-international-law": {
+          "n": 20,
+          "success_rate": 0.85,
+          "cost_per_1000": 1.04248
+        },
+        "mmlu-jurisprudence": {
+          "n": 17,
+          "success_rate": 0.8235294117647058,
+          "cost_per_1000": 0.876964705882353
+        },
+        "mmlu-logical-fallacies": {
+          "n": 26,
+          "success_rate": 0.9615384615384616,
+          "cost_per_1000": 0.8902076923076924
+        },
+        "mmlu-machine-learning": {
+          "n": 21,
+          "success_rate": 0.9047619047619048,
+          "cost_per_1000": 1.1023809523809522
+        },
+        "mmlu-management": {
+          "n": 18,
+          "success_rate": 0.8333333333333334,
+          "cost_per_1000": 0.17962222222222224
+        },
+        "mmlu-marketing": {
+          "n": 57,
+          "success_rate": 0.8771929824561403,
+          "cost_per_1000": 0.2854736842105264
+        },
+        "mmlu-medical-genetics": {
+          "n": 25,
+          "success_rate": 0.88,
+          "cost_per_1000": 0.400968
+        },
+        "mmlu-miscellaneous": {
+          "n": 162,
+          "success_rate": 0.9135802469135802,
+          "cost_per_1000": 0.3252172839506173
+        },
+        "mmlu-moral-disputes": {
+          "n": 70,
+          "success_rate": 0.7571428571428571,
+          "cost_per_1000": 0.7751514285714286
+        },
+        "mmlu-moral-scenarios": {
+          "n": 204,
+          "success_rate": 0.7843137254901961,
+          "cost_per_1000": 1.4313235294117646
+        },
+        "mmlu-nutrition": {
+          "n": 53,
+          "success_rate": 0.7735849056603774,
+          "cost_per_1000": 0.3135547169811322
+        },
+        "mmlu-philosophy": {
+          "n": 67,
+          "success_rate": 0.7164179104477612,
+          "cost_per_1000": 0.6047910447761193
+        },
+        "mmlu-prehistory": {
+          "n": 65,
+          "success_rate": 0.8153846153846154,
+          "cost_per_1000": 0.19789846153846155
+        },
+        "mmlu-professional-accounting": {
+          "n": 51,
+          "success_rate": 0.7450980392156863,
+          "cost_per_1000": 1.2070745098039217
+        },
+        "mmlu-professional-law": {
+          "n": 331,
+          "success_rate": 0.6465256797583081,
+          "cost_per_1000": 2.810164350453172
+        },
+        "mmlu-professional-medicine": {
+          "n": 51,
+          "success_rate": 0.8431372549019608,
+          "cost_per_1000": 1.7564470588235297
+        },
+        "mmlu-professional-psychology": {
+          "n": 124,
+          "success_rate": 0.782258064516129,
+          "cost_per_1000": 0.7171645161290322
+        },
+        "mmlu-public-relations": {
+          "n": 20,
+          "success_rate": 0.8,
+          "cost_per_1000": 0.32298000000000016
+        },
+        "mmlu-security-studies": {
+          "n": 52,
+          "success_rate": 0.7692307692307693,
+          "cost_per_1000": 0.7871346153846155
+        },
+        "mmlu-sociology": {
+          "n": 33,
+          "success_rate": 0.8787878787878788,
+          "cost_per_1000": 0.3894666666666667
+        },
+        "mmlu-us-foreign-policy": {
+          "n": 20,
+          "success_rate": 0.95,
+          "cost_per_1000": 0.15155999999999997
+        },
+        "mmlu-virology": {
+          "n": 29,
+          "success_rate": 0.41379310344827586,
+          "cost_per_1000": 0.30160689655172407
+        },
+        "mmlu-world-religions": {
+          "n": 42,
+          "success_rate": 0.8571428571428571,
+          "cost_per_1000": 0.20895238095238092
+        },
+        "mtbench": {
+          "n": 8,
+          "success_rate": 0.875,
+          "cost_per_1000": 13.746425
+        },
+        "mtbench-math": {
+          "n": 5,
+          "success_rate": 0.4,
+          "cost_per_1000": 14.462800000000001
+        },
+        "mtbench-reference": {
+          "n": 3,
+          "success_rate": 0.3333333333333333,
+          "cost_per_1000": 7.907437333333333
+        },
+        "test-match": {
+          "n": 1,
+          "success_rate": 1.0,
+          "cost_per_1000": 0.25
+        },
+        "winogrande": {
+          "n": 272,
+          "success_rate": 0.7941176470588235,
+          "cost_per_1000": 0.5036441176470589
+        }
+      },
+      "by_length": {
+        "0-256": {
+          "unit": "characters",
+          "n": 727,
+          "success_rate": 0.7042640990371389,
+          "cost_per_1000": 1.063301727647868
+        },
+        "257-1024": {
+          "unit": "characters",
+          "n": 3828,
+          "success_rate": 0.7891849529780565,
+          "cost_per_1000": 0.9588500303030303
+        },
+        "1025-4096": {
+          "unit": "characters",
+          "n": 2769,
+          "success_rate": 0.7721198988804623,
+          "cost_per_1000": 3.195319091368725
+        }
+      }
+    }
+  },
+  "all_fixed_models": {
+    "WizardLM/WizardLM-13B-V1.2": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 3068,
+      "coverage": 1.0,
+      "success_rate": 0.4188967777170945,
+      "success_rate_on_routed": 0.4188967777170945,
+      "mean_score_on_routed": 0.434496176952485,
+      "total_cost": 0.5285679,
+      "cost_per_1000": 0.07216929273620973,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "claude-instant-v1": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 4483,
+      "coverage": 1.0,
+      "success_rate": 0.6120972146368104,
+      "success_rate_on_routed": 0.6120972146368104,
+      "mean_score_on_routed": 0.595883397050792,
+      "total_cost": 1.6802592,
+      "cost_per_1000": 0.2294182413981431,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "claude-v1": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 4731,
+      "coverage": 1.0,
+      "success_rate": 0.6459584926269798,
+      "success_rate_on_routed": 0.6459584926269798,
+      "mean_score_on_routed": 0.631096395412343,
+      "total_cost": 15.44304,
+      "cost_per_1000": 2.1085527034407425,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "claude-v2": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 4780,
+      "coverage": 1.0,
+      "success_rate": 0.6526488257782632,
+      "success_rate_on_routed": 0.6526488257782632,
+      "mean_score_on_routed": 0.6346941561987984,
+      "total_cost": 17.437008000000002,
+      "cost_per_1000": 2.3808039322774444,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "gpt-3.5-turbo-1106": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 4525,
+      "coverage": 1.0,
+      "success_rate": 0.6178317859093392,
+      "success_rate_on_routed": 0.6178317859093392,
+      "mean_score_on_routed": 0.6185622610595304,
+      "total_cost": 1.755226,
+      "cost_per_1000": 0.23965401419989074,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "gpt-4-1106-preview": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 5758,
+      "coverage": 1.0,
+      "success_rate": 0.786182413981431,
+      "success_rate_on_routed": 0.786182413981431,
+      "mean_score_on_routed": 0.7826529219006008,
+      "total_cost": 23.65131,
+      "cost_per_1000": 3.2292886400873835,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "meta/code-llama-instruct-34b-chat": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 1327,
+      "coverage": 1.0,
+      "success_rate": 0.18118514472965594,
+      "success_rate_on_routed": 0.18118514472965594,
+      "mean_score_on_routed": 0.2024371927908247,
+      "total_cost": 1.248040024,
+      "cost_per_1000": 0.17040415401419992,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "meta/llama-2-70b-chat": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 2244,
+      "coverage": 1.0,
+      "success_rate": 0.3063899508465319,
+      "success_rate_on_routed": 0.3063899508465319,
+      "mean_score_on_routed": 0.3170466957946478,
+      "total_cost": 1.4646492000000002,
+      "cost_per_1000": 0.19997941015838344,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "mistralai/mistral-7b-chat": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 2055,
+      "coverage": 1.0,
+      "success_rate": 0.2805843801201529,
+      "success_rate_on_routed": 0.2805843801201529,
+      "mean_score_on_routed": 0.3068746586564719,
+      "total_cost": 0.33329020000000004,
+      "cost_per_1000": 0.04550658110322229,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "mistralai/mixtral-8x7b-chat": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 3919,
+      "coverage": 1.0,
+      "success_rate": 0.5350901146914254,
+      "success_rate_on_routed": 0.5350901146914254,
+      "mean_score_on_routed": 0.548313762971054,
+      "total_cost": 0.9728741999999999,
+      "cost_per_1000": 0.1328337247405789,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "zero-one-ai/Yi-34B-Chat": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 4662,
+      "coverage": 1.0,
+      "success_rate": 0.6365374112506826,
+      "success_rate_on_routed": 0.6365374112506826,
+      "mean_score_on_routed": 0.6436441835062807,
+      "total_cost": 1.3413448,
+      "cost_per_1000": 0.1831437465865647,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "primary_policy_id": "relay_primary",
+  "claims_scope": "historical_selected_LLM_call_costs_only_excludes_router_compute_retries_and_comparison_calls",
+  "primary_conclusion": {
+    "quality_loss_margin": 0.01,
+    "quality_noninferiority_supported": false,
+    "lower_historical_call_cost_supported": true,
+    "both_primary_criteria_met": false,
+    "quality_status": "inconclusive",
+    "interpretation_scope": "historical held-out RouterBench calls; no net production savings or RouteLLM superiority claim"
+  },
+  "files_sha256": {
+    "evaluation_started.json": "912f8a5844b2560a4b02911ac013143a7ef44c1c9b0a0028b48f6728675a7c88",
+    "fixed_reference_observed_results.parquet": "be6811750f49beb5ab15438b48890d7fb1b471a9149e2ac0db36baa5b3757b09",
+    "relay_primary_observed_results.parquet": "806770d8ae9b4ef9005b5f4153a8cec60a652385e32f5769c14ab4e6928676fb",
+    "relay_primary_predicted_costs.parquet": "2fb0c78119d8406c5bcaee3b1c41e39e5d533fe605d39f5cfce18d51b1f2a006",
+    "relay_primary_probabilities.parquet": "4aa72584296b618e3be0678f92730bdf73317b612fba1df75d4e303cc4eb19d1",
+    "relay_primary_routes.parquet": "3e8cf988cf7928b96e675b68016a9f94d5a04331e5a693c1a98098decdf760cb",
+    "semantic_hybrid_secondary_coverage.parquet": "89aaa79884df7d4055cdc1023e57abf0a056fec3a1dbd421b1e447cc75373174",
+    "semantic_hybrid_secondary_observed_results.parquet": "7026163bfe5c867c4fc4536fa8c6f0cea758d508e2abe802e65cf13e9d6ad99c",
+    "semantic_hybrid_secondary_predicted_costs.parquet": "2fb0c78119d8406c5bcaee3b1c41e39e5d533fe605d39f5cfce18d51b1f2a006",
+    "semantic_hybrid_secondary_probabilities.parquet": "dc837cb66878dd4a5945f392534272ca9c9fdf9a100e76763bef21d4a9b9b70b",
+    "semantic_hybrid_secondary_routes.parquet": "6953b699337d23a3a1c81e711be420bc03e33d8687b1a4cb83434ab8d4efab36",
+    "semantic_secondary_coverage.parquet": "6eefe71b012c733e3a4f45c3c0e788ecf3ad1d47dccd9342ea7798d1cd704927",
+    "semantic_secondary_observed_results.parquet": "114514a5491413495428a71df809d5e1c5424ed12033e8491c7d731b3a69e6a5",
+    "semantic_secondary_predicted_costs.parquet": "2fb0c78119d8406c5bcaee3b1c41e39e5d533fe605d39f5cfce18d51b1f2a006",
+    "semantic_secondary_probabilities.parquet": "b5b7d7f70c4c7fc149eaff2f6e1263742ecc33da5f1fca23dc474c3282fdc8f8",
+    "semantic_secondary_routes.parquet": "ae8ba84f91ae16ccbb28bb7e7f8b1e6351a98544500e76dcec1a0a473dab0843",
+    "structural_secondary_observed_results.parquet": "2cba84121175df74738af2a91803faa1f5d5f5e20f277bede916de4da816205a",
+    "structural_secondary_predicted_costs.parquet": "2fb0c78119d8406c5bcaee3b1c41e39e5d533fe605d39f5cfce18d51b1f2a006",
+    "structural_secondary_probabilities.parquet": "957f5cb1054fe38bb1a3ae64aa0e21ab0b3fceb870df9f14b2d72877a9e04d84",
+    "structural_secondary_routes.parquet": "0b8d19d072b9d059826e337368c77d9b85f4153206ec631acc9d93a1b9eb4c39",
+    "test_rows.parquet": "69a0b88c5ad5dc7cbbcbe98548d040975d65e892f0bba31474c8d22fae32144a"
+  }
+}

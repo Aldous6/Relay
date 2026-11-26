@@ -1,0 +1,17 @@
+{
+  "scope": "actual frozen v3 artifact plus local discovery, no generation or quality evaluation",
+  "prompt": "Resume en una frase qué es un modelo de lenguaje.",
+  "result": {
+    "live_model": "qwen2.5:1.5b",
+    "historical_model": "mistralai/mixtral-8x7b-chat",
+    "historical_tier": 1,
+    "decision": "pairwise_weak",
+    "router_seconds": 4.553838899999391,
+    "mapping_status": "experimental_unvalidated_historical_tier_projection",
+    "context_window": 16384,
+    "conservative_input_bound": 1728,
+    "router_mode": "experimental_v3",
+    "warning": "La conexión al catálogo local es experimental. Los resultados históricos no validan la calidad ni el ahorro de estos modelos locales. Relay v3 fue elegido con desarrollo reutilizado y todavía necesita evaluación independiente.",
+    "research_candidate": "pairwise_hybrid_a5"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "created_at_utc": "2026-11-17T08:13:25.513618+00:00",
+  "user_facing_date": "2026-11-17",
+  "scope": "authored development pilot, not independent holdout",
+  "tasks": [
+    "interval_difference",
+    "dependency_order",
+    "quoted_record_stream",
+    "rolling_window",
+    "immutable_config_merge",
+    "generation_cache",
+    "decimal_allocation",
+    "scoped_posix_paths"
+  ],
+  "task_count": 8,
+  "acquisition_contract": {
+    "suite_sha256": "50ee37b3e86aff93aca88248d675684d19f55f759a9ed683b7bd82021edbd6fa",
+    "tariffs_sha256": "405df5588448071a19c36f6313390ec594d1cd7ce277ade68b5c7268044f7f42",
+    "sources_sha256": {
+      "maintenance.py": "5fd2b6d6b3c5bbe27960f72f344d81dc0d0f0fd79276d22dc705522dfec62b1d",
+      "maintenance_acceptance.py": "d972e675d78465a87e9a49662c1a4d394f56aadbae61ead178b6cd5fd526d1a6",
+      "maintenance_cli.py": "5ba6d492583d500dd092c37121a08b2d65c44795b0f30377d77402af01a38fe8",
+      "maintenance_collection.py": "bcbb1f25226c8875886246155748dbe7ac2aef85a4569255ee833b9e1a7bb355",
+      "maintenance_comparison.py": "b5a9d4fee4d9dfb8fc2e8105496a329047f85842455b6bab88dcda7dbd2b6ebf",
+      "maintenance_competition.py": "b88c7f1fb3def465fb996bbfbbcdd1714eacfa200a3fd29e4dccb4874d03f8b4",
+      "maintenance_learning.py": "85380d426b9773443ae646eb5af30feef96d03efb4366ae4841ff0acf6cce954",
+      "maintenance_provider.py": "dc98b20da3c6c66215cd7c19f1e1b5d2558c1e11cfdf5cf8abf848ca51c7c322",
+      "maintenance_reference.py": "bef8b944136ded728b10fe4362e97e48ce76c14e9eeef159464e86c44a2f673a",
+      "maintenance_routing.py": "91c74f4684b53c0a0a7a0a566c44939f81107326ac299132db2f8881502cce80",
+      "maintenance_workspace.py": "908be9d21f5bef1819cb31474a4f52d64a10dd239a3c5e3a29a470aa8a2b11bd"
+    },
+    "scope": "diagnostic",
+    "tasks_sha256": "56b90547bf3805689e5a06f04627c07c70bbb3daf4a264d75b86271a3062c901",
+    "models": {
+      "weak": "groq/openai/gpt-oss-20b",
+      "strong": "groq/openai/gpt-oss-120b"
+    },
+    "continuation": {
+      "inspection_model": "groq/openai/gpt-oss-20b",
+      "repair_model": "groq/openai/gpt-oss-120b",
+      "max_repairs": 1
+    }
+  },
+  "primary_relay": {
+    "name": "relay_verified_cascade_v1",
+    "learned": false,
+    "inspection": "20b",
+    "first_edit": "20b",
+    "repair": "120b",
+    "max_repairs": 1
+  },
+  "primary_reference": {
+    "name": "published_routellm_bert_transfer_local_wrapper",
+    "threshold": 0.5,
+    "same_candidates_and_continuation": true
+  },
+  "secondary_reference": "BERT threshold selected on these same development tasks; always reported separately",
+  "acceptance": "private tests frozen before generation, never sent to models or used for repairs",
+  "output_tokens": 4096,
+  "request_budget": 8000,
+  "minimum_interval_seconds": 60,
+  "max_acquisition_calls_total": 40,
+  "max_calls_per_invocation": 30,
+  "cost_basis": "noncached public tariff scenario over reported usage; not cash savings or total operating cost",
+  "missing_rule": "no selective exclusion from the preregistered comparison",
+  "api_generation_calls_before_freeze": 0,
+  "technical_revision": 2,
+  "reason": "Retain safe HTTP provider error taxonomy; preserve original interrupted run and single diagnostic attempt separately. Same tasks, candidates, request limits, policy and primary threshold.",
+  "prior_acquisition_calls": 4,
+  "prior_unknown_usage_calls": 1,
+  "original_run": "outputs/maintenance-comparison/20261117-live-v1",
+  "diagnostic": "outputs/maintenance-comparison/20261117-live-v1-diagnostics/request-20b.json",
+  "selected_run": "outputs/maintenance-comparison/20261117-live-v2",
+  "total_call_ceiling_including_prior": 40,
+  "selection_rule": "One complete new acquisition chosen before its outcomes; do not choose the better run retrospectively."
+}

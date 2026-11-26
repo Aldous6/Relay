@@ -1,0 +1,73 @@
+﻿RELAY · Guion de ensayo de Aldo Santiago Márquez
+Objetivo de cierre: 7 min 40 s. En el aviso de un minuto ya debe estar proyectada la conclusión. Los tiempos incluyen pausas en las figuras. Las indicaciones entre corchetes no se leen.
+
+Portada · 0:00 a 0:22
+
+¿Cuántos aciertos estaría dispuesto a perder para gastar menos al responder mil consultas? Con Relay probé si podía elegir un modelo de lenguaje leyendo solamente la pregunta. Encontré dos respuestas a esa decisión, según cuánto margen de error se permita.
+
+1 · Datos y preguntas · 0:22 a 1:10
+
+Usé RouterBench. Para cada consulta ya tenía el puntaje y el costo histórico de las respuestas de once modelos. Podía comparar distintas elecciones sobre los mismos textos. Llamé acierto a una respuesta con puntaje de al menos 0,75.
+
+Después de quitar duplicados quedaron 36.481 consultas. Reservé 7.324 para la prueba final. En 311 ningún modelo llegó al umbral. Esas consultas carecen de etiqueta de nivel y sí cuentan al evaluar las estrategias completas. Me interesaban tres cosas: si podía anticipar el nivel, qué características del texto ayudaban y cuánto costaba seguir la predicción en la práctica. Así podía medir por separado un error de clasificación y una respuesta que realmente falla.
+
+2 · Cómo elegí los modelos · 1:10 a 2:03
+
+Separé las consultas por una huella del texto antes de definir los niveles. Con costos de entrenamiento ordené los modelos en tres grupos. Para etiquetar cada consulta busqué el modelo más barato que alcanzaba el puntaje y tomé su grupo como nivel correcto. El clasificador aprendió con catorce características, como longitud y proporción de mayúsculas. A cada nivel le asigné un modelo representante usando solo entrenamiento.
+
+La estrategia directa podía elegir cualquiera de los once modelos. Estimaba la probabilidad de acierto y el costo de cada uno. Elegía el de menor costo previsto que alcanzara el umbral de probabilidad. Fijé la estrategia antes de evaluar el test. Si ningún modelo alcanzaba la probabilidad exigida, conservaba el que tenía la probabilidad estimada más alta.
+
+3 · ¿Se puede anticipar el nivel? · 2:03 a 2:52
+
+El bosque aleatorio obtuvo 0,44 en F1 macro. La regla basada en longitud dio 0,38 y usar la clase más frecuente dio 0,23. En esa métrica cada nivel pesa lo mismo. El bosque fue el mejor en la validación de entrenamiento.
+
+[Señala el 29 de 320.] Al mirar el nivel premium cambia la lectura. Había 320 consultas cuya opción suficiente de menor costo era premium. El bosque reconoció solo 29. Eso me llevó a preguntar cuánto afecta ese error a la respuesta que recibe la persona.
+
+4 · ¿Qué señales usa el bosque? · 2:52 a 3:32
+
+Mezclé entre consultas los valores de una característica y medí cuánto caía el F1 del nivel premium. Si la predicción empeora, el bosque estaba aprovechando esa información. Repetí la prueba en tres particiones de entrenamiento.
+
+Las mayúsculas y el número de palabras estuvieron entre las tres variables más influyentes en las tres particiones. Las marcas de código aparecieron solo en una. Es una asociación predictiva: escribir una pregunta en mayúsculas no demuestra que esa pregunta requiera un modelo más caro.
+
+5 · ¿Compensa seguir la predicción? · 3:32 a 4:45
+
+[Recorre las filas de la tabla.] La referencia fue usar GPT-4 siempre, elegido porque logró más aciertos en el ajuste. Acertó el 78,62 % en la prueba. Elegir el representante por nivel redujo el costo casi 95 %, pero el éxito cayó al 55,07 %. Son unos 236 aciertos netos menos por cada mil consultas.
+
+Al elegir directamente entre once modelos con palabras y características del texto, el éxito fue 77,06 % con un ahorro de 45,13 %. También había dejado preparada una variante secundaria que usaba solo las catorce características para elegir entre los once. Obtuvo 5.734 aciertos, el 78,29 %, con 33,37 % de ahorro. Equivale a unos tres aciertos netos menos por mil frente al fijo. Así se ve qué cambia según la estrategia que uno decide usar. La variante estructural recuperó parte de los aciertos a cambio de gastar más que la estrategia principal.
+
+6 · ¿Se cumplió el margen de calidad? · 4:45 a 5:42
+
+Antes de abrir el test fijé la pérdida admisible en un punto porcentual: diez aciertos por cada mil consultas. Para estimar la incertidumbre remuestreé las consultas cinco mil veces y conservé juntas las respuestas que se comparaban en cada consulta. De esa manera, si cambiaba la mezcla de preguntas en una repetición, cambiaba por igual para las dos estrategias.
+
+[Señala el punto y la línea.] Con la estrategia principal ahorré 45,13 % del costo histórico. La pérdida fue de unos dieciséis aciertos por mil, con un intervalo del 95 % que va de siete a veinticuatro. El margen de diez cae dentro del intervalo. El ahorro se sostuvo, pero los datos también admiten una pérdida mayor de la que fijé.
+
+7 · ¿Y si Relay solo elige entre dos modelos? · 5:42 a 6:55
+
+Hice otra comparación sobre los mismos textos, esta vez con dos opciones, GPT-4 y Mixtral. Comparé Relay con un selector transferido de RouteLLM llamado BERT. Elegí el umbral de ambos con datos de desarrollo.
+
+Relay obtuvo 5.760 aciertos y usar GPT-4 siempre dio 5.758. Son dos aciertos netos más en todo el test. El costo histórico de las llamadas bajó 2,85 %, con intervalo del 95 % de 2,38 a 3,39 %. La diferencia de éxito fue de más 0,03 puntos porcentuales. Su intervalo va de menos 0,16 a más 0,22. Incluye el empate y queda dentro del margen de un punto en esta comparación secundaria.
+
+BERT consiguió 5.746 aciertos y Relay costó 2,17 % más que BERT. La ventaja depende de con quién comparo. El ahorro de 45 % y los dos aciertos adicionales pertenecen a estrategias distintas.
+
+8 · Conclusión y límites · 6:55 a 7:40
+
+[Al aviso de un minuto ya debes estar aquí.] Si priorizo un ahorro grande, la estrategia principal entre once modelos ahorró 45 %, con una pérdida de calidad que podría rebasar mi margen. Si priorizo conservar los aciertos de GPT-4, el experimento de dos modelos mostró un ahorro mucho menor y una calidad observada cercana al fijo.
+
+Estos son costos históricos de llamadas. Para llevar la decisión a una aplicación, repetiría la prueba con consultas nuevas y contabilizaría también el selector y los reintentos. Gracias.
+
+Preguntas para el ensayo posterior
+
+«Si el bosque detectó tan pocos casos premium, ¿por qué lo elegiste?»
+Elegí el clasificador con mejor F1 macro en validación cruzada de entrenamiento. En test, la regresión logística detectó más casos premium, 51,25 %, y tuvo un F1 macro menor, 0,3954. Si la prioridad fuera detectar premium, convendría fijar esa métrica antes de entrenar y evaluar la nueva regla en otras consultas.
+
+«¿Por qué no usaste dos modelos como resultado principal si mantiene la calidad?»
+La estrategia de once se declaró principal antes de abrir el test. La comparación de dos responde otra pregunta con el mismo test y dos candidatos específicos. Su intervalo es compatible con mi margen, aunque también con una pequeña pérdida de aciertos. Además, el ahorro comparado con GPT-4 fue 2,85 % y Relay costó más que BERT. Para convertirla en mi apuesta principal fijaría esa decisión antes de evaluarla en otra muestra.
+
+«¿Por qué hay 7.013 consultas para clasificar y 7.324 para medir el ahorro?»
+En 311 consultas ningún modelo alcanzó el puntaje exigido. No puedo asignarles el nivel del modelo suficiente más barato. Sí pueden llegar a una aplicación, consumir recursos y terminar sin acierto. Al comparar costo y éxito conté las 7.324 para todas las estrategias, incluido GPT-4 fijo.
+
+Fuentes para consultar después del ensayo
+Resultados y variantes por modelo: reports/final/relay_results.md, reports/final/summary.json y docs/protocolo_final.md.
+Comparación del par GPT-4/Mixtral y BERT: reports/routellm-bert-secondary-v1/summary.json.
+Datos y artículo de RouterBench: https://doi.org/10.57967/hf/1996 y https://arxiv.org/abs/2403.12031v2.
+Para la visualización se consultó la guía de Scientific Agent Skills, Kassis et al. (2026), https://doi.org/10.48550/arXiv.2609.00065.

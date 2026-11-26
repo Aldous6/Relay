@@ -1,0 +1,14 @@
+# Additional packages installed in .venv-relay, based on the original locked environment.
+# Optional local CPU inference only. No PyTorch installation or remote inference.
+click==8.5.1
+filelock==4.2.9
+flatbuffers==25.12.19
+fsspec==2026.9.0
+hf-xet==1.8.0
+httpcore2==2.16.0
+httpx2==2.16.0
+huggingface_hub==2.4.0
+idna==3.20
+onnxruntime==1.31.1
+tokenizers==0.23.3
+truststore==0.10.5

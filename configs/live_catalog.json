@@ -1,0 +1,14 @@
+{
+  "provider": "ollama",
+  "base_url": "http://127.0.0.1:11434",
+  "mapping_status": "experimental_unvalidated_historical_tier_projection",
+  "candidate_models": [
+    {"model": "qwen2.5:0.5b", "tier": 0, "label": "Ligero", "source": "https://ollama.com/library/qwen2.5:0.5b"},
+    {"model": "qwen2.5:1.5b", "tier": 1, "label": "Intermedio", "source": "https://ollama.com/library/qwen2.5:1.5b"},
+    {"model": "llama3:latest", "tier": 2, "label": "Amplio", "source": "https://ollama.com/library/llama3"}
+  ],
+  "default_max_output_tokens": 256,
+  "quality_or_cost_transfer_validated": false,
+  "monetary_api_cost_available": false,
+  "required_behavior": "Never present historical success probabilities or historical dollar savings as verified live-model performance."
+}

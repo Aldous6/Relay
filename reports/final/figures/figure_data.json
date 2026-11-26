@@ -1,0 +1,165 @@
+{
+  "routing_policies": [
+    {
+      "policy_id": "relay_primary",
+      "label": "Relay primaria (lexical_hybrid)",
+      "success_rate": 0.770617149098853,
+      "cost_per_1000": 1.7719505548880394,
+      "primary": true
+    },
+    {
+      "policy_id": "structural_secondary",
+      "label": "Estructural, secundaria",
+      "success_rate": 0.7829055161114146,
+      "cost_per_1000": 2.1515453872200982,
+      "primary": false
+    },
+    {
+      "policy_id": "semantic_secondary",
+      "label": "Semántica, secundaria",
+      "success_rate": 0.7747132714363736,
+      "cost_per_1000": 1.81726698416166,
+      "primary": false
+    },
+    {
+      "policy_id": "semantic_hybrid_secondary",
+      "label": "Semántica + 14 variables, secundaria",
+      "success_rate": 0.7743036592026216,
+      "cost_per_1000": 1.8147647236482798,
+      "primary": false
+    }
+  ],
+  "all_fixed_models": [
+    {
+      "model": "WizardLM/WizardLM-13B-V1.2",
+      "success_rate": 0.4188967777170945,
+      "cost_per_1000": 0.07216929273620973
+    },
+    {
+      "model": "claude-instant-v1",
+      "success_rate": 0.6120972146368104,
+      "cost_per_1000": 0.2294182413981431
+    },
+    {
+      "model": "claude-v1",
+      "success_rate": 0.6459584926269798,
+      "cost_per_1000": 2.1085527034407425
+    },
+    {
+      "model": "claude-v2",
+      "success_rate": 0.6526488257782632,
+      "cost_per_1000": 2.3808039322774444
+    },
+    {
+      "model": "gpt-3.5-turbo-1106",
+      "success_rate": 0.6178317859093392,
+      "cost_per_1000": 0.23965401419989074
+    },
+    {
+      "model": "gpt-4-1106-preview",
+      "success_rate": 0.786182413981431,
+      "cost_per_1000": 3.2292886400873835
+    },
+    {
+      "model": "meta/code-llama-instruct-34b-chat",
+      "success_rate": 0.18118514472965594,
+      "cost_per_1000": 0.17040415401419992
+    },
+    {
+      "model": "meta/llama-2-70b-chat",
+      "success_rate": 0.3063899508465319,
+      "cost_per_1000": 0.19997941015838344
+    },
+    {
+      "model": "mistralai/mistral-7b-chat",
+      "success_rate": 0.2805843801201529,
+      "cost_per_1000": 0.04550658110322229
+    },
+    {
+      "model": "mistralai/mixtral-8x7b-chat",
+      "success_rate": 0.5350901146914254,
+      "cost_per_1000": 0.1328337247405789
+    },
+    {
+      "model": "zero-one-ai/Yi-34B-Chat",
+      "success_rate": 0.6365374112506826,
+      "cost_per_1000": 0.1831437465865647
+    }
+  ],
+  "primary_difference": {
+    "n": 7324,
+    "replicates": 5000,
+    "seed": 42,
+    "success_rate_delta": -0.015565264882577826,
+    "success_rate_delta_95ci": [
+      -0.02403058438012015,
+      -0.006826870562534134
+    ],
+    "cost_per_1000_delta": -1.4573380851993445,
+    "cost_per_1000_delta_95ci": [
+      -1.5040975024576764,
+      -1.411439589363742
+    ],
+    "relative_call_cost_saving": 0.4512876511279924,
+    "relative_call_cost_saving_95ci": [
+      0.4415760108370304,
+      0.4611978026750502
+    ],
+    "scope": "held-out paired prompt bootstrap; primary or secondary status is declared by policy role; historical selected-call cost excludes router compute and retries"
+  },
+  "cluster_sensitivity": {
+    "resampling_unit": "eval_name",
+    "groups": 86,
+    "replicates": 5000,
+    "seed": 42,
+    "success_rate_delta_95ci": [
+      -0.048261169576112976,
+      0.010840823001731188
+    ],
+    "cost_per_1000_delta_95ci": [
+      -2.295688131547973,
+      -0.5204264069471155
+    ],
+    "scope": "secondary sensitivity; eval_name groups need not be independent benchmark families"
+  },
+  "quality_loss_margin": 0.01,
+  "tier_confusion_counts": [
+    [
+      2757,
+      979,
+      14
+    ],
+    [
+      1465,
+      1418,
+      60
+    ],
+    [
+      154,
+      137,
+      29
+    ]
+  ],
+  "tier_confusion_labels": [
+    0,
+    1,
+    2
+  ],
+  "tier_confusion_row_percentages": [
+    [
+      73.52,
+      26.106666666666666,
+      0.37333333333333335
+    ],
+    [
+      49.77913693510024,
+      48.18212708120965,
+      2.038735983690112
+    ],
+    [
+      48.125,
+      42.8125,
+      9.0625
+    ]
+  ]
+}

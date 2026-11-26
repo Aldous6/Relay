@@ -1,0 +1,970 @@
+{
+  "kind": "descriptive resident CPU latency on selected development prompts",
+  "executed_at_utc": "2026-11-09T00:35:56.866743+00:00",
+  "source_summary_sha256": "da98fd7f2e952bb64c81d1eca8995527f337a82c11c91d4e9d43d952e57deb49",
+  "source_configuration_sha256": "e23c68f763a6b60ef1f88cb35817e695f613d48c0aec9cf4f778b428211b44ed",
+  "selected_candidate": "pairwise_hybrid_a5",
+  "selected_parameter": 20,
+  "selected_artifact_sha256": "adaf619331c710f6cedc91b6ae06bda44070e3372071575fd55722d36d4cd7f4",
+  "bert_threshold": 0.5,
+  "bert_checkpoint": "routellm/bert_gpt4_augmented",
+  "bert_checkpoint_revision": "86237e3df400762178ea98379477b8296e66d5e4",
+  "bert_weights_sha256": "e2a92240bad1c7fb9befbf021a62fad5feb1e2a3990d53a28d160a39bb1cac7b",
+  "reference_selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+  "reference_manifest_sha256": "3bf541749991e7a17d400040c0bba70adaf36e08a1464cd220c7c5bcf6be619b",
+  "sample": {
+    "n": 60,
+    "selection": "first validation IDs in original source order, matching v3 runner",
+    "prompt_keys_sha256": "9f22412f5ca9d5b437f854a2f6054cf49b0abf6082da3578f63cd84dea513031",
+    "prompt_keys": [
+      {
+        "source_row": 2,
+        "text_sha256": "aa788ea1341f051aaa2aaf9f42b20d6c72abbc108dd8422c6153c51e2a6c4d1c"
+      },
+      {
+        "source_row": 11,
+        "text_sha256": "264c4dd3c92d60cf12bb35a2058476d8a5933d6bb6e206890821511e56943c06"
+      },
+      {
+        "source_row": 16,
+        "text_sha256": "761ba74d93e0cb9a1e41faec62e48fc4557af1cc18c5021994d33a57ac9ed7b2"
+      },
+      {
+        "source_row": 19,
+        "text_sha256": "ed703b47a7da29c3cde9e891e6c2c31bb4f38bd6e8479724385ffa54889d4642"
+      },
+      {
+        "source_row": 34,
+        "text_sha256": "fc967943d5f4241ac5b16b8211cfccaeaabb2e95d8f5f6ae2bc1327e604411c8"
+      },
+      {
+        "source_row": 48,
+        "text_sha256": "65dc221df2ff2593611070db8d051d64b381c94afc8eb0e674dc99264fb587f8"
+      },
+      {
+        "source_row": 50,
+        "text_sha256": "f77c483c980a268842e71d9ce701ca884f811657c162a5b831915db152503734"
+      },
+      {
+        "source_row": 68,
+        "text_sha256": "bf34a861e23a295fc4b959774678c50013e457d2f4ef31b15d684243d60f43e2"
+      },
+      {
+        "source_row": 84,
+        "text_sha256": "af42294c448f2641cbfa887a96622a67b61a50f3d46419006266dbd35701bd68"
+      },
+      {
+        "source_row": 87,
+        "text_sha256": "c933c96a84700636076f1972ab70d9bb8f8f63c5bc22dd2cf62a5c8dec3be19e"
+      },
+      {
+        "source_row": 90,
+        "text_sha256": "8403662fe2e4e9c73162721f1d235c574341e2bd88dd184a16184329ccdd0cf2"
+      },
+      {
+        "source_row": 96,
+        "text_sha256": "53fac53d02f0afdc0335a4889ce8e984bbc185000a1695a9c209ecd0f729f2f1"
+      },
+      {
+        "source_row": 99,
+        "text_sha256": "fa1d24cda054cad89e7c1592f69f110e82b504c47b4e43b68334fe5f013eae4b"
+      },
+      {
+        "source_row": 105,
+        "text_sha256": "12484db2755ce87da24d0f0cea11613078a907df05d14249b08d11dcce359464"
+      },
+      {
+        "source_row": 110,
+        "text_sha256": "283f8efd0fd1791856d14f4b2cdf4adcaba1c293b945908a436bdd02a9d1d120"
+      },
+      {
+        "source_row": 113,
+        "text_sha256": "6cb56ae38c74e5950abec6f9ddb7d281483b299652bdc1fd7313adc50104222d"
+      },
+      {
+        "source_row": 139,
+        "text_sha256": "237b0e62047799f939e1a52d2f95a92ff53c69cec18b8939d1823c6efe5fed27"
+      },
+      {
+        "source_row": 151,
+        "text_sha256": "72099a211e00f46020389836b2f3d438829bb38fc0f8c003124513ab1353d321"
+      },
+      {
+        "source_row": 155,
+        "text_sha256": "ad0197d523edb6e021e98a4618a3bfea876ecef39a6e3416cd148055110eeddb"
+      },
+      {
+        "source_row": 161,
+        "text_sha256": "f3cd0c31b9539a3740dfead374319fb908277b32eecc6164cadf91b9fb899bdb"
+      },
+      {
+        "source_row": 200,
+        "text_sha256": "057a0712aae6f5f8a972447e5f82499786068e6c58e7366c476d1f5f6fe641dc"
+      },
+      {
+        "source_row": 202,
+        "text_sha256": "157bfae00882b32d91fd9b1ceb0633e1b4bcaf550c9ab2f08f6779c19679f060"
+      },
+      {
+        "source_row": 213,
+        "text_sha256": "636a8bac6ad5f55b4d32dd8382995ba30fb9fc5f53c54d355c74b95756aa0677"
+      },
+      {
+        "source_row": 218,
+        "text_sha256": "bbcd587f2d5a2b457f570bf0412390ba1673953eb1c0a18eb161dd940edfe6e0"
+      },
+      {
+        "source_row": 221,
+        "text_sha256": "3d3646b19f5d81108fe621f412e3bf040de1fc86f6ad705e2401f339b01c5fe6"
+      },
+      {
+        "source_row": 236,
+        "text_sha256": "c26ea5a7e2eed27e18c8378e73524e2dd46942beb967c7bb4a0042643066e93b"
+      },
+      {
+        "source_row": 248,
+        "text_sha256": "eaed47d5949062d3432f83bcc338a84818003bfc7adbfe8d271870ffbce971e1"
+      },
+      {
+        "source_row": 249,
+        "text_sha256": "cbede0cca8cd45963328c508fbb0d5812c837603f774102dcd7cbb73c5ea47ec"
+      },
+      {
+        "source_row": 254,
+        "text_sha256": "59cf4147882c77942880474e4446d43478c3bdfec41169820f01f34a622edb55"
+      },
+      {
+        "source_row": 260,
+        "text_sha256": "7c8b92c04f757780e7eef7e06aa74750a87c975ccacb3140c8a540c02d91379c"
+      },
+      {
+        "source_row": 264,
+        "text_sha256": "8eb15c3c0ae1033e8f39daf8d346a0432a18ae155b918802e9b126ad3e0d153e"
+      },
+      {
+        "source_row": 266,
+        "text_sha256": "6db94b608f13c38020b13d62febc74c753cc437d812cd86cd651aef6b2a7f387"
+      },
+      {
+        "source_row": 278,
+        "text_sha256": "7c8242e9e94862f80759076fc8f9bbb9ec724d98e85735497b0113838527d75d"
+      },
+      {
+        "source_row": 282,
+        "text_sha256": "10e1104d5402adeedf863af318f0c21391a5edf1c218618f1cd99b2b8b478533"
+      },
+      {
+        "source_row": 283,
+        "text_sha256": "a98ac52fc7974f64beb485e19fdff8914235edaeadbc7042143b44e750d47179"
+      },
+      {
+        "source_row": 291,
+        "text_sha256": "7ba43e189baffbd8fc329c88c0566ec81b5b77a60258bf07f981d9b3eb782708"
+      },
+      {
+        "source_row": 307,
+        "text_sha256": "2b47cd7c6c9f5b038c61600ab8ece99defb6a2e6509113fbd92b2d348afa1c70"
+      },
+      {
+        "source_row": 318,
+        "text_sha256": "f36a922b2ca91c3099b69dab3419bfab9f88f1a6b7bc1e3be7928cacbf36b3e7"
+      },
+      {
+        "source_row": 320,
+        "text_sha256": "91e8ca9fc8574871a9f004f15d9beac61c01ed66cb959eac7c0994f003ca6d46"
+      },
+      {
+        "source_row": 322,
+        "text_sha256": "7560bc975f755be49d7d63a899030c7e8c644cc425b1a7a5f9da1b774ac9d135"
+      },
+      {
+        "source_row": 331,
+        "text_sha256": "4fa10d561c5d22b68241f359b64c4125b55abcce08fc8625e55fc14e8d1f7f43"
+      },
+      {
+        "source_row": 333,
+        "text_sha256": "8fee804f09bec0a1d4ca7756e6c16af5511a72cbfa2eebd75a7ecf65bab04450"
+      },
+      {
+        "source_row": 342,
+        "text_sha256": "d98741aa43f8ee1254a179c009ed992657585681099cf2c3c8adb552e0da55c9"
+      },
+      {
+        "source_row": 346,
+        "text_sha256": "c11b4bf94a4b487e8a79fe8fe408d1e45a8b87e786288686e1f9aa0a634ddd70"
+      },
+      {
+        "source_row": 351,
+        "text_sha256": "fcdaa4c26a4ccc44e7f85c777cf54cbcc543d980825e185c225c2d84eedc3342"
+      },
+      {
+        "source_row": 353,
+        "text_sha256": "29a9cd28bd24174098be89e8ca30554860927de87a58c32d823a9dd02f5008b3"
+      },
+      {
+        "source_row": 358,
+        "text_sha256": "e4143ba7e855ef932a46ea707febb28a3d859b432c1a41437d48926a94fcd35a"
+      },
+      {
+        "source_row": 361,
+        "text_sha256": "a2a8ee4cf96debd2a10471b00483079e756751421bfbbd8f54cc4b2a64fb1005"
+      },
+      {
+        "source_row": 367,
+        "text_sha256": "775d9ad0b220893314eec0afbdd3e6d9b6ffad350d4a5f9eb9cbfc0600148a93"
+      },
+      {
+        "source_row": 378,
+        "text_sha256": "3b4242779865d3d2b5710ce3a5b7212deb5eb048d62507716978c4e0d8c80f15"
+      },
+      {
+        "source_row": 382,
+        "text_sha256": "33b2e8d8c379ee836ee250ce354e09b085646fbb4f7d27286925d2d7090f58ca"
+      },
+      {
+        "source_row": 391,
+        "text_sha256": "dcab0fbace867bf7a078af2062d00cfd0fed9886d93ff5a3c0d090f5315598ec"
+      },
+      {
+        "source_row": 412,
+        "text_sha256": "39e344c52679ccb319c97b28af1cff1d323e1566555b00ca5c606dea5320f40d"
+      },
+      {
+        "source_row": 419,
+        "text_sha256": "17d18be376b6f7c67553ec634d3ce71ded19b5365c47f57b4b015e492849a3a2"
+      },
+      {
+        "source_row": 426,
+        "text_sha256": "42353d2023ce6dc00f1a2617df3a2b2a4245d2a2f66d0e57aa628c7912baa72c"
+      },
+      {
+        "source_row": 458,
+        "text_sha256": "06d63447a356379463644d3948c2f86f57ec706162677cb4e17bcc356013fb9e"
+      },
+      {
+        "source_row": 463,
+        "text_sha256": "99fd0fa15146c4c128b228c87f50ca60313d0f8573e303ecad670c5eb9db27cf"
+      },
+      {
+        "source_row": 474,
+        "text_sha256": "d29d93c77b3435464ca9a6e21d8ae114b99e542152c523fd98a8553ac8a600d7"
+      },
+      {
+        "source_row": 484,
+        "text_sha256": "96e2affde162ec8d862f06b115f0eba64865eb4b61c714c8f3b42cce564966c0"
+      },
+      {
+        "source_row": 497,
+        "text_sha256": "b90e2e9c1e1cccca27cacecae88418b84a52cfa8b9be94ac57d7da2930bcfa2a"
+      }
+    ],
+    "input_characters_min": 80,
+    "input_characters_median": 880.5,
+    "input_characters_max": 2023
+  },
+  "warmups_per_backend": 2,
+  "execution_order": "alternating backend order for each prompt; sequential in one process",
+  "feature_or_prediction_cache_used": false,
+  "latency": {
+    "relay": {
+      "n": 60,
+      "median_seconds": 0.022857349998957943,
+      "p95_seconds": 0.031427464993612375,
+      "min_seconds": 0.013802499990561046,
+      "max_seconds": 0.03764509999018628,
+      "total_seconds": 1.3949984999926528
+    },
+    "routellm_bert": {
+      "n": 60,
+      "median_seconds": 0.6410817500000121,
+      "p95_seconds": 1.0626874800080257,
+      "min_seconds": 0.1968944999971427,
+      "max_seconds": 1.2367475999926683,
+      "total_seconds": 34.90613860001031
+    }
+  },
+  "cold_initialization_seconds": {
+    "relay_joblib_load": 0.48038269999960903,
+    "bert_reference_initialization": 57.19270559999859
+  },
+  "cold_initialization_scope": {
+    "relay": "joblib deserialization after external artifact hash preflight",
+    "bert": "pinned LocalBERTReference initialization, including its file-hash verification, optional-library imports, tokenizer and CPU model loading",
+    "comparability": "different initialization boundaries and unreset OS file caches; do not compare these as controlled cold-start times"
+  },
+  "timed_work": {
+    "relay": "full-text prompt representation, predictions, predicted costs and fixed pair policy",
+    "routellm_bert": "native tokenizer, truncated forward inference, official three-class aggregation and fixed threshold decision; no extra full-token coverage audit"
+  },
+  "bert_tokenization": {
+    "max_length": 512,
+    "truncation": true,
+    "padding": true,
+    "note": "BERT uses its official 512-token limit; Relay processes full prompt text. Equal source text does not imply equal retained context."
+  },
+  "hardware_environment": {
+    "platform": "Windows-11-10.0.22631-SP0",
+    "processor": "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD",
+    "logical_cpus": 16,
+    "python": "3.12.10",
+    "torch_num_threads": 4,
+    "native_pool_limit": 4,
+    "native_pools_during_measurement": [
+      {
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "version": "0.3.30"
+      },
+      {
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "version": null
+      },
+      {
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "version": "0.3.30"
+      },
+      {
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "version": null
+      },
+      {
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "version": null
+      }
+    ],
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.0",
+      "joblib": "1.5.3",
+      "torch": "2.9.0+cpu",
+      "transformers": "4.57.1",
+      "tokenizers": "0.22.2"
+    }
+  },
+  "per_prompt_timings": [
+    {
+      "source_row": 2,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 96,
+      "relay_seconds": 0.015973600005963817,
+      "routellm_bert_seconds": 0.2567903000017395
+    },
+    {
+      "source_row": 11,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 80,
+      "routellm_bert_seconds": 0.2092802999977721,
+      "relay_seconds": 0.017339099998935126
+    },
+    {
+      "source_row": 16,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 81,
+      "relay_seconds": 0.015548800001852214,
+      "routellm_bert_seconds": 0.20888750000449363
+    },
+    {
+      "source_row": 19,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 88,
+      "routellm_bert_seconds": 0.21589839999796823,
+      "relay_seconds": 0.01617820000683423
+    },
+    {
+      "source_row": 34,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 83,
+      "relay_seconds": 0.01710820000153035,
+      "routellm_bert_seconds": 0.23375290000694804
+    },
+    {
+      "source_row": 48,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 80,
+      "routellm_bert_seconds": 0.1996655999973882,
+      "relay_seconds": 0.016156600002432242
+    },
+    {
+      "source_row": 50,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 83,
+      "relay_seconds": 0.01707469999382738,
+      "routellm_bert_seconds": 0.20213289999810513
+    },
+    {
+      "source_row": 68,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 81,
+      "routellm_bert_seconds": 0.21693340000638273,
+      "relay_seconds": 0.018406100003630854
+    },
+    {
+      "source_row": 84,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 108,
+      "relay_seconds": 0.01883050000469666,
+      "routellm_bert_seconds": 0.24961410000105388
+    },
+    {
+      "source_row": 87,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 82,
+      "routellm_bert_seconds": 0.2112526999990223,
+      "relay_seconds": 0.013802499990561046
+    },
+    {
+      "source_row": 90,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 81,
+      "relay_seconds": 0.020242800004780293,
+      "routellm_bert_seconds": 0.1968944999971427
+    },
+    {
+      "source_row": 96,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 82,
+      "routellm_bert_seconds": 0.20131230000697542,
+      "relay_seconds": 0.014886300006764941
+    },
+    {
+      "source_row": 99,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 83,
+      "relay_seconds": 0.014464299994870089,
+      "routellm_bert_seconds": 0.20870229999127332
+    },
+    {
+      "source_row": 105,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1194,
+      "routellm_bert_seconds": 0.7712804000038886,
+      "relay_seconds": 0.028599099998245947
+    },
+    {
+      "source_row": 110,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1367,
+      "relay_seconds": 0.027133700001286343,
+      "routellm_bert_seconds": 0.90670439999667
+    },
+    {
+      "source_row": 113,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1404,
+      "routellm_bert_seconds": 0.9702499000122771,
+      "relay_seconds": 0.029680300009204075
+    },
+    {
+      "source_row": 139,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 332,
+      "relay_seconds": 0.017460200004279613,
+      "routellm_bert_seconds": 0.24790930000017397
+    },
+    {
+      "source_row": 151,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1670,
+      "routellm_bert_seconds": 1.1146292999910656,
+      "relay_seconds": 0.033646700001554564
+    },
+    {
+      "source_row": 155,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 2023,
+      "relay_seconds": 0.03764509999018628,
+      "routellm_bert_seconds": 1.2367475999926683
+    },
+    {
+      "source_row": 161,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1588,
+      "routellm_bert_seconds": 0.9821309999970254,
+      "relay_seconds": 0.0304108999989694
+    },
+    {
+      "source_row": 200,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1423,
+      "relay_seconds": 0.03092089999699965,
+      "routellm_bert_seconds": 0.9394536000036169
+    },
+    {
+      "source_row": 202,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1092,
+      "routellm_bert_seconds": 0.7920462000038242,
+      "relay_seconds": 0.026477500010514632
+    },
+    {
+      "source_row": 213,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1392,
+      "relay_seconds": 0.027344499991158955,
+      "routellm_bert_seconds": 0.8713841999997385
+    },
+    {
+      "source_row": 218,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1076,
+      "routellm_bert_seconds": 0.7393130999989808,
+      "relay_seconds": 0.02590829999826383
+    },
+    {
+      "source_row": 221,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1359,
+      "relay_seconds": 0.027061900007538497,
+      "routellm_bert_seconds": 0.9381799999973737
+    },
+    {
+      "source_row": 236,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1415,
+      "routellm_bert_seconds": 0.7812206999951741,
+      "relay_seconds": 0.026527699999860488
+    },
+    {
+      "source_row": 248,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1535,
+      "relay_seconds": 0.02735499999835156,
+      "routellm_bert_seconds": 1.008840299997246
+    },
+    {
+      "source_row": 249,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1414,
+      "routellm_bert_seconds": 0.8542755000089528,
+      "relay_seconds": 0.02901220000057947
+    },
+    {
+      "source_row": 254,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 835,
+      "relay_seconds": 0.02229090000037104,
+      "routellm_bert_seconds": 0.5076464000012493
+    },
+    {
+      "source_row": 260,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 926,
+      "routellm_bert_seconds": 0.6892032000032486,
+      "relay_seconds": 0.028032900008838624
+    },
+    {
+      "source_row": 264,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1446,
+      "relay_seconds": 0.0313828999933321,
+      "routellm_bert_seconds": 1.0599537000089185
+    },
+    {
+      "source_row": 266,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1447,
+      "routellm_bert_seconds": 0.9014325000025565,
+      "relay_seconds": 0.029362900007981807
+    },
+    {
+      "source_row": 278,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1334,
+      "relay_seconds": 0.027802700002212077,
+      "routellm_bert_seconds": 0.8398846999916714
+    },
+    {
+      "source_row": 282,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1162,
+      "routellm_bert_seconds": 1.0487687999993796,
+      "relay_seconds": 0.026852800001506694
+    },
+    {
+      "source_row": 283,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1022,
+      "relay_seconds": 0.023423799997544847,
+      "routellm_bert_seconds": 0.7097796000016388
+    },
+    {
+      "source_row": 291,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1601,
+      "routellm_bert_seconds": 1.1489790000050562,
+      "relay_seconds": 0.03227419999893755
+    },
+    {
+      "source_row": 307,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 627,
+      "relay_seconds": 0.020457999999052845,
+      "routellm_bert_seconds": 0.4599501000047894
+    },
+    {
+      "source_row": 318,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1331,
+      "routellm_bert_seconds": 0.820580700004939,
+      "relay_seconds": 0.029687500005820766
+    },
+    {
+      "source_row": 320,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 719,
+      "relay_seconds": 0.02077070000814274,
+      "routellm_bert_seconds": 0.4853201999940211
+    },
+    {
+      "source_row": 322,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1070,
+      "routellm_bert_seconds": 0.7004347999900347,
+      "relay_seconds": 0.0235367999994196
+    },
+    {
+      "source_row": 331,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 957,
+      "relay_seconds": 0.026412999999593012,
+      "routellm_bert_seconds": 0.66999080000096
+    },
+    {
+      "source_row": 333,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1318,
+      "routellm_bert_seconds": 0.7478613999992376,
+      "relay_seconds": 0.02856249999604188
+    },
+    {
+      "source_row": 342,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1201,
+      "relay_seconds": 0.027375799996661954,
+      "routellm_bert_seconds": 0.7685387999954401
+    },
+    {
+      "source_row": 346,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1211,
+      "routellm_bert_seconds": 0.8159668000007514,
+      "relay_seconds": 0.025943799992091954
+    },
+    {
+      "source_row": 351,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 1049,
+      "relay_seconds": 0.02532039998914115,
+      "routellm_bert_seconds": 0.6442637000000104
+    },
+    {
+      "source_row": 353,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 1111,
+      "routellm_bert_seconds": 0.81471409999358,
+      "relay_seconds": 0.026744399991002865
+    },
+    {
+      "source_row": 358,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 942,
+      "relay_seconds": 0.024315099988598377,
+      "routellm_bert_seconds": 0.6422853999974905
+    },
+    {
+      "source_row": 361,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 566,
+      "routellm_bert_seconds": 0.4131218000111403,
+      "relay_seconds": 0.019016900012502447
+    },
+    {
+      "source_row": 367,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 580,
+      "relay_seconds": 0.019534499995643273,
+      "routellm_bert_seconds": 0.6398781000025338
+    },
+    {
+      "source_row": 378,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 664,
+      "routellm_bert_seconds": 0.4377673999988474,
+      "relay_seconds": 0.0216087000007974
+    },
+    {
+      "source_row": 382,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 674,
+      "relay_seconds": 0.021987200001603924,
+      "routellm_bert_seconds": 0.449182500000461
+    },
+    {
+      "source_row": 391,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 334,
+      "routellm_bert_seconds": 0.2964732999971602,
+      "relay_seconds": 0.01888649999455083
+    },
+    {
+      "source_row": 412,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 525,
+      "relay_seconds": 0.020266899999114685,
+      "routellm_bert_seconds": 0.3147116000036476
+    },
+    {
+      "source_row": 419,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 223,
+      "routellm_bert_seconds": 0.20813210000051185,
+      "relay_seconds": 0.017116899995016865
+    },
+    {
+      "source_row": 426,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 273,
+      "relay_seconds": 0.01728220000222791,
+      "routellm_bert_seconds": 0.2099467999942135
+    },
+    {
+      "source_row": 458,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 446,
+      "routellm_bert_seconds": 0.3263714000058826,
+      "relay_seconds": 0.02022769999166485
+    },
+    {
+      "source_row": 463,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 316,
+      "relay_seconds": 0.017755300010321662,
+      "routellm_bert_seconds": 0.2302073000028031
+    },
+    {
+      "source_row": 474,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 350,
+      "routellm_bert_seconds": 0.2515360999968834,
+      "relay_seconds": 0.019299199993838556
+    },
+    {
+      "source_row": 484,
+      "order": [
+        "relay",
+        "routellm_bert"
+      ],
+      "input_characters": 589,
+      "relay_seconds": 0.021988199994666502,
+      "routellm_bert_seconds": 0.41713760000129696
+    },
+    {
+      "source_row": 497,
+      "order": [
+        "routellm_bert",
+        "relay"
+      ],
+      "input_characters": 324,
+      "routellm_bert_seconds": 0.27063519999501295,
+      "relay_seconds": 0.01828150000073947
+    }
+  ],
+  "source_files_sha256": {
+    "tools/benchmark_v3.py": "7f756391b8bcea47ea330d7fa8d7be4408b9309b1403e48d5225a5a2cf684361",
+    "src/routerbench/improvement.py": "93de6db427ef3d8f382b8096f00d7bcc2cb9350bf2b0da6ac306b27a3a5ec319",
+    "src/routerbench/pairwise.py": "b025ba1021ccfc2a993ba0df4a5556a2205d310a55e14b60714996c631df2327",
+    "src/routerbench/learner.py": "0c52e3096f26b544cbaf9a22cd0f6607f783eb18b695ab13e6f09baafe9a4518",
+    "src/routerbench/representations.py": "57106ba348d1692cd951332101f266ca0196dcc37f64f79e92a29dde2dd026e1",
+    "src/routerbench/routellm_reference.py": "d4565a6c0e86ee01ada052c3487c8343e43ca44b6b6982ff45f3597323a8604d"
+  },
+  "outer_test_evaluated": false,
+  "model_responses_generated": false,
+  "paid_api_calls": false,
+  "limitations": [
+    "small nonrandom development sample, not a serving SLA or population confidence interval",
+    "resident models and fitted vocabularies are reused; input representations and forward predictions are recomputed",
+    "background CPU load and OS scheduling are not controlled or certified by this script; run after training stops",
+    "model loading is separate; no network, queueing, LLM generation, retries or application rendering is timed",
+    "latency does not establish quality superiority, monetary net savings or production readiness"
+  ]
+}

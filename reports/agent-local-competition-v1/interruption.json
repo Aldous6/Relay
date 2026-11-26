@@ -1,0 +1,15 @@
+{
+  "status": "interrupted_commit_failure_not_used_as_complete_comparison",
+  "reason": "Windows PermissionError WinError 5 replacing journal.json.tmp; actual lock source unconfirmed",
+  "complete_episodes": 3,
+  "durable_completed_calls": 16,
+  "pending_calls": 1,
+  "temporary_journal_preserved": true,
+  "source_and_configuration_changed_for_resume": false,
+  "replacement_run": "reports/agent-local-competition-v2",
+  "manifest_sha256": "647a668abeafbeef90089e04a482fdf89df8f1180edfe1cae2e542b968f486e3",
+  "journal_sha256": "08b0c08866d410a214dfd3e666c3683f9f0e431d9df9cdb03c0114c422425751",
+  "temporary_journal_sha256": "aeddbf69ed4efc4cda0b9543da6656fb6d111507d35a8aa7681f7f07162d2b94",
+  "generation_parameters_or_policy_thresholds_changed": false,
+  "rerun_scope": "all six tasks and all five policies; same known development instances; only file persistence robustness changed"
+}

@@ -1,0 +1,26 @@
+{
+  "experiment_id": "relay-v5-semantic-nonlinear-pilot-v1",
+  "source_config": "configs/relay_v4.json",
+  "encoder_config": "configs/semantic_encoder.json",
+  "semantic_control_run": "reports/relay-semantic-development-v1",
+  "semantic_control_summary_sha256": "5965e354e7d9248237cc6d3a3912754c9187d3438a2845549415c7e2e219ec47",
+  "reference_operating_run": "reports/relay-v4-operating-v1",
+  "population": "original 6000 fit pilot; identical 4383 calibration and 4406 validation; do not activate unused fit",
+  "expected_population": {"fit": 6000, "calibration": 4383, "validation": 4406},
+  "semantic_mode": "semantic_hybrid",
+  "candidates": [
+    {"id": "e5_hgb15", "max_leaf_nodes": 15},
+    {"id": "e5_hgb31", "max_leaf_nodes": 31}
+  ],
+  "max_iter": 150,
+  "min_samples_leaf": 30,
+  "l2_regularization": 1.0,
+  "native_threads": 4,
+  "quantiles": 101,
+  "quality_loss_margin": 0.005,
+  "bootstrap_replicates": 5000,
+  "seed": 42,
+  "outer_test_allowed": false,
+  "automatic_live_promotion": false,
+  "output_dir": "reports/relay-v5-semantic-pilot-v1"
+}

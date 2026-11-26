@@ -1,0 +1,57 @@
+{
+  "script_sha256": "79825459b1faeb39bf8069a5ec5814236a31923067d6e9e556d3aadeb6d43ca8",
+  "audit_script_sha256": "dfc50fc72e4129e01af1e29cf729997e740cc8857d89bb8a117081bd4eb486de",
+  "metrics_source_sha256": "7fb7ec10528cfc6b86d55acc50267bdb9b814df4da3cb103265931038201470e",
+  "manifest_sha256": "fbec6d2951640355344656a5aa591ae0c6c3902f8ab348c87eae5c8909593cc3",
+  "journal_sha256": "11e5e4d64f89c2dcb46f5d15da4ab85b5f50494514ce6fab75531ca597ccdccc",
+  "summary_sha256": "babd14b5fb0718d20df78543bbdf3368027a0218c84d4bfa642bcfdf2bac0f73",
+  "source_bundle_sha256": "221cc68c9627d86a9db0c7dc9bbc2728205948f0cbd930764d040a4148f85e1c",
+  "report_sha256": "6801098897970ebf2d408047cf2769011e6aef596ca0252a508774c8afcfc1e7",
+  "comparisons_sha256": "aba4877e1ba2ebef7cd4ccac96406e86c0737b34fe0d12cb66cce766ee01441d",
+  "freeze_sha256": "990c049a8a7b949c747059909321f1b156265cd3b9c36de37eeff0cbe7f40722",
+  "journal_records_verified": 394,
+  "episodes_verified": 30,
+  "recomputed_baselines": [
+    "always_strong",
+    "always_weak",
+    "routellm_bert_transfer",
+    "local_structural_transfer"
+  ],
+  "frozen_policy_rotation_verified": true,
+  "technical_predecessor_audit": {
+    "link": {
+      "run_directory": "reports/agent-local-competition-v1",
+      "manifest_sha256": "647a668abeafbeef90089e04a482fdf89df8f1180edfe1cae2e542b968f486e3",
+      "journal_sha256": "08b0c08866d410a214dfd3e666c3683f9f0e431d9df9cdb03c0114c422425751",
+      "reason": "Windows PermissionError WinError 5 replacing journal.json.tmp; actual lock source unconfirmed",
+      "same_tasks_models_parameters_thresholds": true,
+      "previous_durable_calls": 16,
+      "previous_pending_calls": 1,
+      "freeze_sha256": "30039eaa4e37a2761685783702dabc680fb718de403b297e169642b8e2973b05"
+    },
+    "durable_completed_calls": 16,
+    "pending_calls": 1,
+    "completed_episodes": 3,
+    "same_scientific_configuration_verified": true,
+    "changed_source_files": [
+      "routerbench/agent_evaluation.py"
+    ],
+    "durable_calls_input_tokens": 9635,
+    "durable_calls_output_tokens": 258,
+    "durable_calls_generation_seconds": 45.00266989989905,
+    "interruption_sha256": "14501246831703acdffbe3860675ecb37415649238429be6513e33e91892454a",
+    "temporary_journal_sha256": "aeddbf69ed4efc4cda0b9543da6656fb6d111507d35a8aa7681f7f07162d2b94",
+    "scope": "additional interrupted work reported separately; pending call consumption unknown; no pooling into completed paired comparison"
+  },
+  "protocol_document": {
+    "path": "docs/agent_local_competition_protocolo.md",
+    "sha256": "f4ceada582975605c59ca671dbf65d1033c936256076715839cc81f8473e8db8"
+  },
+  "generation_executed": false,
+  "training_executed": false,
+  "tools_executed": false,
+  "models_deserialized": false,
+  "raw_data_opened": false,
+  "monetary_conversion_applied": false,
+  "primary_policy_changed": false
+}

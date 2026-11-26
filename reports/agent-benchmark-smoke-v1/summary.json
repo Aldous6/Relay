@@ -1,0 +1,607 @@
+{
+  "payload": {
+    "schema_version": 1,
+    "freeze_sha256": "c4a8b743c110727e09c766e6989d1a7657c6ab9f57589564e1390f36770bee33",
+    "journal_sha256": "4689cd7bdf830babcb47c1270994f60a9d728b93862a82485e0279d9685b2f8a",
+    "completed_pairs": [
+      [
+        "synthetic-42-file_lookup-000",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-file_lookup-000",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-file_lookup-000",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-file_lookup-001",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-file_lookup-001",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-file_lookup-001",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-file_lookup-002",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-file_lookup-002",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-file_lookup-002",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-file_lookup-003",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-file_lookup-003",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-file_lookup-003",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-aggregate_records-000",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-aggregate_records-000",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-aggregate_records-000",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-aggregate_records-001",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-aggregate_records-001",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-aggregate_records-001",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-aggregate_records-002",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-aggregate_records-002",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-aggregate_records-002",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-aggregate_records-003",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-aggregate_records-003",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-aggregate_records-003",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-repair_function-000",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-repair_function-000",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-repair_function-000",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-repair_function-001",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-repair_function-001",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-repair_function-001",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-repair_function-002",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-repair_function-002",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-repair_function-002",
+        "cheap_then_escalate"
+      ],
+      [
+        "synthetic-42-repair_function-003",
+        "always_strong"
+      ],
+      [
+        "synthetic-42-repair_function-003",
+        "always_weak"
+      ],
+      [
+        "synthetic-42-repair_function-003",
+        "cheap_then_escalate"
+      ]
+    ],
+    "configuration": {
+      "schema_version": 1,
+      "run_id": "relay-agents-infrastructure-v1",
+      "execution_mode": "simulated",
+      "evaluation_split": "development",
+      "independent_validation": false,
+      "models": {
+        "strong": "simulated/strong",
+        "weak": "simulated/weak"
+      },
+      "max_calls": 12,
+      "generation_manifest": {
+        "kind": "scripted_mock",
+        "identifier": "tool_fixture_v1",
+        "real_model_calls": false,
+        "usage": "fictitious counters: 100 input, 20 output, zero cached per call",
+        "failure_injection": "one malformed reply on initial weak aggregate/repair calls"
+      },
+      "pricing": {
+        "simulated/strong": {
+          "input_per_million": 10.0,
+          "output_per_million": 20.0,
+          "cached_input_per_million": 5.0,
+          "source": "fictitious fixture tariff, not a provider price",
+          "as_of": "2026-11-12"
+        },
+        "simulated/weak": {
+          "input_per_million": 1.0,
+          "output_per_million": 2.0,
+          "cached_input_per_million": 0.5,
+          "source": "fictitious fixture tariff, not a provider price",
+          "as_of": "2026-11-12"
+        }
+      },
+      "compute_rates": {
+        "router_usd_per_second": null,
+        "verification_usd_per_second": null,
+        "tool_usd_per_second": null
+      },
+      "roi": {
+        "min_total_cost_saving": 0.3,
+        "max_success_rate_loss": 0.02,
+        "max_p95_router_seconds": 0.2
+      },
+      "bootstrap_replicates": 2000,
+      "seed": 42,
+      "per_family": 4
+    },
+    "metrics": {
+      "schema_version": 1,
+      "baseline_policy": "always_strong",
+      "roi_config": {
+        "min_total_cost_saving": 0.3,
+        "max_success_rate_loss": 0.02,
+        "max_p95_router_seconds": 0.2
+      },
+      "policies": {
+        "always_strong": {
+          "n_episodes": 12,
+          "source_groups": 12,
+          "successes": 12,
+          "failures": 0,
+          "success_rate": 1.0,
+          "terminations": {
+            "final_answer": 12
+          },
+          "calls": 47,
+          "retry_calls": 0,
+          "tokens": {
+            "input_tokens": {
+              "total": 4700,
+              "known_total": 4700,
+              "known_calls": 47,
+              "unknown_calls": 0
+            },
+            "output_tokens": {
+              "total": 940,
+              "known_total": 940,
+              "known_calls": 47,
+              "unknown_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 0,
+              "known_total": 0,
+              "known_calls": 47,
+              "unknown_calls": 0
+            }
+          },
+          "costs": {
+            "total_usd": null,
+            "cost_per_task_usd": null,
+            "cost_per_success_usd": null,
+            "known_subtotal_usd": 0.0658,
+            "components": {
+              "llm_usd": {
+                "total": 0.0658,
+                "known_subtotal": 0.0658,
+                "known_calls": 47,
+                "unknown_calls": 0
+              },
+              "router_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 47
+              },
+              "verification_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 47
+              },
+              "tool_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 47
+              }
+            },
+            "retry_llm_usd": 0.0,
+            "retry_llm_known_subtotal_usd": 0.0,
+            "retry_llm_unknown_calls": 0,
+            "retry_scope": "subset of llm_usd, already included exactly once in total_usd",
+            "denominator": "all episodes, including failed tasks"
+          },
+          "coverage": {
+            "complete_cost_episodes": 0,
+            "unknown_cost_episodes": 12,
+            "complete_cost_calls": 0,
+            "unknown_cost_calls": 47,
+            "llm_cost_basis": {
+              "estimated": 47
+            }
+          },
+          "routing_latency": {
+            "n": 47,
+            "known": 47,
+            "unknown": 0,
+            "complete": true,
+            "p50_seconds": 0.0002699000178836286,
+            "p95_seconds": 0.0004947600187733769,
+            "quantile_scope": "observed measurements only; unknown values are not zero"
+          },
+          "end_to_end_latency": {
+            "n": 12,
+            "known": 12,
+            "unknown": 0,
+            "complete": true,
+            "p50_seconds": 0.8131951499963179,
+            "p95_seconds": 2.3098908400192157,
+            "quantile_scope": "observed measurements only; unknown values are not zero"
+          },
+          "execution_modes": [
+            "simulated"
+          ],
+          "evaluation_splits": [
+            "development"
+          ]
+        },
+        "always_weak": {
+          "n_episodes": 12,
+          "source_groups": 12,
+          "successes": 12,
+          "failures": 0,
+          "success_rate": 1.0,
+          "terminations": {
+            "final_answer": 12
+          },
+          "calls": 55,
+          "retry_calls": 8,
+          "tokens": {
+            "input_tokens": {
+              "total": 5500,
+              "known_total": 5500,
+              "known_calls": 55,
+              "unknown_calls": 0
+            },
+            "output_tokens": {
+              "total": 1100,
+              "known_total": 1100,
+              "known_calls": 55,
+              "unknown_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 0,
+              "known_total": 0,
+              "known_calls": 55,
+              "unknown_calls": 0
+            }
+          },
+          "costs": {
+            "total_usd": null,
+            "cost_per_task_usd": null,
+            "cost_per_success_usd": null,
+            "known_subtotal_usd": 0.007699999999999999,
+            "components": {
+              "llm_usd": {
+                "total": 0.007699999999999999,
+                "known_subtotal": 0.007699999999999999,
+                "known_calls": 55,
+                "unknown_calls": 0
+              },
+              "router_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 55
+              },
+              "verification_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 55
+              },
+              "tool_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 55
+              }
+            },
+            "retry_llm_usd": 0.00112,
+            "retry_llm_known_subtotal_usd": 0.00112,
+            "retry_llm_unknown_calls": 0,
+            "retry_scope": "subset of llm_usd, already included exactly once in total_usd",
+            "denominator": "all episodes, including failed tasks"
+          },
+          "coverage": {
+            "complete_cost_episodes": 0,
+            "unknown_cost_episodes": 12,
+            "complete_cost_calls": 0,
+            "unknown_cost_calls": 55,
+            "llm_cost_basis": {
+              "estimated": 55
+            }
+          },
+          "routing_latency": {
+            "n": 55,
+            "known": 55,
+            "unknown": 0,
+            "complete": true,
+            "p50_seconds": 0.0003187000402249396,
+            "p95_seconds": 0.0004853400285355747,
+            "quantile_scope": "observed measurements only; unknown values are not zero"
+          },
+          "end_to_end_latency": {
+            "n": 12,
+            "known": 12,
+            "unknown": 0,
+            "complete": true,
+            "p50_seconds": 1.1352958499919623,
+            "p95_seconds": 3.067396449981606,
+            "quantile_scope": "observed measurements only; unknown values are not zero"
+          },
+          "execution_modes": [
+            "simulated"
+          ],
+          "evaluation_splits": [
+            "development"
+          ]
+        },
+        "cheap_then_escalate": {
+          "n_episodes": 12,
+          "source_groups": 12,
+          "successes": 12,
+          "failures": 0,
+          "success_rate": 1.0,
+          "terminations": {
+            "final_answer": 12
+          },
+          "calls": 55,
+          "retry_calls": 8,
+          "tokens": {
+            "input_tokens": {
+              "total": 5500,
+              "known_total": 5500,
+              "known_calls": 55,
+              "unknown_calls": 0
+            },
+            "output_tokens": {
+              "total": 1100,
+              "known_total": 1100,
+              "known_calls": 55,
+              "unknown_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 0,
+              "known_total": 0,
+              "known_calls": 55,
+              "unknown_calls": 0
+            }
+          },
+          "costs": {
+            "total_usd": null,
+            "cost_per_task_usd": null,
+            "cost_per_success_usd": null,
+            "known_subtotal_usd": 0.04298,
+            "components": {
+              "llm_usd": {
+                "total": 0.04298,
+                "known_subtotal": 0.04298,
+                "known_calls": 55,
+                "unknown_calls": 0
+              },
+              "router_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 55
+              },
+              "verification_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 55
+              },
+              "tool_usd": {
+                "total": null,
+                "known_subtotal": 0.0,
+                "known_calls": 0,
+                "unknown_calls": 55
+              }
+            },
+            "retry_llm_usd": 0.0112,
+            "retry_llm_known_subtotal_usd": 0.0112,
+            "retry_llm_unknown_calls": 0,
+            "retry_scope": "subset of llm_usd, already included exactly once in total_usd",
+            "denominator": "all episodes, including failed tasks"
+          },
+          "coverage": {
+            "complete_cost_episodes": 0,
+            "unknown_cost_episodes": 12,
+            "complete_cost_calls": 0,
+            "unknown_cost_calls": 55,
+            "llm_cost_basis": {
+              "estimated": 55
+            }
+          },
+          "routing_latency": {
+            "n": 55,
+            "known": 55,
+            "unknown": 0,
+            "complete": true,
+            "p50_seconds": 0.0003142000059597194,
+            "p95_seconds": 0.0004751499916892499,
+            "quantile_scope": "observed measurements only; unknown values are not zero"
+          },
+          "end_to_end_latency": {
+            "n": 12,
+            "known": 12,
+            "unknown": 0,
+            "complete": true,
+            "p50_seconds": 1.1980648000026122,
+            "p95_seconds": 2.893061900002067,
+            "quantile_scope": "observed measurements only; unknown values are not zero"
+          },
+          "execution_modes": [
+            "simulated"
+          ],
+          "evaluation_splits": [
+            "development"
+          ]
+        }
+      },
+      "comparisons": {
+        "always_weak": {
+          "baseline_policy": "always_strong",
+          "paired": {
+            "n_episodes": 12,
+            "n_source_groups": 12,
+            "paired_by": "episode_id",
+            "bootstrap_unit": "source_group",
+            "bootstrap_replicates": 2000,
+            "seed": 42,
+            "success_rate_delta": 0.0,
+            "success_rate_delta_95ci": [
+              0.0,
+              0.0
+            ],
+            "cost_per_task_usd_delta": null,
+            "cost_per_task_usd_delta_95ci": null,
+            "relative_total_cost_saving": null,
+            "relative_total_cost_saving_95ci": null,
+            "valid_saving_bootstrap_replicates": 0,
+            "complete_paired_costs": false,
+            "scope": "paired source-group percentile bootstrap; all task outcomes, no claim of independent sampling"
+          },
+          "roi": {
+            "adoption_status": "not_assessed_simulation",
+            "point_criteria": {
+              "total_cost_saving": null,
+              "success_loss": true,
+              "router_p95": true
+            },
+            "point_criteria_met": null,
+            "confidence_criteria_met": null,
+            "independent_validation_declared": false,
+            "missing_requirements": [
+              "paired_total_cost_or_positive_baseline_cost_unknown"
+            ],
+            "automatic_adoption": false,
+            "scope": "proposed monetary/quality/latency gates; metadata and integrity checks do not certify independence"
+          }
+        },
+        "cheap_then_escalate": {
+          "baseline_policy": "always_strong",
+          "paired": {
+            "n_episodes": 12,
+            "n_source_groups": 12,
+            "paired_by": "episode_id",
+            "bootstrap_unit": "source_group",
+            "bootstrap_replicates": 2000,
+            "seed": 42,
+            "success_rate_delta": 0.0,
+            "success_rate_delta_95ci": [
+              0.0,
+              0.0
+            ],
+            "cost_per_task_usd_delta": null,
+            "cost_per_task_usd_delta_95ci": null,
+            "relative_total_cost_saving": null,
+            "relative_total_cost_saving_95ci": null,
+            "valid_saving_bootstrap_replicates": 0,
+            "complete_paired_costs": false,
+            "scope": "paired source-group percentile bootstrap; all task outcomes, no claim of independent sampling"
+          },
+          "roi": {
+            "adoption_status": "not_assessed_simulation",
+            "point_criteria": {
+              "total_cost_saving": null,
+              "success_loss": true,
+              "router_p95": true
+            },
+            "point_criteria_met": null,
+            "confidence_criteria_met": null,
+            "independent_validation_declared": false,
+            "missing_requirements": [
+              "paired_total_cost_or_positive_baseline_cost_unknown"
+            ],
+            "automatic_adoption": false,
+            "scope": "proposed monetary/quality/latency gates; metadata and integrity checks do not certify independence"
+          }
+        }
+      },
+      "automatic_adoption": false,
+      "cost_scope": "all recorded calls, including retries, plus router, verification and tool costs; missing components remain unknown",
+      "interpretation": "episode success is the declared task verifier outcome; this module does not validate its rubric or independence"
+    },
+    "n_episodes": 36,
+    "n_tasks": 12,
+    "execution_mode": "simulated",
+    "independent_validation": false,
+    "quality_claim": "infrastructure fixture only"
+  },
+  "payload_sha256": "deebf24c2af258835d3b1a707c691bb7aa73401aa56cd7d2c1564cfed1580835"
+}

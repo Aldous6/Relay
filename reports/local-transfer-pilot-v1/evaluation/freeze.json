@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "dataset_sha256": "9beab292ee21ccae941a6fac496a57aa7568144535472675dc1c17c79c7d0937",
+  "n_cases": 64,
+  "policy_manifest": {
+    "scope": "controlled synthetic local transfer pilot, not original RouterBench comparison or production validation",
+    "router_artifact_sha256": "adaf619331c710f6cedc91b6ae06bda44070e3372071575fd55722d36d4cd7f4",
+    "router_source_summary_sha256": "da98fd7f2e952bb64c81d1eca8995527f337a82c11c91d4e9d43d952e57deb49",
+    "relay_tradeoff": 20,
+    "bert_threshold": 0.5,
+    "reference_selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+    "bert_weights_sha256": "e2a92240bad1c7fb9befbf021a62fad5feb1e2a3990d53a28d160a39bb1cac7b",
+    "models": {
+      "strong": {
+        "name": "llama3:latest",
+        "digest": "365c0bd3c000a25d28ddbf732fe1c6add414de7275464c4e4d1c3b5fcb5d8ad1"
+      },
+      "weak": {
+        "name": "qwen2.5:1.5b",
+        "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b"
+      }
+    },
+    "alias_note": "strong/weak indicate inherited router actions and model size, not verified local quality ordering",
+    "system": "Responde preguntas sobre el material recibido. Devuelve solamente el dato o número solicitado, sin explicación ni formato adicional. Puedes calcular a partir de los datos. Si el dato no se puede obtener del material, responde exactamente NO_EVIDENCE.",
+    "generation_options": {
+      "num_ctx": 8192,
+      "num_predict": 96,
+      "temperature": 0,
+      "seed": 42
+    },
+    "cases": 64,
+    "categories": 8,
+    "synthetic": true,
+    "monetary_cost_usd": null,
+    "quality_metric": "strict normalized exact response on controlled synthetic tasks; not broad answer quality",
+    "generation_sampling": "one cached response per case/model, shared across routing policies; no stochastic variance estimate",
+    "api_sources": [
+      "https://docs.ollama.com/api/chat",
+      "https://docs.ollama.com/modelfile"
+    ],
+    "automatic_training_or_promotion": false,
+    "paid_api_calls": false,
+    "generator_source_sha256": "86025ee94568cc5b489b8944e032fe15520a3f8a0ad45d572f7b9696bec2faa2",
+    "cohort_seed": 8404348381681036065
+  },
+  "collect_both_models": true,
+  "known_prompt_groups_sha256": "0d38f7ba50bfa834fca1714133ccfd9df5ad2a54bfac2c2790f14117baa2855a",
+  "overlap_scope": "exact normalized prompt hashes only; not a certificate of independence",
+  "freeze_sha256": "f3e45460e830f7726398be40a551599fed66c8a5f8969c3712465cee7b0d42be"
+}

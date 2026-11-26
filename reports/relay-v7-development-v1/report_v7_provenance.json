@@ -1,0 +1,11 @@
+{
+  "summary_sha256": "f727814b45d6e8b77858ea669f0eccfa638242705dadec41b1685b80d8381500",
+  "report_sha256": "d67a5dfcd6584e573c89a286648228b50bc6606b03242b1d2bb61f24eef46266",
+  "script_sha256": "ce1010a19367223719afcd94632f76823f640cfc3aa5e4385c248f02188de107",
+  "verified_artifacts": 26,
+  "training_executed": false,
+  "pickle_deserialized": false,
+  "generation_executed": false,
+  "selection_changed": false,
+  "candidate_rows_and_paired_deltas_checked": true
+}

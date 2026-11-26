@@ -1,0 +1,9 @@
+{
+  "summary_sha256": "9fe39436ef502145fdc404502f784168b558e9ef8ecb6618aa77bb89527e78e9",
+  "report_sha256": "7babc88889496abc5b1371da5ac5b863273d9e1e645514b159a72b7de28c809a",
+  "script_sha256": "93f72c118ff420b828537a87c91f078826adbee784c39d9bce1e13206888c70d",
+  "verified_artifacts": 16,
+  "training_executed": false,
+  "pickle_deserialized": false,
+  "generation_executed": false
+}

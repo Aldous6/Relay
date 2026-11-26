@@ -1,0 +1,84 @@
+{
+  "configuration": {
+    "experiment_id": "relay-v4-fixed-ensemble-development-v1",
+    "scope": "exploratory fixed blending declared before full v4 results; no learned weights or outer test",
+    "components": [
+      {
+        "run": "reports/relay-v3-development-v1",
+        "candidate_id": "pairwise_hybrid_a5",
+        "weight": 0.5
+      },
+      {
+        "run": "reports/relay-v4-development-v1",
+        "candidate_id": "svd64_hgb31",
+        "weight": 0.5
+      }
+    ],
+    "common_pair": {
+      "strong": "gpt-4-1106-preview",
+      "weak": "mistralai/mixtral-8x7b-chat"
+    },
+    "quality_threshold": 0.75,
+    "quality_loss_margin": 0.005,
+    "quantiles": 101,
+    "policy": "expected_gain_per_positive_predicted_extra_cost; strong iff ratio > threshold; ties weak",
+    "selection": "minimum validation cost among points with success at least fixed strong minus margin; no CI selection",
+    "bootstrap_replicates": 5000,
+    "seed": 42,
+    "outer_test_allowed": false,
+    "weights_learned": false,
+    "automatic_live_promotion": false,
+    "output_dir": "reports/relay-v4-ensemble-v1"
+  },
+  "configuration_sha256": "34dd35c3ce3dca71adb013fe3e7f8f3c42a93498255153ef72865b1f3a76dcb5",
+  "components": [
+    {
+      "run": "reports/relay-v3-development-v1",
+      "candidate_id": "pairwise_hybrid_a5",
+      "weight": 0.5,
+      "source_summary_sha256": "da98fd7f2e952bb64c81d1eca8995527f337a82c11c91d4e9d43d952e57deb49",
+      "artifact": "pairwise_hybrid_a5.joblib",
+      "artifact_sha256": "adaf619331c710f6cedc91b6ae06bda44070e3372071575fd55722d36d4cd7f4",
+      "predictions_sha256": "1d723ffd739a2aa5ffc680b2b7e37825faefcea65aeebb043563b4dadd1f8c64",
+      "predicted_costs_sha256": "e16b1043167bfceb5ea0a2b9e5eef7e2b152d1c77bb25728bb8648b2377494d8",
+      "target_counts": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      }
+    },
+    {
+      "run": "reports/relay-v4-development-v1",
+      "candidate_id": "svd64_hgb31",
+      "weight": 0.5,
+      "source_summary_sha256": "23c0ac5f0d0599033bfe86b983cdac9a4ee6f4ace7fe43a4af51365b84745175",
+      "artifact": "svd64_hgb31.joblib",
+      "artifact_sha256": "debd12cbb3f9974c913dabc5a47ac803074e5b0a1721d4ff6bcfac8e30fc2521",
+      "predictions_sha256": "81b907dfb2c653ff2be9b54c931d5263fe4558bc1b0443854f0c6feacf964d8c",
+      "predicted_costs_sha256": "e16b1043167bfceb5ea0a2b9e5eef7e2b152d1c77bb25728bb8648b2377494d8",
+      "target_counts": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      }
+    }
+  ],
+  "started_at_utc": "2026-11-09T01:04:30.630758+00:00",
+  "outer_test_allowed": false,
+  "models_refit": false,
+  "weights_learned": false
+}

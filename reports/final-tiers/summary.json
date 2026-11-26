@@ -1,0 +1,481 @@
+{
+  "experiment_id": "relay-original-tier-experiment-final-v1",
+  "completed_at_utc": "2026-11-08T19:31:20.112087+00:00",
+  "selected_model": "random_forest",
+  "selection_sha256": "346836ab02a5d078e5c43ac2607bacd161f46d65d017352451d5ef72ea5d8cec",
+  "selection_used_test": false,
+  "final_test_evaluated": true,
+  "configuration": {
+    "experiment_id": "routerbench-0shot-structural-v1",
+    "seed": 42,
+    "dataset": {
+      "path": "data/raw/routerbench_0shot.pkl",
+      "repository": "withmartian/routerbench",
+      "revision": "784021482c3f320c6619ed4b3bb3b41a21424fcb",
+      "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+      "expected_rows": 36497,
+      "expected_columns": 37,
+      "expected_models": 11
+    },
+    "quality_threshold": 0.75,
+    "sensitivity_thresholds": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "tier_sizes": [
+      2,
+      6,
+      3
+    ],
+    "split": {
+      "strategy": "prompt_hash",
+      "test_fraction": 0.2
+    },
+    "deduplication": "NFKC + casefold + whitespace collapse; keep first source row",
+    "cv_folds": 5,
+    "primary_metric": "f1_macro",
+    "costs": "historical estimated costs stored in RouterBench",
+    "status": "scaffold; training and final test evaluation pending"
+  },
+  "dataset_sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+  "prepared_files_sha256": {
+    "features.parquet": "fd6eb943f985f20606409a89b51538bdeb406eb529fa2c1e428e99995c366d4b",
+    "rows.parquet": "2f03770fe1dd95e18dd6eb2488b76795da5dca910cc3d814cfee33f22c0608ef",
+    "labels.parquet": "b85cd017de5de6f26fdb7ef7f870eb926ea0bf6c3c0c9716362d4d683212fa5c"
+  },
+  "tier_map": {
+    "mistralai/mistral-7b-chat": 0,
+    "WizardLM/WizardLM-13B-V1.2": 0,
+    "mistralai/mixtral-8x7b-chat": 1,
+    "meta/code-llama-instruct-34b-chat": 1,
+    "zero-one-ai/Yi-34B-Chat": 1,
+    "claude-instant-v1": 1,
+    "meta/llama-2-70b-chat": 1,
+    "gpt-3.5-turbo-1106": 1,
+    "claude-v1": 2,
+    "claude-v2": 2,
+    "gpt-4-1106-preview": 2
+  },
+  "tier_map_scope": "prepared model-to-tier map estimated in original outer train and reused unchanged",
+  "feature_names": [
+    "n_chars",
+    "n_words",
+    "n_lines",
+    "avg_word_length",
+    "lexical_diversity",
+    "digit_ratio",
+    "punctuation_ratio",
+    "uppercase_ratio",
+    "n_questions",
+    "n_brackets",
+    "n_code_markers",
+    "n_math_symbols",
+    "non_ascii_ratio",
+    "cjk_ratio"
+  ],
+  "train_eligible_rows": 27964,
+  "test_eligible_rows": 7013,
+  "excluded_ineligible": {
+    "train": 1193,
+    "test": 311
+  },
+  "support": {
+    "train": {
+      "0": 14805,
+      "1": 12033,
+      "2": 1126
+    },
+    "test": {
+      "0": 3750,
+      "1": 2943,
+      "2": 320
+    }
+  },
+  "cv": {
+    "dummy": {
+      "metrics_mean": {
+        "f1_macro": 0.23077462698648246,
+        "balanced_accuracy": 0.3333333333333333,
+        "tier2_recall": 0.0,
+        "tier2_f1": 0.0
+      },
+      "metrics_std": {
+        "f1_macro": 1.2066308596174994e-05,
+        "balanced_accuracy": 0.0,
+        "tier2_recall": 0.0,
+        "tier2_f1": 0.0
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    },
+    "length": {
+      "metrics_mean": {
+        "f1_macro": 0.3859939272130963,
+        "balanced_accuracy": 0.4141305733621645,
+        "tier2_recall": 0.2256007866273353,
+        "tier2_f1": 0.11208539324410804
+      },
+      "metrics_std": {
+        "f1_macro": 0.005006123750300736,
+        "balanced_accuracy": 0.006790040004126716,
+        "tier2_recall": 0.03982315549216114,
+        "tier2_f1": 0.010188437447389748
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    },
+    "logistic": {
+      "metrics_mean": {
+        "f1_macro": 0.38919898029367134,
+        "balanced_accuracy": 0.46082806239829976,
+        "tier2_recall": 0.45819075712881024,
+        "tier2_f1": 0.11342221418508218
+      },
+      "metrics_std": {
+        "f1_macro": 0.008895377794755546,
+        "balanced_accuracy": 0.016424629889224034,
+        "tier2_recall": 0.05470320116214454,
+        "tier2_f1": 0.01409641194447823
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    },
+    "random_forest": {
+      "metrics_mean": {
+        "f1_macro": 0.4463881374531229,
+        "balanced_accuracy": 0.4378578052932234,
+        "tier2_recall": 0.08702851524090463,
+        "tier2_f1": 0.1315484052846782
+      },
+      "metrics_std": {
+        "f1_macro": 0.011019895735866396,
+        "balanced_accuracy": 0.008798819785017046,
+        "tier2_recall": 0.017908785396648055,
+        "tier2_f1": 0.02492741553792711
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    }
+  },
+  "test": {
+    "dummy": {
+      "n": 7013,
+      "f1_macro": 0.23227724612097,
+      "balanced_accuracy": 0.3333333333333333,
+      "tier2_recall": 0.0,
+      "tier2_f1": 0.0,
+      "per_class": {
+        "0": {
+          "precision": 0.5347212319977185,
+          "recall": 1.0,
+          "f1": 0.69683173836291,
+          "support": 3750
+        },
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2943
+        },
+        "2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 320
+        }
+      },
+      "confusion_matrix_labels": [
+        0,
+        1,
+        2
+      ],
+      "confusion_matrix": [
+        [
+          3750,
+          0,
+          0
+        ],
+        [
+          2943,
+          0,
+          0
+        ],
+        [
+          320,
+          0,
+          0
+        ]
+      ]
+    },
+    "length": {
+      "n": 7013,
+      "f1_macro": 0.3830823710939502,
+      "balanced_accuracy": 0.4131671905085514,
+      "tier2_recall": 0.246875,
+      "tier2_f1": 0.11738484398216939,
+      "per_class": {
+        "0": {
+          "precision": 0.6271709764569664,
+          "recall": 0.43333333333333335,
+          "f1": 0.5125374546601482,
+          "support": 3750
+        },
+        "1": {
+          "precision": 0.48468786808009423,
+          "recall": 0.5592932381923208,
+          "f1": 0.5193248146395331,
+          "support": 2943
+        },
+        "2": {
+          "precision": 0.0769980506822612,
+          "recall": 0.246875,
+          "f1": 0.11738484398216939,
+          "support": 320
+        }
+      },
+      "confusion_matrix_labels": [
+        0,
+        1,
+        2
+      ],
+      "confusion_matrix": [
+        [
+          1625,
+          1624,
+          501
+        ],
+        [
+          851,
+          1646,
+          446
+        ],
+        [
+          115,
+          126,
+          79
+        ]
+      ]
+    },
+    "logistic": {
+      "n": 7013,
+      "f1_macro": 0.3954284571703046,
+      "balanced_accuracy": 0.47702402310567454,
+      "tier2_recall": 0.5125,
+      "tier2_f1": 0.14174589455488332,
+      "per_class": {
+        "0": {
+          "precision": 0.6415371076562042,
+          "recall": 0.5832,
+          "f1": 0.6109791870372957,
+          "support": 3750
+        },
+        "1": {
+          "precision": 0.6130434782608696,
+          "recall": 0.33537206931702346,
+          "f1": 0.4335602899187349,
+          "support": 2943
+        },
+        "2": {
+          "precision": 0.08224674022066199,
+          "recall": 0.5125,
+          "f1": 0.14174589455488332,
+          "support": 320
+        }
+      },
+      "confusion_matrix_labels": [
+        0,
+        1,
+        2
+      ],
+      "confusion_matrix": [
+        [
+          2187,
+          578,
+          985
+        ],
+        [
+          1111,
+          987,
+          845
+        ],
+        [
+          111,
+          45,
+          164
+        ]
+      ]
+    },
+    "random_forest": {
+      "n": 7013,
+      "f1_macro": 0.44449339798534265,
+      "balanced_accuracy": 0.4358820902706988,
+      "tier2_recall": 0.090625,
+      "tier2_f1": 0.13711583924349882,
+      "per_class": {
+        "0": {
+          "precision": 0.6300274223034735,
+          "recall": 0.7352,
+          "f1": 0.6785626384444992,
+          "support": 3750
+        },
+        "1": {
+          "precision": 0.5595895816890292,
+          "recall": 0.4818212708120965,
+          "f1": 0.51780171626803,
+          "support": 2943
+        },
+        "2": {
+          "precision": 0.2815533980582524,
+          "recall": 0.090625,
+          "f1": 0.13711583924349882,
+          "support": 320
+        }
+      },
+      "confusion_matrix_labels": [
+        0,
+        1,
+        2
+      ],
+      "confusion_matrix": [
+        [
+          2757,
+          979,
+          14
+        ],
+        [
+          1465,
+          1418,
+          60
+        ],
+        [
+          154,
+          137,
+          29
+        ]
+      ]
+    }
+  },
+  "primary_test_result": {
+    "n": 7013,
+    "f1_macro": 0.44449339798534265,
+    "balanced_accuracy": 0.4358820902706988,
+    "tier2_recall": 0.090625,
+    "tier2_f1": 0.13711583924349882,
+    "per_class": {
+      "0": {
+        "precision": 0.6300274223034735,
+        "recall": 0.7352,
+        "f1": 0.6785626384444992,
+        "support": 3750
+      },
+      "1": {
+        "precision": 0.5595895816890292,
+        "recall": 0.4818212708120965,
+        "f1": 0.51780171626803,
+        "support": 2943
+      },
+      "2": {
+        "precision": 0.2815533980582524,
+        "recall": 0.090625,
+        "f1": 0.13711583924349882,
+        "support": 320
+      }
+    },
+    "confusion_matrix_labels": [
+      0,
+      1,
+      2
+    ],
+    "confusion_matrix": [
+      [
+        2757,
+        979,
+        14
+      ],
+      [
+        1465,
+        1418,
+        60
+      ],
+      [
+        154,
+        137,
+        29
+      ]
+    ]
+  },
+  "secondary_test_results": "remaining three models are predeclared references; do not reselect using test",
+  "permutation_importance": {
+    "population": "outer_training_eligible_only",
+    "folds": 3,
+    "repeats_per_fold": 5,
+    "scoring": "F1 of tier 2, zero_division=0",
+    "fold_records": [
+      {
+        "fold": 1,
+        "train_n": 18642,
+        "validation_n": 9322,
+        "baseline_tier2_f1": 0.11222444889779559
+      },
+      {
+        "fold": 2,
+        "train_n": 18643,
+        "validation_n": 9321,
+        "baseline_tier2_f1": 0.12627291242362526
+      },
+      {
+        "fold": 3,
+        "train_n": 18643,
+        "validation_n": 9321,
+        "baseline_tier2_f1": 0.1696969696969697
+      }
+    ],
+    "top_three": [
+      "uppercase_ratio",
+      "n_words",
+      "n_code_markers"
+    ],
+    "ranking_tie_break": "feature_name; zero-importance ties do not establish useful predictors",
+    "features_with_positive_mean_drop": 12,
+    "interpretation": "predictive reliance of the fixed model; not causal effects; fold variability is descriptive, not independent confidence intervals"
+  },
+  "artifacts": {
+    "dummy": {
+      "file": "dummy.joblib",
+      "sha256": "7022f3566ec47d0ae759e6dbc0e898c93ee3137e82d391273d3d07ab0158200e"
+    },
+    "length": {
+      "file": "length.joblib",
+      "sha256": "ef7180bbf9716a3231d81443a10089d8cf2a96a7a6302198f44d05bbdeddac45"
+    },
+    "logistic": {
+      "file": "logistic.joblib",
+      "sha256": "f1a5680936924c2b6b89c9e55b34e6531a4c6a80521600f5f0c04e06fad162bf"
+    },
+    "random_forest": {
+      "file": "model.joblib",
+      "sha256": "b2d80b7c65a77b30ba36dbfbd5751241823d65cda253db94e1d3682cf327600a"
+    }
+  },
+  "policy_cost_quality_simulation_completed_here": false,
+  "quality_threshold_sensitivity_completed_here": false,
+  "new_benchmark_family_holdout_completed_here": false,
+  "routellm_comparison_completed_here": false,
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "elapsed_seconds": 216.2253206000023,
+  "files_sha256": {
+    "cv_folds.parquet": "dc0bb986240741c13945c4e184317484d0e5e33bf5f27fef1b2d3c7ea19a7e3f",
+    "cv_predictions.parquet": "496ca9d770e548503ebb5c52936934bc6b32da15dde23266ec7525017a017ac4",
+    "cv_results.json": "d2f972a268ddc81ce72643472afb5bed03ed0116d8276fcf527135cd2011495b",
+    "dummy.joblib": "7022f3566ec47d0ae759e6dbc0e898c93ee3137e82d391273d3d07ab0158200e",
+    "length.joblib": "ef7180bbf9716a3231d81443a10089d8cf2a96a7a6302198f44d05bbdeddac45",
+    "logistic.joblib": "f1a5680936924c2b6b89c9e55b34e6531a4c6a80521600f5f0c04e06fad162bf",
+    "model.joblib": "b2d80b7c65a77b30ba36dbfbd5751241823d65cda253db94e1d3682cf327600a",
+    "permutation_folds.parquet": "304e88b4893fa50943f7f9dae02323f1b99619dbffc6c191a281a223d55a682d",
+    "permutation_importance.parquet": "f6d6804c7cecd3cc7daa8367afc55af4879f3255d08ca3eca0e4a88c2f88f37e",
+    "selection.json": "346836ab02a5d078e5c43ac2607bacd161f46d65d017352451d5ef72ea5d8cec",
+    "test_predictions.parquet": "37371ce6c846bcf5aad85046b41d2f922c90d3b0c5ce43b6367ae855522b32d9"
+  }
+}

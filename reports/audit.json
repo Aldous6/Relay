@@ -1,0 +1,60 @@
+{
+  "rows": 36497,
+  "columns": 37,
+  "models_count": 11,
+  "models": [
+    "WizardLM/WizardLM-13B-V1.2",
+    "claude-instant-v1",
+    "claude-v1",
+    "claude-v2",
+    "gpt-3.5-turbo-1106",
+    "gpt-4-1106-preview",
+    "meta/code-llama-instruct-34b-chat",
+    "meta/llama-2-70b-chat",
+    "mistralai/mistral-7b-chat",
+    "mistralai/mixtral-8x7b-chat",
+    "zero-one-ai/Yi-34B-Chat"
+  ],
+  "evaluations": 86,
+  "empty_prompts": 0,
+  "null_scores": 0,
+  "null_costs": 0,
+  "duplicate_extra_rows": 16,
+  "duplicate_groups_with_conflicting_results": 11,
+  "rows_with_partial_score": 7905,
+  "thresholds": {
+    "0.5": {
+      "ineligible_raw": 1413,
+      "eligible_raw": 35084,
+      "eligible_after_dedup": 35069
+    },
+    "0.75": {
+      "ineligible_raw": 1505,
+      "eligible_raw": 34992,
+      "eligible_after_dedup": 34977
+    },
+    "1.0": {
+      "ineligible_raw": 8616,
+      "eligible_raw": 27881,
+      "eligible_after_dedup": 27867
+    }
+  },
+  "median_estimated_cost_global_descriptive_only": {
+    "WizardLM/WizardLM-13B-V1.2": 5.61e-05,
+    "claude-instant-v1": 0.000152,
+    "claude-v1": 0.0015279999999999998,
+    "claude-v2": 0.00156,
+    "gpt-3.5-turbo-1106": 0.000188,
+    "gpt-4-1106-preview": 0.00193,
+    "meta/code-llama-instruct-34b-chat": 0.00014045599999999998,
+    "meta/llama-2-70b-chat": 0.00017189999999999998,
+    "mistralai/mistral-7b-chat": 3.68e-05,
+    "mistralai/mixtral-8x7b-chat": 0.00011279999999999999,
+    "zero-one-ai/Yi-34B-Chat": 0.00014800000000000002
+  },
+  "dedup_rule": "NFKC + casefold + whitespace collapse; first source row, independent of results",
+  "dataset_sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+  "dataset_revision": "784021482c3f320c6619ed4b3bb3b41a21424fcb",
+  "generated_at_utc": "2026-11-08T05:57:20.056041+00:00",
+  "kind": "descriptive audit; no model performance"
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "scope": "diagnostic",
+  "tasks": [
+    {
+      "task_id": "interval_difference",
+      "group_id": "authored_v1_interval_difference",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/interval_difference/config.json",
+      "task": "Repair subtract_intervals(intervals, blocked) in module.py. Both arguments are iterables of pairs of integer endpoints representing half-open intervals [start,end). Return the union of intervals minus the union of blocked, as a sorted list of maximal nonempty (start,end) tuples: merge touching as well as overlapping output intervals. Inputs may be unsorted, repeated, overlapping, nested, empty, negative, or one-shot iterators. Ignore zero-length intervals. Reject reversed endpoints and endpoints whose type is not exactly int (including bool) with ValueError, even if the other collection is empty. Do not mutate either input. Preserve the function interface and use only the standard library.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    },
+    {
+      "task_id": "dependency_order",
+      "group_id": "authored_v1_dependency_order",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/dependency_order/config.json",
+      "task": "Repair dependency_order(graph) in module.py. graph maps string node names to iterable string prerequisites. Include keys and prerequisites absent as keys. Return a topological ordering, choosing the lexicographically smallest currently ready node at every step (Python string ordering). Duplicate prerequisite edges count once. Reject any cycle, including a self-cycle or a cycle disconnected from ready nodes, with ValueError. Empty graph returns []. Inputs are valid strings and finite iterables, which can be generators; do not mutate graph or its containers. Preserve the interface and use only the standard library.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    },
+    {
+      "task_id": "quoted_record_stream",
+      "group_id": "authored_v1_quoted_record_stream",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/quoted_record_stream/config.json",
+      "task": "Repair parse_records(chunks, delimiter=',') in module.py. Consume a finite iterable of string chunks once and return a list of records, each a list of field strings. Chunk boundaries have no meaning, including boundaries between doubled quotes or CR and LF. Delimiter must be one character other than double quote, CR or LF; otherwise raise ValueError. Fields may be quoted only when their first character is double quote. Within quotes preserve all characters including CR/LF, interpret doubled double quotes as one quote, and allow delimiters. After a closing quote only a delimiter, record terminator or end is valid. Outside quotes records end with LF or CRLF; bare CR is invalid. Quotes inside an unquoted field, unclosed quotes and text after a closing quote are invalid: raise ValueError. Do not strip spaces. Empty input yields []; a blank record yields ['']; trailing record terminator adds no extra record; a trailing delimiter adds an empty field. Use only the standard library. No requirement to limit buffering.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    },
+    {
+      "task_id": "rolling_window",
+      "group_id": "authored_v1_rolling_window",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/rolling_window/config.json",
+      "task": "Repair WindowStats(width) in module.py. width must have type exactly int and be positive; otherwise ValueError. add(timestamp,value) inserts an event and returns (count,total); snapshot(now) returns (count,total) without inserting. Timestamps, now and values must have type exactly int (bool is invalid); invalid values raise ValueError. Calls must have nondecreasing time across both methods, with ties allowed; reject a time older than any prior successful call with ValueError. At time t count only events with t-width < timestamp <= t, so expire events exactly on the left boundary. Values and times may be negative. Empty state returns (0,0). Failed calls leave all state unchanged, including latest time and pending events. Keep separate instances independent and use only the standard library.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    },
+    {
+      "task_id": "immutable_config_merge",
+      "group_id": "authored_v1_immutable_config_merge",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/immutable_config_merge/config.json",
+      "task": "Repair merge_config(base, patch) and preserve exported DELETE in module.py. Inputs are plain dictionaries with string keys and JSON-like values (dict, list, string, number, bool, None); patch may additionally use the singleton DELETE as a dictionary value. Merge recursively when a patch value is a dict; if the base value is not a dict, start that subtree from {}. Other patch values replace the base, including lists and None. DELETE removes a key if present and otherwise does nothing. DELETE is allowed only as a dictionary value, never inside a list (at any depth); inputs otherwise follow the stated domain. Do not mutate either input. Every dict/list anywhere in the result must be detached from both inputs, including retained base values and replaced list contents; later mutations of result or either input must not affect the others. Return a plain dict; preserve the function interface and use only the standard library.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    },
+    {
+      "task_id": "generation_cache",
+      "group_id": "authored_v1_generation_cache",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/generation_cache/config.json",
+      "task": "Repair GenerationCache in module.py. begin(key) returns a positive integer token unique across all begins on that instance, including after invalidate/clear. A token belongs to its key; a later begin for that key revokes the earlier token. begin does not remove an already cached value. commit(key, token, value) returns True and stores value only when token is the latest unconsumed begin for that key; that token is consumed by the successful commit. All stale, already consumed, unknown, or wrong-key tokens return False without changing any state. get(key, default=None) returns the cached value (including None) or default if absent. invalidate(key) removes its cached value and revokes any pending token, without affecting other keys. clear() removes all cached values and revokes all pending tokens, including keys never committed. Keys are strings and tokens passed to commit are integers. Instances are independent. Values may be any objects and need not be copied. Preserve these interfaces and use only the standard library.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    },
+    {
+      "task_id": "decimal_allocation",
+      "group_id": "authored_v1_decimal_allocation",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/decimal_allocation/config.json",
+      "task": "Repair allocate_cents(total, weights) in module.py using only the standard library. total and each weight are Decimal objects or decimal strings; reject other types, invalid/nonfinite decimals, negative weights, empty weights, or weights summing to zero with ValueError. weights is a finite iterable and may be a one-shot generator. First round total to cents using round-half-to-even. Allocate the absolute integer cents proportionally: floor each exact share, then give remaining cents to the largest fractional remainders, breaking ties by earlier input index. Reapply the sign of the rounded total. Return a list of Decimal amounts, each with exponent -2, whose sum equals the rounded total. Zero weights receive zero. Negative totals use the same magnitude allocation with negative results. Avoid binary float and rounding intermediate proportions; finite decimal inputs must work independently of the caller's decimal precision. Do not mutate inputs. Preserve the interface.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    },
+    {
+      "task_id": "scoped_posix_paths",
+      "group_id": "authored_v1_scoped_posix_paths",
+      "partition": "development",
+      "config": "../examples/maintenance_cases_v1/scoped_posix_paths/config.json",
+      "task": "Repair resolve_path(root, path) in module.py as pure POSIX string processing, with no filesystem access. root and path are strings without NUL (reject NUL with ValueError); root must be absolute or raise ValueError. Normalize root by collapsing repeated '/', removing '.', and processing '..'; attempting to go above '/' is invalid. For a relative path (including empty), start at normalized root and process components; reject '..' immediately if it would leave root, even if later components reenter. For an absolute path, normalize from '/', reject traversal above '/', then require the final normalized result to equal root or be beneath it by whole components. Absolute paths may leave/reenter root during normalization if the final result is in scope. Repeated separators and '.' are harmless. Return an absolute canonical string with no trailing slash except '/'. Backslash and percent sequences are literal filename characters, not separators or escape encodings. Root '/' permits all absolute results and relative paths that do not climb above '/'. Preserve the interface and use only the standard library.",
+      "acceptance_files": [
+        "acceptance_test.py"
+      ]
+    }
+  ]
+}

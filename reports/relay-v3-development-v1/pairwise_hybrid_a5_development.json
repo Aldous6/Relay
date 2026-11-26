@@ -1,0 +1,231 @@
+{
+  "specification": {
+    "id": "pairwise_hybrid_a5",
+    "objective": "pairwise",
+    "representation": "hybrid",
+    "alpha": 1e-05
+  },
+  "curve": [
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 0,
+      "weak_fraction": 0.012256014525646845,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3477,
+        "coverage": 1.0,
+        "success_rate": 0.789151157512483,
+        "success_rate_on_routed": 0.789151157512483,
+        "mean_score_on_routed": 0.7876985928279618,
+        "total_cost": 14.367866200000002,
+        "cost_per_1000": 3.260977349069451,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 1,
+      "weak_fraction": 0.012256014525646845,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3477,
+        "coverage": 1.0,
+        "success_rate": 0.789151157512483,
+        "success_rate_on_routed": 0.789151157512483,
+        "mean_score_on_routed": 0.7876985928279618,
+        "total_cost": 14.367866200000002,
+        "cost_per_1000": 3.260977349069451,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 2,
+      "weak_fraction": 0.012256014525646845,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3477,
+        "coverage": 1.0,
+        "success_rate": 0.789151157512483,
+        "success_rate_on_routed": 0.789151157512483,
+        "mean_score_on_routed": 0.7876985928279618,
+        "total_cost": 14.367866200000002,
+        "cost_per_1000": 3.260977349069451,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 5,
+      "weak_fraction": 0.013390830685428961,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3476,
+        "coverage": 1.0,
+        "success_rate": 0.7889241942805265,
+        "success_rate_on_routed": 0.7889241942805265,
+        "mean_score_on_routed": 0.7874716295960055,
+        "total_cost": 14.338924800000001,
+        "cost_per_1000": 3.254408715388107,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 10,
+      "weak_fraction": 0.016568315932818885,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3475,
+        "coverage": 1.0,
+        "success_rate": 0.7886972310485701,
+        "success_rate_on_routed": 0.7886972310485701,
+        "mean_score_on_routed": 0.7871311847480708,
+        "total_cost": 14.242538000000001,
+        "cost_per_1000": 3.23253245574217,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 20,
+      "weak_fraction": 0.05220154334997731,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3464,
+        "coverage": 1.0,
+        "success_rate": 0.7862006354970494,
+        "success_rate_on_routed": 0.7862006354970494,
+        "mean_score_on_routed": 0.7843508851566046,
+        "total_cost": 13.2963874,
+        "cost_per_1000": 3.017791057648661,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 40,
+      "weak_fraction": 0.26690876078075354,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3325,
+        "coverage": 1.0,
+        "success_rate": 0.7546527462551067,
+        "success_rate_on_routed": 0.7546527462551067,
+        "mean_score_on_routed": 0.7588175215615071,
+        "total_cost": 7.3615058,
+        "cost_per_1000": 1.6707911484339537,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 80,
+      "weak_fraction": 0.5921470721743077,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2997,
+        "coverage": 1.0,
+        "success_rate": 0.6802088061734,
+        "success_rate_on_routed": 0.6802088061734,
+        "mean_score_on_routed": 0.686995006808897,
+        "total_cost": 3.7679706,
+        "cost_per_1000": 0.8551907852927826,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "pairwise_hybrid_a5",
+      "parameter": 160,
+      "weak_fraction": 0.9473445301861099,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2466,
+        "coverage": 1.0,
+        "success_rate": 0.5596913300045393,
+        "success_rate_on_routed": 0.5596913300045393,
+        "mean_score_on_routed": 0.5665456196096232,
+        "total_cost": 1.3762446000000002,
+        "cost_per_1000": 0.3123569223785747,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    }
+  ],
+  "selected_point": {
+    "candidate_id": "pairwise_hybrid_a5",
+    "parameter": 20,
+    "weak_fraction": 0.05220154334997731,
+    "metrics": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 3464,
+      "coverage": 1.0,
+      "success_rate": 0.7862006354970494,
+      "success_rate_on_routed": 0.7862006354970494,
+      "mean_score_on_routed": 0.7843508851566046,
+      "total_cost": 13.2963874,
+      "cost_per_1000": 3.017791057648661,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "training_seconds": 137.20414209998853,
+  "validation_batch_inference_seconds": 11.156467699998757,
+  "artifact": "pairwise_hybrid_a5.joblib",
+  "artifact_sha256": "adaf619331c710f6cedc91b6ae06bda44070e3372071575fd55722d36d4cd7f4",
+  "paired_development_comparison_vs_bert": {
+    "n": 4406,
+    "replicates": 5000,
+    "seed": 42,
+    "success_rate_delta": -0.0009078529278256923,
+    "success_rate_delta_95ci": [
+      -0.004312301407172038,
+      0.0024965955515206537
+    ],
+    "cost_per_1000_delta": -0.08999459827507945,
+    "cost_per_1000_delta_95ci": [
+      -0.14001897185655918,
+      -0.03991564003631411
+    ],
+    "relative_call_cost_saving": 0.028957788032627385,
+    "relative_call_cost_saving_95ci": [
+      0.012873682294265951,
+      0.04459830260534324
+    ],
+    "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+  },
+  "single_request_latency": {
+    "n": 60,
+    "p50_seconds": 0.028164949995698407,
+    "p95_seconds": 0.03364237000205321,
+    "scope": "prompt representation + policy on this CPU, warm model, no cached feature vectors"
+  }
+}

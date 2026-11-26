@@ -1,0 +1,22 @@
+{
+  "experiment_id": "routerbench-0shot-structural-v1",
+  "seed": 42,
+  "dataset": {
+    "path": "data/raw/routerbench_0shot.pkl",
+    "repository": "withmartian/routerbench",
+    "revision": "784021482c3f320c6619ed4b3bb3b41a21424fcb",
+    "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+    "expected_rows": 36497,
+    "expected_columns": 37,
+    "expected_models": 11
+  },
+  "quality_threshold": 0.75,
+  "sensitivity_thresholds": [0.5, 0.75, 1.0],
+  "tier_sizes": [2, 6, 3],
+  "split": {"strategy": "prompt_hash", "test_fraction": 0.2},
+  "deduplication": "NFKC + casefold + whitespace collapse; keep first source row",
+  "cv_folds": 5,
+  "primary_metric": "f1_macro",
+  "costs": "historical estimated costs stored in RouterBench",
+  "status": "scaffold; training and final test evaluation pending"
+}

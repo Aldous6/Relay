@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-16T05:33:18.654709+00:00",
+  "scope": "offline software contracts only; not competitive evidence",
+  "api_calls_executed_this_change": 0,
+  "groq_key_available_in_process_at_check": false,
+  "validation": [
+    {
+      "command": ".venv-groq/Scripts/python.exe -m unittest discover -s tests -p test_maintenance*.py -v",
+      "tests_run": 121,
+      "passed": 120,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 64.104,
+      "stage": "integration suite before final provenance regression fixes"
+    },
+    {
+      "command": ".venv-groq/Scripts/python.exe -m unittest test_maintenance.MaintenanceIntegrationTests.test_public_diagnostics_exclude_execution_path_and_timing_but_keep_raw_evidence test_maintenance_competition test_maintenance_learning -q",
+      "tests_run": 27,
+      "passed": 27,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 24.815,
+      "stage": "final changed contracts and regressions"
+    },
+    {
+      "command": ".venv-groq/Scripts/python.exe tools/relay_compare_maintenance.py check",
+      "exit_code": 0,
+      "api_calls": 0
+    },
+    {
+      "command": ".venv-groq/Scripts/python.exe tools/relay_maintain.py check",
+      "exit_code": 0,
+      "api_calls": 0
+    }
+  ],
+  "skip_reason": "Windows does not permit symlink creation for this user; junction guard test passed",
+  "resolved_findings": [
+    "frozen expanded suite inventory and provider limits",
+    "operational failures remain unknown",
+    "shared public prefix identical across candidate branches",
+    "same acquisition regime bound to learned policy",
+    "complete partitions required for training and holdout reporting",
+    "RouteLLM BERT always-weak endpoint preserved",
+    "Windows CRLF unittest timing and run-path metadata removed only from public diagnostics",
+    "holdout CLI function-name shadowing regression",
+    "simulated acquisition excluded from CLI training"
+  ],
+  "reference_smoke": {
+    "executed_by": "competitive_reference subagent",
+    "provider_calls": 0,
+    "implementation": "LocalBERTReference CPU pinned published checkpoint",
+    "weights_verified_before_load": true,
+    "probability": 0.41278524783046266,
+    "input_tokens": 35,
+    "truncated_tokens": 0,
+    "scope": "single fixed nonbenchmark text; verifies execution only"
+  },
+  "competitive_result": null,
+  "trained_maintenance_model": null,
+  "representative_new_cohort": null,
+  "independent_acceptance_grader": null,
+  "sources_sha256": {
+    "maintenance.py": "83b3487e6f292e1024e96f090a2d736932069e89e46f4a5301cbd9a1bf128f90",
+    "maintenance_cli.py": "e38fde0adac23f8f757ac32132df83e05c0b6f891327ea874c0b80b7b895cad4",
+    "maintenance_collection.py": "48880cf23e2f4297b06aeb9bf45701bdd51875df2d2a53d17f9b4c5792c064b2",
+    "maintenance_comparison.py": "b5a9d4fee4d9dfb8fc2e8105496a329047f85842455b6bab88dcda7dbd2b6ebf",
+    "maintenance_competition.py": "146bff7e172269f52466d5b38bdf4f79e75276261482d53dc98a50f0d41d57c2",
+    "maintenance_learning.py": "85380d426b9773443ae646eb5af30feef96d03efb4366ae4841ff0acf6cce954",
+    "maintenance_provider.py": "34ba4f0481ad7e4cb270b125e72d377a6d587ec27f754268022dcd8076980e7a",
+    "maintenance_reference.py": "bef8b944136ded728b10fe4362e97e48ce76c14e9eeef159464e86c44a2f673a",
+    "maintenance_routing.py": "ba23751d2789741ceee8f6580ada30664b583078c1ef01e4b41d4ce602bd92f1",
+    "maintenance_workspace.py": "908be9d21f5bef1819cb31474a4f52d64a10dd239a3c5e3a29a470aa8a2b11bd"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "run_id": "relay-agent-api-v8-development",
+  "execution_mode": "external",
+  "evaluation_split": "development",
+  "independent_validation": false,
+  "catalog_status": "template_not_selected",
+  "models": {"strong": "SELECT_PROVIDER/SELECT_STRONG_MODEL", "weak": "SELECT_PROVIDER/SELECT_WEAK_MODEL"},
+  "model_catalog": ["SELECT_PROVIDER/SELECT_WEAK_MODEL", "SELECT_PROVIDER/SELECT_STRONG_MODEL"],
+  "models_metadata": {
+    "SELECT_PROVIDER/SELECT_WEAK_MODEL": {"returned_model_ids": ["SELECT_WEAK_MODEL"], "context_window": 8192, "api_key_env": "SELECT_API_KEY_ENV"},
+    "SELECT_PROVIDER/SELECT_STRONG_MODEL": {"returned_model_ids": ["SELECT_STRONG_MODEL"], "context_window": 8192, "api_key_env": "SELECT_API_KEY_ENV"}
+  },
+  "generation_options": {"max_output_tokens": 1024, "temperature": 0, "timeout": 90},
+  "harness": {"contract_version": 2, "max_transport_retries": 2, "retry_delay_seconds": 0.5},
+  "policies": ["always_strong", "always_weak", "cheap_then_escalate"],
+  "primary_policy": "cheap_then_escalate",
+  "policy_order": "cyclic_by_task",
+  "max_calls": 8,
+  "spending": {"max_provider_spend_usd": 0, "max_total_generation_calls": 256, "account_is_free_tier": false, "account_tier_source": null},
+  "pricing": {},
+  "compute_rates": {"router_usd_per_second": null, "verification_usd_per_second": null, "tool_usd_per_second": null},
+  "roi": {"min_total_cost_saving": 0.3, "max_success_rate_loss": 0.02, "max_p95_router_seconds": 0.2},
+  "bootstrap_replicates": 2000,
+  "seed": 20261112,
+  "per_family": 2,
+  "task_splits_path": null,
+  "require_unseen_families": false,
+  "predictive_policy": null,
+  "scope": "Template only. Provider, identities, context capacities, account tier and tariffs must be chosen and verified before execution. Synthetic development tasks from three known families; no independent quality or ROI claim."
+}

@@ -1,0 +1,82 @@
+{
+  "assets": [
+    {
+      "bytes": 16738,
+      "path": "gpt-oss-20b/chat_template.jinja",
+      "sha256": "a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146",
+      "url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/chat_template.jinja"
+    },
+    {
+      "bytes": 4200,
+      "path": "gpt-oss-20b/tokenizer_config.json",
+      "sha256": "9279e942392b742d633c7adbb89ebe002c98399db8926a7af5125c726f404070",
+      "url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/tokenizer_config.json"
+    },
+    {
+      "bytes": 98,
+      "path": "gpt-oss-20b/special_tokens_map.json",
+      "sha256": "dd5e191d20c12d2fee1da5bae14ca1db0f5f4215300af691f23cdee97120a293",
+      "url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/special_tokens_map.json"
+    },
+    {
+      "bytes": 11357,
+      "path": "gpt-oss-20b/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/LICENSE"
+    },
+    {
+      "bytes": 16738,
+      "path": "gpt-oss-120b/chat_template.jinja",
+      "sha256": "a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146",
+      "url": "https://huggingface.co/openai/gpt-oss-120b/resolve/b5c939de8f754692c1647ca79fbf85e8c1e70f8a/chat_template.jinja"
+    },
+    {
+      "bytes": 4200,
+      "path": "gpt-oss-120b/tokenizer_config.json",
+      "sha256": "9279e942392b742d633c7adbb89ebe002c98399db8926a7af5125c726f404070",
+      "url": "https://huggingface.co/openai/gpt-oss-120b/resolve/b5c939de8f754692c1647ca79fbf85e8c1e70f8a/tokenizer_config.json"
+    },
+    {
+      "bytes": 98,
+      "path": "gpt-oss-120b/special_tokens_map.json",
+      "sha256": "dd5e191d20c12d2fee1da5bae14ca1db0f5f4215300af691f23cdee97120a293",
+      "url": "https://huggingface.co/openai/gpt-oss-120b/resolve/b5c939de8f754692c1647ca79fbf85e8c1e70f8a/special_tokens_map.json"
+    },
+    {
+      "bytes": 11357,
+      "path": "gpt-oss-120b/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "url": "https://huggingface.co/openai/gpt-oss-120b/resolve/b5c939de8f754692c1647ca79fbf85e8c1e70f8a/LICENSE"
+    },
+    {
+      "bytes": 3613922,
+      "path": "o200k_base.tiktoken",
+      "sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+      "url": "https://openaipublic.blob.core.windows.net/encodings/o200k_base.tiktoken"
+    },
+    {
+      "bytes": 1078,
+      "git_blob_sha": "83ed1036f70d4f419307e8a044a35e163cc35201",
+      "path": "tiktoken-LICENSE",
+      "sha256": "418cb499b436128d653d79941333a5437b7be2ea9213dcc2f04d15d5d2c51d86",
+      "url": "https://raw.githubusercontent.com/openai/tiktoken/79dc2c0533685b893616c78160b5d9e40876e724/LICENSE"
+    }
+  ],
+  "encoding": "o200k_harmony",
+  "license": "GPT-OSS template/config assets: Apache-2.0 with original LICENSE; tiktoken implementation: MIT with original LICENSE. Vocabulary provenance is its official URL and SHA256; no new license assigned.",
+  "model_revisions": {
+    "openai/gpt-oss-120b": "b5c939de8f754692c1647ca79fbf85e8c1e70f8a",
+    "openai/gpt-oss-20b": "6cee5e81ee83917806bbde320786a8fb61efebee"
+  },
+  "retrieved_date_local": "2026-11-12",
+  "retrieved_timezone": "America/Mexico_City",
+  "schema_version": 1,
+  "scope": "Public tokenizer/template assets only, no weights, no model API; provider server template remains unverified.",
+  "sources": [
+    "https://developers.openai.com/cookbook/articles/openai-harmony",
+    "https://developers.openai.com/cookbook/articles/gpt-oss/run-transformers",
+    "https://developers.openai.com/cookbook/articles/gpt-oss/verifying-implementations",
+    "https://github.com/openai/tiktoken/blob/79dc2c0533685b893616c78160b5d9e40876e724/tiktoken_ext/openai_public.py"
+  ],
+  "tiktoken_source_revision": "79dc2c0533685b893616c78160b5d9e40876e724"
+}

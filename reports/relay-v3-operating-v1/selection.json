@@ -1,0 +1,42 @@
+{
+  "status": "selected_on_reused_development_requires_new_cohort",
+  "candidate_id": "pairwise_hybrid_a4",
+  "parameter": 28.574465237814778,
+  "point": {
+    "candidate_id": "pairwise_hybrid_a4",
+    "parameter": 28.574465237814778,
+    "grid_position": 13,
+    "weak_fraction": 0.13004993191103043,
+    "metrics": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 3446,
+      "coverage": 1.0,
+      "success_rate": 0.7821152973218338,
+      "success_rate_on_routed": 0.7821152973218338,
+      "mean_score_on_routed": 0.7804925102133454,
+      "total_cost": 10.8378436,
+      "cost_per_1000": 2.459792010894235,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "common_pair": {
+    "strong": "gpt-4-1106-preview",
+    "weak": "mistralai/mixtral-8x7b-chat"
+  },
+  "policy": "expected_gain_per_predicted_extra_cost",
+  "strong_comparator": ">",
+  "ties": "weak",
+  "objective": "pairwise",
+  "score_definition": "expected threshold-success gain divided by positive predicted extra historical call cost",
+  "source_artifact": "reports/relay-v3-development-v1/pairwise_hybrid_a4.joblib",
+  "source_artifact_sha256": "7d35e7c7b6466c6020ae812b0df1ca307bbbc018c03237e03afe4fcacb89e738",
+  "configuration_sha256": "eff8acafae9322e1a8fb6617ed43e58dae35fe306d61b6f409e48c11389d7b27",
+  "source_summary_sha256": "da98fd7f2e952bb64c81d1eca8995527f337a82c11c91d4e9d43d952e57deb49",
+  "quality_floor": 0.7818815251929188,
+  "requires_independent_evaluation": true,
+  "automatic_live_promotion": false,
+  "confirmation_of_superiority": false
+}

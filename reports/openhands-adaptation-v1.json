@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "kind": "audited_openhands_adaptation_pilot",
+  "evaluation_id": "openhands-adaptive-v1",
+  "artifact_id": "97ad0462de5f88db6b17983070e525b12af17bf33ecc1a703c17e8811e862b4c",
+  "representation": "routellm-bert",
+  "completed_at_utc": "2026-11-18T08:36:45.012243+00:00",
+  "fresh_tasks": 24,
+  "policies": {
+    "fixed_strong": {
+      "task_count": 24,
+      "group_count": 24,
+      "accepted_count": 23,
+      "acceptance_rate": 0.9583333333333334,
+      "unknown_cost_count": 0,
+      "known_cost_subtotal_usd": 0.0077685,
+      "cost_complete": true,
+      "cost_basis": "tariff_estimate",
+      "cost_bases": [
+        "tariff_estimate"
+      ],
+      "total_cost_usd": 0.0077685,
+      "cost_per_accepted_task_usd": 0.0003377608695652174,
+      "paired_losses_vs_strong": 0,
+      "paired_gains_vs_strong": 0,
+      "paired_loss_upper_95": 0.10131018148894873,
+      "relative_savings_per_accepted_vs_strong": 0.0,
+      "selected_candidate_count": 0,
+      "selected_baseline_count": 24,
+      "same_choices_as_relay": false,
+      "median_selected_branch_transport_seconds": 1.1015000000043074,
+      "sum_selected_branch_transport_seconds": 29.02900000003865,
+      "median_selected_branch_wall_seconds": 2.2374783999985084,
+      "sum_selected_branch_wall_seconds": 157.7275105000008,
+      "median_selected_branch_quota_wait_seconds": 0.0,
+      "sum_selected_branch_quota_wait_seconds": 106.71900000001187
+    },
+    "fixed_cheap": {
+      "task_count": 24,
+      "group_count": 24,
+      "accepted_count": 21,
+      "acceptance_rate": 0.875,
+      "unknown_cost_count": 1,
+      "known_cost_subtotal_usd": 0.00505515,
+      "cost_complete": false,
+      "cost_basis": null,
+      "cost_bases": [
+        "tariff_estimate",
+        "unknown"
+      ],
+      "total_cost_usd": null,
+      "cost_per_accepted_task_usd": null,
+      "paired_losses_vs_strong": 3,
+      "paired_gains_vs_strong": 1,
+      "paired_loss_upper_95": 0.27490262824711603,
+      "relative_savings_per_accepted_vs_strong": null,
+      "selected_candidate_count": 24,
+      "selected_baseline_count": 0,
+      "same_choices_as_relay": false,
+      "median_selected_branch_transport_seconds": 0.7890000000043074,
+      "sum_selected_branch_transport_seconds": 24.547000000049593,
+      "median_selected_branch_wall_seconds": 1.856979849995696,
+      "sum_selected_branch_wall_seconds": 527.7520454999758,
+      "median_selected_branch_quota_wait_seconds": 0.0,
+      "sum_selected_branch_quota_wait_seconds": 481.14199999999255
+    },
+    "relay_adaptive": {
+      "task_count": 24,
+      "group_count": 24,
+      "accepted_count": 22,
+      "acceptance_rate": 0.9166666666666666,
+      "unknown_cost_count": 1,
+      "known_cost_subtotal_usd": 0.0071193,
+      "cost_complete": false,
+      "cost_basis": null,
+      "cost_bases": [
+        "tariff_estimate",
+        "unknown"
+      ],
+      "total_cost_usd": null,
+      "cost_per_accepted_task_usd": null,
+      "paired_losses_vs_strong": 1,
+      "paired_gains_vs_strong": 0,
+      "paired_loss_upper_95": 0.16684992965212972,
+      "relative_savings_per_accepted_vs_strong": null,
+      "selected_candidate_count": 5,
+      "selected_baseline_count": 19,
+      "same_choices_as_relay": true,
+      "median_selected_branch_transport_seconds": 1.1015000000043074,
+      "sum_selected_branch_transport_seconds": 27.467000000033295,
+      "median_selected_branch_wall_seconds": 2.0689718999929028,
+      "sum_selected_branch_wall_seconds": 51.14753259997815,
+      "median_selected_branch_quota_wait_seconds": 0.0,
+      "sum_selected_branch_quota_wait_seconds": 1.3910000000032596
+    },
+    "bert_0_50": {
+      "task_count": 24,
+      "group_count": 24,
+      "accepted_count": 23,
+      "acceptance_rate": 0.9583333333333334,
+      "unknown_cost_count": 0,
+      "known_cost_subtotal_usd": 0.0077685,
+      "cost_complete": true,
+      "cost_basis": "tariff_estimate",
+      "cost_bases": [
+        "tariff_estimate"
+      ],
+      "total_cost_usd": 0.0077685,
+      "cost_per_accepted_task_usd": 0.0003377608695652174,
+      "paired_losses_vs_strong": 0,
+      "paired_gains_vs_strong": 0,
+      "paired_loss_upper_95": 0.10131018148894873,
+      "relative_savings_per_accepted_vs_strong": 0.0,
+      "selected_candidate_count": 0,
+      "selected_baseline_count": 24,
+      "same_choices_as_relay": false,
+      "median_selected_branch_transport_seconds": 1.1015000000043074,
+      "sum_selected_branch_transport_seconds": 29.02900000003865,
+      "median_selected_branch_wall_seconds": 2.2374783999985084,
+      "sum_selected_branch_wall_seconds": 157.7275105000008,
+      "median_selected_branch_quota_wait_seconds": 0.0,
+      "sum_selected_branch_quota_wait_seconds": 106.71900000001187
+    },
+    "bert_0_58": {
+      "task_count": 24,
+      "group_count": 24,
+      "accepted_count": 22,
+      "acceptance_rate": 0.9166666666666666,
+      "unknown_cost_count": 1,
+      "known_cost_subtotal_usd": 0.0071193,
+      "cost_complete": false,
+      "cost_basis": null,
+      "cost_bases": [
+        "tariff_estimate",
+        "unknown"
+      ],
+      "total_cost_usd": null,
+      "cost_per_accepted_task_usd": null,
+      "paired_losses_vs_strong": 1,
+      "paired_gains_vs_strong": 0,
+      "paired_loss_upper_95": 0.16684992965212972,
+      "relative_savings_per_accepted_vs_strong": null,
+      "selected_candidate_count": 5,
+      "selected_baseline_count": 19,
+      "same_choices_as_relay": true,
+      "median_selected_branch_transport_seconds": 1.1015000000043074,
+      "sum_selected_branch_transport_seconds": 27.467000000033295,
+      "median_selected_branch_wall_seconds": 2.0689718999929028,
+      "sum_selected_branch_wall_seconds": 51.14753259997815,
+      "median_selected_branch_quota_wait_seconds": 0.0,
+      "sum_selected_branch_quota_wait_seconds": 1.3910000000032596
+    }
+  },
+  "relay_comparisons": {
+    "fixed_strong": {
+      "relay_relative_savings_per_accepted": null,
+      "relay_acceptance_delta": -0.04166666666666674,
+      "relay_paired_losses": 1,
+      "relay_paired_gains": 0,
+      "same_choices": false
+    },
+    "fixed_cheap": {
+      "relay_relative_savings_per_accepted": null,
+      "relay_acceptance_delta": 0.04166666666666663,
+      "relay_paired_losses": 1,
+      "relay_paired_gains": 2,
+      "same_choices": false
+    },
+    "bert_0_50": {
+      "relay_relative_savings_per_accepted": null,
+      "relay_acceptance_delta": -0.04166666666666674,
+      "relay_paired_losses": 1,
+      "relay_paired_gains": 0,
+      "same_choices": false
+    },
+    "bert_0_58": {
+      "relay_relative_savings_per_accepted": null,
+      "relay_acceptance_delta": 0.0,
+      "relay_paired_losses": 0,
+      "relay_paired_gains": 0,
+      "same_choices": true
+    }
+  },
+  "activation": {
+    "eligible": false,
+    "reasons": [
+      "observed_paired_quality_loss",
+      "unknown_or_incomparable_selected_cost",
+      "cost_basis_changed_or_incomparable",
+      "insufficient_savings_per_accepted_task"
+    ],
+    "scope": "openhands-python-v1",
+    "criteria": {
+      "max_paired_losses": 0,
+      "min_savings": 0.1,
+      "min_validation_groups": 20
+    },
+    "production_approved": false,
+    "scope_note": "empirical pilot gate; earlier per-workflow gate unchanged"
+  },
+  "routing_compute": {
+    "resident_reconstructed_seconds": 21.755504700005986,
+    "earlier_encoder_inference_seconds": 21.748093400063226,
+    "cached_head_replay_seconds": 0.007411299942759797,
+    "encoder_cold_load_seconds": 54.76959949999582,
+    "bert_control_earlier_inference_seconds": 21.748093400063226,
+    "bert_control_cold_load_seconds": 54.76959949999582,
+    "break_even_cpu_price_usd_per_hour_vs_strong": null,
+    "break_even_scope": "conditional ceiling from LLM tariff difference / reconstructed resident seconds; excludes loading, training and evidence acquisition",
+    "measurement": "earlier real encoder timing plus frozen cached-head replay; not measured end-to-end policy latency",
+    "monetary_cost_usd": null,
+    "net_savings_verified": false
+  },
+  "training": {
+    "recorded": true,
+    "selection_sha256": "1d369a1337332602d56aaa77ece8f97c1b1a6970ac451e09956da28f8ce5c015",
+    "head_fit_and_selection_seconds": 4.558204200002365,
+    "historical_encoder_original_load_seconds": 71.38453450001543,
+    "historical_encoder_original_scoring_seconds": 18.36318810004741,
+    "historical_encoder_original_total_compute_seconds": 89.74772260006284,
+    "compute_cost_usd": null,
+    "amortization_assumed": false,
+    "scope": "saved training metadata; original historical encoder work is separate from cached fit/selection"
+  },
+  "acquisition": {
+    "episodes": 48,
+    "http_attempts": 52,
+    "unknown_http_costs": 0,
+    "known_uncached_tariff_subtotal_usd": 0.012823649999999999,
+    "total_uncached_tariff_usd": 0.012823649999999999,
+    "scope": "both fresh measured branches; not an operational policy cost and excludes prior development/diagnostics/local compute",
+    "actual_paid_bill_usd": null,
+    "amortization_assumed": false
+  },
+  "cost_semantics": "uncached Groq tariff scenario from all recorded HTTP attempts, including failures and retries; unknown totals stay null",
+  "reference": {
+    "implementation": "local_published_routellm_bert_scoring",
+    "checkpoint": "routellm/bert_gpt4_augmented",
+    "revision": "86237e3df400762178ea98379477b8296e66d5e4",
+    "weights_sha256": "e2a92240bad1c7fb9befbf021a62fad5feb1e2a3990d53a28d160a39bb1cac7b",
+    "input_contract": "caller_supplied_text; pilot used unchanged last user message",
+    "max_input_tokens": 512,
+    "source_supervision": "GPT-4/Mixtral preferences",
+    "success_probability": false,
+    "cpu_threads": 4,
+    "load_seconds": 54.76959949999582,
+    "router_cost_usd": null,
+    "original_reference": {
+      "implementation": "local_published_routellm_bert_scoring",
+      "checkpoint": "routellm/bert_gpt4_augmented",
+      "revision": "86237e3df400762178ea98379477b8296e66d5e4",
+      "weights_sha256": "e2a92240bad1c7fb9befbf021a62fad5feb1e2a3990d53a28d160a39bb1cac7b",
+      "input_contract": "caller_supplied_text; pilot used unchanged last user message",
+      "max_input_tokens": 512,
+      "source_supervision": "GPT-4/Mixtral preferences",
+      "success_probability": false,
+      "cpu_threads": 4,
+      "load_seconds": 54.76959949999582,
+      "router_cost_usd": null
+    },
+    "cached": true,
+    "cache_sha256": "2b7e80e100d8fae325611563091477015ea5d216958dd73e65ef6e9cddf24b1c",
+    "cache_path": "C:\\Users\\Aldo\\Desktop\\proyecto-icd\\data\\imported\\harness-adaptive-v1\\bert_reference.json",
+    "cache_schema": "fresh",
+    "cache_task_count": 24,
+    "cache_unique_prompt_count": 24,
+    "cache_checkpoint_load_seconds": 0.0,
+    "original_load_seconds": 54.76959949999582,
+    "original_scoring_seconds": 21.748093400063226,
+    "original_total_compute_seconds": 76.51769290005905,
+    "cache_verification": "pinned_checkpoint_metadata_and_exact_prompt_coverage_not_recomputed_predictions",
+    "cache_suite_sha256": "c268b24f2f874efbc8a1ddcb734b7e046a77e87f027e53d3742e997d6c178723"
+  },
+  "audit": {
+    "suite_sha256": "c268b24f2f874efbc8a1ddcb734b7e046a77e87f027e53d3742e997d6c178723",
+    "policy_sha256": "9d25a95b4b7cfd37dee4f67cf5a90caf2e524a8d0f4ce782000b0ae58525a188",
+    "frozen_routes_sha256": "7c7afccf4f97a757eb9a7a0d9b46b2727f6bb4dbef7a3e336547f03c500ef916",
+    "comparison_sha256": "ecb882939d67c420876d5f2cb1d044dd959130346347280c88b113b89638efc5",
+    "validation_sha256": "bb6f0c3096949e0896ba3779851528fc91f4636243b5adc3409385f7d9f63ebd",
+    "run_manifest_sha256": "3e9dd83d81f667e17bf239d75cfe4df20af196b257a1c285c7d1b0e541f463c4",
+    "bert_reference_sha256": "2b7e80e100d8fae325611563091477015ea5d216958dd73e65ef6e9cddf24b1c",
+    "validation_records_sha256": "1c666bf22978148c30f576a7715b3f547c436c68abadc0ec193cf744b32f1a16",
+    "bert_reference_sources_verified": {
+      "tools/score_adaptive_reference.py": "99ca720b2d84c6f541329218085b8cee014566d71d2d852317f7fd789a7454a6",
+      "src/relay_router/integrations/routellm.py": "52b227609a47c37417b05bff66d4d30fbf357717393cd4ecc4547d1b6fab2d60"
+    },
+    "recorded_runtime_packages": {
+      "openhands-sdk": "1.62.0",
+      "litellm": "1.105.7"
+    },
+    "observations_sha256": "2132615ecd2bca742b316eb42f295eb50acc2db2abd1ca261738e514e479e9f5",
+    "http_attempts_sha256": "139a38a06c129ae27087626bccb14148f9335e4ad683beec652c179919d566d1",
+    "source_hashes_match_freeze": true,
+    "routes_reproduced": true,
+    "all_dispatches_reconciled": true,
+    "validation_reproduced_without_tuning": true,
+    "freeze_id": "584ac66483094c6407eaa970787a1d3e03e0778838bf388d9a362b7419df5e1e",
+    "frozen_at_utc": "2026-11-18T08:11:18.112942+00:00",
+    "first_dispatch_at_utc": "2026-11-18T08:12:16.858702+00:00",
+    "execution_amendment": {
+      "present": true,
+      "amendment_id": "cd5a77e5eeb13502434dc1ac6fc3edb9588570569cbab1671afcdda795318968",
+      "sha256": "150920e2739bcfd1ce764585c1145e6c14d5a4c50739df0171471508a837e388",
+      "created_at_utc": "2026-11-18T08:26:37.503826+00:00",
+      "source_sha256": {
+        "tools/continue_adaptive_pilot.py": "65faa361a2fb32c1ece9fbbc641902e547b83f80c13143c33b68b5f83ed7073a",
+        "src/relay_router/integrations/openhands_io.py": "d48b541cd9a1f2495433a79c75023dfe247e2c4b58e90ebcfe1153b80124e7c1"
+      },
+      "original_completed_episodes_before_guard": 6,
+      "original_http_attempts_before_guard": 7,
+      "original_pre_http_permission_errors_preserved": [
+        "HumanEval-2-gpt-oss-20b"
+      ],
+      "original_prefix_unchanged": true,
+      "io_retry_events": 0,
+      "io_retry_events_sha256": null,
+      "added_http_requests": 0,
+      "scope": "guard added after the recorded initial prefix; initial failed episodes remain in the primary result"
+    },
+    "integrity_scope": "local hashes and recorded chronology; not independently certified evidence"
+  },
+  "claim_limits": {
+    "general_routellm_superiority_established": false,
+    "not_diamond_evaluated": false,
+    "net_monetary_savings_established": false,
+    "statistical_noninferiority_established": false,
+    "comparison": "same paired branches; local published RouteLLM-BERT checkpoint at frozen .50/.58 with baseline on truncation, not official RouteLLM SDK",
+    "population": "24 fresh-for-routing historical public Python tasks; pretraining contamination possible, not customer repositories"
+  },
+  "report_id": "104b5f5fa01b19e55a2ae1e1334f87fd10474e60cd14e4f38f21ca1cb9b44517"
+}

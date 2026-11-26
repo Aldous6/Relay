@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-11-12T02:24:35.575786+00:00",
+  "unit_tests_run": 217,
+  "unit_tests_passed": 217,
+  "unit_tests_skipped": 0,
+  "python_syntax_files": 100,
+  "test_log": "outputs/v7-package/tests.log",
+  "test_log_sha256": "784348d3087a335768abacf3a2c570fd2649a0a7010ff5ceeea9a26a09728480",
+  "application_server_started": false,
+  "paid_api_calls": false,
+  "outer_test_evaluated": false,
+  "wheel": "outputs/v7-package/routerbench_icd-0.7.0-py3-none-any.whl",
+  "wheel_sha256": "44142b6943d3be58ec9bddc9a0a2b49fa0a449dcaaa6421d6fef52eda27f8b22",
+  "wheel_excludes_data_models_reports": true,
+  "frozen_training_sources_unchanged": true,
+  "summary_sha256": "f727814b45d6e8b77858ea669f0eccfa638242705dadec41b1685b80d8381500",
+  "sdk_replay": "outputs/v7-package/sdk_replay.json",
+  "sdk_replay_sha256": "51182f3a10932ca91ee92489ca56da526d09428f076cb9e5024454ab24031e2a",
+  "verifier": "outputs/v7-package/verify.py",
+  "verifier_sha256": "ea5ed6735b87cce610eae1cb09bd57cfc4fa67a7b9e5bebbaa55c425e8170e4c"
+}

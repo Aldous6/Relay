@@ -1,0 +1,538 @@
+{
+  "configuration": {
+    "experiment_id": "local-structural-adapter-development-v1",
+    "scope": "development adaptation using the already observed 64 synthetic local catalog audit cases",
+    "source_dir": "reports/local-catalog-audit-v1",
+    "dataset_path": "reports/local-transfer-pilot-v1/cohort.jsonl",
+    "output_dir": "reports/local-adapter-development-v1",
+    "expected_cases": 64,
+    "models": {
+      "strong": "qwen2.5:1.5b",
+      "weak": "qwen2.5:0.5b"
+    },
+    "bert_reference_selection_file": "reports/routellm-bert-secondary-v1/selection.json",
+    "bert_reference_selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+    "adapted_bert_control": "same local tree hyperparameters, fit/calibration rows and policy grid; frozen 768-column BERT features instead of raw fourteen attributes; not the published preference router",
+    "split": {
+      "seed": 42,
+      "fit_fraction": 0.7,
+      "strategy": "normalized prompt hash independent of outcomes"
+    },
+    "learner": {
+      "representation": "structural",
+      "max_iter": 80,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 3,
+      "l2_regularization": 2.0,
+      "quality_threshold": 0.75,
+      "seed": 42
+    },
+    "router_input": "SYSTEM:\n{SYSTEM}\n\nUSER:\n{prompt}",
+    "system_source": "tools/local_transfer_pilot.py:SYSTEM",
+    "cost_unit": "seconds",
+    "tradeoff_grid": [
+      0,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.5,
+      1,
+      2
+    ],
+    "tradeoff_unit": "expected exact success probability per predicted extra generation second",
+    "selection": "minimum calibration observed generation seconds among points with success at least fixed strong calibration; ties higher success then smaller tradeoff; fixed strong fallback",
+    "bootstrap_replicates": 1000,
+    "automatic_live_promotion": false,
+    "independent_superiority_claim": false,
+    "paid_api_calls": false
+  },
+  "configuration_sha256": "cf256726ce6049fa1242ef3df0884afcb9f08e9022e8e889f20cd29087107203",
+  "source_files_sha256": {
+    "freeze.json": "e5c9201cf969c18a0745dc4803e92f1a8211a6993c05a01d371707dd58a7ab4c",
+    "summary.json": "63a613868ea6491c6333b6249770a6b0307b3da95b69aeca76b8f9148e8d5853",
+    "responses.json": "3b74a3c19a5409846f21a547919d0d2caa32690908f6d1eeedd10d07c05fde28",
+    "routes.json": "d5eee995eaa959647935c8c5684fb803f61c301bd708b07c894b8881ead389ef",
+    "dataset_sha256": "9beab292ee21ccae941a6fac496a57aa7568144535472675dc1c17c79c7d0937"
+  },
+  "system": "Responde preguntas sobre el material recibido. Devuelve solamente el dato o número solicitado, sin explicación ni formato adicional. Puedes calcular a partir de los datos. Si el dato no se puede obtener del material, responde exactamente NO_EVIDENCE.",
+  "system_sha256": "fa16732498a422fa6813cff372d210ff973264dda77099a7b572d3a2972b6450",
+  "serialization": "SYSTEM:\n{SYSTEM}\n\nUSER:\n{prompt}",
+  "scope": "known synthetic cohort reused for development, not independent validation",
+  "bert_reference_selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+  "bert_checkpoint_revision": "86237e3df400762178ea98379477b8296e66d5e4",
+  "bert_weights_sha256": "e2a92240bad1c7fb9befbf021a62fad5feb1e2a3990d53a28d160a39bb1cac7b",
+  "same_local_head_hyperparameters": {
+    "max_iter": 80,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 3,
+    "l2_regularization": 2.0,
+    "quality_threshold": 0.75,
+    "seed": 42
+  },
+  "artifact": "adapter.joblib",
+  "artifact_sha256": "74d9ac0eac0a378d932c829af29fd562d69d7afbcc762b738344493036c226a8",
+  "target_counts": {
+    "fit": {
+      "strong_only": 10,
+      "weak_only": 0,
+      "equal": 38
+    },
+    "calibration": {
+      "strong_only": 2,
+      "weak_only": 1,
+      "equal": 13
+    }
+  },
+  "calibration_notes": {
+    "strong_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+    "weak_only": "class absent from fit or calibration; smoothed calibration prevalence",
+    "equal": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant"
+  },
+  "fit_rows": 48,
+  "calibration_rows": 16,
+  "classifier_fit_rows": 48,
+  "classifier_calibration_rows": 15,
+  "selected_specification": {
+    "mode": "pairwise",
+    "policy": "signed_pairwise_utility",
+    "tradeoff": 0.1,
+    "cost_unit": "seconds",
+    "input_template": "SYSTEM:\n{SYSTEM}\n\nUSER:\n{prompt}",
+    "system_sha256": "fa16732498a422fa6813cff372d210ff973264dda77099a7b572d3a2972b6450",
+    "strong": "qwen2.5:1.5b",
+    "weak": "qwen2.5:0.5b",
+    "quality_threshold": 0.75
+  },
+  "selected_calibration_metrics": {
+    "n": 16,
+    "success_rate": 0.875,
+    "total_selected_generation_seconds": 20.219114700012142,
+    "mean_selected_generation_seconds": 1.2636946687507589,
+    "cost_unit": "seconds",
+    "monetary_cost_usd": null
+  },
+  "fixed_strong_calibration_metrics": {
+    "n": 16,
+    "success_rate": 0.8125,
+    "total_selected_generation_seconds": 27.683268800014048,
+    "mean_selected_generation_seconds": 1.730204300000878,
+    "cost_unit": "seconds",
+    "monetary_cost_usd": null
+  },
+  "curve": [
+    {
+      "tradeoff": 0,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.8125,
+        "total_selected_generation_seconds": 22.19203000003472,
+        "mean_selected_generation_seconds": 1.38700187500217,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 0.5625
+    },
+    {
+      "tradeoff": 0.01,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.8125,
+        "total_selected_generation_seconds": 22.19203000003472,
+        "mean_selected_generation_seconds": 1.38700187500217,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 0.5625
+    },
+    {
+      "tradeoff": 0.02,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.8125,
+        "total_selected_generation_seconds": 22.19203000003472,
+        "mean_selected_generation_seconds": 1.38700187500217,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 0.5625
+    },
+    {
+      "tradeoff": 0.05,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.875,
+        "total_selected_generation_seconds": 20.764300600014394,
+        "mean_selected_generation_seconds": 1.2977687875008996,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 0.6875
+    },
+    {
+      "tradeoff": 0.1,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.875,
+        "total_selected_generation_seconds": 20.219114700012142,
+        "mean_selected_generation_seconds": 1.2636946687507589,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 0.75
+    },
+    {
+      "tradeoff": 0.2,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.875,
+        "total_selected_generation_seconds": 20.219114700012142,
+        "mean_selected_generation_seconds": 1.2636946687507589,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 0.75
+    },
+    {
+      "tradeoff": 0.5,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.75,
+        "total_selected_generation_seconds": 18.30363650000072,
+        "mean_selected_generation_seconds": 1.143977281250045,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 1.0
+    },
+    {
+      "tradeoff": 1,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.75,
+        "total_selected_generation_seconds": 18.30363650000072,
+        "mean_selected_generation_seconds": 1.143977281250045,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 1.0
+    },
+    {
+      "tradeoff": 2,
+      "metrics": {
+        "n": 16,
+        "success_rate": 0.75,
+        "total_selected_generation_seconds": 18.30363650000072,
+        "mean_selected_generation_seconds": 1.143977281250045,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "weak_fraction": 1.0
+    }
+  ],
+  "calibration_comparison_vs_strong": {
+    "success_rate_delta": 0.0625,
+    "success_rate_delta_95ci": [
+      0.0,
+      0.1875
+    ],
+    "mean_selected_seconds_delta": -0.46650963125011913,
+    "mean_selected_seconds_delta_95ci": [
+      -0.5972765420342512,
+      -0.3293846721904629
+    ],
+    "relative_selected_duration_saving": 0.2696269054757767,
+    "relative_selected_duration_saving_95ci": [
+      0.20616905105546657,
+      0.3228790482414996
+    ],
+    "scope": "descriptive post-selection calibration diagnostics on a small reused cohort; seconds, not money"
+  },
+  "models": {
+    "strong": "qwen2.5:1.5b",
+    "weak": "qwen2.5:0.5b"
+  },
+  "partition_counts": {
+    "fit": 48,
+    "calibration": 16
+  },
+  "partition_prompt_groups": {
+    "fit": [
+      "20290d89951ceb6579ba03aa4139f1ca1e2d819f6bd58ce745d84f01a0b20baf",
+      "c10ebb43bef005327d1be427e392e67187ffececc99ccaff51fa0594c90c8cd4",
+      "a11b9e39c6df9963d9efc6f3f9302dc32710542af4ba0727d0ac7ba70cf8a1b5",
+      "6b811bd10434a204d53d4360b95764e8c3f299c9af926ddb4e60159382eec030",
+      "fb099b91b64ad0029bd3f120602d288d7af25b0b8b4b2fe8c395c7e008f62568",
+      "d57077f70ad072729f2ce2aaa5005febb219e4291be9acded2f72145f84c6ba3",
+      "33b61e0e1dd131fbd02c86eaba7cb0f8541e38ebe28754ce31063ccd79463e94",
+      "d62b1bbed08f97cd5e888e49efc80e4d983aba3ada3c060d591b9bb8715cf081",
+      "48951a103ff51cd6011d386e17790629fee806fc2c27e84df640632e1a0fb70b",
+      "4cba29d857dcc74b47ac666f021528c9efeefdacae09d6f4419d7fe9bb1c9588",
+      "af2c967589bc6194ae14de0ff357374d2cd462551544b2665cf5463996727ed8",
+      "8ea80f1bf3ae8796124efb78aeb0b391638b0dbc0ffad2a40db2566a1c2db723",
+      "7a9a36b7336f25dc7823ff81af4b07d93b7307892c0a0f9237eb17941eb9ead3",
+      "57958d4448435562a231ae25042733b252e07a9d2cf9ab60fe991bb110e21b5a",
+      "29763082f9900aa1f2af07a745301558c6b9c9c5da31c69a920e321e09a900c0",
+      "e46e73d30971c64b170e47d5dc1a3b15e8edf9c9d6c22de0106c1a9b1da1f309",
+      "06cb3e832438bfb27550d13e1b0d9a6bd40b2203aa7ec9a487e3d6505206053c",
+      "4666ca58319a81c8a44de6cf3f81b5aa4f67a3bd46b60f5b9735249dedbac2ef",
+      "ef7cbcf35e6dcb192a192afffaaf9b452ebb67a4b0edfd47f90217e9e0f10533",
+      "5a68be93ccd988986b1862d13409235deb745e2993f7e32e73d43952f630d496",
+      "5406f601571f48dc3a1df392496e97a270467b33f6be674ff047fd3c87ef1da3",
+      "8caee8788d726d7f2157e55071aa7709a17808d95798ec62361572e752c779d3",
+      "7fe73cb7485ca514bb556d784e3d621a889694d6481916b67797abaf059926ac",
+      "09fe926383d801bf2b7f61f957d2a1259a151326077aeb9b45348862192fc431",
+      "d76af9e83f8d4dccfff62dc53269dfe962d08f760ef8c0f914ca22140d44d965",
+      "c6c0f7812324ffa39c50074b7c74b206cf4d16152c2ac0985e49c395aea33903",
+      "7c4f8763095a057a5c285820b404a071a44dad5172199823d7b1a620124686ef",
+      "95231abc5c767f64a2623431c1cbf945f7481fb46fc8da96afb4ce47388c3ad9",
+      "42342df17607ca9318c834da91d32e949947462c0a27fd3b47e3ca6c69ccb220",
+      "c1f2596f5c50e5c8f327cbd8d4a47f264d290daa970597bc30d1e7e2b1ec5cb8",
+      "7cae16a3bcf36c5240787d466349fcda66e39addfb943d32f49960f1ad1aa19c",
+      "e6440505260d9edbcb5d9f2e2f0faeadb122493ba8dd93b716b71cca7b17e554",
+      "32ce88b0386102e3238f014649ff93e5d046b65ea959ea5263eed7236e84f16b",
+      "499a70421ead7e1df13e675d275fdc714ecfbfcebdd5193eb34da2027c12e175",
+      "d35e783e7aa9623bacc317fadaf36ab1262ff4dcf88307584a5996177656d437",
+      "2f92d65dec3e6e673b8ea1fcb25de6eee8475a9e4f117574a4923ca4873cab26",
+      "d6c87ec3b95db70d670ade83543c653d466621d6121e01dc5b16c8a6329a9fd1",
+      "9d1bc2930c2e21d0f2f0bcc7416052fc63f0064634b61765f09e002b246daf92",
+      "48d25685b43bfc3476168b0f901083a7a1b58c4600b6b10046d3cfe0a201220d",
+      "d808d26abe8405621271fa79c0ae906f14fca9b2102e52c589daa3cb813a17a6",
+      "2d51e50c1c57a98444961befc2273e4d314f9e2e52791b7128f155c312dc01c6",
+      "cdde709ef96e199656653708e2a03df70e0b5b7a1835d9460506f2700f5af886",
+      "18c1c3b421fbd47b80800589a568a52ad8c8ca05fa9900a407ae4013afe9a032",
+      "e294e258bb765b51628d3746c78b705725f35e7abaed3e7c78d6c28747f42973",
+      "51d021b13c0db7ad8333bf8576234b603a7ac60830cc6f4e717d213df3aa934c",
+      "4dd7197c009c057317ac9fc7b581330a4bacd4c7602f13db811da0d13777e4f2",
+      "c135dab3089cf2cbaa785201f2343b02ce8ddf99494fa05cbf0c1712a85e03b7",
+      "d6914b23567486f79261f4e163a7a72e7342b39a4f515d386c0265bcfe8a6b69"
+    ],
+    "calibration": [
+      "b7928111d949c83ef620563823d030081cbe56f726a425b14a71526d34072d1c",
+      "ad9860d2bba1cdbb32bc20aa28392e34d299facde817774f15c212783bea07f1",
+      "7bac08ac626d5a5a4cf7e9d0063dd5c134fc32f15cad1bf5bace4c78e2b8843b",
+      "1901b966dc35f2eb64cc7bbe4e1923e5aac43390d41ff06b794c1cde7d4b36ad",
+      "eba08b87b207992f73c95074fe252b255326590145c0d2ac20e5bc2f9870571a",
+      "9eab587dc90a4eec44491994222ede52b10f2a73811ba259cd7c252fe8aae818",
+      "e8b817981cd60910235ece6131e592f3071b2a7c1e5111badca1f4c5d916041b",
+      "14bbda7c43d089fc971fd507ac591fd0d703faf465eacf9a60d3cbcbcf62818e",
+      "e84cfaa3d099520bc989458f9c3d3d67178a221bc6df27d7a9211c1cc587772f",
+      "829981f7d11cbff319e9bcf4b21c0a15d2cadb93a79d009ced0ebda64efa2a92",
+      "b19dd780e4567eea54016416f95fdc3ae05185fb55c59e53905f8318d365f3da",
+      "787cf8c817fb57d93aad282776f70209144982f8daef56242a16b1cdd55820e1",
+      "4e4514611399f53b807ace082d772074b0986691ab2b5aa702279f0447797c99",
+      "34cc517046c0084c183a6075585145a1f4fbcb8cb0f74e755815f217071cd068",
+      "58edc43dc069b4a51c761c8dac78a6949f507366b65559f150d7b71e1248db5b",
+      "47b9925043bfc2d17ef4e2bccf4273c440b2ae4ba553e0909826c567b20c1c97"
+    ]
+  },
+  "controls": {
+    "bert_adapted": {
+      "artifact": "bert_adapted.joblib",
+      "artifact_sha256": "dbfb6028af05b091936d02eae3bcbefaed6dc83e75c42385f26f5fb84a76aa67",
+      "target_counts": {
+        "fit": {
+          "strong_only": 10,
+          "weak_only": 0,
+          "equal": 38
+        },
+        "calibration": {
+          "strong_only": 2,
+          "weak_only": 1,
+          "equal": 13
+        }
+      },
+      "calibration_notes": {
+        "strong_only": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant",
+        "weak_only": "class absent from fit or calibration; smoothed calibration prevalence",
+        "equal": "multiclass sigmoid on disjoint supported calibration rows; unsupported class mass held constant"
+      },
+      "fit_rows": 48,
+      "calibration_rows": 16,
+      "classifier_fit_rows": 48,
+      "classifier_calibration_rows": 15,
+      "selected_specification": {
+        "mode": "pairwise",
+        "policy": "signed_pairwise_utility",
+        "tradeoff": 0.2,
+        "cost_unit": "seconds",
+        "input_template": "SYSTEM:\n{SYSTEM}\n\nUSER:\n{prompt}",
+        "system_sha256": "fa16732498a422fa6813cff372d210ff973264dda77099a7b572d3a2972b6450",
+        "strong": "qwen2.5:1.5b",
+        "weak": "qwen2.5:0.5b",
+        "quality_threshold": 0.75
+      },
+      "selected_calibration_metrics": {
+        "n": 16,
+        "success_rate": 0.8125,
+        "total_selected_generation_seconds": 19.69550300000992,
+        "mean_selected_generation_seconds": 1.23096893750062,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "fixed_strong_calibration_metrics": {
+        "n": 16,
+        "success_rate": 0.8125,
+        "total_selected_generation_seconds": 27.683268800014048,
+        "mean_selected_generation_seconds": 1.730204300000878,
+        "cost_unit": "seconds",
+        "monetary_cost_usd": null
+      },
+      "curve": [
+        {
+          "tradeoff": 0,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.8125,
+            "total_selected_generation_seconds": 21.967207400040934,
+            "mean_selected_generation_seconds": 1.3729504625025584,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 0.5625
+        },
+        {
+          "tradeoff": 0.01,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.875,
+            "total_selected_generation_seconds": 21.250729100022,
+            "mean_selected_generation_seconds": 1.328170568751375,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 0.625
+        },
+        {
+          "tradeoff": 0.02,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.875,
+            "total_selected_generation_seconds": 21.250729100022,
+            "mean_selected_generation_seconds": 1.328170568751375,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 0.625
+        },
+        {
+          "tradeoff": 0.05,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.875,
+            "total_selected_generation_seconds": 21.250729100022,
+            "mean_selected_generation_seconds": 1.328170568751375,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 0.625
+        },
+        {
+          "tradeoff": 0.1,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.8125,
+            "total_selected_generation_seconds": 20.72711740001978,
+            "mean_selected_generation_seconds": 1.2954448375012362,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 0.6875
+        },
+        {
+          "tradeoff": 0.2,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.8125,
+            "total_selected_generation_seconds": 19.69550300000992,
+            "mean_selected_generation_seconds": 1.23096893750062,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 0.8125
+        },
+        {
+          "tradeoff": 0.5,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.75,
+            "total_selected_generation_seconds": 18.30363650000072,
+            "mean_selected_generation_seconds": 1.143977281250045,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 1.0
+        },
+        {
+          "tradeoff": 1,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.75,
+            "total_selected_generation_seconds": 18.30363650000072,
+            "mean_selected_generation_seconds": 1.143977281250045,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 1.0
+        },
+        {
+          "tradeoff": 2,
+          "metrics": {
+            "n": 16,
+            "success_rate": 0.75,
+            "total_selected_generation_seconds": 18.30363650000072,
+            "mean_selected_generation_seconds": 1.143977281250045,
+            "cost_unit": "seconds",
+            "monetary_cost_usd": null
+          },
+          "weak_fraction": 1.0
+        }
+      ],
+      "calibration_comparison_vs_strong": {
+        "success_rate_delta": 0.0,
+        "success_rate_delta_95ci": [
+          -0.1875,
+          0.1875
+        ],
+        "mean_selected_seconds_delta": -0.4992353625002579,
+        "mean_selected_seconds_delta_95ci": [
+          -0.6113126971869178,
+          -0.3744533840629629
+        ],
+        "relative_selected_duration_saving": 0.28854127948936703,
+        "relative_selected_duration_saving_95ci": [
+          0.23008307733575853,
+          0.33627001357742037
+        ],
+        "scope": "descriptive post-selection calibration diagnostics on a small reused cohort; seconds, not money"
+      },
+      "role": "locally adapted BERT feature control; not the published preference router"
+    }
+  },
+  "primary_candidate_not_selected_by_architecture": true,
+  "independent_validation": false,
+  "production_validation": false,
+  "monetary_cost_usd": null,
+  "limitations": [
+    "64 already observed synthetic cases reused for development; hash splitting does not restore independence",
+    "calibration both calibrates the model and selects its operating point; reported intervals are descriptive",
+    "cached callback durations include hardware/warmup/order variation and are not prices",
+    "new cohort needed after freezing this artifact, policy, local model digests and generation settings"
+  ],
+  "script_sha256": "53f76c6dbdcbbb7261012976d472bdfc1cfff0be7517ab1a986ccc2b112b00fb",
+  "files_sha256": {
+    "adapter.joblib": "74d9ac0eac0a378d932c829af29fd562d69d7afbcc762b738344493036c226a8",
+    "bert_adapted.joblib": "dbfb6028af05b091936d02eae3bcbefaed6dc83e75c42385f26f5fb84a76aa67",
+    "bert_adapted_calibration_predicted_seconds.parquet": "dbfe5122b60edb6346bf9db70a9fdec1b27eb90914e9e647e0b0b7f0df9948f6",
+    "bert_adapted_calibration_probabilities.parquet": "5e720742d6c22d7eee664b540e082e6b7121514a7e351aa06685f6b661064542",
+    "bert_adapted_calibration_routes_all_points.parquet": "1a44b0e2767f85c943383c37241d15e43c4625f384eb2d71c64770ff83e246fc",
+    "bert_adapted_selected_calibration_routes.parquet": "99c2752a891d87cdf7758b98b5d41866aae18ed4e68fc641e82eb4de7851cb95",
+    "calibration_predicted_seconds.parquet": "dbfe5122b60edb6346bf9db70a9fdec1b27eb90914e9e647e0b0b7f0df9948f6",
+    "calibration_probabilities.parquet": "1b04a7a4784ad7a03a548b0c69e6054d1f09c1fd304c1b8b39bd6a5631ddc2aa",
+    "calibration_routes_all_points.parquet": "661541c7f689c727f9be91b810d9234796d443c1b7ad5c81371fb43ef16f4ac5",
+    "development_rows.parquet": "ca53f7f25f1ae553cc5dc8ce90b51d56e47f1261589b955f36c063d4043daf46",
+    "selected_calibration_routes.parquet": "794e238210db7d15f42f83e3c2c2eac4758093fc7b3ee5c79e0ed1a016a27697",
+    "training_started.json": "d98ba85b2c2d2e17d5bc2a6d02b88cda48136aead9a4e003f7204f22685216cf"
+  }
+}

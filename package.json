@@ -1,0 +1,9 @@
+{
+  "name": "relay-local",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["web"],
+  "scripts": {
+    "dev": "node tools/dev.mjs"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "scope": "diagnostic",
+  "tasks": [
+    {
+      "task_id": "normalize_labels_demo",
+      "group_id": "maintenance_demo_labels",
+      "partition": "development",
+      "config": "maintenance_demo.json",
+      "task": "Corrige normalize_labels: elimina espacios exteriores y entradas vacías, normaliza con casefold y elimina duplicados conservando el orden de primera aparición. No modifiques la lista recibida."
+    }
+  ]
+}

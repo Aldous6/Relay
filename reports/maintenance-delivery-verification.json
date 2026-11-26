@@ -1,0 +1,39 @@
+{
+  "recorded_at_utc": "2026-11-16T03:49:07.515969+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "scope": "offline product integration and SDK regressions; no real LLM generations",
+  "provider_calls": 0,
+  "tests": {
+    "run": 103,
+    "passed": 102,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "test_does_not_follow_symlink (test_maintenance_workspace.MaintenanceWorkspaceTests.test_does_not_follow_symlink)",
+        "reason": "OS does not permit symlink creation for this user"
+      }
+    ]
+  },
+  "functional_flow": {
+    "status": "ready_for_review",
+    "baseline_passed": false,
+    "proposal_passed": true,
+    "tests_in_example": 5,
+    "applied_to_isolated_example": true,
+    "real_model_quality_verified": false
+  },
+  "source_sha256": {
+    "src\\relay_router\\maintenance.py": "8db46679d06228713dc327219ecd4d0049b2a76b1f19b7d1acb47ea25cbce28a",
+    "src\\relay_router\\maintenance_cli.py": "e6f3d4d93e6e71a374c7b637fd53fb69ab6ee0ab16a7aebb159f7f025aecbf10",
+    "src\\relay_router\\maintenance_provider.py": "0bb44a92c0b0dd27da57e1d4c33d0a529696fe7c0a3e9f3b4e9b2b914475ec2d",
+    "src\\relay_router\\maintenance_routing.py": "ba23751d2789741ceee8f6580ada30664b583078c1ef01e4b41d4ce602bd92f1",
+    "src\\relay_router\\maintenance_workspace.py": "908be9d21f5bef1819cb31474a4f52d64a10dd239a3c5e3a29a470aa8a2b11bd"
+  },
+  "evidence_directory": "outputs\\maintenance-delivery-check\\20261116T034844029030Z",
+  "additional_checks": {
+    "default_cli_check": "passed without provider calls",
+    "powershell_syntax": "passed",
+    "powershell_launcher_execution": "blocked by existing execution policy; direct Python CLI verified"
+  }
+}

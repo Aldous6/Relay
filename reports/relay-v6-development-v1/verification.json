@@ -1,0 +1,15 @@
+{
+  "verified_at_utc": "2026-11-12T01:58:40.710142+00:00",
+  "unit_tests_passed": 199,
+  "python_syntax_files": 92,
+  "test_log": "outputs/v6-package/tests.log",
+  "test_log_sha256": "5dba568c9052b32c85bb68dccbc47517facdb452df99c423f7c052d6827ac92a",
+  "application_server_started": false,
+  "paid_api_calls": false,
+  "wheel": "outputs/v6-package/routerbench_icd-0.6.0-py3-none-any.whl",
+  "wheel_sha256": "875f78ef24fe808d7c0fbb2ecaa882c814a5861ce44078866d3c018a8e628cde",
+  "wheel_excludes_data_models_reports": true,
+  "frozen_training_sources_unchanged": true,
+  "summary_sha256": "9fe39436ef502145fdc404502f784168b558e9ef8ecb6618aa77bb89527e78e9",
+  "sdk_replay": "sdk_replay.json"
+}

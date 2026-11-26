@@ -1,0 +1,28 @@
+{
+  "scope": "project",
+  "destination": ".agents/skills",
+  "selected_on": "2026-11-07",
+  "repositories": [
+    {
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "revision": "515742b7ed522c78f19bb9b61f346a0435785302",
+      "license_path": "LICENSE.md",
+      "skills": [
+        "skills/scikit-learn",
+        "skills/scientific-critical-thinking",
+        "skills/scientific-visualization"
+      ]
+    },
+    {
+      "repository": "openai/skills",
+      "revision": "49f948faa9258a0c61caceaf225e179651397431",
+      "license_path": "skills/.curated/jupyter-notebook/LICENSE.txt",
+      "skills": ["skills/.curated/jupyter-notebook"]
+    }
+  ],
+  "notes": [
+    "Immutable reviewed snapshots; not a claim that these are the latest revisions.",
+    "openai/skills is deprecated; the notebook skill is selected as a self-contained local scaffold with an explicit license.",
+    "Install instructions only. Do not run bundled demos, install packages or contact commercial services automatically."
+  ]
+}

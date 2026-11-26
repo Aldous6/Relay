@@ -1,0 +1,168 @@
+Idea principal en una frase: evaluar si 14 métricas tabulares extraídas de un prompt permiten predecir el nivel de costo del LLM más barato que alcanza un criterio de calidad, y comprobar qué se gana o pierde con esa decisión de enrutamiento.
+
+Diapositiva 1 — Portada: ¿qué proyecto estoy proponiendo?
+Qué debes decir
+“Mi propuesta se titula Enrutamiento dinámico multiclase de LLMs. En los agentes de inteligencia artificial, un harness coordina cómo se atiende una solicitud, incluyendo el modelo que se va a ejecutar. No todas las peticiones requieren la misma capacidad de cómputo. Por eso propongo construir un clasificador tabular que, usando únicamente la estructura del texto de entrada, estime qué nivel de costo —Básico, Intermedio o Premium— conviene emplear. La validación será offline, usando respuestas y costos ya medidos en RouterBench, por lo que el proyecto es realizable sin contratar APIs ni implementar todo un agente.”
+Conceptos que debes manejar
+- Harness: sistema que organiza las llamadas, herramientas, estado y decisiones de un agente. Aquí solo estudiamos una de sus decisiones: a qué LLM enviar un prompt.
+- Enrutamiento: seleccionar de antemano entre varias opciones de modelo.
+- Tier: categoría creada para este experimento a partir de costos históricos observados. No es una medida universal de inteligencia o calidad.
+- Clasificación multiclase: predecir una de tres etiquetas mutuamente excluyentes: 0, 1 o 2.
+- Experimento offline: evaluar con salidas y costos almacenados, sin contratar modelos en tiempo real.
+Precisión importante: el clasificador predice el Tier, no el nombre de un modelo específico ni una respuesta correcta garantizada.
+Diapositiva 2 — Contexto, problema y preguntas
+Paso 1. Explicar los dos extremos
+- Usar siempre Premium: puede alcanzar buena calidad en muchas tareas, pero hace pagar un costo elevado incluso para consultas sencillas.
+- Usar siempre Básico: reduce costos, pero puede fallar en tareas difíciles.
+- Necesidad: aprender una política de decisión que use solo información disponible antes de generar la respuesta.
+Paso 2. Definir qué predecimos realmente
+Nuestra etiqueta de referencia se obtiene después de observar resultados de RouterBench. Para cada prompt, el “modelo elegible” debe tener puntuación ≥ 0.75; entre los elegibles se identifica el de menor costo observado y se usa su grupo de costo como etiqueta. Por tanto, “óptimo” significa “más barato entre los modelos evaluados que pasan la regla de calidad”, no “el mejor modelo imaginable”.
+Paso 3. Presentar las preguntas y sus evidencias
+Pregunta	Análisis	¿Qué contaría como respuesta?
+P1. ¿Se puede predecir el Tier con 14 atributos textuales?	Comparar Dummy, regla por longitud, Regresión Logística y Random Forest.	Medir F1-macro y comprobar si los modelos entrenados superan a las líneas base en un test separado.
+P2. ¿Qué características se asocian más con Tier 2?	Importancia por permutación, evaluada con F1 de Tier 2 y repetida en particiones.	Reportar las tres señales más importantes y su estabilidad.
+P3. ¿Cuánto se ahorra frente a usar siempre Premium?	Simulación offline de una política de ruteo, con representante de cada Tier escogido solo en entrenamiento.	Costo por 1,000 prompts y porcentaje con calidad ≥ 0.75, comparados con una política Premium fija.
+
+
+Cómo explicarlo de forma sencilla
+“P1 pregunta si el problema se puede aprender; P2 pregunta qué variables utiliza el modelo; P3 pregunta si serviría para ahorrar sin comprometer excesivamente la calidad”.
+
+No confundas correlación predictiva con causalidad. La importancia por permutación muestra variables útiles para clasificar, no demuestra que una variable cause que un prompt necesite Premium.
+Diapositiva 3 — Datos reales y creación de los Tiers
+Paso 1. Procedencia y estructura
+Fuente: Martian (2024), RouterBench, DOI 10.57967/hf/1996. Archivo routerbench_0shot.pkl, descargado del repositorio withmartian/routerbench de Hugging Face.
+
+Los números se calcularon sobre el archivo descargado:
+Estadística original	Valor
+Filas / prompts	36,497
+Columnas	37
+Modelos evaluados	11
+Nombres de evaluaciones / benchmarks	86
+Prompts vacíos	0
+Nulos en puntuaciones o costos	0
+Prompts duplicados normalizados	16
+Registros con alguna puntuación parcial (0 < score < 1)	7,905
+
+
+Cada fila representa un prompt y sus resultados con los 11 LLMs. Hay variables textuales o categóricas (prompt y benchmark), numéricas (costos y puntuaciones) y de identificación (sample_id).
+Paso 2. Transformar datos sin etiquetas en un problema supervisado
+El archivo no trae una columna tier original. La construimos mediante una regla previamente declarada.
+1. Para cada uno de los 11 modelos, calcular la mediana del costo por prompt. Mediana, en lugar de media, reduce la influencia de costos extremos.
+2. Ordenar los modelos por el costo mediano y asignarlos a grupos: Tier 0: 2 más baratos; Tier 1: siguientes 6; Tier 2: 3 más caros. Estos grupos reflejan separaciones visibles entre grupos de costos históricos.
+3. Para un prompt dado, identificar los modelos cuya puntuación fue al menos 0.75.
+4. Escoger el modelo elegible que tiene el costo real más bajo para esa observación, entre los once evaluados.
+5. Asignar el Tier de ese modelo al prompt; esta etiqueta se usará como objetivo de clasificación.
+6. Cuando ningún modelo alcanza 0.75, no inventar una etiqueta. Eliminar ese prompt del problema multiclase y reportar la exclusión.
+7. Quitar duplicados para que un mismo texto no aparezca en entrenamiento y prueba.
+Cuentas exactas:
+36,497 observaciones originales
+−1,505 sin modelo que alcance score ≥ 0.75
+−   16 duplicados / registros repetidos resueltos
+=34,976 observaciones finales
+Paso 3. Distribución final
+Tier	Interpretación	Instancias	Proporción
+0	Modelo de costo bajo	18,554	53.05 %
+1	Modelo de costo intermedio	14,976	42.82 %
+2	Modelo de costo alto / Premium	1,446	4.13 %
+Total		34,976	100 %
+
+
+Paso 4. ¿Qué atributos usamos y cuáles NO?
+Generamos 14 características numéricas a partir del texto únicamente:
+1. Caracteres (n_chars)
+2. Palabras (n_words)
+3. Líneas (n_lines)
+4. Longitud promedio de palabra (avg_word_length)
+5. Diversidad léxica (lexical_diversity)
+6. Proporción de dígitos (digit_ratio)
+7. Proporción de signos de puntuación (punctuation_ratio)
+8. Proporción de letras mayúsculas (uppercase_ratio)
+9. Interrogaciones (n_questions)
+10. Paréntesis, llaves y corchetes (n_brackets)
+11. Indicadores de código (n_code_markers)
+12. Símbolos matemáticos (n_math_symbols)
+13. Proporción de caracteres no ASCII (non_ascii_ratio)
+14. Proporción CJK (cjk_ratio)
+Prohibidos como predictores: nombres de LLMs, resultados de calidad, costos, respuestas generadas, sample_id y eval_name. Estos revelarían información que no estaría disponible al recibir un prompt, o que haría demasiado fácil reconocer el benchmark.
+Paso 5. Desbalance y calidad del dato
+- La clase Premium tiene solo 4.13 %. Si el modelo aprende casi siempre 0 o 1, puede aparentar buen rendimiento global y aun así ignorar las peticiones Premium.
+- Solución inicial: ponderar las clases (class_weight='balanced' o variante en Random Forest), medir F1-macro, analizar la matriz de confusión y hacer énfasis en recall del Tier 2.
+- Hay puntuaciones parciales y tareas de distintos benchmarks, así que el umbral 0.75 puede significar cosas algo diferentes. Se reportará esa limitación y se hará análisis de sensibilidad con 0.50 y 1.00.
+- Se detectan variaciones grandes en longitud del prompt; se justifica el escalado robusto para modelos lineales.
+Fuente y licencia: cómo decirlo correctamente
+La página oficial describe que RouterBench fue diseñado para entrenar y evaluar métodos de enrutamiento, pero no especifica una licencia formal de los datos. El BibTeX y DOI indican cómo citar, no prueban por sí mismos un permiso general de reutilización. No digas que el dataset es Apache 2.0 o MIT. Puedes decir que es un conjunto públicamente accesible, publicado para investigación de enrutamiento, usado aquí solo para una evaluación académica, con licencia formal pendiente de confirmación. Si el profesor exige licencia explícita, tendrás que aclarar que este requisito permanece abierto hasta obtener autorización del titular.
+Diapositiva 4 — Metodología paso a paso
+Fase 1. Extraer variables y preparar los datos
+Partir de prompt_clean y sus 14 columnas numéricas. Revisar que no haya NaN, textos vacíos o duplicados. La clase objetivo será tier (0, 1 o 2). Los 11 scores y costos únicamente sirvieron para construirla y, después, para evaluar una política de selección en datos de prueba; no entran al predictor.
+Fase 2. Mantener una prueba verdaderamente independiente
+Separar 80 % de entrenamiento y 20 % de prueba, de forma estratificada según el Tier. El conjunto de prueba permanece intacto hasta el final. Sobre entrenamiento aplicar validación cruzada estratificada de 5 folds para comparar técnicas y, si hiciera falta, ajustar parámetros. La normalización debe pertenecer al Pipeline y ajustarse solo dentro de cada fold.
+Fase 3. Entrenar referencias y modelos
+- DummyClassifier (mayoría): demuestra el rendimiento mínimo que puede alcanzarse ignorando las características.
+- Heurística por longitud: comprobar si contar caracteres o palabras ya explica una parte importante del etiquetado.
+- Regresión Logística multiclase: alternativa lineal interpretable y técnica conocida; usar RobustScaler y pesos para contrarrestar el desbalance.
+- Random Forest: captura relaciones no lineales e interacciones entre métricas estructurales; entrenarlo con pesos de clase. No se requiere escalar árboles.
+- Plan B: si Random Forest no produce una mejora o está fuera de alcance, conservar Regresión Logística multiclase y las líneas base. No cambiar a clasificación binaria sin rediseñar la propuesta.
+Fase 4. Evaluar rigurosamente
+Métrica principal: F1-macro. Calcular F1 por clase y tomar el promedio simple, de forma que Tier 2 cuente tanto como las clases mayoritarias. La precisión global por sí sola no es suficiente.
+
+Métricas complementarias: recall del Tier 2, F1 de Tier 2, matriz de confusión y exactitud balanceada. Fíjate especialmente en los errores T2→T0 (riesgo de usar un modelo demasiado barato) y T2→T1.
+Fase 5. Responder explícitamente cada pregunta
+- P1: comparar Macro-F1 en prueba contra Dummy y longitud. El resultado puede ser un modelo superior o que no supera baselines: ambas conclusiones responden a la pregunta.
+- P2: usar importancia por permutación en evaluación y medir cuánto cae F1 de Tier 2 cuando se permuta cada atributo. Repetir para valorar estabilidad.
+- P3: para cada etiqueta predicha, utilizar un modelo representativo del Tier, seleccionado solo con el conjunto de entrenamiento. Como RouterBench conserva costos y puntuaciones, se pueden consultar los resultados almacenados de esa decisión en test. Comparar contra un Premium fijo y reportar costo total por 1,000 prompts + fracción de prompts que lograron ≥ 0.75. Es una simulación retrospectiva, no un ahorro comercial verificado.
+Riesgos y respuestas
+Riesgo	Mitigación
+Tier 2 minoritario (4.1 %)	Ponderación, Macro-F1, recall Tier 2 y matriz de confusión.
+Outliers de longitud	RobustScaler solo para Regresión Logística.
+Duplicados	Limpieza antes de la partición.
+Benchmarks heterogéneos	Sensibilidad a umbrales y, si es posible, prueba por familia de evaluación.
+Costo histórico	Reportar solo costos del benchmark, no precios actuales.
+Modelo avanzado falla	Mantener Regresión Logística multiclase, baselines y análisis de clases.
+
+
+Cronograma realista
+Periodo	Entregable
+5–12 de noviembre	Auditoría, creación de las etiquetas, 14 atributos y líneas base.
+13–19 de noviembre	Modelos, ponderación de clases, validación cruzada.
+20–26 de noviembre	Interpretación, test final, comparación costo-calidad y presentación de resultados.
+
+
+Preguntas que podría hacer el profesor
+1. ¿Por qué los Tiers no existen originalmente?
+Porque RouterBench evalúa modelos individuales, no etiqueta cada prompt con una clase. Mi aporte de preparación es construir una etiqueta operacional de costo-calidad usando una regla explícita y documentada.
+
+2. ¿Por qué 0.75?
+Es el umbral principal elegido para definir una calidad aceptable. No está impuesto por RouterBench; por ello también estudiaré 0.50 y 1.00 como análisis de sensibilidad. Reconozco que distintas tareas no hacen sus scores plenamente comparables.
+
+3. ¿Qué significa “óptimo”?
+El modelo más económico dentro de los once evaluados que alcanza el criterio; no un óptimo universal ni una prueba de capacidad general.
+
+4. ¿Por qué usar modelos tabulares y no otro LLM para decidir?
+Porque busco una decisión rápida y barata. El experimento pregunta si señales de bajo costo del texto son suficientes para una clasificación útil.
+
+5. ¿El desbalance no invalida el proyecto?
+No: hay 1,446 ejemplos del Tier 2. El reto es evitar que el modelo los ignore; por ello empleo ponderación y métricas balanceadas. La calidad de la etiqueta también es una limitación independiente del número de ejemplos.
+
+6. ¿Por qué F1-macro y no accuracy?
+Porque accuracy puede ser alta si la clase mayoritaria se predice bien mientras Tier 2 se ignora. Macro-F1 obliga a evaluar las tres clases con el mismo peso.
+
+7. ¿Cómo evita la fuga de información?
+No introduce scores ni costos como predictores, elimina duplicados antes de dividir y ajusta el escalador dentro de cada partición de entrenamiento. El test final se reserva hasta elegir el modelo.
+
+8. ¿Qué pasa si el clasificador no supera al Dummy?
+Se reporta como resultado negativo. El experimento seguiría respondiendo P1; el plan B es Regresión Logística con ingeniería de variables y comparación con heurística de longitud.
+
+9. ¿Esta metodología permite afirmar que funciona en agentes reales?
+No. RouterBench contiene benchmarks con estructura propia; validar en producción exigiría datos de agentes reales y precios actuales. El resultado es un estudio controlado offline.
+
+10. ¿La cita BibTeX es una licencia?
+No. Es una forma de atribución bibliográfica. La disponibilidad pública y el propósito declarado respaldan una consulta académica, pero la licencia del conjunto de datos no aparece expresamente indicada en su ficha. Eso debe decirse con precisión.
+Resultados exploratorios que puedes mencionar solo si te preguntan por viabilidad
+En una primera prueba 80/20, todavía sin validación cruzada ni ajuste definitivo, se observó:
+Modelo	F1-macro	Recall Tier 2
+Dummy	0.231	0.000
+Regresión Logística ponderada	0.397	0.450
+Random Forest ponderado	0.462	0.128
+
+
+Interpretación: hay señal predictiva, pero la técnica con mejor Macro-F1 no necesariamente obtiene el mejor recall de la clase Premium. No presentar estos valores como resultados finales.

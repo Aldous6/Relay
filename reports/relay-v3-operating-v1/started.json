@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "experiment_id": "relay-v3-operating-curves-development-v1",
+    "scope": "additional_exploratory_policy_ablation_after_initial_conservative_development_points",
+    "source_run": "reports/relay-v3-development-v1",
+    "output_dir": "reports/relay-v3-operating-v1",
+    "policy": "expected_gain_per_predicted_extra_cost",
+    "grid": "101 quantiles of validation prediction scores, with endpoints ensuring both fixed policies; same point budget for BERT and each Relay candidate",
+    "quantiles": 101,
+    "quality_loss_margin": 0.005,
+    "selection": "minimum development observed cost meeting fixed-strong development success minus margin; tie higher quality then candidate ID then parameter",
+    "absolute_gain": "P(strong_success)-P(weak_success)",
+    "pairwise_gain": "P(strong_only)-P(weak_only)",
+    "require_predicted_strong_extra_cost_positive": true,
+    "outer_test_allowed": false,
+    "independent_superiority_claim_allowed": false,
+    "retraining_allowed": false,
+    "bootstrap_replicates": 5000,
+    "seed": 42
+  },
+  "configuration_sha256": "eff8acafae9322e1a8fb6617ed43e58dae35fe306d61b6f409e48c11389d7b27",
+  "source_summary_sha256": "da98fd7f2e952bb64c81d1eca8995527f337a82c11c91d4e9d43d952e57deb49",
+  "started_at_utc": "2026-11-09T00:33:15.731704+00:00",
+  "additional_search_after_stage_one_results": true,
+  "outer_test_allowed": false
+}

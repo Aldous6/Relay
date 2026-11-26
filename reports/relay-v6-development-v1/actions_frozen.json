@@ -1,0 +1,10 @@
+{
+  "configuration_sha256": "ad77dc7f41550399b98f63e22908101f27ff544ddc37ce1b5c1f62a8fe076e56",
+  "files_sha256": {
+    "relay_all_routes.parquet": "2386126a283a1dee4ede110ea744be4310cedb743c3c06bcfff401f931b774b7",
+    "bert_all_routes.parquet": "bbec3671d81442dbf486465f352403ac8e88ae1ec8785266ec60597d31e66ead",
+    "fixed_routes.parquet": "e0fc5f9276fdb147775aa9d0de1ab5a06b32d6314f33e59bd84ee1467bea6709",
+    "previous_bert_all_routes.parquet": "c1de29d6df6601c5a8d8db17e95ba3f36a423d92c2a45e3ee9e2cfbcb10d4fc8"
+  },
+  "selection_and_metrics_computed": false
+}

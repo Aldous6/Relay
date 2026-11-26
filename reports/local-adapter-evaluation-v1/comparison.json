@@ -1,0 +1,207 @@
+{
+  "scope": "fresh instances of eight known synthetic templates after local development; not new task families or production validation",
+  "policies": {
+    "candidate": {
+      "by_grade": {
+        "exact": {
+          "n": 64,
+          "successes": 38,
+          "success_rate": 0.59375
+        }
+      },
+      "n_cases": 64,
+      "generation_failures": 0,
+      "selected_model_counts": {
+        "strong": 9,
+        "weak": 55
+      },
+      "tokens": {
+        "input_tokens": {
+          "known_total": 15680,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "output_tokens": {
+          "known_total": 270,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "total_tokens": {
+          "known_total": 15950,
+          "known_cases": 64,
+          "unknown_cases": 0
+        }
+      },
+      "selected_generation_seconds": 95.83840180000698,
+      "cost_usd": null
+    },
+    "reference": {
+      "by_grade": {
+        "exact": {
+          "n": 64,
+          "successes": 39,
+          "success_rate": 0.609375
+        }
+      },
+      "n_cases": 64,
+      "generation_failures": 0,
+      "selected_model_counts": {
+        "strong": 7,
+        "weak": 57
+      },
+      "tokens": {
+        "input_tokens": {
+          "known_total": 15680,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "output_tokens": {
+          "known_total": 273,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "total_tokens": {
+          "known_total": 15953,
+          "known_cases": 64,
+          "unknown_cases": 0
+        }
+      },
+      "selected_generation_seconds": 95.09822260001965,
+      "cost_usd": null
+    },
+    "baseline_strong": {
+      "by_grade": {
+        "exact": {
+          "n": 64,
+          "successes": 46,
+          "success_rate": 0.71875
+        }
+      },
+      "n_cases": 64,
+      "generation_failures": 0,
+      "selected_model_counts": {
+        "strong": 64,
+        "weak": 0
+      },
+      "tokens": {
+        "input_tokens": {
+          "known_total": 15680,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "output_tokens": {
+          "known_total": 277,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "total_tokens": {
+          "known_total": 15957,
+          "known_cases": 64,
+          "unknown_cases": 0
+        }
+      },
+      "selected_generation_seconds": 137.10526529997878,
+      "cost_usd": null
+    },
+    "baseline_weak": {
+      "by_grade": {
+        "exact": {
+          "n": 64,
+          "successes": 33,
+          "success_rate": 0.515625
+        }
+      },
+      "n_cases": 64,
+      "generation_failures": 0,
+      "selected_model_counts": {
+        "strong": 0,
+        "weak": 64
+      },
+      "tokens": {
+        "input_tokens": {
+          "known_total": 15680,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "output_tokens": {
+          "known_total": 265,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "total_tokens": {
+          "known_total": 15945,
+          "known_cases": 64,
+          "unknown_cases": 0
+        }
+      },
+      "selected_generation_seconds": 91.96412240005156,
+      "cost_usd": null
+    },
+    "published_bert": {
+      "by_grade": {
+        "exact": {
+          "n": 64,
+          "successes": 46,
+          "success_rate": 0.71875
+        }
+      },
+      "n_cases": 64,
+      "generation_failures": 0,
+      "selected_model_counts": {
+        "strong": 64,
+        "weak": 0
+      },
+      "tokens": {
+        "input_tokens": {
+          "known_total": 15680,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "output_tokens": {
+          "known_total": 277,
+          "known_cases": 64,
+          "unknown_cases": 0
+        },
+        "total_tokens": {
+          "known_total": 15957,
+          "known_cases": 64,
+          "unknown_cases": 0
+        }
+      },
+      "selected_generation_seconds": 137.10526529997878,
+      "cost_usd": null
+    }
+  },
+  "complementarity": {
+    "both_correct": 32,
+    "strong_only": 14,
+    "weak_only": 1,
+    "both_wrong": 17
+  },
+  "resident_routing": {
+    "candidate": {
+      "n": 64,
+      "median_ms": 19.653650000691414,
+      "p95_ms": 22.757100001035724,
+      "total_seconds": 1.2689508000330534
+    },
+    "reference": {
+      "n": 64,
+      "median_ms": 409.3723499972839,
+      "p95_ms": 859.8735100051272,
+      "total_seconds": 30.923529199964833
+    },
+    "published_bert_shared_native": {
+      "n": 64,
+      "median_ms": 395.5354999998235,
+      "p95_ms": 846.0593649986549,
+      "total_seconds": 30.072984400045243
+    }
+  },
+  "router_timing_scope": "resident sequential CPU routing before any cohort generation; excludes model load and neutral warmup; no production SLA",
+  "production_validation": false,
+  "superiority_test_performed": false,
+  "automatic_live_promotion": false,
+  "monetary_cost_usd": null,
+  "source_result_sha256": "f170e7f263039492152292ba70b888275745a6c44db3a2b9f336f7b5793e4e15"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-11-16",
+  "origin": "self_authored",
+  "suite": "maintenance_cases_v1",
+  "scope": "diagnostic_development_only",
+  "external_source_material": [],
+  "task_count": 8,
+  "groups": "one distinct problem per group; all development; no fit/calibration/holdout",
+  "limitations": [
+    "Small authored cohort; not representative of industry maintenance tasks.",
+    "Not an independent holdout and not a standardized benchmark.",
+    "Tasks, acceptance tests and reference solutions share authorship.",
+    "Reference solutions verify specification consistency, not exhaustive correctness."
+  ],
+  "provider_visible": [
+    "task",
+    "module.py",
+    "test_public.py"
+  ],
+  "provider_excluded": [
+    "acceptance_test.py",
+    "reference_solutions",
+    "config.json",
+    "provenance.json"
+  ],
+  "acceptance_policy": "Acceptance checks run only after model editing; no acceptance failures are repair feedback.",
+  "reference_policy": "Reference solutions are outside each case repository and must never be copied into grading workspaces."
+}

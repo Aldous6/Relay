@@ -1,0 +1,20 @@
+{
+  "model_id": "intfloat/multilingual-e5-small",
+  "revision": "6a0d452a575215f80b8f66276dd4ee5d504942c6",
+  "model_file": "onnx/model_qint8_avx512_vnni.onnx",
+  "model_sha256": "dd476dd0c2514e9b9be83aeb3853fac0763e0bdf4a71645407587d77c48a2d88",
+  "model_bytes": 118346824,
+  "model_dir": "artifacts/encoders/multilingual-e5-small-6a0d452-qint8",
+  "cache_path": "data/interim/relay-e5-qint8.sqlite",
+  "tokenizer_file": "tokenizer.json",
+  "embedding_dimension": 384,
+  "max_tokens": 512,
+  "overlap": 64,
+  "prefix": "query: ",
+  "token_assembly_version": "e5-joint-prefix-tokenization-v3",
+  "aggregation": "new_token_weighted_mean_of_l2_window_embeddings_then_l2",
+  "batch_size": 1,
+  "threads": 4,
+  "quantization": "official ONNX qint8 AVX512-VNNI export; not assumed equivalent to fp32",
+  "packages": {"onnxruntime": "1.31.1", "tokenizers": "0.23.3"}
+}

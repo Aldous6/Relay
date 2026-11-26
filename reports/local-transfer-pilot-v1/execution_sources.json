@@ -1,0 +1,12 @@
+{
+  "sources_sha256": {
+    "tools/local_transfer_pilot.py": "86025ee94568cc5b489b8944e032fe15520a3f8a0ad45d572f7b9696bec2faa2",
+    "src/routerbench/prospective.py": "8d1adee33468fe07b9c711604cd78531786e8b8e40b01e0490a37daafd359062",
+    "src/routerbench/live.py": "7e6cdfc300611f81c80472e206609d889a507a8c9d6a63df75064c2ecb62cdfa",
+    "src/routerbench/pairwise.py": "b025ba1021ccfc2a993ba0df4a5556a2205d310a55e14b60714996c631df2327",
+    "src/routerbench/routellm_reference.py": "d4565a6c0e86ee01ada052c3487c8343e43ca44b6b6982ff45f3597323a8604d"
+  },
+  "cohort_sha256": "9beab292ee21ccae941a6fac496a57aa7568144535472675dc1c17c79c7d0937",
+  "policy_lock_sha256": "75677315f23305300089563d9210596ef66f08f7bac882e8987c3598cb089692",
+  "before_generation": true
+}

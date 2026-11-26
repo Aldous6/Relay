@@ -1,0 +1,20 @@
+{
+  "experiment_id": "relay-v4-fixed-ensemble-development-v1",
+  "scope": "exploratory fixed blending declared before full v4 results; no learned weights or outer test",
+  "components": [
+    {"run": "reports/relay-v3-development-v1", "candidate_id": "pairwise_hybrid_a5", "weight": 0.5},
+    {"run": "reports/relay-v4-development-v1", "candidate_id": "svd64_hgb31", "weight": 0.5}
+  ],
+  "common_pair": {"strong": "gpt-4-1106-preview", "weak": "mistralai/mixtral-8x7b-chat"},
+  "quality_threshold": 0.75,
+  "quality_loss_margin": 0.005,
+  "quantiles": 101,
+  "policy": "expected_gain_per_positive_predicted_extra_cost; strong iff ratio > threshold; ties weak",
+  "selection": "minimum validation cost among points with success at least fixed strong minus margin; no CI selection",
+  "bootstrap_replicates": 5000,
+  "seed": 42,
+  "outer_test_allowed": false,
+  "weights_learned": false,
+  "automatic_live_promotion": false,
+  "output_dir": "reports/relay-v4-ensemble-v1"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "artifact": "neighborhood_primary.joblib",
+  "artifact_sha256": "dea185c72a9d30a53dd52afc6284b7b59b77ba7617c7cc2bec1006c391017bc3",
+  "strong": "gpt-4-1106-preview",
+  "weak": "mistralai/mixtral-8x7b-chat",
+  "policy_mode": "pairwise_utility",
+  "tradeoff": 9.177383209099325,
+  "cost_unit": "historical_cost",
+  "independent_validation": false,
+  "scope": "reused historical development; no production or new-model validation"
+}

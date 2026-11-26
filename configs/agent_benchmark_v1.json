@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "relay-agents-infrastructure-v1",
+  "execution_mode": "simulated",
+  "evaluation_split": "development",
+  "independent_validation": false,
+  "models": {"strong": "simulated/strong", "weak": "simulated/weak"},
+  "max_calls": 12,
+  "generation_manifest": {"kind": "scripted_mock", "identifier": "tool_fixture_v1", "real_model_calls": false, "usage": "fictitious counters: 100 input, 20 output, zero cached per call", "failure_injection": "one malformed reply on initial weak aggregate/repair calls"},
+  "pricing": {
+    "simulated/strong": {"input_per_million": 10.0, "output_per_million": 20.0, "cached_input_per_million": 5.0, "source": "fictitious fixture tariff, not a provider price", "as_of": "2026-11-12"},
+    "simulated/weak": {"input_per_million": 1.0, "output_per_million": 2.0, "cached_input_per_million": 0.5, "source": "fictitious fixture tariff, not a provider price", "as_of": "2026-11-12"}
+  },
+  "compute_rates": {"router_usd_per_second": null, "verification_usd_per_second": null, "tool_usd_per_second": null},
+  "roi": {"min_total_cost_saving": 0.30, "max_success_rate_loss": 0.02, "max_p95_router_seconds": 0.2},
+  "bootstrap_replicates": 2000,
+  "seed": 42,
+  "per_family": 4
+}

@@ -1,0 +1,35 @@
+{
+  "candidate_id": "fixed_ensemble",
+  "parameter": 25.486340261276307,
+  "point": {
+    "candidate_id": "fixed_ensemble",
+    "parameter": 25.486340261276307,
+    "grid_position": 9,
+    "weak_fraction": 0.09010440308669995,
+    "metrics": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 3447,
+      "coverage": 1.0,
+      "success_rate": 0.7823422605537903,
+      "success_rate_on_routed": 0.7823422605537903,
+      "mean_score_on_routed": 0.7807194734453018,
+      "total_cost": 12.27767,
+      "cost_per_1000": 2.786579664094417,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "artifact": "weighted_ensemble.joblib",
+  "artifact_sha256": "6237cf2a8d33127ba2736f74a855226269f9403a38dbdcb09973fff8136cced3",
+  "policy": {
+    "objective": "pairwise",
+    "minimum_predicted_extra_cost": 0.00022671251300805656,
+    "maximum_predicted_extra_cost": 0.017073481198661755,
+    "score_definition": "expected threshold-success gain divided by positive predicted extra historical call cost"
+  },
+  "requires_independent_evaluation": true,
+  "automatic_live_promotion": false,
+  "confirmation_of_superiority": false
+}

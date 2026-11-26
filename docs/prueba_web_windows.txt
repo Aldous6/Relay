@@ -1,0 +1,55 @@
+Relay · Prueba del chat para Windows
+
+Extrae todo el ZIP en una carpeta de tu equipo. Entra en Relay-prueba y haz
+doble clic en "Abrir Relay.cmd". Se abrirá una ventana local y el navegador.
+Mantén abierta la ventana durante la prueba. Para detener Relay, pulsa Ctrl+C
+en esa ventana o ciérrala.
+
+Requisitos
+
+Necesitas Python 3.12 para abrir el chat. Si Windows no encuentra Python,
+instálalo con la opción que agrega Python al PATH, abre una terminal nueva
+y comprueba la versión con "python --version" o "py -3.12 --version".
+La interfaz web ya está compilada en este ZIP.
+
+Para elegir un modelo y obtener una respuesta necesitas la CLI de OpenCode
+en tu equipo, con un proveedor y un modelo que puedas usar. Comprueba la
+instalación con "opencode --version". Si hace falta conectar una cuenta,
+hazlo tú directamente en OpenCode. El catálogo muestra tarifas anunciadas;
+si quieres una prueba gratuita, confirma el acceso sin cargos con tu
+proveedor antes de enviar.
+
+Una prueba de diez minutos
+
+Abre "Ajustes" y comprueba que la carpeta del proyecto es "ejemplo", incluida
+en este ZIP. Si aparece otra, pega la ruta completa a "ejemplo" y elige
+"Abrir carpeta". Marca "Revisar el modelo antes de enviar" y pulsa
+"Guardar ajustes".
+
+Escribe "Lee ventas.csv y dime el ingreso de febrero. Explica el cálculo."
+Revisa qué modelo recomienda Relay y por qué. Puedes editar el mensaje,
+elegir otro modelo o pulsar "Enviar con este modelo" para pedir la respuesta.
+El resultado esperado es 98 (3 × 30 + 2 × 4).
+
+Abre "Nuevo chat" y prueba "Revisa total.py y ventas.csv. ¿Por qué se calculan
+mal los ingresos? Indica el cambio mínimo y los totales de enero y febrero.
+Solo explica, sin editar archivos." El programa tiene un error intencional.
+Suma los precios una vez por fila y obtiene 68. La operación correcta es
+unidades × precio unitario. Da 80 en enero, 98 en febrero y 178 en total.
+
+El historial se guarda en tu equipo por carpeta. OpenCode puede leer o
+modificar archivos si sus permisos lo permiten. El proveedor elegido puede
+recibir la consulta y el contexto leído al generar. Usa la carpeta ficticia
+para estas pruebas.
+
+Qué contarle a Aldo
+
+¿Qué tarea intentaste? ¿Qué modelo sugirió Relay? ¿Usaste ese modelo o lo
+cambiaste? ¿Cumplió el resultado que esperabas? Si algo te detuvo, basta
+con el paso concreto y el mensaje, omitiendo datos privados y credenciales.
+Esta demo prueba las reglas del chat de OpenCode. Las cifras académicas de
+la presentación corresponden al selector histórico evaluado con RouterBench.
+
+Python para Windows: https://www.python.org/downloads/windows/
+OpenCode: https://opencode.ai/docs/
+Proveedores de OpenCode: https://opencode.ai/docs/providers/

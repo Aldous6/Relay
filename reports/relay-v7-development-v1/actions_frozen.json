@@ -1,0 +1,13 @@
+{
+  "configuration_sha256": "a64dd56a675ad143057299b0a7233c3124ad9353441eeef77526ff756f30c905",
+  "selection_and_metrics_computed": false,
+  "files_sha256": {
+    "fixed_routes.parquet": "e0fc5f9276fdb147775aa9d0de1ab5a06b32d6314f33e59bd84ee1467bea6709",
+    "bert101_all_routes.parquet": "c1de29d6df6601c5a8d8db17e95ba3f36a423d92c2a45e3ee9e2cfbcb10d4fc8",
+    "ensemble_v4_all_routes.parquet": "e9a25d9c3f985d537ae613fa29e03bb0245f88408da8dbd77d6088d659a4f949",
+    "relay_v6_all_routes.parquet": "39bcc6f32edd541a281659d4695b947197ee916c0e492061ff37020a39cca983",
+    "bert16_v6_all_routes.parquet": "4d43acd15e9c82c27c7d286c71c0f80f3306c0f1024c33f22c87296be17164fc",
+    "neighborhood_primary_all_routes.parquet": "83d888ba3de862816ef09cdcff6b69231af85bde54197c9d555d46c872add482",
+    "global_control_all_routes.parquet": "84b5a499f2eefb220bea13f99dcb73d37154a9f1a5f0c226c2490c4e1737ab7d"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-11-09T01:07:43.437131+00:00",
+  "sources": [
+    {
+      "path": "reports\\relay-v4-development-v1\\summary.json",
+      "sha256": "23c0ac5f0d0599033bfe86b983cdac9a4ee6f4ace7fe43a4af51365b84745175"
+    },
+    {
+      "path": "reports\\relay-v4-operating-v1\\summary.json",
+      "sha256": "59b6b50e090d89c4047595794891b56d673ab4e87c48fdd16b8a36a587b10544"
+    },
+    {
+      "path": "reports\\relay-v3-operating-v1\\summary.json",
+      "sha256": "d6b247df9fcc97003f0fe70a2202970a2400c8c97e2297f44c97e3586c4b62de"
+    },
+    {
+      "path": "reports\\relay-v4-development-v1\\latency_cpu.json",
+      "sha256": "6b8806c64d383447e5bc160fe11a66643079a011a98a47acf5b6709abb318789"
+    }
+  ],
+  "script_sha256": "3421e27513e8830a6c1724fcc25f51c543cbfa18b655ff3ffecad2b1e48cb2ef",
+  "diagnostic_helper_sha256": "95c01cc7be6990228976a5c0707cf12a20828341357d77d219788d7460ecc2ed",
+  "report_sha256": "de2df06b786b2d139f70c95249b4f1449a94254e71e34f2e2165713cfc0f63bc",
+  "diagnostics_sha256": "2d0cb78038576101f3b792f11d68b650f1fcec7d6b62192ce0074878d85938a0",
+  "outer_test_evaluated_here": false,
+  "models_refit": false,
+  "policy_or_candidate_reselected_here": false
+}

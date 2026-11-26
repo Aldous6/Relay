@@ -1,0 +1,15 @@
+{
+  "reason": "A shared bootstrap helper inherited a development-only description in an already held-out evaluation.",
+  "changed_fields": [
+    "policies.relay_primary.comparison_vs_fixed.scope",
+    "policies.structural_secondary.comparison_vs_fixed.scope",
+    "policies.semantic_secondary.comparison_vs_fixed.scope",
+    "policies.semantic_hybrid_secondary.comparison_vs_fixed.scope"
+  ],
+  "before_sha256": "363d9a0971ceea2a69d3b2db4dd1cd81ec120fbed68cb31df3115ee714e5cce1",
+  "after_sha256": "fa7912f355603c1a98a60868c400557e0c5c123885a044018b1d6e7944c8e381",
+  "original_archive": "summary.before_scope_metadata_correction.json",
+  "metrics_predictions_routes_or_selection_changed": false,
+  "before": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim",
+  "after": "held-out paired prompt bootstrap; primary or secondary status is declared by policy role; historical selected-call cost excludes router compute and retries"
+}

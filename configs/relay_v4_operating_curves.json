@@ -1,0 +1,19 @@
+{
+  "experiment_id": "relay-v4-operating-curves-development-v1",
+  "scope": "prespecified_v4_policy_ablation_before_v4_outcomes",
+  "source_run": "reports/relay-v4-development-v1",
+  "output_dir": "reports/relay-v4-operating-v1",
+  "policy": "expected_gain_per_predicted_extra_cost",
+  "grid": "101 quantiles of validation prediction scores, with endpoints ensuring both fixed policies; same point budget for BERT and each Relay candidate",
+  "quantiles": 101,
+  "quality_loss_margin": 0.005,
+  "selection": "minimum development observed cost meeting fixed-strong development success minus margin; tie higher quality then candidate ID then parameter",
+  "absolute_gain": "P(strong_success)-P(weak_success)",
+  "pairwise_gain": "P(strong_only)-P(weak_only)",
+  "require_predicted_strong_extra_cost_positive": true,
+  "outer_test_allowed": false,
+  "independent_superiority_claim_allowed": false,
+  "retraining_allowed": false,
+  "bootstrap_replicates": 5000,
+  "seed": 42
+}

@@ -1,0 +1,236 @@
+{
+  "specification": {
+    "id": "structural_hgb15",
+    "objective": "pairwise",
+    "backend": "hist_gradient_boosting",
+    "representation": "structural",
+    "n_components": 32,
+    "max_leaf_nodes": 15,
+    "max_iter": 150,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0
+  },
+  "curve": [
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 0,
+      "weak_fraction": 0.01929187471629596,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3473,
+        "coverage": 1.0,
+        "success_rate": 0.7882433045846573,
+        "success_rate_on_routed": 0.7882433045846573,
+        "mean_score_on_routed": 0.7867907399001361,
+        "total_cost": 14.2521098,
+        "cost_per_1000": 3.2347049024058103,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 1,
+      "weak_fraction": 0.01929187471629596,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3473,
+        "coverage": 1.0,
+        "success_rate": 0.7882433045846573,
+        "success_rate_on_routed": 0.7882433045846573,
+        "mean_score_on_routed": 0.7867907399001361,
+        "total_cost": 14.2521098,
+        "cost_per_1000": 3.2347049024058103,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 2,
+      "weak_fraction": 0.02088061733999092,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3473,
+        "coverage": 1.0,
+        "success_rate": 0.7882433045846573,
+        "success_rate_on_routed": 0.7882433045846573,
+        "mean_score_on_routed": 0.7865637766681798,
+        "total_cost": 14.2194898,
+        "cost_per_1000": 3.2273013617793915,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 5,
+      "weak_fraction": 0.024738992283250112,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3476,
+        "coverage": 1.0,
+        "success_rate": 0.7889241942805265,
+        "success_rate_on_routed": 0.7889241942805265,
+        "mean_score_on_routed": 0.7871879255560599,
+        "total_cost": 14.1442224,
+        "cost_per_1000": 3.210218429414435,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 10,
+      "weak_fraction": 0.03767589650476623,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3469,
+        "coverage": 1.0,
+        "success_rate": 0.7873354516568316,
+        "success_rate_on_routed": 0.7873354516568316,
+        "mean_score_on_routed": 0.7857126645483431,
+        "total_cost": 13.8773556,
+        "cost_per_1000": 3.1496494779845663,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 20,
+      "weak_fraction": 0.07625964593735815,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3440,
+        "coverage": 1.0,
+        "success_rate": 0.7807535179300953,
+        "success_rate_on_routed": 0.7807535179300953,
+        "mean_score_on_routed": 0.7802088061733999,
+        "total_cost": 12.928905,
+        "cost_per_1000": 2.934386064457558,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 40,
+      "weak_fraction": 0.2644121652292329,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3310,
+        "coverage": 1.0,
+        "success_rate": 0.7512482977757603,
+        "success_rate_on_routed": 0.7512482977757603,
+        "mean_score_on_routed": 0.7551634135270087,
+        "total_cost": 7.3995131999999995,
+        "cost_per_1000": 1.6794174307762142,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 80,
+      "weak_fraction": 0.5587834770767136,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3096,
+        "coverage": 1.0,
+        "success_rate": 0.7026781661370858,
+        "success_rate_on_routed": 0.7026781661370858,
+        "mean_score_on_routed": 0.7094870630957785,
+        "total_cost": 4.1279216000000005,
+        "cost_per_1000": 0.9368864275987291,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    {
+      "candidate_id": "structural_hgb15",
+      "parameter": 160,
+      "weak_fraction": 0.9446209714026328,
+      "metrics": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 2477,
+        "coverage": 1.0,
+        "success_rate": 0.5621879255560599,
+        "success_rate_on_routed": 0.5621879255560599,
+        "mean_score_on_routed": 0.5690422151611438,
+        "total_cost": 1.3640854,
+        "cost_per_1000": 0.3095972310485701,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    }
+  ],
+  "selected_point": {
+    "candidate_id": "structural_hgb15",
+    "parameter": 10,
+    "weak_fraction": 0.03767589650476623,
+    "metrics": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 3469,
+      "coverage": 1.0,
+      "success_rate": 0.7873354516568316,
+      "success_rate_on_routed": 0.7873354516568316,
+      "mean_score_on_routed": 0.7857126645483431,
+      "total_cost": 13.8773556,
+      "cost_per_1000": 3.1496494779845663,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "training_seconds": 3.6250427999912063,
+  "validation_batch_inference_seconds": 0.12782310000329744,
+  "artifact": "structural_hgb15.joblib",
+  "artifact_sha256": "b3093f8000183b3142dbe0efbcf0bac00031dc12fe5926e9c0bc228a2e63ef6b",
+  "paired_development_comparison_vs_bert": {
+    "n": 4406,
+    "replicates": 5000,
+    "seed": 42,
+    "success_rate_delta": 0.00022696323195642307,
+    "success_rate_delta_95ci": [
+      -0.0027235587834770767,
+      0.0031774852473899226
+    ],
+    "cost_per_1000_delta": 0.041863822060826145,
+    "cost_per_1000_delta_95ci": [
+      0.004309917158420335,
+      0.08136905129369035
+    ],
+    "relative_call_cost_saving": -0.013470627223286513,
+    "relative_call_cost_saving_95ci": [
+      -0.026229273909238293,
+      -0.0013999244479354041
+    ],
+    "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+  },
+  "single_request_latency": {
+    "n": 60,
+    "p50_seconds": 0.03362449999258388,
+    "p95_seconds": 0.0418040300028224,
+    "scope": "prompt representation + policy on this CPU, warm model, no cached feature vectors"
+  }
+}

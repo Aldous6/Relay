@@ -1,0 +1,278 @@
+.reading-room {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+.reading-layout {
+  align-self: start;
+  width: min(100% - clamp(2rem, 8vw, 8rem), 70rem);
+  min-width: 0;
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 7vh, 5.5rem) 4rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
+  align-items: start;
+  gap: clamp(2.5rem, 6vw, 6rem);
+}
+
+.reading-desk, .reading-shelf {min-width: 0}
+.reading-title {margin-bottom: clamp(1.75rem, 4vw, 3rem)}
+.reading-title h1 {
+  margin: 0;
+  font: 570 clamp(2.4rem, 4vw, 4rem)/1.08 var(--display);
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+
+.reading-title p {
+  max-width: 45ch;
+  margin: .85rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.reading-editor {
+  padding: clamp(1rem, 2.1vw, 1.5rem);
+  border: 1px solid var(--line-strong);
+  border-radius: .95rem;
+  background: var(--surface);
+}
+
+.reading-attachment {
+  display: flex;
+  align-items: center;
+  gap: .375rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: .5rem;
+  background: var(--canvas);
+}
+
+.reading-attachment[data-attached=true] {
+  border-style: solid;
+  background: var(--surface-muted);
+}
+
+.reading-attachment[data-dragging=true] {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  background: var(--signal-soft);
+}
+
+.reading-file {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .75rem;
+  min-height: 4rem;
+  color: var(--ink);
+  border-radius: .4rem;
+  text-align: left;
+}
+
+.reading-file:enabled:hover {background: var(--surface-muted)}
+.reading-file > span:last-child {display: grid; min-width: 0; gap: .15rem}
+.reading-file strong {
+  font-size: .9rem;
+  line-height: 1.4;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.reading-file small, .reading-resource small {
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.45;
+}
+
+.reading-paper, .reading-cover {
+  display: block;
+  position: relative;
+  flex: none;
+  width: 1.25rem;
+  height: 1.5rem;
+  border: 1px solid currentColor;
+  border-radius: .2rem;
+  color: var(--muted);
+}
+
+.reading-paper::before, .reading-cover::before {
+  content: "";
+  position: absolute;
+  inset: .45rem .25rem auto;
+  border-top: 1px solid currentColor;
+  box-shadow: 0 .24rem currentColor;
+}
+
+.reading-cover[data-slides=true] {height: .95rem}
+.reading-cover[data-slides=true]::before {
+  inset: .25rem .25rem auto;
+  box-shadow: 0 .2rem currentColor;
+}
+
+.reading-editor > label {
+  display: block;
+  margin: 1.4rem 0 .5rem;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.reading-editor textarea {
+  display: block;
+  width: 100%;
+  min-height: 6rem;
+  padding: .45rem .15rem;
+  border: 0;
+  border-radius: .25rem;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.reading-editor textarea::placeholder {color: var(--muted); opacity: 1}
+.reading-send {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .85rem;
+  padding-top: .85rem;
+  border-top: 1px solid var(--line);
+}
+
+.reading-send button {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .55rem .9rem;
+  border-radius: .5rem;
+  background: var(--ink);
+  color: var(--surface);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.reading-send button:enabled:hover {background: var(--accent)}
+.reading-send button:disabled {background: var(--surface-muted); color: var(--muted)}
+.reading-send .icon {width: 1rem; height: 1rem}
+.reading-icon {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--muted);
+  border-radius: .45rem;
+}
+
+.reading-icon:enabled:hover {background: var(--surface-muted); color: var(--ink)}
+.reading-icon:disabled {opacity: .55}
+.reading-attachment > .reading-icon {margin-right: .25rem}
+.reading-shelf {padding-top: .55rem}
+.reading-shelf section + section {margin-top: 2.25rem}
+.reading-shelf h2 {
+  margin: 0;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .9rem;
+  font-weight: 620;
+  line-height: 1.4;
+}
+
+.reading-resource {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .8rem;
+  padding: .7rem .2rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.reading-resource strong, .reading-resource small {display: block}
+.reading-resource strong {font-size: .9rem; font-weight: 600; line-height: 1.4}
+.reading-resource:hover strong {text-decoration: underline; text-underline-offset: .18em}
+.reading-resource .icon {width: .85rem; height: .85rem; color: var(--muted)}
+.reading-state {display: flex; justify-content: space-between; align-items: center; gap: .5rem}
+.reading-state > span {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .85rem;
+  font-weight: 550;
+}
+
+.reading-state > span::before {
+  content: "";
+  width: .5rem;
+  height: .5rem;
+  flex: none;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+}
+
+.reading-state > span[data-ready=true]::before {background: var(--signal); border-color: var(--accent)}
+.reading-service-note, .reading-models, .reading-profile {
+  font-size: .83rem;
+  line-height: 1.55;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.reading-service-note {margin: .125rem 0 .75rem}
+.reading-models {margin: .25rem 0 .75rem; padding-left: 1.05rem}
+.reading-models li {padding-block: .15rem}
+.reading-profile {display: flex; align-items: baseline; gap: .45rem; padding: .6rem 0}
+.reading-profile input {accent-color: var(--accent)}
+.reading-history {margin: 1.75rem 0 2rem}
+.reading-question {
+  margin: 2rem 0 1.25rem;
+  padding: .2rem 0 .2rem .9rem;
+  border-left: 2px solid var(--line-strong);
+}
+
+.reading-question > span {font-size: .8rem; font-weight: 600; color: var(--muted)}
+.reading-question p {margin: .25rem 0 0; overflow-wrap: anywhere; white-space: pre-wrap}
+.reading-answer {min-width: 0; padding-bottom: 1.25rem; border-bottom: 1px solid var(--line)}
+.reading-answer .usage {margin-top: 1rem}
+.reading-notice {
+  margin: .85rem 0;
+  padding: .125rem 0 .125rem .8rem;
+  border-left: 2px solid var(--line-strong);
+  color: var(--muted);
+  font-size: .875rem;
+  overflow-wrap: anywhere;
+}
+
+.reading-error {border-color: #a33932; color: #872e29}
+.reading-reset {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  margin-top: .65rem;
+  color: var(--muted);
+  font-size: .83rem;
+}
+
+.reading-reset button {
+  min-height: 2.75rem;
+  padding-inline: .1rem;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
+@media (max-width: 62rem) {
+  .reading-layout {width: min(100% - clamp(2rem, 8vw, 5rem), 44rem); grid-template-columns: minmax(0, 1fr); gap: 2.5rem}
+  .reading-shelf {display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1.5rem; padding: 0}
+  .reading-shelf section + section {margin-top: 0}
+}

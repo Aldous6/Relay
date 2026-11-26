@@ -1,0 +1,6 @@
+{
+  "platform": "Windows-11-10.0.22631-SP0",
+  "processor": "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD",
+  "ollama_ps": "NAME             ID              SIZE      PROCESSOR    CONTEXT    RUNNER      UNTIL              \nqwen2.5:1.5b     65ec06548149    1.4 GB    100% CPU     8192       llamacpp    4 minutes from now    \nllama3:latest    365c0bd3c000    6.0 GB    100% CPU     8192       llamacpp    4 minutes from now    \n",
+  "note": "Read during data collection. Both loaded models reported 100% CPU; not a controlled hardware certification."
+}

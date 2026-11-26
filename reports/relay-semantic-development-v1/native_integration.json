@@ -1,0 +1,46 @@
+{
+  "python": "3.12.10",
+  "saved_artifact_hashes_verified": true,
+  "exact_reference_partitions_preserved": true,
+  "validation_full_coverage_verified": true,
+  "serialization_excludes_runtime": true,
+  "long_text_software_test": {
+    "input_tokens": 11715,
+    "n_windows": 27,
+    "covered_tokens": 11715,
+    "truncated_tokens": 0,
+    "source_characters": 67574,
+    "elapsed_seconds": 13.335247700000764,
+    "embedding_shape": [
+      1,
+      384
+    ],
+    "scope": "synthetic coverage smoke check, not measured LLM answer quality"
+  },
+  "single_window_tokenization_matches_reference": true,
+  "same_text_uncached_repeat_bitwise_equal_in_smoke_check": true,
+  "model_recommendation": {
+    "selected_model": "claude-instant-v1",
+    "predicted_success": 0.774995073140119,
+    "predicted_historical_cost": 2.0032821911221022e-05,
+    "decision": "threshold_met",
+    "all_predicted_success": {
+      "WizardLM/WizardLM-13B-V1.2": 0.5186807309713533,
+      "claude-instant-v1": 0.774995073140119,
+      "claude-v1": 0.7339950958119478,
+      "claude-v2": 0.7767302785629457,
+      "gpt-3.5-turbo-1106": 0.6423454491271732,
+      "gpt-4-1106-preview": 0.7071130860081489,
+      "meta/code-llama-instruct-34b-chat": 0.36029611800652467,
+      "meta/llama-2-70b-chat": 0.4524298956896216,
+      "mistralai/mistral-7b-chat": 0.42367919328752945,
+      "mistralai/mixtral-8x7b-chat": 0.6609372504367416,
+      "zero-one-ai/Yi-34B-Chat": 0.709071360267386
+    },
+    "llm_called": false,
+    "production_validated": false,
+    "scope": "experimental model recommendation in the historical RouterBench catalog, not current provider pricing or guaranteed success"
+  },
+  "outer_test_performance_evaluated": false,
+  "routellm_evaluated": false
+}

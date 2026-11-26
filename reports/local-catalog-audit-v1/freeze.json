@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "dataset_sha256": "9beab292ee21ccae941a6fac496a57aa7568144535472675dc1c17c79c7d0937",
+  "n_cases": 64,
+  "policy_manifest": {
+    "scope": "development catalog audit after viewing the prior synthetic pilot; not a new independent evaluation",
+    "prior_summary_sha256": "a4da58f1fdb2aae71aaad3a9041f3708073b9f4ccf434f660c6f1e3cc9cdc2fc",
+    "models": {
+      "strong": "qwen2.5:1.5b cached prior responses",
+      "weak": "qwen2.5:0.5b"
+    },
+    "small_digest": "a8b0c51577010a279d933d14c2a8ab4b268079d44c5c8830c0a93900f1827c67",
+    "generation_options": {
+      "num_ctx": 8192,
+      "num_predict": 96,
+      "temperature": 0,
+      "seed": 42
+    },
+    "paid_api_calls": false,
+    "code_sha256": "cf486ef2cb9c5834b43de2216af5d5fa50b116fc26684debbd2f58cac630b96f",
+    "new_calls_expected": 64,
+    "prior_responses_reused": 64,
+    "monetary_cost_usd": null
+  },
+  "collect_both_models": true,
+  "known_prompt_groups_sha256": "0d38f7ba50bfa834fca1714133ccfd9df5ad2a54bfac2c2790f14117baa2855a",
+  "overlap_scope": "exact normalized prompt hashes only; not a certificate of independence",
+  "freeze_sha256": "d0fbf5475470e31d963c7c6d316d8e53a00fee0a576601e5cc0877c4d1d94476"
+}

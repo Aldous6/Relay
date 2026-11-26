@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "package_version": "0.8.1",
+  "freeze_sha256": "990c049a8a7b949c747059909321f1b156265cd3b9c36de37eeff0cbe7f40722",
+  "unit_tests": {
+    "count": 293,
+    "returncode": 0,
+    "log": "outputs/agent-local-package/unit_tests.log",
+    "sha256": "4fe47d36acc137be3b1f759ab3ff49f17d53960202a46cb3affe2025b336e306"
+  },
+  "static_analysis": {
+    "parsed_files": 116,
+    "syntax_errors": 0
+  },
+  "installed_package": {
+    "wheel": "outputs/agent-local-package/final/routerbench_icd-0.8.1-py3-none-any.whl",
+    "sha256": "7b295e7aee3f4eab877087e3ddfe06922448be53f755cd9c608444156c85f775",
+    "size_bytes": 143980,
+    "verification": "outputs/agent-local-package/installed-smoke-4g_ll26g/verification.json",
+    "verification_sha256": "ae78c2cf53aed8d7e807a34f031882189cc3bd6dd7b8acd998e7177804a4251b",
+    "legacy_sdk_compatible": true,
+    "simulated_episodes_passed": 9,
+    "network_attempts": 0,
+    "large_artifacts_or_raw_data_bundled": false
+  },
+  "completed_replay": {
+    "record": "outputs/agent-local-package/completed_replay.json",
+    "sha256": "c0e788247634b6eb81f4701ef7cc67ce3c9d6a254759f7f17836c5dc8eaf873c",
+    "new_generation_calls": 0,
+    "journal_unchanged": true
+  },
+  "real_evaluation": {
+    "tasks": 6,
+    "episodes": 30,
+    "recorded_calls": 182,
+    "provider_replies_with_metadata": 161,
+    "transport_or_contract_failures_unknown_cause": 21,
+    "successes": {
+      "always_strong": 1,
+      "always_weak": 0,
+      "cheap_then_escalate": 0,
+      "local_structural_transfer": 0,
+      "routellm_bert_transfer": 2
+    },
+    "monetary_cost_known": false,
+    "independent_validation": false
+  },
+  "sources_match_frozen_run": true,
+  "protocol_hash_matches": true,
+  "app_started_for_visual_review": false,
+  "paid_api_calls": 0,
+  "raw_original_dataset_opened": false,
+  "checksums": {
+    "manifest.json": "fbec6d2951640355344656a5aa591ae0c6c3902f8ab348c87eae5c8909593cc3",
+    "journal.json": "11e5e4d64f89c2dcb46f5d15da4ab85b5f50494514ce6fab75531ca597ccdccc",
+    "summary.json": "babd14b5fb0718d20df78543bbdf3368027a0218c84d4bfa642bcfdf2bac0f73",
+    "source_bundle.zip": "221cc68c9627d86a9db0c7dc9bbc2728205948f0cbd930764d040a4148f85e1c",
+    "competition_report.md": "6801098897970ebf2d408047cf2769011e6aef596ca0252a508774c8afcfc1e7",
+    "comparisons.json": "aba4877e1ba2ebef7cd4ccac96406e86c0737b34fe0d12cb66cce766ee01441d",
+    "competition_report_provenance.json": "197134f49f885bec3b865b7968a8cd4f023ce49fab5946fb540698f9ce7d29bb"
+  }
+}

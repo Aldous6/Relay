@@ -1,0 +1,83 @@
+{
+  "created_at_utc": "2026-11-09T00:12:13.534177+00:00",
+  "routes_sha256": "c4e449fb5f3ce3eec6e8800ff921cca94fb5361ca25dd09d2ed0c579c59a03e8",
+  "source_tier_summary_sha256": "c803d8fce952ddffe30172df3140eec5e740f8db97002ea5eaaf9fe9f42fb88e",
+  "prepared_manifest_sha256": "001ee9255b79f82b9a08df4e6056b67280a34b302b8e8cdab13cf364018a5adc",
+  "model_sha256": "b2d80b7c65a77b30ba36dbfbd5751241823d65cda253db94e1d3682cf327600a",
+  "selected_classifier": "random_forest",
+  "representative_selection": {
+    "representatives": {
+      "0": "WizardLM/WizardLM-13B-V1.2",
+      "1": "zero-one-ai/Yi-34B-Chat",
+      "2": "gpt-4-1106-preview"
+    },
+    "all_train_statistics": {
+      "WizardLM/WizardLM-13B-V1.2": {
+        "tier": 0,
+        "train_success_rate": 0.41465171313921184,
+        "train_mean_cost": 7.310770655417224e-05
+      },
+      "claude-instant-v1": {
+        "tier": 1,
+        "train_success_rate": 0.6138834585176801,
+        "train_mean_cost": 0.00023383450972322257
+      },
+      "claude-v1": {
+        "tier": 2,
+        "train_success_rate": 0.6465685770140961,
+        "train_mean_cost": 0.0021539236546969853
+      },
+      "claude-v2": {
+        "tier": 2,
+        "train_success_rate": 0.6552457385876462,
+        "train_mean_cost": 0.0024278456631340673
+      },
+      "gpt-3.5-turbo-1106": {
+        "tier": 1,
+        "train_success_rate": 0.6178619199506122,
+        "train_mean_cost": 0.0002441615392530096
+      },
+      "gpt-4-1106-preview": {
+        "tier": 2,
+        "train_success_rate": 0.7857461330040814,
+        "train_mean_cost": 0.0033081397263092912
+      },
+      "meta/code-llama-instruct-34b-chat": {
+        "tier": 1,
+        "train_success_rate": 0.181054292279727,
+        "train_mean_cost": 0.00017247144932606236
+      },
+      "meta/llama-2-70b-chat": {
+        "tier": 1,
+        "train_success_rate": 0.32276983228727235,
+        "train_mean_cost": 0.0002033323387179751
+      },
+      "mistralai/mistral-7b-chat": {
+        "tier": 0,
+        "train_success_rate": 0.2795212127447954,
+        "train_mean_cost": 4.578115032410742e-05
+      },
+      "mistralai/mixtral-8x7b-chat": {
+        "tier": 1,
+        "train_success_rate": 0.5360976780875948,
+        "train_mean_cost": 0.00013502088692252288
+      },
+      "zero-one-ai/Yi-34B-Chat": {
+        "tier": 1,
+        "train_success_rate": 0.6410124498405185,
+        "train_mean_cost": 0.0001861433480810783
+      }
+    },
+    "n_train": 29157,
+    "threshold": 0.75,
+    "rule": "maximum train success rate at score >= 0.75; ties: lower train mean cost, then model name"
+  },
+  "n_test": 7324,
+  "test_outcomes_consulted_for_routing": false,
+  "sensitivity_thresholds": [
+    0.5,
+    0.75,
+    1.0
+  ],
+  "sensitivity_reuses_routes_and_representatives": true
+}

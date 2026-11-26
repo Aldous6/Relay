@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "purpose": "counterfactual paid token scenario; not an invoice, free-tier charge or full operating cost",
+  "currency": "USD",
+  "unit": "one million tokens",
+  "as_of": "2026-11-12",
+  "models": {
+    "groq/openai/gpt-oss-120b": {
+      "input_usd_per_million": 0.15,
+      "cached_input_usd_per_million": 0.075,
+      "output_usd_per_million": 0.60,
+      "source": "https://console.groq.com/docs/model/openai/gpt-oss-120b"
+    },
+    "groq/openai/gpt-oss-20b": {
+      "input_usd_per_million": 0.075,
+      "cached_input_usd_per_million": 0.037,
+      "output_usd_per_million": 0.30,
+      "source": "https://console.groq.com/docs/model/openai/gpt-oss-20b"
+    }
+  },
+  "unknown_cache_rule": "report a range from all input cached to no input cached; never impute a measured cache count",
+  "unknown_usage_rule": "a failed or unmeasured call leaves the complete episode token cost unknown",
+  "excluded": ["router compute", "tool compute", "verification compute", "training", "data acquisition"]
+}

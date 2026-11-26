@@ -1,0 +1,40 @@
+{
+  "kind": "installed_cascade_runtime_offline_verification",
+  "version": "0.1.0.dev4",
+  "created_at_utc": "2026-11-18T09:43:29.809182+00:00",
+  "python_executable": "C:\\Users\\Aldo\\Desktop\\proyecto-icd\\.venv-harness\\Scripts\\python.exe",
+  "package_path": "C:\\Users\\Aldo\\Desktop\\proyecto-icd\\.venv-harness\\Lib\\site-packages\\relay_harness",
+  "wheel_sha256": "ccb335ec182c2ee9d495c1592540a7d0e0bb876ec2fec7fe5caee8ba42b71e21",
+  "installed_sources_verified": 16,
+  "historical_frozen_sources_verified": 11,
+  "openhands_version": "1.62.0",
+  "provider_requests": 0,
+  "model_replies_simulated": true,
+  "quality_or_savings_evidence": false,
+  "old_adaptation_gates": [
+    {
+      "path": "outputs/harness-adaptive/v1/run/validation.json",
+      "sha256": "bb6f0c3096949e0896ba3779851528fc91f4636243b5adc3409385f7d9f63ebd",
+      "baseline_preserved": true
+    },
+    {
+      "path": "outputs/harness-adaptive/v1/run/pre_dispatch_recovery/validation-recovered.json",
+      "sha256": "256343ba473e061ca467f754492b5f3e045b2a00ca2505cef28acd2ecdf3cd36",
+      "baseline_preserved": true
+    }
+  ],
+  "development_report": "reports\\openhands-cascade-development-v3.json",
+  "development_sha256": "c73450c7bb37f6dfc59766176be2654e7e403b86dfc589a566b212e59404e6ea",
+  "example_sha256": "b9ab1e4a5a029c570f6e4a1f172e6e6de1a71d1c4eeac32ed3b175b206427f38",
+  "verifier_script_sha256": "b4cd4174c326221f15bdf5754726fe55b85afa77b6ea85f908456d8d98bca5cd",
+  "fixture_artifacts": "outputs\\cascade-demo\\20261118T094306864420Z-installed",
+  "fixture_result_sha256": "a1a9af4a493b3c3e350b1c9239b58b809ed67810e7381f35c17c2289b5e45d97",
+  "fixture_checks": {
+    "initial_defect_reproduced": true,
+    "clean_fallback": true,
+    "both_attempts_counted": true,
+    "accepted_unknown": true,
+    "input_snapshot_unchanged": true,
+    "no_ml_encoder_loaded": true
+  }
+}

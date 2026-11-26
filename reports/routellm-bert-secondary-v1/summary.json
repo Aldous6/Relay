@@ -1,0 +1,237 @@
+{
+  "protocol_id": "relay-routellm-bert-secondary-v1",
+  "kind": "secondary_pretrained_transfer_comparison_separate_from_locked_primary_evaluation",
+  "selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+  "configuration_sha256": "9c3604c867d19b721cc83246701bd70c7e32058f1a6d27e6729d98b7b15c2644",
+  "n_development_validation": 4406,
+  "n_test": 7324,
+  "selected": {
+    "routellm_bert": {
+      "threshold": 0.5,
+      "development_quality_floor": 0.7768815251929188,
+      "quality_constraint_met": true,
+      "fallback_used": false,
+      "development_metrics": {
+        "threshold": 0.5,
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3468,
+        "coverage": 1.0,
+        "success_rate": 0.7871084884248751,
+        "success_rate_on_routed": 0.7871084884248751,
+        "mean_score_on_routed": 0.7856105310939628,
+        "total_cost": 13.692903600000001,
+        "cost_per_1000": 3.107785655923741,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    },
+    "relay_common_pair": {
+      "threshold": 0.8,
+      "development_quality_floor": 0.7768815251929188,
+      "quality_constraint_met": true,
+      "fallback_used": false,
+      "development_metrics": {
+        "threshold": 0.8,
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3470,
+        "coverage": 1.0,
+        "success_rate": 0.787562414888788,
+        "success_rate_on_routed": 0.787562414888788,
+        "mean_score_on_routed": 0.7861098502042669,
+        "total_cost": 14.0462624,
+        "cost_per_1000": 3.1879851112119835,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+      }
+    }
+  },
+  "metrics": {
+    "routellm_bert": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 5746,
+      "coverage": 1.0,
+      "success_rate": 0.7845439650464228,
+      "success_rate_on_routed": 0.7845439650464228,
+      "mean_score_on_routed": 0.7795671764063353,
+      "total_cost": 22.489328,
+      "cost_per_1000": 3.0706346258874935,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "relay_common_pair": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 5760,
+      "coverage": 1.0,
+      "success_rate": 0.7864554888039322,
+      "success_rate_on_routed": 0.7864554888039322,
+      "mean_score_on_routed": 0.7815264882577826,
+      "total_cost": 22.9767526,
+      "cost_per_1000": 3.1371863189513927,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "fixed_strong": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 5758,
+      "coverage": 1.0,
+      "success_rate": 0.786182413981431,
+      "success_rate_on_routed": 0.786182413981431,
+      "mean_score_on_routed": 0.7826529219006008,
+      "total_cost": 23.65131,
+      "cost_per_1000": 3.2292886400873835,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "fixed_weak": {
+      "n_prompts": 7324,
+      "n_routed": 7324,
+      "n_abstained": 0,
+      "n_successes": 3919,
+      "coverage": 1.0,
+      "success_rate": 0.5350901146914254,
+      "success_rate_on_routed": 0.5350901146914254,
+      "mean_score_on_routed": 0.548313762971054,
+      "total_cost": 0.9728741999999999,
+      "cost_per_1000": 0.1328337247405789,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "comparisons": {
+    "relay_common_pair_vs_routellm_bert": {
+      "n": 7324,
+      "replicates": 5000,
+      "seed": 42,
+      "success_rate_delta": 0.0019115237575095577,
+      "success_rate_delta_95ci": [
+        -0.00013653741125068268,
+        0.003959584926269798
+      ],
+      "cost_per_1000_delta": 0.0665516930638995,
+      "cost_per_1000_delta_95ci": [
+        0.04477352949208084,
+        0.0896219203986893
+      ],
+      "relative_call_cost_saving": -0.021673595582758054,
+      "relative_call_cost_saving_95ci": [
+        -0.02923659108236105,
+        -0.014499118887163537
+      ],
+      "scope": "secondary held-out paired prompt bootstrap; adapted Relay vs externally pretrained BERT transfer; historical call cost excludes overhead"
+    },
+    "relay_common_pair_vs_fixed_strong": {
+      "n": 7324,
+      "replicates": 5000,
+      "seed": 42,
+      "success_rate_delta": 0.00027307482250136535,
+      "success_rate_delta_95ci": [
+        -0.0016384489350081922,
+        0.002184598580010923
+      ],
+      "cost_per_1000_delta": -0.09210232113599126,
+      "cost_per_1000_delta_95ci": [
+        -0.10975006895139272,
+        -0.07703243514472961
+      ],
+      "relative_call_cost_saving": 0.028520931821535367,
+      "relative_call_cost_saving_95ci": [
+        0.02380095439493569,
+        0.03387466913279865
+      ],
+      "scope": "secondary held-out paired prompt bootstrap; adapted Relay vs externally pretrained BERT transfer; historical call cost excludes overhead"
+    },
+    "routellm_bert_vs_fixed_strong": {
+      "n": 7324,
+      "replicates": 5000,
+      "seed": 42,
+      "success_rate_delta": -0.0016384489350081922,
+      "success_rate_delta_95ci": [
+        -0.003959584926269798,
+        0.0005461496450027307
+      ],
+      "cost_per_1000_delta": -0.15865401419989078,
+      "cost_per_1000_delta_95ci": [
+        -0.1838850061441835,
+        -0.135521602266521
+      ],
+      "relative_call_cost_saving": 0.04912970993995669,
+      "relative_call_cost_saving_95ci": [
+        0.04211941245937553,
+        0.05675542494148063
+      ],
+      "scope": "secondary held-out paired prompt bootstrap; adapted Relay vs externally pretrained BERT transfer; historical call cost excludes overhead"
+    }
+  },
+  "coverage": {
+    "development": {
+      "n": 4406,
+      "input_tokens": 873456,
+      "retained_tokens": 870567,
+      "truncated_tokens": 2889,
+      "prompts_truncated": 30,
+      "fraction_prompts_truncated": 0.006808896958692692,
+      "token_coverage": 0.9966924493048305,
+      "max_input_tokens": 827,
+      "scope": "official tokenizer truncation at 512 including special tokens; no sliding windows"
+    },
+    "test": {
+      "n": 7324,
+      "input_tokens": 1433466,
+      "retained_tokens": 1429519,
+      "truncated_tokens": 3947,
+      "prompts_truncated": 39,
+      "fraction_prompts_truncated": 0.005324959038776625,
+      "token_coverage": 0.9972465339254646,
+      "max_input_tokens": 852,
+      "scope": "official tokenizer truncation at 512 including special tokens; no sliding windows"
+    }
+  },
+  "reference": {
+    "checkpoint": "routellm/bert_gpt4_augmented",
+    "revision": "86237e3df400762178ea98379477b8296e66d5e4",
+    "source_revision": "0b64fdafe049e596a3f5657c219329f24af24198",
+    "implementation": "local faithful BERT inference adapter; original RouteLLM package not imported"
+  },
+  "relay_test_prediction_sha256": {
+    "relay_primary_probabilities.parquet": "4aa72584296b618e3be0678f92730bdf73317b612fba1df75d4e303cc4eb19d1",
+    "relay_primary_predicted_costs.parquet": "2fb0c78119d8406c5bcaee3b1c41e39e5d533fe605d39f5cfce18d51b1f2a006"
+  },
+  "paid_api_calls": false,
+  "primary_protocol_changed": false,
+  "test_outcomes_used_for_selection": false,
+  "elapsed_seconds_this_execution": 6117.703398700003,
+  "limitations": [
+    "This is RouteLLM BERT checkpoint inference, not the recommended MF router.",
+    "Reference predicts relative preference; Relay predicts absolute score-threshold success. Compare selected outcomes, not raw probabilities.",
+    "The checkpoint has external preference/augmentation supervision; possible benchmark contamination is unresolved.",
+    "Relay was fit on local outer-training data, so this is an adapted-vs-pretrained transfer comparison, not equal-supervision method isolation.",
+    "The primary final evaluation is unchanged and this comparison cannot retroactively establish its prespecified superiority claim.",
+    "Cost is historical selected-model call cost and excludes router compute, training and retries."
+  ],
+  "evaluated_at_utc": "2026-11-08T21:26:00.069130+00:00",
+  "files_sha256": {
+    "development_bert_cache.json": "3266314337909978df819c2efa8dd8869ad24a195a7356906ff6d6b6657ec774",
+    "development_bert_probabilities_and_coverage.parquet": "832c83d3c6e915fc7c6931f4085f3e22ecde9b292eac93fe3859fcd234018e02",
+    "fixed_strong_observed_results.parquet": "be6811750f49beb5ab15438b48890d7fb1b471a9149e2ac0db36baa5b3757b09",
+    "fixed_strong_routes.parquet": "15dce6d5e78b31cadb96c54614165cbbe94def92a7918dbbd1b01da26c2b55ae",
+    "fixed_weak_observed_results.parquet": "ad2deaeca99b5b28eead8a9fcbe6a52d397a17aec97f4de3c8aeabee9c38307c",
+    "fixed_weak_routes.parquet": "3c3402c5239e433e5d3e0c7ef1491ac3557d0ab76ea71aefa6b33863d60ac3e3",
+    "relay_common_pair_observed_results.parquet": "e8f2a6118c55d892078d2acfa1e72388f0ca933d549ba86c409563c34ef7e880",
+    "relay_common_pair_routes.parquet": "0e08eb3de50ff32630e8eb797ce89b257157f29b010c1e12451a134380aafad8",
+    "routellm_bert_observed_results.parquet": "35d9a74d96300356a4bb8aacf83bdc4c756a952ce2edd0bbd0f0315cedaa5ae5",
+    "routellm_bert_routes.parquet": "db5fe5ae7c1e1406d63e8831477b291ced9442f52cbdf30a0b19a863ec91d883",
+    "selection.json": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+    "test_bert_cache.json": "c1b56ad9a90d9ecbc177666a256bb8b7ad7607fa08fe8d35151ddf3ffddf9c2b",
+    "test_bert_probabilities_and_coverage.parquet": "fb3f7c4bbdb87b2cc170753ad4c7c9e4114403299803cc5f4525e6b81ebde3ae"
+  }
+}

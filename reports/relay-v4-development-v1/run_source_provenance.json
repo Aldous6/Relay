@@ -1,0 +1,21 @@
+{
+  "source_files_sha256": {
+    "configs/relay_v4.json": "81ad76c810fbe4439dfafa88d74838d20d2fdd02480ee6cda105eb1e6ab4851c",
+    "configs/relay_v4_operating_curves.json": "af8077610cfad098122d40c7f422619122356f971880222773de7f7051dd9aba",
+    "src/routerbench/improvement.py": "18af9d56b9676e2c942c640dea6d71bddd749f4cf169820638cf2fa18f3cc091",
+    "src/routerbench/nonlinear.py": "02c5ef63e37b6eccd64ffe6de5319d78b521fb68734ba8a38e1ba5388ea3f7ff",
+    "src/routerbench/pairwise.py": "b025ba1021ccfc2a993ba0df4a5556a2205d310a55e14b60714996c631df2327",
+    "src/routerbench/representations.py": "57106ba348d1692cd951332101f266ca0196dcc37f64f79e92a29dde2dd026e1",
+    "src/routerbench/development.py": "13d22a4dfc0650e2f3701483a9a52a58b53dddb7df5035bff11597e74115fe00"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3",
+    "pyarrow": "22.0.0"
+  },
+  "recorded_during_training": true,
+  "native_threads": 4
+}

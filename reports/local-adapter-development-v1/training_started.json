@@ -1,0 +1,74 @@
+{
+  "configuration": {
+    "experiment_id": "local-structural-adapter-development-v1",
+    "scope": "development adaptation using the already observed 64 synthetic local catalog audit cases",
+    "source_dir": "reports/local-catalog-audit-v1",
+    "dataset_path": "reports/local-transfer-pilot-v1/cohort.jsonl",
+    "output_dir": "reports/local-adapter-development-v1",
+    "expected_cases": 64,
+    "models": {
+      "strong": "qwen2.5:1.5b",
+      "weak": "qwen2.5:0.5b"
+    },
+    "bert_reference_selection_file": "reports/routellm-bert-secondary-v1/selection.json",
+    "bert_reference_selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+    "adapted_bert_control": "same local tree hyperparameters, fit/calibration rows and policy grid; frozen 768-column BERT features instead of raw fourteen attributes; not the published preference router",
+    "split": {
+      "seed": 42,
+      "fit_fraction": 0.7,
+      "strategy": "normalized prompt hash independent of outcomes"
+    },
+    "learner": {
+      "representation": "structural",
+      "max_iter": 80,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 3,
+      "l2_regularization": 2.0,
+      "quality_threshold": 0.75,
+      "seed": 42
+    },
+    "router_input": "SYSTEM:\n{SYSTEM}\n\nUSER:\n{prompt}",
+    "system_source": "tools/local_transfer_pilot.py:SYSTEM",
+    "cost_unit": "seconds",
+    "tradeoff_grid": [
+      0,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.5,
+      1,
+      2
+    ],
+    "tradeoff_unit": "expected exact success probability per predicted extra generation second",
+    "selection": "minimum calibration observed generation seconds among points with success at least fixed strong calibration; ties higher success then smaller tradeoff; fixed strong fallback",
+    "bootstrap_replicates": 1000,
+    "automatic_live_promotion": false,
+    "independent_superiority_claim": false,
+    "paid_api_calls": false
+  },
+  "configuration_sha256": "cf256726ce6049fa1242ef3df0884afcb9f08e9022e8e889f20cd29087107203",
+  "source_files_sha256": {
+    "freeze.json": "e5c9201cf969c18a0745dc4803e92f1a8211a6993c05a01d371707dd58a7ab4c",
+    "summary.json": "63a613868ea6491c6333b6249770a6b0307b3da95b69aeca76b8f9148e8d5853",
+    "responses.json": "3b74a3c19a5409846f21a547919d0d2caa32690908f6d1eeedd10d07c05fde28",
+    "routes.json": "d5eee995eaa959647935c8c5684fb803f61c301bd708b07c894b8881ead389ef",
+    "dataset_sha256": "9beab292ee21ccae941a6fac496a57aa7568144535472675dc1c17c79c7d0937"
+  },
+  "system": "Responde preguntas sobre el material recibido. Devuelve solamente el dato o número solicitado, sin explicación ni formato adicional. Puedes calcular a partir de los datos. Si el dato no se puede obtener del material, responde exactamente NO_EVIDENCE.",
+  "system_sha256": "fa16732498a422fa6813cff372d210ff973264dda77099a7b572d3a2972b6450",
+  "serialization": "SYSTEM:\n{SYSTEM}\n\nUSER:\n{prompt}",
+  "scope": "known synthetic cohort reused for development, not independent validation",
+  "bert_reference_selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+  "bert_checkpoint_revision": "86237e3df400762178ea98379477b8296e66d5e4",
+  "bert_weights_sha256": "e2a92240bad1c7fb9befbf021a62fad5feb1e2a3990d53a28d160a39bb1cac7b",
+  "same_local_head_hyperparameters": {
+    "max_iter": 80,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 3,
+    "l2_regularization": 2.0,
+    "quality_threshold": 0.75,
+    "seed": 42
+  }
+}

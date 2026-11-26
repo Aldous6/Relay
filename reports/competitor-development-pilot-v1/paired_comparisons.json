@@ -1,0 +1,71 @@
+{
+  "kind": "exploratory paired development comparisons",
+  "fixed_reference_model": "gpt-4-1106-preview",
+  "outer_test_evaluated": false,
+  "routellm_evaluated": false,
+  "comparisons": {
+    "structural_vs_best_fixed_fit": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": 0.005447117566954153,
+      "success_rate_delta_95ci": [
+        -0.004766227871084884,
+        0.015433499773036768
+      ],
+      "cost_per_1000_delta": -1.112596619155697,
+      "cost_per_1000_delta_95ci": [
+        -1.165304725533366,
+        -1.0615033630276896
+      ],
+      "relative_call_cost_saving": 0.33700006695865403,
+      "relative_call_cost_saving_95ci": [
+        0.32715693979838734,
+        0.34729747515451653
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "lexical_hybrid_vs_best_fixed_fit": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": -0.004539264639128461,
+      "success_rate_delta_95ci": [
+        -0.015433499773036768,
+        0.007035860190649115
+      ],
+      "cost_per_1000_delta": -1.5087540699046755,
+      "cost_per_1000_delta_95ci": [
+        -1.5699711819791176,
+        -1.4513864094189757
+      ],
+      "relative_call_cost_saving": 0.45699421859456946,
+      "relative_call_cost_saving_95ci": [
+        0.44472735363716265,
+        0.4696542077005531
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "lexical_hybrid_vs_structural": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": -0.009986382206082615,
+      "success_rate_delta_95ci": [
+        -0.019064911484339538,
+        -0.0011348161597821154
+      ],
+      "cost_per_1000_delta": -0.3961574507489787,
+      "cost_per_1000_delta_95ci": [
+        -0.44199419403086637,
+        -0.35138722576032616
+      ],
+      "relative_call_cost_saving": 0.18098667232962207,
+      "relative_call_cost_saving_95ci": [
+        0.16074374122643242,
+        0.20142551341727144
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    }
+  }
+}

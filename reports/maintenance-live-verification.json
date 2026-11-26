@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-17T09:13:54.244161+00:00",
+  "scope": "final source contracts plus separate live development evidence; no claim of superiority",
+  "validation": [
+    {
+      "command": "python -m unittest discover -s tests -p test_maintenance*.py -q",
+      "environment": {
+        "PYTHONPATH": "src"
+      },
+      "interpreter": ".venv-groq/Scripts/python.exe",
+      "tests_run": 191,
+      "passed": 190,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 132.457
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_report_maintenance_pilot.py -q",
+      "tests_run": 5,
+      "passed": 5,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 0.701
+    },
+    {
+      "scope": "offline replay helper tests, executed by maintenance_cases agent",
+      "tests_run": 3,
+      "passed": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "command": "python tools/relay_fix.py check",
+      "exit_code": 0,
+      "model_calls": 0
+    },
+    {
+      "command": "python tools/relay_compare_maintenance.py score outputs/maintenance-comparison/20261117-live-v3-complete",
+      "interpreter": ".venv-routellm/Scripts/python.exe",
+      "exit_code": 0,
+      "model_api_calls": 0,
+      "checkpoint_verified": true
+    },
+    {
+      "command": "python tools/relay_compare_maintenance.py compare outputs/maintenance-comparison/20261117-live-v3-complete",
+      "exit_code": 0,
+      "model_api_calls": 0
+    },
+    {
+      "scope": "primary delivery report generated from existing eight cases and reference with v1/v2 plus all three diagnostics",
+      "exit_code": 0,
+      "status": "completed",
+      "model_api_calls": 0
+    }
+  ],
+  "test_environment_note": "Initial unittest discovery without PYTHONPATH imported an older installed package and produced 12 import errors before executing tests. Rerun with PYTHONPATH=src validated the workspace sources; no dependency reinstall was needed.",
+  "skip_reason": "Windows does not permit symlink creation for this user; other path integrity checks passed.",
+  "generations_in_final_cohort": 23,
+  "generation_calls_including_prior_runs_and_diagnostics": 39,
+  "unknown_usage_call_count": 4,
+  "api_generation_call_ceiling": 40,
+  "original_run_unchanged": true,
+  "continuation_new_calls": 4,
+  "credential_handling": {
+    "files_scanned": 1226,
+    "credential_matches": 0,
+    "key_persisted_by_tools": false,
+    "in_memory_reference_cleared": true
+  },
+  "new_default": "direct 120B first; selected after development results; not independently validated",
+  "evaluated_profile": "direct 20B first with at most one 120B repair before LF/CRLF fix",
+  "independent_holdout": false,
+  "trained_maintenance_router": false,
+  "routellm_reference": "pinned published BERT checkpoint through local wrapper; not MF, SW or official SDK",
+  "not_diamond_executed": false,
+  "outputs": {
+    "outputs/maintenance-comparison/20261117-live-v3-complete/delivery_report.json": "852557d0d2d715674a8c6847e81b3639c6c88caf2d930b58c5250e6a6fc81145",
+    "outputs/maintenance-comparison/20261117-live-v3-complete/comparison.json": "eaeb26e476998e6d9930728c752cec0625c74225108411a424114ab02fa3601a",
+    "outputs/maintenance-comparison/20261117-live-v3-complete/reference.json": "99e194fd2d1d0846834749761a4aa9ede94e3353669f443dbbd9d482564a83ac",
+    "outputs/maintenance-comparison/20261117-live-v3-complete/recovery-audit.json": "3f7082a2bb556bb16da0c798dc19e6e98f434b4514147c1053510538e0578564",
+    "reports/maintenance-line-ending-diagnostic-v1/report.json": "73224437fa86da2c7e5eec2d29b78206d54b401f1dc9f240a76bef1d786e1782"
+  },
+  "final_sources_sha256": {
+    "maintenance.py": "83dc50767891196a5bd994513912ae04713688567fa3112bb26bc87470be69b0",
+    "maintenance_acceptance.py": "d972e675d78465a87e9a49662c1a4d394f56aadbae61ead178b6cd5fd526d1a6",
+    "maintenance_cli.py": "59b8e94cd453b3bbd56b260b4b398918ccf5f14973e6c1a3fd05b8da77e69e6b",
+    "maintenance_collection.py": "00ece59d2baa4afcd350dd4d43588c41541e77b8701d52ddd0f2e3a4d4224cee",
+    "maintenance_comparison.py": "b5a9d4fee4d9dfb8fc2e8105496a329047f85842455b6bab88dcda7dbd2b6ebf",
+    "maintenance_competition.py": "e23ad5794ceddb5d6e4460816095421de1078b33963baedf35527600c6da5996",
+    "maintenance_learning.py": "85380d426b9773443ae646eb5af30feef96d03efb4366ae4841ff0acf6cce954",
+    "maintenance_provider.py": "603b570c9d05de1d8f6c4395fc08606def5eea9b2b43a271b61cf2a55e126889",
+    "maintenance_reference.py": "bef8b944136ded728b10fe4362e97e48ce76c14e9eeef159464e86c44a2f673a",
+    "maintenance_routing.py": "91c74f4684b53c0a0a7a0a566c44939f81107326ac299132db2f8881502cce80",
+    "maintenance_workspace.py": "a0e95d1f2c5b3e026923ee0285c3825bad71465f88bf8bd9b811fd965fd3a560"
+  }
+}

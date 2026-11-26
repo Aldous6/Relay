@@ -1,0 +1,79 @@
+{
+  "generated_at_utc": "2026-11-09T00:13:34.006108+00:00",
+  "sources": [
+    {
+      "path": "reports/final/summary.json",
+      "sha256": "fa7912f355603c1a98a60868c400557e0c5c123885a044018b1d6e7944c8e381",
+      "bytes": 92921
+    },
+    {
+      "path": "reports/final-tiers/summary.json",
+      "sha256": "c803d8fce952ddffe30172df3140eec5e740f8db97002ea5eaaf9fe9f42fb88e",
+      "bytes": 13475
+    },
+    {
+      "path": "configs/final_protocol.json",
+      "sha256": "0a7efdd03ac1b207c7f5120180c23036037ef5d19e46c99b758f7e56d2df10cd",
+      "bytes": 6842
+    },
+    {
+      "path": "reports/final-tiers/permutation_importance.parquet",
+      "sha256": "f6d6804c7cecd3cc7daa8367afc55af4879f3255d08ca3eca0e4a88c2f88f37e",
+      "bytes": 4331
+    },
+    {
+      "path": "reports/routellm-bert-secondary-v1/summary.json",
+      "sha256": "09f08e8e5b0c83cbef7cf1aaddeba26c6950c0f1228469b52cdd76ec9c2cf183",
+      "bytes": 10233
+    },
+    {
+      "path": "reports/final-tier-policy-v1/summary.json",
+      "sha256": "6688074e2cb7462bb5d5196c10c3158b6ffdeb44135aeeb1c9db2c29ae3acbd1",
+      "bytes": 28603
+    },
+    {
+      "path": "reports/final/scope_metadata_correction.json",
+      "sha256": "e902665bac4163e60ddf7caf2479b785ce0dc4718e81985a07cba189f5e6bb00",
+      "bytes": 1039
+    }
+  ],
+  "primary_policy_frozen_before_test": "relay_primary",
+  "secondary_winner_reselection": false,
+  "tool_reference": {
+    "authors": "Timothy Kassis, Vinayak Agarwal, Yuhuan He, Darshil Patel, Aubrey M. Brueckner",
+    "year": 2026,
+    "title": "Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents",
+    "doi": "10.48550/arXiv.2609.00065",
+    "url": "https://arxiv.org/abs/2609.00065"
+  },
+  "figures": {
+    "generated": true,
+    "files": [
+      {
+        "path": "figures/routing_cost_quality.png",
+        "sha256": "5708f60baf7dda495fd539f091ad4a0c7458c81c3a83ccd87d3f82bcc1f8b412",
+        "width_inches": 11.8,
+        "height_inches": 5.2,
+        "dpi": 200,
+        "transparent": false,
+        "alt_text": "Puntos de costo histórico frente a éxito de las políticas congeladas y once modelos fijos; a la derecha, diferencia de éxito de la política primaria con intervalos por prompt y por grupo, cero y margen de pérdida declarado."
+      },
+      {
+        "path": "figures/tier_confusion.png",
+        "sha256": "a718cdf0cfb8d6403af962ebf1d42c71ccd39ad2b6f912d04fdc5c285e85198b",
+        "width_inches": 6.0,
+        "height_inches": 5.0,
+        "dpi": 200,
+        "transparent": false,
+        "alt_text": "Matriz de confusión del modelo de tiers seleccionado en validación cruzada. Cada celda muestra conteo y porcentaje de su fila; el color se normaliza por tier real para hacer visible la clase minoritaria."
+      }
+    ],
+    "provenance": "figures/provenance.json"
+  },
+  "output_report": {
+    "path": "reports/final/relay_results.md",
+    "sha256": "31520e8fd70f7382831469157528d34820cbd2ac4eae8640464aa2b18afded09",
+    "bytes": 9803
+  },
+  "script_sha256": "a295d9f2e815c13451fc1b155fe6110f63c656e974d2c00cf5f3e4756886eeb1"
+}

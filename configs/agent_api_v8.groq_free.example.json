@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "run_id": "relay-agent-api-v8-groq-development",
+  "execution_mode": "external",
+  "evaluation_split": "development",
+  "independent_validation": false,
+  "catalog_status": "selected",
+  "models": {"strong": "groq/openai/gpt-oss-120b", "weak": "groq/openai/gpt-oss-20b"},
+  "model_catalog": ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b"],
+  "models_metadata": {
+    "groq/openai/gpt-oss-20b": {"returned_model_ids": ["openai/gpt-oss-20b"], "context_window": 131072, "api_key_env": "GROQ_API_KEY"},
+    "groq/openai/gpt-oss-120b": {"returned_model_ids": ["openai/gpt-oss-120b"], "context_window": 131072, "api_key_env": "GROQ_API_KEY"}
+  },
+  "catalog_provenance": {
+    "as_of": "2026-11-12",
+    "model_sources": ["https://console.groq.com/docs/model/openai/gpt-oss-20b", "https://console.groq.com/docs/model/openai/gpt-oss-120b"],
+    "identity_contract_source": "https://console.groq.com/docs/api-reference",
+    "litellm_prefix_source": "https://docs.litellm.ai/docs/providers/groq",
+    "quota_source": "https://console.groq.com/docs/rate-limits",
+    "free_account_source": "https://console.groq.com/docs/billing-faqs",
+    "scope": "Published model IDs and capacities only. Account eligibility, actual returned identity and free-tier access are not live-verified; generation remains blocked pending account declaration. Strong/weak are experimental roles, not a guaranteed quality ranking."
+  },
+  "generation_options": {"max_output_tokens": 4096, "temperature": 0, "timeout": 90},
+  "harness": {"contract_version": 2, "max_transport_retries": 2, "retry_delay_seconds": 0.5},
+  "policies": ["always_strong", "always_weak", "cheap_then_escalate"],
+  "primary_policy": "cheap_then_escalate",
+  "policy_order": "cyclic_by_task",
+  "max_calls": 8,
+  "spending": {"max_provider_spend_usd": 0, "max_total_generation_calls": 256, "account_is_free_tier": false, "account_tier_source": null},
+  "pricing": {},
+  "compute_rates": {"router_usd_per_second": null, "verification_usd_per_second": null, "tool_usd_per_second": null},
+  "roi": {"min_total_cost_saving": 0.3, "max_success_rate_loss": 0.02, "max_p95_router_seconds": 0.2},
+  "bootstrap_replicates": 2000,
+  "seed": 20261112,
+  "per_family": 2,
+  "task_splits_path": null,
+  "require_unseen_families": false,
+  "predictive_policy": null,
+  "scope": "Concrete diagnostic catalog candidate for a confirmed Groq free account, not verified account access or a frontier-quality claim. Prepare only until account tier is explicitly recorded. Synthetic development tasks from three known families; no independent quality or monetary-saving claim. No zero tariffs are fabricated."
+}

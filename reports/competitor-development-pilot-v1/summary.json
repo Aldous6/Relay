@@ -1,0 +1,946 @@
+{
+  "experiment_id": "routerbench-direct-routing-development-v2",
+  "generated_at_utc": "2026-11-08T08:32:17.249049+00:00",
+  "configuration": {
+    "experiment_id": "routerbench-direct-routing-development-v2",
+    "status": "development_only_no_superiority_claim",
+    "seed": 42,
+    "prepared_dir": "data/processed",
+    "dataset": {
+      "path": "data/raw/routerbench_0shot.pkl",
+      "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+      "expected_models": 11
+    },
+    "population": "all_deduplicated_outer_training_prompts_including_ineligible",
+    "quality_threshold": 0.75,
+    "internal_split": {
+      "strategy": "prompt_hash",
+      "fit_fraction": 0.7,
+      "calibration_fraction": 0.15,
+      "validation_fraction": 0.15,
+      "stratify_by_outcomes": false
+    },
+    "variants": [
+      "structural",
+      "lexical_hybrid"
+    ],
+    "lexical": {
+      "word_ngram_range": [
+        1,
+        2
+      ],
+      "char_ngram_range": [
+        3,
+        5
+      ],
+      "char_analyzer": "char_wb",
+      "max_features_per_block": 20000,
+      "min_df": 2,
+      "sublinear_tf": true,
+      "truncate_prompt": false
+    },
+    "probability_calibration": "sigmoid_on_disjoint_calibration_split",
+    "policy": {
+      "min_success_probability": 0.75,
+      "probability_threshold_grid": [
+        0.5,
+        0.6,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "cost_estimation": "training_only_no_realized_validation_cost_for_decision",
+      "selection": "cheapest_predicted_cost_among_probability_eligible",
+      "fallback": "highest_predicted_success_then_lowest_predicted_cost_then_model_name"
+    },
+    "reporting": {
+      "final_test_evaluated": false,
+      "confirmatory_quality_margin": null,
+      "development_metrics": [
+        "success_rate",
+        "estimated_cost_per_1000",
+        "brier_score",
+        "log_loss",
+        "fallback_rate"
+      ],
+      "costs_are": "historical_estimates_in_routerbench",
+      "missing_final_margin_does_not_block_exploratory_training": true
+    },
+    "routellm_reference": {
+      "repository": "https://github.com/lm-sys/RouteLLM",
+      "reviewed_commit": "0b64fdafe049e596a3f5657c219329f24af24198",
+      "variant": "mf",
+      "checkpoint": "routellm/mf_gpt4_augmented",
+      "checkpoint_revision": null,
+      "embedding_model_in_reviewed_source": "text-embedding-3-small",
+      "comparison_status": "pending_official_reference_predictions",
+      "paid_api_calls_authorized": false,
+      "common_pair": {
+        "strong_dataset_model": "gpt-4-1106-preview",
+        "weak_dataset_model": "mistralai/mixtral-8x7b-chat",
+        "strong_reference_id": "gpt-4-1106-preview",
+        "weak_reference_id": "mixtral-8x7b-instruct-v0.1"
+      },
+      "multi_model_results_are_separate_from_binary_comparison": true
+    }
+  },
+  "kind": "exploratory development; not a RouteLLM comparison or final result",
+  "pilot_max_fit_rows": 6000,
+  "dataset_sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+  "source_prepared_files_sha256": {
+    "features.parquet": "fd6eb943f985f20606409a89b51538bdeb406eb529fa2c1e428e99995c366d4b",
+    "rows.parquet": "2f03770fe1dd95e18dd6eb2488b76795da5dca910cc3d814cfee33f22c0608ef",
+    "labels.parquet": "b85cd017de5de6f26fdb7ef7f870eb926ea0bf6c3c0c9716362d4d683212fa5c"
+  },
+  "partition_counts": {
+    "unused_fit_pilot": 14368,
+    "fit": 6000,
+    "validation": 4406,
+    "calibration": 4383
+  },
+  "fixed_model_baselines": {
+    "WizardLM/WizardLM-13B-V1.2": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 1856,
+      "coverage": 1.0,
+      "success_rate": 0.4212437585111212,
+      "success_rate_on_routed": 0.4212437585111212,
+      "mean_score_on_routed": 0.43531547889241945,
+      "total_cost": 0.3234165,
+      "cost_per_1000": 0.0734036541080345,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "claude-instant-v1": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 2771,
+      "coverage": 1.0,
+      "success_rate": 0.6289151157512483,
+      "success_rate_on_routed": 0.6289151157512483,
+      "mean_score_on_routed": 0.613004993191103,
+      "total_cost": 1.0316960000000002,
+      "cost_per_1000": 0.23415705855651386,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "claude-v1": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 2845,
+      "coverage": 1.0,
+      "success_rate": 0.6457103949160236,
+      "success_rate_on_routed": 0.6457103949160236,
+      "mean_score_on_routed": 0.6324784384929641,
+      "total_cost": 9.51032,
+      "cost_per_1000": 2.158492964139809,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "claude-v2": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 2901,
+      "coverage": 1.0,
+      "success_rate": 0.6584203359055832,
+      "success_rate_on_routed": 0.6584203359055832,
+      "mean_score_on_routed": 0.6360644575578757,
+      "total_cost": 10.752896,
+      "cost_per_1000": 2.440512029051294,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "gpt-3.5-turbo-1106": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 2795,
+      "coverage": 1.0,
+      "success_rate": 0.6343622333182024,
+      "success_rate_on_routed": 0.6343622333182024,
+      "mean_score_on_routed": 0.6326827054017249,
+      "total_cost": 1.078706,
+      "cost_per_1000": 0.24482660009078527,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "gpt-4-1106-preview": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 3467,
+      "coverage": 1.0,
+      "success_rate": 0.7868815251929188,
+      "success_rate_on_routed": 0.7868815251929188,
+      "mean_score_on_routed": 0.7870744439400816,
+      "total_cost": 14.54629,
+      "cost_per_1000": 3.3014729913753973,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "meta/code-llama-instruct-34b-chat": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 796,
+      "coverage": 1.0,
+      "success_rate": 0.18066273263731275,
+      "success_rate_on_routed": 0.18066273263731275,
+      "mean_score_on_routed": 0.2016114389468906,
+      "total_cost": 0.7636864320000001,
+      "cost_per_1000": 0.17332874080798913,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "meta/llama-2-70b-chat": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 1418,
+      "coverage": 1.0,
+      "success_rate": 0.3218338629142079,
+      "success_rate_on_routed": 0.3218338629142079,
+      "mean_score_on_routed": 0.32953926463912847,
+      "total_cost": 0.8939709,
+      "cost_per_1000": 0.20289852473899228,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "mistralai/mistral-7b-chat": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 1249,
+      "coverage": 1.0,
+      "success_rate": 0.2834770767135724,
+      "success_rate_on_routed": 0.2834770767135724,
+      "mean_score_on_routed": 0.3066840671811167,
+      "total_cost": 0.20342980000000002,
+      "cost_per_1000": 0.04617108488424876,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "mistralai/mixtral-8x7b-chat": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 2416,
+      "coverage": 1.0,
+      "success_rate": 0.5483431684067182,
+      "success_rate_on_routed": 0.5483431684067182,
+      "mean_score_on_routed": 0.5553109396277802,
+      "total_cost": 0.5952852000000001,
+      "cost_per_1000": 0.1351078529278257,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    },
+    "zero-one-ai/Yi-34B-Chat": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 2860,
+      "coverage": 1.0,
+      "success_rate": 0.64911484339537,
+      "success_rate_on_routed": 0.64911484339537,
+      "mean_score_on_routed": 0.6568315932818883,
+      "total_cost": 0.8222664000000001,
+      "cost_per_1000": 0.18662423967317296,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "fixed_models_selected_from_fit": {
+    "best_success": "gpt-4-1106-preview",
+    "cheapest_mean_cost": "mistralai/mistral-7b-chat"
+  },
+  "variants": {
+    "structural": {
+      "training_seconds": 1.0977541000029305,
+      "batch_validation_inference_seconds": 0.0342910999970627,
+      "feature_count": 14,
+      "calibration_notes": {
+        "WizardLM/WizardLM-13B-V1.2": "sigmoid fitted on disjoint calibration rows",
+        "claude-instant-v1": "sigmoid fitted on disjoint calibration rows",
+        "claude-v1": "sigmoid fitted on disjoint calibration rows",
+        "claude-v2": "sigmoid fitted on disjoint calibration rows",
+        "gpt-3.5-turbo-1106": "sigmoid fitted on disjoint calibration rows",
+        "gpt-4-1106-preview": "sigmoid fitted on disjoint calibration rows",
+        "meta/code-llama-instruct-34b-chat": "sigmoid fitted on disjoint calibration rows",
+        "meta/llama-2-70b-chat": "sigmoid fitted on disjoint calibration rows",
+        "mistralai/mistral-7b-chat": "sigmoid fitted on disjoint calibration rows",
+        "mistralai/mixtral-8x7b-chat": "sigmoid fitted on disjoint calibration rows",
+        "zero-one-ai/Yi-34B-Chat": "sigmoid fitted on disjoint calibration rows"
+      },
+      "diagnostics": {
+        "per_model": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "brier": 0.23538312762686553,
+            "log_loss": 0.6628428793370338,
+            "observed_success": 0.4212437585111212,
+            "mean_predicted_success": 0.4076445186997806
+          },
+          "claude-instant-v1": {
+            "brier": 0.2253005778415335,
+            "log_loss": 0.642202129445555,
+            "observed_success": 0.6289151157512483,
+            "mean_predicted_success": 0.6021691975216559
+          },
+          "claude-v1": {
+            "brier": 0.2172720213945912,
+            "log_loss": 0.6249737407959901,
+            "observed_success": 0.6457103949160236,
+            "mean_predicted_success": 0.6446038648826493
+          },
+          "claude-v2": {
+            "brier": 0.21486153215644854,
+            "log_loss": 0.6198427427178006,
+            "observed_success": 0.6584203359055832,
+            "mean_predicted_success": 0.6428930492893523
+          },
+          "gpt-3.5-turbo-1106": {
+            "brier": 0.22286791462256578,
+            "log_loss": 0.6366194479612312,
+            "observed_success": 0.6343622333182024,
+            "mean_predicted_success": 0.6081705388485795
+          },
+          "gpt-4-1106-preview": {
+            "brier": 0.1558027330104352,
+            "log_loss": 0.486017193838611,
+            "observed_success": 0.7868815251929188,
+            "mean_predicted_success": 0.7778859170916341
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "brier": 0.13621450645612324,
+            "log_loss": 0.4296261914196309,
+            "observed_success": 0.18066273263731275,
+            "mean_predicted_success": 0.18119595702198757
+          },
+          "meta/llama-2-70b-chat": {
+            "brier": 0.19449790850194357,
+            "log_loss": 0.5665422380484857,
+            "observed_success": 0.3218338629142079,
+            "mean_predicted_success": 0.312215108599177
+          },
+          "mistralai/mistral-7b-chat": {
+            "brier": 0.20088143550127868,
+            "log_loss": 0.5907859054471141,
+            "observed_success": 0.2834770767135724,
+            "mean_predicted_success": 0.28381231804257323
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.22918939740546637,
+            "log_loss": 0.6504001857495987,
+            "observed_success": 0.5483431684067182,
+            "mean_predicted_success": 0.5260777580173679
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "brier": 0.2123427104473164,
+            "log_loss": 0.6148979805732461,
+            "observed_success": 0.64911484339537,
+            "mean_predicted_success": 0.6328987104354387
+          }
+        },
+        "mean_brier": 0.20405580590586983,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 1543,
+            "mean_prediction": 0.06871720031128228,
+            "observed_success": 0.0492546986390149
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 3142,
+            "mean_prediction": 0.14830314678756262,
+            "observed_success": 0.1460852959898154
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 5262,
+            "mean_prediction": 0.2640538908370283,
+            "observed_success": 0.2689091600152033
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 4070,
+            "mean_prediction": 0.3435949627320173,
+            "observed_success": 0.34963144963144965
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 6929,
+            "mean_prediction": 0.45311232214723235,
+            "observed_success": 0.48001154567758697
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 7006,
+            "mean_prediction": 0.5495684291181858,
+            "observed_success": 0.5453896660005709
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 11588,
+            "mean_prediction": 0.6535907579538502,
+            "observed_success": 0.6740593717638936
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 6116,
+            "mean_prediction": 0.7346178264696575,
+            "observed_success": 0.7612818835840418
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 2806,
+            "mean_prediction": 0.8338164383659958,
+            "observed_success": 0.849607982893799
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 4,
+            "mean_prediction": 0.9041952870422314,
+            "observed_success": 0.75
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "predicted_cost_mae": 0.0004228483289469609,
+      "policy_at_configured_probability": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3491,
+        "coverage": 1.0,
+        "success_rate": 0.7923286427598729,
+        "success_rate_on_routed": 0.7923286427598729,
+        "mean_score_on_routed": 0.7770426690876078,
+        "total_cost": 9.644189296,
+        "cost_per_1000": 2.1888763722197004,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries",
+        "fallback_rate": 0.19768497503404447,
+        "selected_model_counts": {
+          "gpt-4-1106-preview": 2737,
+          "claude-v1": 938,
+          "zero-one-ai/Yi-34B-Chat": 691,
+          "claude-v2": 26,
+          "meta/llama-2-70b-chat": 6,
+          "claude-instant-v1": 4,
+          "mistralai/mixtral-8x7b-chat": 1,
+          "WizardLM/WizardLM-13B-V1.2": 1,
+          "gpt-3.5-turbo-1106": 1,
+          "meta/code-llama-instruct-34b-chat": 1
+        }
+      },
+      "development_cost_quality_curve": [
+        {
+          "minimum_predicted_success": 0.5,
+          "fallback_rate": 0.009305492510213346,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 2780,
+          "coverage": 1.0,
+          "success_rate": 0.6309577848388561,
+          "success_rate_on_routed": 0.6309577848388561,
+          "mean_score_on_routed": 0.6365410803449841,
+          "total_cost": 1.002417232,
+          "cost_per_1000": 0.22751185474353156,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.6,
+          "fallback_rate": 0.014979573309123922,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3079,
+          "coverage": 1.0,
+          "success_rate": 0.6988197911938266,
+          "success_rate_on_routed": 0.6988197911938266,
+          "mean_score_on_routed": 0.6807194734453018,
+          "total_cost": 1.4497499400000002,
+          "cost_per_1000": 0.3290399319110304,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.7,
+          "fallback_rate": 0.050385837494325916,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3284,
+          "coverage": 1.0,
+          "success_rate": 0.7453472537448933,
+          "success_rate_on_routed": 0.7453472537448933,
+          "mean_score_on_routed": 0.7329891057648661,
+          "total_cost": 6.226812003999999,
+          "cost_per_1000": 1.4132573772128914,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.75,
+          "fallback_rate": 0.19768497503404447,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3491,
+          "coverage": 1.0,
+          "success_rate": 0.7923286427598729,
+          "success_rate_on_routed": 0.7923286427598729,
+          "mean_score_on_routed": 0.7770426690876078,
+          "total_cost": 9.644189296,
+          "cost_per_1000": 2.1888763722197004,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.8,
+          "fallback_rate": 0.3949160236041761,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3502,
+          "coverage": 1.0,
+          "success_rate": 0.7948252383113935,
+          "success_rate_on_routed": 0.7948252383113935,
+          "mean_score_on_routed": 0.7795392646391285,
+          "total_cost": 10.885927795999999,
+          "cost_per_1000": 2.4707053554244207,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.85,
+          "fallback_rate": 0.8726736268724467,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3527,
+          "coverage": 1.0,
+          "success_rate": 0.8004993191103041,
+          "success_rate_on_routed": 0.8004993191103041,
+          "mean_score_on_routed": 0.7852133454380391,
+          "total_cost": 11.162784596000002,
+          "cost_per_1000": 2.5335416695415347,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.9,
+          "fallback_rate": 0.9990921470721743,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3528,
+          "coverage": 1.0,
+          "success_rate": 0.8007262823422605,
+          "success_rate_on_routed": 0.8007262823422605,
+          "mean_score_on_routed": 0.7854403086699955,
+          "total_cost": 11.171416196000001,
+          "cost_per_1000": 2.5355007253744892,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.95,
+          "fallback_rate": 1.0,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3528,
+          "coverage": 1.0,
+          "success_rate": 0.8007262823422605,
+          "success_rate_on_routed": 0.8007262823422605,
+          "mean_score_on_routed": 0.7854403086699955,
+          "total_cost": 11.171416196000001,
+          "cost_per_1000": 2.5355007253744892,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        }
+      ],
+      "single_request_latency_pilot_ms": {
+        "n": 100,
+        "p50": 31.205149996822,
+        "p95": 41.3062700026785,
+        "scope": "representation plus cost/success prediction and selection; warm process, batch=1, first validation rows, no truncation"
+      },
+      "artifact": "structural.joblib",
+      "artifact_sha256": "126ba473e30b6c8b1f225f5ad632c78418578d2bc67181c3db753a36a5228e8b"
+    },
+    "lexical_hybrid": {
+      "training_seconds": 55.91553720000229,
+      "batch_validation_inference_seconds": 9.903324499995506,
+      "feature_count": 40014,
+      "calibration_notes": {
+        "WizardLM/WizardLM-13B-V1.2": "sigmoid fitted on disjoint calibration rows",
+        "claude-instant-v1": "sigmoid fitted on disjoint calibration rows",
+        "claude-v1": "sigmoid fitted on disjoint calibration rows",
+        "claude-v2": "sigmoid fitted on disjoint calibration rows",
+        "gpt-3.5-turbo-1106": "sigmoid fitted on disjoint calibration rows",
+        "gpt-4-1106-preview": "sigmoid fitted on disjoint calibration rows",
+        "meta/code-llama-instruct-34b-chat": "sigmoid fitted on disjoint calibration rows",
+        "meta/llama-2-70b-chat": "sigmoid fitted on disjoint calibration rows",
+        "mistralai/mistral-7b-chat": "sigmoid fitted on disjoint calibration rows",
+        "mistralai/mixtral-8x7b-chat": "sigmoid fitted on disjoint calibration rows",
+        "zero-one-ai/Yi-34B-Chat": "sigmoid fitted on disjoint calibration rows"
+      },
+      "diagnostics": {
+        "per_model": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "brier": 0.22840262444412165,
+            "log_loss": 0.6482783938005373,
+            "observed_success": 0.4212437585111212,
+            "mean_predicted_success": 0.40695731621474024
+          },
+          "claude-instant-v1": {
+            "brier": 0.2162386075059267,
+            "log_loss": 0.6212805275835686,
+            "observed_success": 0.6289151157512483,
+            "mean_predicted_success": 0.6029942227337232
+          },
+          "claude-v1": {
+            "brier": 0.20876993337493502,
+            "log_loss": 0.6056092456645261,
+            "observed_success": 0.6457103949160236,
+            "mean_predicted_success": 0.6437521018470492
+          },
+          "claude-v2": {
+            "brier": 0.20499441343737274,
+            "log_loss": 0.5974271791696872,
+            "observed_success": 0.6584203359055832,
+            "mean_predicted_success": 0.6410693577939933
+          },
+          "gpt-3.5-turbo-1106": {
+            "brier": 0.21660358227237195,
+            "log_loss": 0.6222377849000222,
+            "observed_success": 0.6343622333182024,
+            "mean_predicted_success": 0.6064757170201335
+          },
+          "gpt-4-1106-preview": {
+            "brier": 0.15369327747429923,
+            "log_loss": 0.47802946414015096,
+            "observed_success": 0.7868815251929188,
+            "mean_predicted_success": 0.7761216642113921
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "brier": 0.11642732272127376,
+            "log_loss": 0.35729157090707664,
+            "observed_success": 0.18066273263731275,
+            "mean_predicted_success": 0.18195752005193835
+          },
+          "meta/llama-2-70b-chat": {
+            "brier": 0.15793268292504511,
+            "log_loss": 0.45947345962289227,
+            "observed_success": 0.3218338629142079,
+            "mean_predicted_success": 0.31196392637629067
+          },
+          "mistralai/mistral-7b-chat": {
+            "brier": 0.19383469146619028,
+            "log_loss": 0.572278888262684,
+            "observed_success": 0.2834770767135724,
+            "mean_predicted_success": 0.28388864888262866
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.21584367076686647,
+            "log_loss": 0.621063552118224,
+            "observed_success": 0.5483431684067182,
+            "mean_predicted_success": 0.5241942330110752
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "brier": 0.19840864764306335,
+            "log_loss": 0.580616259839373,
+            "observed_success": 0.64911484339537,
+            "mean_predicted_success": 0.6308413489403407
+          }
+        },
+        "mean_brier": 0.19192267763922422,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 3869,
+            "mean_prediction": 0.036667242445832894,
+            "observed_success": 0.016800206771775652
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 1533,
+            "mean_prediction": 0.15613577697963882,
+            "observed_success": 0.17938682322243965
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 4588,
+            "mean_prediction": 0.2568586651024164,
+            "observed_success": 0.281386224934612
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 4817,
+            "mean_prediction": 0.34823519865226593,
+            "observed_success": 0.34751920282333404
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 6064,
+            "mean_prediction": 0.4536766772748276,
+            "observed_success": 0.4718007915567282
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 7518,
+            "mean_prediction": 0.5513039354485796,
+            "observed_success": 0.5605214152700186
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 8322,
+            "mean_prediction": 0.6511608793023973,
+            "observed_success": 0.6563326123527998
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 7848,
+            "mean_prediction": 0.745700497332647,
+            "observed_success": 0.775611620795107
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 3621,
+            "mean_prediction": 0.8433936541313484,
+            "observed_success": 0.8784866059099696
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 286,
+            "mean_prediction": 0.9109392064710763,
+            "observed_success": 0.9230769230769231
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "predicted_cost_mae": 0.0004228483289469609,
+      "policy_at_configured_probability": {
+        "n_prompts": 4406,
+        "n_routed": 4406,
+        "n_abstained": 0,
+        "n_successes": 3447,
+        "coverage": 1.0,
+        "success_rate": 0.7823422605537903,
+        "success_rate_on_routed": 0.7823422605537903,
+        "mean_score_on_routed": 0.7632433045846573,
+        "total_cost": 7.898719568,
+        "cost_per_1000": 1.7927189214707215,
+        "quality_score_threshold": 0.75,
+        "cost_scope": "stored selected-model call costs only; excludes router compute and retries",
+        "fallback_rate": 0.23785746709033137,
+        "selected_model_counts": {
+          "gpt-4-1106-preview": 1685,
+          "zero-one-ai/Yi-34B-Chat": 1018,
+          "claude-v1": 587,
+          "mistralai/mixtral-8x7b-chat": 396,
+          "claude-v2": 328,
+          "gpt-3.5-turbo-1106": 181,
+          "claude-instant-v1": 179,
+          "WizardLM/WizardLM-13B-V1.2": 20,
+          "meta/code-llama-instruct-34b-chat": 10,
+          "mistralai/mistral-7b-chat": 2
+        }
+      },
+      "development_cost_quality_curve": [
+        {
+          "minimum_predicted_success": 0.5,
+          "fallback_rate": 0.01611438946890604,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 2776,
+          "coverage": 1.0,
+          "success_rate": 0.6300499319110304,
+          "success_rate_on_routed": 0.6300499319110304,
+          "mean_score_on_routed": 0.6353722197004085,
+          "total_cost": 1.3757062279999999,
+          "cost_per_1000": 0.31223473172945976,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.6,
+          "fallback_rate": 0.027008624602814345,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3117,
+          "coverage": 1.0,
+          "success_rate": 0.7074443940081707,
+          "success_rate_on_routed": 0.7074443940081707,
+          "mean_score_on_routed": 0.6955855651384476,
+          "total_cost": 2.136186372,
+          "cost_per_1000": 0.48483576305038584,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.7,
+          "fallback_rate": 0.11393554244212438,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3363,
+          "coverage": 1.0,
+          "success_rate": 0.7632773490694508,
+          "success_rate_on_routed": 0.7632773490694508,
+          "mean_score_on_routed": 0.7438379482523831,
+          "total_cost": 5.202499816,
+          "cost_per_1000": 1.1807761724920565,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.75,
+          "fallback_rate": 0.23785746709033137,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3447,
+          "coverage": 1.0,
+          "success_rate": 0.7823422605537903,
+          "success_rate_on_routed": 0.7823422605537903,
+          "mean_score_on_routed": 0.7632433045846573,
+          "total_cost": 7.898719568,
+          "cost_per_1000": 1.7927189214707215,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.8,
+          "fallback_rate": 0.4407625964593736,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3522,
+          "coverage": 1.0,
+          "success_rate": 0.799364502950522,
+          "success_rate_on_routed": 0.799364502950522,
+          "mean_score_on_routed": 0.779698138901498,
+          "total_cost": 9.472866868,
+          "cost_per_1000": 2.149992480254199,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.85,
+          "fallback_rate": 0.6652292328642759,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3557,
+          "coverage": 1.0,
+          "success_rate": 0.8073082160689968,
+          "success_rate_on_routed": 0.8073082160689968,
+          "mean_score_on_routed": 0.7869042215161144,
+          "total_cost": 10.320119824,
+          "cost_per_1000": 2.342287749432592,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.9,
+          "fallback_rate": 0.9369042215161144,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3563,
+          "coverage": 1.0,
+          "success_rate": 0.8086699954607354,
+          "success_rate_on_routed": 0.8086699954607354,
+          "mean_score_on_routed": 0.7882660009078529,
+          "total_cost": 10.612415096,
+          "cost_per_1000": 2.4086280290512936,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        },
+        {
+          "minimum_predicted_success": 0.95,
+          "fallback_rate": 1.0,
+          "n_prompts": 4406,
+          "n_routed": 4406,
+          "n_abstained": 0,
+          "n_successes": 3563,
+          "coverage": 1.0,
+          "success_rate": 0.8086699954607354,
+          "success_rate_on_routed": 0.8086699954607354,
+          "mean_score_on_routed": 0.7882660009078529,
+          "total_cost": 10.625979496,
+          "cost_per_1000": 2.4117066491148433,
+          "quality_score_threshold": 0.75,
+          "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+        }
+      ],
+      "single_request_latency_pilot_ms": {
+        "n": 100,
+        "p50": 38.997249997919425,
+        "p95": 52.67404999867722,
+        "scope": "representation plus cost/success prediction and selection; warm process, batch=1, first validation rows, no truncation"
+      },
+      "artifact": "lexical_hybrid.joblib",
+      "artifact_sha256": "d737eef68e9e20c690e243ed92e5d7d144355f9d14678f43d881b18c9400fd04"
+    }
+  },
+  "outer_test_performance_evaluated": false,
+  "routellm_official_evaluated": false,
+  "production_capability_metadata_available": false,
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3"
+  },
+  "elapsed_seconds": 82.34540030000062,
+  "files_sha256": {
+    "development_rows.parquet": "112f6811288bb113b5f9ff87f12e6dda8c25914051997b711896b34a277be39b",
+    "lexical_hybrid.joblib": "d737eef68e9e20c690e243ed92e5d7d144355f9d14678f43d881b18c9400fd04",
+    "lexical_hybrid_observed_results.parquet": "463916e2f2cd95c9e96abdc7a4680d087120026d9d14f8e17fb22901bae85e9e",
+    "lexical_hybrid_predicted_costs.parquet": "025a219066f6d9bfdde2472f242eb7257839b5e15623839d51125300fbbdc706",
+    "lexical_hybrid_probabilities.parquet": "d66477c53f7d03243787bc76a28ad7b1f0f9429c62b28092abf9a44b97487c16",
+    "lexical_hybrid_routes.parquet": "9ccde56ccc8730ca8de05dd8715a30c4b1f187b9f0921e5ab8ee987a3cfe1a76",
+    "structural.joblib": "126ba473e30b6c8b1f225f5ad632c78418578d2bc67181c3db753a36a5228e8b",
+    "structural_observed_results.parquet": "7694fc6fb4aca2c3f019431daa8680cf134b2ebbc69c2c52ec18a15f791f45a5",
+    "structural_predicted_costs.parquet": "025a219066f6d9bfdde2472f242eb7257839b5e15623839d51125300fbbdc706",
+    "structural_probabilities.parquet": "aba19a85be6298168c9e216774e353af8874f20e77fce207eac07a8563a914a6",
+    "structural_routes.parquet": "452186bf81d0b337c06df9ba5f858295d1954426c5088da5b11e83ed86948dfb"
+  }
+}

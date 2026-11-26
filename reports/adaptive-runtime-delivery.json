@@ -1,0 +1,27 @@
+{
+  "kind": "installed_adaptive_runtime_offline_verification",
+  "version": "0.1.0.dev3",
+  "openhands_version": "1.62.0",
+  "wheel_sha256": "baabe83092a59abfd84e4106b342708c134b47e1386a41a3a59ce509fb8d3cae",
+  "policy_artifact_id": "97ad0462de5f88db6b17983070e525b12af17bf33ecc1a703c17e8811e862b4c",
+  "outcomes": [
+    {
+      "validation_report_id": "029cd532a0da0c5650e29f77d4b9b61af4884242b2e277426e55d38a43886672",
+      "validation_file": "outputs\\harness-adaptive\\v1\\run\\validation.json",
+      "activated": false,
+      "selected_model": "groq/openai/gpt-oss-120b",
+      "reason": "baseline_adaptation_gate_not_met"
+    },
+    {
+      "validation_report_id": "c2bced6811cdb372060a8245d8adc8e767b050c8c16e8e3e07b45a75ab3abbf8",
+      "validation_file": "outputs\\harness-adaptive\\v1\\run\\pre_dispatch_recovery\\validation-recovered.json",
+      "activated": false,
+      "selected_model": "groq/openai/gpt-oss-120b",
+      "reason": "baseline_adaptation_gate_not_met"
+    }
+  ],
+  "remote_calls": 0,
+  "synthetic_wiring_only_not_quality_evidence": true,
+  "optional_encoder_not_loaded_when_gate_fails": true,
+  "combined_optional_dependency_installation": "blocked_by_automatic_review_pending_explicit_user_approval"
+}

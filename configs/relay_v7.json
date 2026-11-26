@@ -1,0 +1,110 @@
+{
+  "seed": 42,
+  "prepared_dir": "data/processed",
+  "dataset": {
+    "path": "data/raw/routerbench_0shot.pkl",
+    "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+    "expected_models": 11
+  },
+  "internal_split": {
+    "strategy": "prompt_hash",
+    "fit_fraction": 0.7,
+    "calibration_fraction": 0.15,
+    "validation_fraction": 0.15
+  },
+  "reference_split_run": "reports/competitor-development-pilot-v1",
+  "reference_split_summary_sha256": "ee4de4e8f60bc1edcadfe4f10873711e827b5047b46f73853fac30809c3c9440",
+  "activate_unused_fit_rows": true,
+  "expected_population": {
+    "fit": 20368,
+    "calibration": 4383,
+    "validation": 4406
+  },
+  "quality_threshold": 0.75,
+  "common_pair": {
+    "strong": "gpt-4-1106-preview",
+    "weak": "mistralai/mixtral-8x7b-chat"
+  },
+  "reference": {
+    "selection_file": "reports/routellm-bert-secondary-v1/selection.json",
+    "selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+    "development_probabilities_file": "reports/routellm-bert-secondary-v1/development_bert_probabilities_and_coverage.parquet",
+    "development_probabilities_sha256": "832c83d3c6e915fc7c6931f4085f3e22ecde9b292eac93fe3859fcd234018e02"
+  },
+  "experiment_id": "relay-v7-neighborhood-development-v1",
+  "status": "prespecified_development_only_after_original_test_was_consumed",
+  "representation": "existing lexical hybrid, local similarity-weighted outcome evidence plus calibrated global prior",
+  "learner": {
+    "seed": 42,
+    "quality_threshold": 0.75,
+    "max_features": 20000,
+    "min_df": 2,
+    "alpha": 0.0001,
+    "n_neighbors": 64,
+    "temperature": 0.05,
+    "prior_weight": 4.0,
+    "calibration_C": 1.0,
+    "query_batch_size": 64
+  },
+  "selection": {
+    "quality_loss_margin": 0,
+    "rule": "primary fixed before results; minimum cost with success at least max(fixed strong, best feasible BERT101); compare cost separately; fallback fixed strong if no feasible point",
+    "confidence_intervals_used_for_selection": false
+  },
+  "bootstrap_replicates": 5000,
+  "latency_sample_size": 60,
+  "native_threads": 4,
+  "output_dir": "reports/relay-v7-development-v1",
+  "outer_test_evaluation_allowed": false,
+  "automatic_live_promotion_allowed": false,
+  "paid_api_calls_authorized": false,
+  "quantiles": 101,
+  "primary_candidate_id": "neighborhood_primary",
+  "candidates": [
+    {
+      "id": "neighborhood_primary",
+      "use_neighbors": true
+    },
+    {
+      "id": "global_control",
+      "use_neighbors": false
+    }
+  ],
+  "controls": {
+    "bert101": {
+      "directory": "reports/relay-v4-operating-v1",
+      "summary": "summary.json",
+      "curve": "routellm_bert_curve.json",
+      "actions": "routellm_bert_actions.parquet",
+      "files_sha256": {
+        "summary.json": "59b6b50e090d89c4047595794891b56d673ab4e87c48fdd16b8a36a587b10544",
+        "routellm_bert_curve.json": "42795705b5eba597a215b6fb5dd3da76e78e4a1d36da83e3f9c04046d700717e",
+        "routellm_bert_actions.parquet": "67976b35a0f78d6031db0a2732eff5733af7350f3da824d5f2df7c9a905c6d21"
+      }
+    },
+    "ensemble_v4": {
+      "directory": "reports/relay-v4-ensemble-v1",
+      "summary": "summary.json",
+      "curve": "curve.json",
+      "actions": "ensemble_actions.parquet",
+      "files_sha256": {
+        "summary.json": "e39dece550d0249762cd89456ea9e800f3f88d4ce42da849b08e53c70b654853",
+        "curve.json": "ec45d37d181b09c86ac9d673928dbc85f83e5f43b3b7cbe5134bd8c66c81fe6a",
+        "ensemble_actions.parquet": "37a4884e69175ed54ff5c7c8e5d894b9771f62240bd77d93f490bd478dc6b210"
+      }
+    },
+    "v6": {
+      "directory": "reports/relay-v6-development-v1",
+      "summary": "summary.json",
+      "routes": "selected_routes.parquet",
+      "bert_routes": "bert_selected_routes.parquet",
+      "bundle": "bundle.json",
+      "files_sha256": {
+        "summary.json": "9fe39436ef502145fdc404502f784168b558e9ef8ecb6618aa77bb89527e78e9",
+        "selected_routes.parquet": "39bcc6f32edd541a281659d4695b947197ee916c0e492061ff37020a39cca983",
+        "bert_selected_routes.parquet": "4d43acd15e9c82c27c7d286c71c0f80f3306c0f1024c33f22c87296be17164fc",
+        "bundle.json": "978b4caaa5d430881355a94d9453f3839335c427a22f8df66d1e63c9e0875a3d"
+      }
+    }
+  }
+}

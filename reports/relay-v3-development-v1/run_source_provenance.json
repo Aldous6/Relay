@@ -1,0 +1,20 @@
+{
+  "source_files_sha256": {
+    "configs/relay_v3.json": "19a96bf7948887c360f6ac8df84885c6a177b4522dac8237cb031d2f4b40ac1d",
+    "src/routerbench/improvement.py": "93de6db427ef3d8f382b8096f00d7bcc2cb9350bf2b0da6ac306b27a3a5ec319",
+    "src/routerbench/pairwise.py": "b025ba1021ccfc2a993ba0df4a5556a2205d310a55e14b60714996c631df2327",
+    "src/routerbench/learner.py": "0c52e3096f26b544cbaf9a22cd0f6607f783eb18b695ab13e6f09baafe9a4518",
+    "src/routerbench/representations.py": "57106ba348d1692cd951332101f266ca0196dcc37f64f79e92a29dde2dd026e1",
+    "src/routerbench/development.py": "13d22a4dfc0650e2f3701483a9a52a58b53dddb7df5035bff11597e74115fe00",
+    "src/routerbench/policy.py": "9a6731fb9a9c58872f0ab35187a3750d107a059bf002d9992c7bb72c5f09bef0"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3",
+    "pyarrow": "22.0.0"
+  },
+  "recorded_while_training_before_new_model_selection": true
+}

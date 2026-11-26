@@ -1,0 +1,155 @@
+{
+  "kind": "exploratory paired development comparisons",
+  "fixed_reference_model": "gpt-4-1106-preview",
+  "outer_test_evaluated": false,
+  "routellm_evaluated": false,
+  "comparisons": {
+    "semantic_vs_best_fixed_fit": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": 0.0027235587834770767,
+      "success_rate_delta_95ci": [
+        -0.007943713118474808,
+        0.01407172038129823
+      ],
+      "cost_per_1000_delta": -1.386161989105765,
+      "cost_per_1000_delta_95ci": [
+        -1.4414912686790713,
+        -1.334663521697687
+      ],
+      "relative_call_cost_saving": 0.41986167771988603,
+      "relative_call_cost_saving_95ci": [
+        0.4086931655254729,
+        0.43125718740526076
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "semantic_hybrid_vs_best_fixed_fit": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": -0.0029505220154334997,
+      "success_rate_delta_95ci": [
+        -0.013844757149341807,
+        0.008397639582387654
+      ],
+      "cost_per_1000_delta": -1.4205145919201088,
+      "cost_per_1000_delta_95ci": [
+        -1.4792282109850199,
+        -1.3662805243304625
+      ],
+      "relative_call_cost_saving": 0.43026691286919205,
+      "relative_call_cost_saving_95ci": [
+        0.4197664057752958,
+        0.4412752452575053
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "semantic_hybrid_vs_semantic": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": -0.005674080798910576,
+      "success_rate_delta_95ci": [
+        -0.011348161597821153,
+        -0.00022696323195642307
+      ],
+      "cost_per_1000_delta": -0.03435260281434407,
+      "cost_per_1000_delta_95ci": [
+        -0.0692056272128916,
+        -0.0024118621198365954
+      ],
+      "relative_call_cost_saving": 0.01793578315669675,
+      "relative_call_cost_saving_95ci": [
+        0.0012554745591759231,
+        0.03599031042645031
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "semantic_vs_reference_structural": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": -0.0027235587834770767,
+      "success_rate_delta_95ci": [
+        -0.011575124829777576,
+        0.006128007262823422
+      ],
+      "cost_per_1000_delta": -0.2735653699500681,
+      "cost_per_1000_delta_95ci": [
+        -0.31238360835224654,
+        -0.23421358057194694
+      ],
+      "relative_call_cost_saving": 0.12497981769187383,
+      "relative_call_cost_saving_95ci": [
+        0.10734452338900562,
+        0.14285819324691337
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "semantic_hybrid_vs_reference_structural": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": -0.008397639582387654,
+      "success_rate_delta_95ci": [
+        -0.016341352700862462,
+        0.0
+      ],
+      "cost_per_1000_delta": -0.3079179727644122,
+      "cost_per_1000_delta_95ci": [
+        -0.34831474398547363,
+        -0.26812524738992266
+      ],
+      "relative_call_cost_saving": 0.14067398993948566,
+      "relative_call_cost_saving_95ci": [
+        0.12324416535259262,
+        0.15862876884768368
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "semantic_vs_reference_lexical_hybrid": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": 0.007262823422605538,
+      "success_rate_delta_95ci": [
+        -0.0015887426236949613,
+        0.01611438946890604
+      ],
+      "cost_per_1000_delta": 0.1225920807989106,
+      "cost_per_1000_delta_95ci": [
+        0.07797562374035386,
+        0.16586705696777138
+      ],
+      "relative_call_cost_saving": -0.06838332508831768,
+      "relative_call_cost_saving_95ci": [
+        -0.09419891163925742,
+        -0.04288536867715878
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    },
+    "semantic_hybrid_vs_reference_lexical_hybrid": {
+      "n": 4406,
+      "replicates": 2000,
+      "seed": 42,
+      "success_rate_delta": 0.0015887426236949613,
+      "success_rate_delta_95ci": [
+        -0.006808896958692692,
+        0.009986382206082615
+      ],
+      "cost_per_1000_delta": 0.08823947798456651,
+      "cost_per_1000_delta_95ci": [
+        0.044210401089423444,
+        0.13334033558783479
+      ],
+      "relative_call_cost_saving": -0.0492210334413028,
+      "relative_call_cost_saving_95ci": [
+        -0.0756000114123736,
+        -0.024250800912670536
+      ],
+      "scope": "paired prompt bootstrap on exploratory development; historical selected-call cost only; no router overhead or confirmatory superiority claim"
+    }
+  }
+}

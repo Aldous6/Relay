@@ -1,0 +1,265 @@
+{
+  "kind": "paired_agent_branch_replay",
+  "split": "validation",
+  "plan_sha256": "adfa815c6431aaa8f42cede1e34c6b85ab4ffe1e7a3b6d6332d18c8b621f5cca",
+  "policies": {
+    "fixed_strong": {
+      "tasks_expected": 12,
+      "episodes_present": 12,
+      "missing": 0,
+      "accepted": 11,
+      "acceptance_rate": 0.9166666666666666,
+      "llm_tariff_total_usd": 0.0034281,
+      "llm_tariff_cost_per_accepted_task_usd": 0.00031164545454545454,
+      "known_cost_subtotal_usd": 0.0034281,
+      "unknown_cost_episodes": 0,
+      "http_attempts": 12,
+      "input_tokens": 8802,
+      "output_tokens": 3513,
+      "model_counts": {
+        "groq/openai/gpt-oss-20b": 0,
+        "groq/openai/gpt-oss-120b": 12
+      },
+      "cost_per_accepted_savings_vs_strong": 0.0,
+      "quality_delta_vs_strong": 0.0,
+      "paired_lost_successes_vs_strong": 0,
+      "wilson_95_one_sided_harm_upper": 0.18398119474747693,
+      "median_transport_seconds": 1.2964999999967404,
+      "median_episode_seconds_without_quota_wait": 2.195280800006003
+    },
+    "fixed_cheap": {
+      "tasks_expected": 12,
+      "episodes_present": 12,
+      "missing": 0,
+      "accepted": 9,
+      "acceptance_rate": 0.75,
+      "llm_tariff_total_usd": null,
+      "llm_tariff_cost_per_accepted_task_usd": null,
+      "known_cost_subtotal_usd": 0.0015955499999999998,
+      "unknown_cost_episodes": 2,
+      "http_attempts": 13,
+      "input_tokens": 8154,
+      "output_tokens": 3280,
+      "model_counts": {
+        "groq/openai/gpt-oss-20b": 12,
+        "groq/openai/gpt-oss-120b": 0
+      },
+      "cost_per_accepted_savings_vs_strong": null,
+      "quality_delta_vs_strong": -0.16666666666666663,
+      "paired_lost_successes_vs_strong": 2,
+      "wilson_95_one_sided_harm_upper": 0.39920691041554024,
+      "median_transport_seconds": 1.132500000006985,
+      "median_episode_seconds_without_quota_wait": 2.126570049993461
+    },
+    "relay_exploratory": {
+      "tasks_expected": 12,
+      "episodes_present": 12,
+      "missing": 0,
+      "accepted": 11,
+      "acceptance_rate": 0.9166666666666666,
+      "llm_tariff_total_usd": 0.0034281,
+      "llm_tariff_cost_per_accepted_task_usd": 0.00031164545454545454,
+      "known_cost_subtotal_usd": 0.0034281,
+      "unknown_cost_episodes": 0,
+      "http_attempts": 12,
+      "input_tokens": 8802,
+      "output_tokens": 3513,
+      "model_counts": {
+        "groq/openai/gpt-oss-20b": 0,
+        "groq/openai/gpt-oss-120b": 12
+      },
+      "cost_per_accepted_savings_vs_strong": 0.0,
+      "quality_delta_vs_strong": 0.0,
+      "paired_lost_successes_vs_strong": 0,
+      "wilson_95_one_sided_harm_upper": 0.18398119474747693,
+      "median_transport_seconds": 1.2964999999967404,
+      "median_episode_seconds_without_quota_wait": 2.195280800006003
+    },
+    "bert_transferred_fixed_0.5": {
+      "tasks_expected": 12,
+      "episodes_present": 12,
+      "missing": 0,
+      "accepted": 11,
+      "acceptance_rate": 0.9166666666666666,
+      "llm_tariff_total_usd": 0.0034281,
+      "llm_tariff_cost_per_accepted_task_usd": 0.00031164545454545454,
+      "known_cost_subtotal_usd": 0.0034281,
+      "unknown_cost_episodes": 0,
+      "http_attempts": 12,
+      "input_tokens": 8802,
+      "output_tokens": 3513,
+      "model_counts": {
+        "groq/openai/gpt-oss-20b": 0,
+        "groq/openai/gpt-oss-120b": 12
+      },
+      "cost_per_accepted_savings_vs_strong": 0.0,
+      "quality_delta_vs_strong": 0.0,
+      "paired_lost_successes_vs_strong": 0,
+      "wilson_95_one_sided_harm_upper": 0.18398119474747693,
+      "median_transport_seconds": 1.2964999999967404,
+      "median_episode_seconds_without_quota_wait": 2.195280800006003
+    },
+    "bert_transferred_development_calibrated": {
+      "tasks_expected": 12,
+      "episodes_present": 12,
+      "missing": 0,
+      "accepted": 11,
+      "acceptance_rate": 0.9166666666666666,
+      "llm_tariff_total_usd": 0.00303345,
+      "llm_tariff_cost_per_accepted_task_usd": 0.00027576818181818184,
+      "known_cost_subtotal_usd": 0.00303345,
+      "unknown_cost_episodes": 0,
+      "http_attempts": 12,
+      "input_tokens": 8802,
+      "output_tokens": 3418,
+      "model_counts": {
+        "groq/openai/gpt-oss-20b": 3,
+        "groq/openai/gpt-oss-120b": 9
+      },
+      "cost_per_accepted_savings_vs_strong": 0.11512207928590168,
+      "quality_delta_vs_strong": 0.0,
+      "paired_lost_successes_vs_strong": 0,
+      "wilson_95_one_sided_harm_upper": 0.18398119474747693,
+      "median_transport_seconds": 1.5389999999897555,
+      "median_episode_seconds_without_quota_wait": 2.331696799999918
+    }
+  },
+  "cost_basis": "tariff_estimate_uncached_scenario_not_free_account_invoice",
+  "quality_noninferiority_demonstrated": false,
+  "production_ready": false,
+  "method": "Each candidate executed once per task with identical host and budget; policies frozen before validation choose measured branches.",
+  "limitations": [
+    "Small historical public benchmarks; possible training contamination",
+    "No customer adoption or production evidence",
+    "LLM token tariff scenario excludes local compute and acquisition costs",
+    "Not Diamond not executed; BERT is a transferred checkpoint, not all RouteLLM"
+  ],
+  "acquisition": {
+    "primary_http_attempts": 52,
+    "prior_http_attempts": 5,
+    "all_http_attempts": 57,
+    "unknown_usage_attempts": 7,
+    "known_uncached_tariff_subtotal_usd": 0.012164699999999997,
+    "complete_monetary_cost_usd": null,
+    "note": "Includes retained setup/development diagnostics. Unknown usage and local compute are not imputed."
+  },
+  "completed_at_utc": "2026-11-17T17:19:30.819894+00:00",
+  "sources": {
+    "kind": "public_sources_before_model_runs",
+    "sources": [
+      {
+        "url": "https://codeload.github.com/jkoppel/QuixBugs/zip/4257f44b0ff1181dedaedee6a447e133219fcebf",
+        "file": "quixbugs.zip",
+        "sha256": "0926648bc8bb4a027428785c5fbb8e36acae4555e4beec181934859d53298c62",
+        "bytes": 623489
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/human-eval/b9453e8f1865df0a0057a1383767caa400acfbcf/data/HumanEval.jsonl.gz",
+        "file": "HumanEval.jsonl.gz",
+        "sha256": "b796127e635a67f93fb35c04f4cb03cf06f38c8072ee7cee8833d7bee06979ef",
+        "bytes": 44877
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/human-eval/b9453e8f1865df0a0057a1383767caa400acfbcf/LICENSE",
+        "file": "HumanEval-LICENSE",
+        "sha256": "bcba3de214851cce46ed5af42d6698044616eeace887c3231bc7a20474ab639e",
+        "bytes": 1083
+      }
+    ],
+    "quixbugs_revision": "4257f44b0ff1181dedaedee6a447e133219fcebf",
+    "humaneval_revision": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+    "licenses": "MIT texts retained with respective sources",
+    "limitation": "Public historical benchmarks; training contamination is possible; not customer production traffic."
+  },
+  "reference": {
+    "implementation": "local_wrapper_published_routellm_bert_transfer",
+    "checkpoint": "routellm/bert_gpt4_augmented",
+    "revision": "86237e3df400762178ea98379477b8296e66d5e4",
+    "weights_sha256": "e2a92240bad1c7fb9befbf021a62fad5feb1e2a3990d53a28d160a39bb1cac7b",
+    "source_repository": "https://github.com/lm-sys/RouteLLM",
+    "source_revision": "0b64fdafe049e596a3f5657c219329f24af24198",
+    "catalog": [
+      "groq/openai/gpt-oss-20b",
+      "groq/openai/gpt-oss-120b"
+    ],
+    "load_seconds": 71.38453450001543,
+    "checkpoint_verified": true,
+    "predictor_injected": false,
+    "checkpoint_manifest_sha256": "3bf541749991e7a17d400040c0bba70adaf36e08a1464cd220c7c5bcf6be619b",
+    "provenance": "pinned_local_checkpoint",
+    "tokenization": {
+      "max_length": 512,
+      "truncation": true,
+      "padding": true,
+      "prefix": null
+    },
+    "runtime_packages": {
+      "torch": "2.9.0",
+      "transformers": "4.57.1"
+    },
+    "cpu_threads": 4,
+    "input": "unchanged last user message content; no system prefix",
+    "scoring": "1 - sum(softmax(logits)[-2:]); higher prefers the strong action",
+    "supervision": "published GPT-4/Mixtral preferences with external augmentation",
+    "scope": "pretrained transfer to GPT-OSS; not MF, SW or the official RouteLLM SDK",
+    "calibrated_for_execution_pair": false,
+    "threshold_selected": false
+  },
+  "routing_overhead": {
+    "bert_validation_inference_seconds": 8.39694919998874,
+    "bert_cold_load_seconds": 71.38453450001543,
+    "relay_isolated_lookup_seconds": null,
+    "local_compute_monetary_cost": null,
+    "note": "Transport latency fields exclude policy CPU inference; Relay lookup overhead was not independently timed."
+  },
+  "audit": {
+    "cohort_sha256": "131d77f26699bb8a641d8f179dc17202152067144d873f46419e4c8fc66bd3fc",
+    "plan_file_sha256": "42de9d87004ee9c3154660f816f47e4ec1125639ce0a50c321d55d8f0e91076a",
+    "observations_sha256": "2708440944b231a4b9050e50146caa30600456fee36f12bcf654d7a0ff955fdd",
+    "attempts_sha256": "4cfe6f290fa983d6fd5a2b3acda7d6108abba83251d14ab33d82e715e27a3c89",
+    "episodes": 48,
+    "all_expected_episodes_present": true,
+    "all_dispatches_reconciled": true,
+    "episode_costs_recomputed_from_tokens": true,
+    "plan_reproduced_from_development_only": true,
+    "runtime_sources_match_start": true,
+    "plan_file_written_at_utc": "2026-11-17T17:10:56.021871+00:00",
+    "first_validation_http_at_utc": "2026-11-17T17:10:56.088291+00:00",
+    "plan_precedes_validation": true
+  },
+  "workflow_routes": {
+    "function-implementation": "groq/openai/gpt-oss-120b",
+    "function-repair": "groq/openai/gpt-oss-120b"
+  },
+  "incremental_routing_value": {
+    "same_decisions_as_fixed_cheap": false,
+    "same_decisions_as_fixed_strong": true,
+    "claim": "No routing savings over fixed strong in this cohort"
+  },
+  "development_by_workflow": {
+    "function-implementation": {
+      "groq/openai/gpt-oss-20b": {
+        "tasks": 6,
+        "accepted": 5,
+        "unknown_cost_episodes": 1
+      },
+      "groq/openai/gpt-oss-120b": {
+        "tasks": 6,
+        "accepted": 6,
+        "unknown_cost_episodes": 0
+      }
+    },
+    "function-repair": {
+      "groq/openai/gpt-oss-20b": {
+        "tasks": 6,
+        "accepted": 4,
+        "unknown_cost_episodes": 2
+      },
+      "groq/openai/gpt-oss-120b": {
+        "tasks": 6,
+        "accepted": 5,
+        "unknown_cost_episodes": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "configuration": {
+    "experiment_id": "relay-v3-pairwise-development-v1",
+    "status": "prespecified_development_only_after_original_test_was_consumed",
+    "seed": 42,
+    "prepared_dir": "data/processed",
+    "dataset": {
+      "path": "data/raw/routerbench_0shot.pkl",
+      "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+      "expected_models": 11
+    },
+    "internal_split": {
+      "strategy": "prompt_hash",
+      "fit_fraction": 0.7,
+      "calibration_fraction": 0.15,
+      "validation_fraction": 0.15
+    },
+    "reference_split_run": "reports/competitor-development-pilot-v1",
+    "reference_split_summary_sha256": "ee4de4e8f60bc1edcadfe4f10873711e827b5047b46f73853fac30809c3c9440",
+    "activate_unused_fit_rows": true,
+    "expected_population": {
+      "fit": 20368,
+      "calibration": 4383,
+      "validation": 4406
+    },
+    "quality_threshold": 0.75,
+    "common_pair": {
+      "strong": "gpt-4-1106-preview",
+      "weak": "mistralai/mixtral-8x7b-chat"
+    },
+    "lexical": {
+      "max_features_per_block": 20000,
+      "min_df": 2,
+      "truncate_prompt": false
+    },
+    "absolute_probability_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "pairwise_tradeoff_grid": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      20,
+      40,
+      80,
+      160
+    ],
+    "tradeoff_unit": "expected success probability per historical USD of extra call cost",
+    "candidates": [
+      {
+        "id": "absolute_hybrid_full",
+        "objective": "absolute",
+        "representation": "hybrid",
+        "alpha": 0.0001
+      },
+      {
+        "id": "pairwise_hybrid_a3",
+        "objective": "pairwise",
+        "representation": "hybrid",
+        "alpha": 0.001
+      },
+      {
+        "id": "pairwise_hybrid_a4",
+        "objective": "pairwise",
+        "representation": "hybrid",
+        "alpha": 0.0001
+      },
+      {
+        "id": "pairwise_hybrid_a5",
+        "objective": "pairwise",
+        "representation": "hybrid",
+        "alpha": 1e-05
+      }
+    ],
+    "reference": {
+      "selection_file": "reports/routellm-bert-secondary-v1/selection.json",
+      "selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+      "development_probabilities_file": "reports/routellm-bert-secondary-v1/development_bert_probabilities_and_coverage.parquet",
+      "development_probabilities_sha256": "832c83d3c6e915fc7c6931f4085f3e22ecde9b292eac93fe3859fcd234018e02",
+      "threshold_grid": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ]
+    },
+    "selection": {
+      "quality_loss_margin": 0.005,
+      "quality_floor_reference": "fixed strong model on development validation",
+      "rule": "minimum observed development call cost among feasible points; ties higher success then candidate ID then parameter",
+      "fallback": "fixed strong if no candidate meets the development quality floor",
+      "confidence_intervals_used_for_selection": false,
+      "interpretation": "exploratory repeated development, not independent or confirmatory evidence"
+    },
+    "bootstrap_replicates": 5000,
+    "latency_sample_size": 60,
+    "output_dir": "reports/relay-v3-development-v1",
+    "outer_test_evaluation_allowed": false,
+    "automatic_live_promotion_allowed": false,
+    "paid_api_calls_authorized": false
+  },
+  "configuration_sha256": "e23c68f763a6b60ef1f88cb35817e695f613d48c0aec9cf4f778b428211b44ed",
+  "outer_test_access_allowed": false,
+  "started_at_utc": "2026-11-09T00:22:20.726335+00:00"
+}

@@ -1,0 +1,96 @@
+{
+  "seed": 42,
+  "prepared_dir": "data/processed",
+  "dataset": {
+    "path": "data/raw/routerbench_0shot.pkl",
+    "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+    "expected_models": 11
+  },
+  "internal_split": {
+    "strategy": "prompt_hash",
+    "fit_fraction": 0.7,
+    "calibration_fraction": 0.15,
+    "validation_fraction": 0.15
+  },
+  "reference_split_run": "reports/competitor-development-pilot-v1",
+  "reference_split_summary_sha256": "ee4de4e8f60bc1edcadfe4f10873711e827b5047b46f73853fac30809c3c9440",
+  "activate_unused_fit_rows": true,
+  "expected_population": {
+    "fit": 20368,
+    "calibration": 4383,
+    "validation": 4406
+  },
+  "quality_threshold": 0.75,
+  "common_pair": {
+    "strong": "gpt-4-1106-preview",
+    "weak": "mistralai/mixtral-8x7b-chat"
+  },
+  "reference": {
+    "selection_file": "reports/routellm-bert-secondary-v1/selection.json",
+    "selection_sha256": "cf6726654a0c5f772f056c5a24b9694f85a7db071e82b39dc8d2cd613c3a8fc3",
+    "development_probabilities_file": "reports/routellm-bert-secondary-v1/development_bert_probabilities_and_coverage.parquet",
+    "development_probabilities_sha256": "832c83d3c6e915fc7c6931f4085f3e22ecde9b292eac93fe3859fcd234018e02",
+    "threshold_grid": [
+      0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      1
+    ]
+  },
+  "experiment_id": "relay-v6-guarded-development-v1",
+  "status": "prespecified_development_only_after_original_test_was_consumed",
+  "representation": "existing PromptRepresentation hybrid word/character TF-IDF plus fourteen structural features; no new encoder",
+  "learner": {
+    "seed": 42,
+    "quality_threshold": 0.75,
+    "max_features": 20000,
+    "min_df": 2,
+    "alpha": 0.0001
+  },
+  "max_harm_grid": [
+    0.01,
+    0.03,
+    0.05,
+    0.1
+  ],
+  "min_weak_success_grid": [
+    0.5,
+    0.65,
+    0.8,
+    0.9
+  ],
+  "selection": {
+    "quality_loss_margin": 0,
+    "quality_floor_reference": "max(fixed strong development success, selected BERT development success)",
+    "rule": "minimum cost among points meeting quality floor and strictly cheaper than fixed strong; ties higher success then grid position",
+    "fallback": "fixed strong, explicitly not a successful guarded candidate",
+    "confidence_intervals_used_for_selection": false
+  },
+  "bootstrap_replicates": 5000,
+  "latency_sample_size": 60,
+  "native_threads": 4,
+  "output_dir": "reports/relay-v6-development-v1",
+  "outer_test_evaluation_allowed": false,
+  "automatic_live_promotion_allowed": false,
+  "paid_api_calls_authorized": false,
+  "previous_bert_control": {
+    "summary_file": "reports/relay-v4-operating-v1/summary.json",
+    "curve_file": "reports/relay-v4-operating-v1/routellm_bert_curve.json",
+    "actions_file": "reports/relay-v4-operating-v1/routellm_bert_actions.parquet",
+    "summary_file_sha256": "59b6b50e090d89c4047595794891b56d673ab4e87c48fdd16b8a36a587b10544",
+    "curve_file_sha256": "42795705b5eba597a215b6fb5dd3da76e78e4a1d36da83e3f9c04046d700717e",
+    "actions_file_sha256": "67976b35a0f78d6031db0a2732eff5733af7350f3da824d5f2df7c9a905c6d21"
+  }
+}

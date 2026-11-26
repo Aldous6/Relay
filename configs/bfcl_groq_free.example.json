@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "bfcl-groq-development-control",
+  "upstream_commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+  "snapshot_path": "data/imported/bfcl/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+  "exposure_record_path": "outputs/bfcl-source-search-exposure.json",
+  "execution_mode": "external",
+  "evaluation_split": "development",
+  "independent_validation": false,
+  "model_catalog": ["groq/openai/gpt-oss-20b", "groq/openai/gpt-oss-120b"],
+  "models_metadata": {
+    "groq/openai/gpt-oss-20b": {"returned_model_ids": ["openai/gpt-oss-20b"], "context_window": 131072, "api_key_env": "GROQ_API_KEY"},
+    "groq/openai/gpt-oss-120b": {"returned_model_ids": ["openai/gpt-oss-120b"], "context_window": 131072, "api_key_env": "GROQ_API_KEY"}
+  },
+  "generation_options": {"max_output_tokens": 2048, "temperature": 0, "timeout": 90, "action_format": "native_tools", "reasoning_effort": "medium"},
+  "quota_input_accounting": {"method": "gptoss_local_token_estimate", "margin_tokens": 256, "template_date": "2026-11-12", "reasoning_effort": "medium"},
+  "pacing": {"min_interval_seconds": 2.1, "max_request_budget": 8000, "tokens_per_minute": 8000, "window_seconds": 61},
+  "harness": {"max_transport_retries": 2, "retry_delay_seconds": 0.5},
+  "policies": ["always_strong", "always_weak", "cheap_then_escalate"],
+  "max_calls_per_turn": 21,
+  "max_total_generation_calls": 315,
+  "spending": {"max_provider_spend_usd": 0, "account_is_free_tier": true, "account_tier_source": "User explicitly confirmed Groq Console Billing Free in this session; 2026-11-12."},
+  "pricing": {},
+  "compute_rates": {"router_usd_per_second": null, "verification_usd_per_second": null, "tool_usd_per_second": null},
+  "console_progress": true,
+  "catalog_provenance": {
+    "as_of": "2026-11-12",
+    "model_sources": ["https://console.groq.com/docs/model/openai/gpt-oss-20b", "https://console.groq.com/docs/model/openai/gpt-oss-120b"],
+    "quota_source": "Account limits supplied by user: 8000 TPM per model; no other account activity is observable.",
+    "scope": "Strong and cheap are experimental roles; relative quality remains to be measured."
+  },
+  "scope": "Exploratory local BFCL adaptation, development only. Prepare by default, no credentials or generation. Free provider spending is not a monetary savings estimate."
+}

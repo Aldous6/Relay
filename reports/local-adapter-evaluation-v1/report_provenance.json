@@ -1,0 +1,19 @@
+{
+  "source_sha256": {
+    "evaluation/summary.json": "40a8d40fc89367f9c466678e4677f035247f79e3fa65fa9f347d42b1092da33d",
+    "evaluation/freeze.json": "5fb4f07b435868b4972d390abc017f49694bb9815043cc17a165264d4172adef",
+    "evaluation/routes.json": "183b0489bd4d89c334a0791aeffdccd2933ab49480dddd4287f6323dc8bbf2c5",
+    "evaluation/responses.json": "cd9853cafc12f73577ff21752f4d1711a2796ee56da8ebc337a178f576dffa0c",
+    "policy_lock.json": "035e976c2df61bdc60ef74ab84c49402c19bf6bc86f3adb7ea72d8213361b72b",
+    "cohort.jsonl": "c27cb437d0feeb0322c66936e213bd98240c40d8e46d548647e686063e5e7a27",
+    "published_bert_routes.json": "938939ccf3edeedf95f4ccab3119985aa8f1be54dafa72c8f1e5d862d28b4ed1",
+    "all_routes_before_generation.json": "2414138b722d1f3a642ce2bbc4d3a5edeeabcf102b2e2e40d44f9ab158816320",
+    "route_timings.json": "df147b1c138de8de0418684fb78bd8449b04c944e36a44f743b64422e2d14d74",
+    "source_bundle.zip": "114d335dd950afd96a9d89cfb27411ec1a987baae245b16a8497b6096d588805",
+    "comparison.json": "9c4ff3a78306c3dd329084dca47cadb3a243d7825c0ea18077fa0f9dcbfd91c7"
+  },
+  "report_sha256": "f285dc1d5e6daa6c4c0acf8972551b0814f053662373393115ee55d6b99cd919",
+  "script_sha256": "4d166c7beaf9b4896c66d194ad7cd8f0166046723c7ccd981cbcbf90cb048aac",
+  "models_retrained_or_policy_reselected": false,
+  "production_validation": false
+}

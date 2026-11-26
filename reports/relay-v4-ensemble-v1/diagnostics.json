@@ -1,0 +1,35 @@
+{
+  "class_order": [
+    "strong_only",
+    "weak_only",
+    "equal"
+  ],
+  "validation_class_counts": {
+    "strong_only": 1337,
+    "weak_only": 286,
+    "equal": 2783
+  },
+  "multiclass_brier_sum_per_row": 0.4674585491122543,
+  "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+  "mean_one_vs_rest_brier": 0.15581951637075145,
+  "multiclass_log_loss": 0.7723961365024421,
+  "per_class": {
+    "strong_only": {
+      "brier": 0.19335423975411434,
+      "observed_prevalence": 0.30344984112573764,
+      "mean_predicted_probability": 0.3050055324445183
+    },
+    "weak_only": {
+      "brier": 0.05897708977773065,
+      "observed_prevalence": 0.064911484339537,
+      "mean_predicted_probability": 0.05495184643021388
+    },
+    "equal": {
+      "brier": 0.2151272195804093,
+      "observed_prevalence": 0.6316386745347253,
+      "mean_predicted_probability": 0.6400426211252679
+    }
+  },
+  "expected_quality_gain_mse": 0.2895354394832804,
+  "note": "A fixed weighted average of calibrated components does not guarantee calibration of the blend; reused-validation diagnostics only."
+}

@@ -1,0 +1,42 @@
+{
+  "status": "selected_on_reused_development_requires_new_cohort",
+  "candidate_id": "svd64_hgb31",
+  "parameter": 22.7582182694152,
+  "point": {
+    "candidate_id": "svd64_hgb31",
+    "parameter": 22.7582182694152,
+    "grid_position": 9,
+    "weak_fraction": 0.09010440308669995,
+    "metrics": {
+      "n_prompts": 4406,
+      "n_routed": 4406,
+      "n_abstained": 0,
+      "n_successes": 3448,
+      "coverage": 1.0,
+      "success_rate": 0.7825692237857467,
+      "success_rate_on_routed": 0.7825692237857467,
+      "mean_score_on_routed": 0.7810599182932365,
+      "total_cost": 12.428486,
+      "cost_per_1000": 2.820809350885156,
+      "quality_score_threshold": 0.75,
+      "cost_scope": "stored selected-model call costs only; excludes router compute and retries"
+    }
+  },
+  "common_pair": {
+    "strong": "gpt-4-1106-preview",
+    "weak": "mistralai/mixtral-8x7b-chat"
+  },
+  "policy": "expected_gain_per_predicted_extra_cost",
+  "strong_comparator": ">",
+  "ties": "weak",
+  "objective": "pairwise",
+  "score_definition": "expected threshold-success gain divided by positive predicted extra historical call cost",
+  "source_artifact": "reports/relay-v4-development-v1/svd64_hgb31.joblib",
+  "source_artifact_sha256": "debd12cbb3f9974c913dabc5a47ac803074e5b0a1721d4ff6bcfac8e30fc2521",
+  "configuration_sha256": "4b4439243c51e91c729a361b964a14b386bbff9a7326af92aca48afe95bd970e",
+  "source_summary_sha256": "23c0ac5f0d0599033bfe86b983cdac9a4ee6f4ace7fe43a4af51365b84745175",
+  "quality_floor": 0.7818815251929188,
+  "requires_independent_evaluation": true,
+  "automatic_live_promotion": false,
+  "confirmation_of_superiority": false
+}

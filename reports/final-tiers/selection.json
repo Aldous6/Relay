@@ -1,0 +1,107 @@
+{
+  "selected_model": "random_forest",
+  "selected_by": "maximum training five-fold mean macro-F1; model-name tie break",
+  "selected_at_utc": "2026-11-08T19:28:44.942951+00:00",
+  "outer_test_metrics_used": false,
+  "cv_summary": {
+    "dummy": {
+      "metrics_mean": {
+        "f1_macro": 0.23077462698648246,
+        "balanced_accuracy": 0.3333333333333333,
+        "tier2_recall": 0.0,
+        "tier2_f1": 0.0
+      },
+      "metrics_std": {
+        "f1_macro": 1.2066308596174994e-05,
+        "balanced_accuracy": 0.0,
+        "tier2_recall": 0.0,
+        "tier2_f1": 0.0
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    },
+    "length": {
+      "metrics_mean": {
+        "f1_macro": 0.3859939272130963,
+        "balanced_accuracy": 0.4141305733621645,
+        "tier2_recall": 0.2256007866273353,
+        "tier2_f1": 0.11208539324410804
+      },
+      "metrics_std": {
+        "f1_macro": 0.005006123750300736,
+        "balanced_accuracy": 0.006790040004126716,
+        "tier2_recall": 0.03982315549216114,
+        "tier2_f1": 0.010188437447389748
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    },
+    "logistic": {
+      "metrics_mean": {
+        "f1_macro": 0.38919898029367134,
+        "balanced_accuracy": 0.46082806239829976,
+        "tier2_recall": 0.45819075712881024,
+        "tier2_f1": 0.11342221418508218
+      },
+      "metrics_std": {
+        "f1_macro": 0.008895377794755546,
+        "balanced_accuracy": 0.016424629889224034,
+        "tier2_recall": 0.05470320116214454,
+        "tier2_f1": 0.01409641194447823
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    },
+    "random_forest": {
+      "metrics_mean": {
+        "f1_macro": 0.4463881374531229,
+        "balanced_accuracy": 0.4378578052932234,
+        "tier2_recall": 0.08702851524090463,
+        "tier2_f1": 0.1315484052846782
+      },
+      "metrics_std": {
+        "f1_macro": 0.011019895735866396,
+        "balanced_accuracy": 0.008798819785017046,
+        "tier2_recall": 0.017908785396648055,
+        "tier2_f1": 0.02492741553792711
+      },
+      "std_scope": "descriptive variability across correlated CV folds; not an independent-sample confidence interval"
+    }
+  },
+  "configuration": {
+    "experiment_id": "routerbench-0shot-structural-v1",
+    "seed": 42,
+    "dataset": {
+      "path": "data/raw/routerbench_0shot.pkl",
+      "repository": "withmartian/routerbench",
+      "revision": "784021482c3f320c6619ed4b3bb3b41a21424fcb",
+      "sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+      "expected_rows": 36497,
+      "expected_columns": 37,
+      "expected_models": 11
+    },
+    "quality_threshold": 0.75,
+    "sensitivity_thresholds": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "tier_sizes": [
+      2,
+      6,
+      3
+    ],
+    "split": {
+      "strategy": "prompt_hash",
+      "test_fraction": 0.2
+    },
+    "deduplication": "NFKC + casefold + whitespace collapse; keep first source row",
+    "cv_folds": 5,
+    "primary_metric": "f1_macro",
+    "costs": "historical estimated costs stored in RouterBench",
+    "status": "scaffold; training and final test evaluation pending"
+  },
+  "dataset_sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+  "prepared_files_sha256": {
+    "features.parquet": "fd6eb943f985f20606409a89b51538bdeb406eb529fa2c1e428e99995c366d4b",
+    "rows.parquet": "2f03770fe1dd95e18dd6eb2488b76795da5dca910cc3d814cfee33f22c0608ef",
+    "labels.parquet": "b85cd017de5de6f26fdb7ef7f870eb926ea0bf6c3c0c9716362d4d683212fa5c"
+  }
+}

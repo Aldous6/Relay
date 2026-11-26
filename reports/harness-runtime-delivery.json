@@ -1,0 +1,100 @@
+{
+  "delivery": "relay-harness",
+  "version": "0.1.0.dev1",
+  "status": "local_installable_preview",
+  "entrypoint": "relay-harness",
+  "wheel": "dist/relay-harness/relay_harness-0.1.0.dev1-py3-none-any.whl",
+  "guide": "docs/relay_harness.md",
+  "capabilities": [
+    "observe_existing_harness",
+    "sticky_model_per_task",
+    "workflow_model_cost_and_acceptance_report",
+    "paired_development_policy_proposal",
+    "disjoint_validation_gate",
+    "explicit_apply_and_baseline_rollback",
+    "local_openhands_integration"
+  ],
+  "tests_passed": 76,
+  "model_api_calls": 0,
+  "measured_product_savings": null,
+  "competitive_superiority_demonstrated": false,
+  "scientific_experiments": "preserved; not rerun for this delivery",
+  "source_hashes_verified": true,
+  "runtime_verification": {
+    "kind": "harness_runtime_software_verification",
+    "version": "0.1.0.dev1",
+    "test_patterns": [
+      "test_workflow*.py",
+      "test_runtime_imports.py",
+      "test_harness_packaging.py",
+      "test_sdk.py",
+      "test_utility_sdk.py"
+    ],
+    "tests_run": 63,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "network_model_calls": 0,
+    "scope": "software_contracts_and_synthetic_fixtures_not_product_savings",
+    "source_sha256": {
+      "src/relay_router/__init__.py": "3f7e3bb8c78ac0c54986f485a119a59368617c9e2bbdfc15a7d2224558eb6b56",
+      "src/relay_router/workflow.py": "c2527c54416d731f12a497d0b32f5addd5564e470f33bc3610a659b693c2acf6",
+      "src/relay_router/workflow_cli.py": "6bd761509e5e63e5a41aa82891fcb75e9b455b51182a1f6d6f844924f8fefc5b",
+      "src/relay_router/workflow_policy.py": "ad5c08d71d512114ca31ebfdc545159daa85af45477c3b6564e9dbcadb20fda2",
+      "tools/build_harness_runtime.py": "773f41971760ec52751003d31a9d7f11aa80d52663d18c5cf50418fd2936a891",
+      "dist/relay-harness/relay_harness-0.1.0.dev1-py3-none-any.whl": "b0e42a9f2d488c6c467469faca0d78d1a3d03ee988b72b8183fe5426e72203ce"
+    }
+  },
+  "openhands_verification": {
+    "python": "3.12.10",
+    "packages": {
+      "openhands-sdk": "1.62.0",
+      "litellm": "1.105.7",
+      "pydantic": "2.14.3"
+    },
+    "pypi_wheel_sha256": "1ff083f5bff6090c6e3f0536ed2d3eaff2145536ce54cbcf50f3566167587065",
+    "source_urls": [
+      "https://pypi.org/project/openhands-sdk/1.62.0/",
+      "https://docs.openhands.dev/sdk/guides/llm-routing",
+      "https://github.com/OpenHands/software-agent-sdk"
+    ],
+    "files_sha256": {
+      "src/relay_router/integrations/openhands.py": "d398075adb3e6e7ff520954f0ea39ece8bb6afa64e7279e966aec17166969076",
+      "examples/relay_openhands.py": "7a764aac971333317b44f33444548af5e014c71f43781833bf5e546e7f276e00",
+      "tests/test_openhands_adapter.py": "1f33b8b10e9e49de25a93d0a3cbc3ff885b7f16f64f1de2214892be1fb833c9f",
+      ".venv-harness/Lib/site-packages/openhands/sdk/llm/router/base.py": "814b70b0f47872d7fb43a2a1422c9b039af2c618d229fb4169af0295a20de247",
+      ".venv-harness/Lib/site-packages/openhands/sdk/llm/utils/telemetry.py": "027194e3eeed32a8f73b1f836afd36ba440a2195dedb939c59f9e61133c84100"
+    },
+    "validation": "SDK integration with mocked transport; no model API calls, credentials or success-rate experiment",
+    "command": ".venv-harness/Scripts/python.exe -m unittest discover -s tests -p test_openhands_adapter.py -v",
+    "network_during_tests": "socket.connect blocked; Windows event-loop local socketpair initialized before guard",
+    "scope": "local in-process conversations; no remote serialization; logical dispatch limit; no savings claim",
+    "dependency_check": "pip check passed",
+    "tests": {
+      "run": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success": true,
+      "log": "tests.txt"
+    },
+    "local_conversation": {
+      "executed": true,
+      "actual_sdk_loop": true,
+      "persistence": true,
+      "tool": "FinishTool",
+      "transport_mocked": true,
+      "provider_calls": 0,
+      "live_task_session_preserved": true,
+      "sdk_and_relay_cost_match": true
+    }
+  },
+  "limits": [
+    "empirical workflow routes, not per-prompt quality prediction",
+    "host-supplied acceptance and complete cost declarations",
+    "OpenHands local conversations only",
+    "public distribution license undecided",
+    "benefit and demand require real workflow validation"
+  ]
+}

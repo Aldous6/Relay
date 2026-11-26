@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "kind": "frozen_public_harness_pilot",
+  "evaluation_id": "openhands-public-v2",
+  "scope": "exploratory public benchmarks; not production approval or independent proof of no quality loss",
+  "models": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+  ],
+  "baseline_model": "groq/openai/gpt-oss-120b",
+  "max_calls_per_episode": 3,
+  "max_total_http_attempts": 144,
+  "max_output_tokens": 1024,
+  "max_observed_tokens_per_model": 180000,
+  "temperature": 0,
+  "reasoning_effort": "low",
+  "selection": "workflow alternative only if development has no acceptance loss and >=10% lower uncached tariff cost",
+  "development_groups_per_workflow": 6,
+  "validation_groups_per_workflow": 6,
+  "production_policy_gate_unchanged": {
+    "min_groups_per_workflow_per_split": 20
+  },
+  "order": "development before frozen plan before validation; hash task ordering; model order hash-balanced",
+  "task_selection": "hash order; public function/source-size constraints; gold tests pass and original held-out tests fail; no model outcomes",
+  "excluded_preflight": [
+    {
+      "task_id": "HumanEval-145",
+      "gold_public": false,
+      "gold_private": true,
+      "original_private": false
+    }
+  ],
+  "source_manifest_sha256": "a7dbaa8f7034782fbc8dc6fba90ea76eb0c0e225abd159ac3702d3c6de3a8a82",
+  "task_file": "data/imported/harness-public-v1/frozen_suite_v2.json",
+  "task_file_sha256": "131d77f26699bb8a641d8f179dc17202152067144d873f46419e4c8fc66bd3fc",
+  "tasks": [
+    {
+      "task_id": "HumanEval-40",
+      "group_id": "HumanEval-40",
+      "workflow": "function-implementation",
+      "split": "development",
+      "routing_text_sha256": "d7f4c5e1ba2d3cd21086b1f04db14f61ccc363dad5bc03569580ebbdb6da6b55"
+    },
+    {
+      "task_id": "HumanEval-9",
+      "group_id": "HumanEval-9",
+      "workflow": "function-implementation",
+      "split": "development",
+      "routing_text_sha256": "f4da7a55c04602304c3367aec49e4ba46b06937e622918f9fb87852604dc98d9"
+    },
+    {
+      "task_id": "HumanEval-36",
+      "group_id": "HumanEval-36",
+      "workflow": "function-implementation",
+      "split": "development",
+      "routing_text_sha256": "efa3b31144a3e0f078c258553e42a7b8741b9df0b7eab648a96c3e3e259014f8"
+    },
+    {
+      "task_id": "HumanEval-61",
+      "group_id": "HumanEval-61",
+      "workflow": "function-implementation",
+      "split": "development",
+      "routing_text_sha256": "ab9292f6c8590caae48ba3117be6b7bc5894b0a04f8a85a08c567be789d565b1"
+    },
+    {
+      "task_id": "HumanEval-14",
+      "group_id": "HumanEval-14",
+      "workflow": "function-implementation",
+      "split": "development",
+      "routing_text_sha256": "cb1d635c5a914179a3b5e616bf078c275b30ce230aa952ff21bd10ae2a783ab7"
+    },
+    {
+      "task_id": "HumanEval-1",
+      "group_id": "HumanEval-1",
+      "workflow": "function-implementation",
+      "split": "development",
+      "routing_text_sha256": "20f3752dfa6d5d76784b1d63eae5a08df90ce9a52dc99934c9b13a020d0fae29"
+    },
+    {
+      "task_id": "HumanEval-24",
+      "group_id": "HumanEval-24",
+      "workflow": "function-implementation",
+      "split": "validation",
+      "routing_text_sha256": "c0c4444a14215822d6e391a047cc98a99d367526705e7099d7982efac07519ec"
+    },
+    {
+      "task_id": "HumanEval-16",
+      "group_id": "HumanEval-16",
+      "workflow": "function-implementation",
+      "split": "validation",
+      "routing_text_sha256": "5143dfb5e3f54b4aef5acf3931a39568386ff738220018e3252f060c0d5a8fd4"
+    },
+    {
+      "task_id": "HumanEval-56",
+      "group_id": "HumanEval-56",
+      "workflow": "function-implementation",
+      "split": "validation",
+      "routing_text_sha256": "b5d470a5ebfa7c1ed70ba1bf6b42aea28f2f19fd8a90556c75d9e26182e24e87"
+    },
+    {
+      "task_id": "HumanEval-4",
+      "group_id": "HumanEval-4",
+      "workflow": "function-implementation",
+      "split": "validation",
+      "routing_text_sha256": "bb4fd3227ccc03a864e453ded70a730c0016a69a3ce5cf1737e1062143c32dc3"
+    },
+    {
+      "task_id": "HumanEval-22",
+      "group_id": "HumanEval-22",
+      "workflow": "function-implementation",
+      "split": "validation",
+      "routing_text_sha256": "666c76e7360f46674b9bd1c908b924485286abdeda837590cff9b57225ff57c9"
+    },
+    {
+      "task_id": "HumanEval-0",
+      "group_id": "HumanEval-0",
+      "workflow": "function-implementation",
+      "split": "validation",
+      "routing_text_sha256": "c09a6a99303228360f4f87f7eb3ef45bdb77326c7e2f631867cdb53fe9d7c4e9"
+    },
+    {
+      "task_id": "QuixBugs-is_valid_parenthesization",
+      "group_id": "QuixBugs-is_valid_parenthesization",
+      "workflow": "function-repair",
+      "split": "development",
+      "routing_text_sha256": "6e1454cb5ce53c1fabcea8137462b7e2e3b428b24cbd8f8c93ba2b0bd1b5f72e"
+    },
+    {
+      "task_id": "QuixBugs-lis",
+      "group_id": "QuixBugs-lis",
+      "workflow": "function-repair",
+      "split": "development",
+      "routing_text_sha256": "c0ddf839d5b8b95f2d685bd589ef48ebd585c69e17e87829f269ecd67c42d5b1"
+    },
+    {
+      "task_id": "QuixBugs-subsequences",
+      "group_id": "QuixBugs-subsequences",
+      "workflow": "function-repair",
+      "split": "development",
+      "routing_text_sha256": "ac84645b6e29e0ce918c6cfe5f09a9b4f766bc2cd56e98255812638b3ed1e8b1"
+    },
+    {
+      "task_id": "QuixBugs-find_in_sorted",
+      "group_id": "QuixBugs-find_in_sorted",
+      "workflow": "function-repair",
+      "split": "development",
+      "routing_text_sha256": "eb700aa8bb3c6cfe46a77e6fc71e7d99ffca448669d251c2a8744d296473a096"
+    },
+    {
+      "task_id": "QuixBugs-get_factors",
+      "group_id": "QuixBugs-get_factors",
+      "workflow": "function-repair",
+      "split": "development",
+      "routing_text_sha256": "570e3db80c6b54a48c62f23cb9a183af99e868a2124ab2b31b3307e4e568fe8d"
+    },
+    {
+      "task_id": "QuixBugs-next_palindrome",
+      "group_id": "QuixBugs-next_palindrome",
+      "workflow": "function-repair",
+      "split": "development",
+      "routing_text_sha256": "fd45aeef3c1ff862c4f185fa98e0af28c5c992f577f27adb7a2a52dd6c175360"
+    },
+    {
+      "task_id": "QuixBugs-bitcount",
+      "group_id": "QuixBugs-bitcount",
+      "workflow": "function-repair",
+      "split": "validation",
+      "routing_text_sha256": "bf93842e58e94bd639a6d25d5295dca640aad8ba5b33254668eab8a4710315e9"
+    },
+    {
+      "task_id": "QuixBugs-sieve",
+      "group_id": "QuixBugs-sieve",
+      "workflow": "function-repair",
+      "split": "validation",
+      "routing_text_sha256": "8e4de9686845325668325ed2c29974eff38bdba6d0f66f641a5b9e513e23aae3"
+    },
+    {
+      "task_id": "QuixBugs-lcs_length",
+      "group_id": "QuixBugs-lcs_length",
+      "workflow": "function-repair",
+      "split": "validation",
+      "routing_text_sha256": "c0af9a9472a5459b0481e6ad48d42d57501cf7e132df2334a7028e48c8096c0c"
+    },
+    {
+      "task_id": "QuixBugs-pascal",
+      "group_id": "QuixBugs-pascal",
+      "workflow": "function-repair",
+      "split": "validation",
+      "routing_text_sha256": "fab8de41ccee36dacbd78032bda5aefc0e3da11a88b58dc366607ad9900c4b9c"
+    },
+    {
+      "task_id": "QuixBugs-to_base",
+      "group_id": "QuixBugs-to_base",
+      "workflow": "function-repair",
+      "split": "validation",
+      "routing_text_sha256": "acd48882a00ab41e2399ba61b1c2dd845e725c82c095890e675e5ad1d6a1d387"
+    },
+    {
+      "task_id": "QuixBugs-max_sublist_sum",
+      "group_id": "QuixBugs-max_sublist_sum",
+      "workflow": "function-repair",
+      "split": "validation",
+      "routing_text_sha256": "77f336db761a973d506ea7c3defe8324b1744f4d0012aec8e3cf447b7ace79b4"
+    }
+  ],
+  "stop_on_public_pass": true,
+  "revision_reason": "Development-only harness repair: stop before redundant finish request; reserve all 12 validation tasks unchanged",
+  "parent_manifest_sha256": "93862d5eae3e5bdc4685d624234936663bbf3aadc9ec12f12b4dfbe163f2ae03",
+  "prior_http_attempts": 5
+}

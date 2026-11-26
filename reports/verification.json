@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-11-09T06:16:12.744251+00:00",
+  "python": "3.12.10",
+  "unit_tests_passed": 176,
+  "python_syntax_files": 82,
+  "prepared_rows": 36481,
+  "feature_count": 14,
+  "dataset_sha256_verified": true,
+  "tiers_recomputed_from_training_only": true,
+  "parquet_sha256_verified": true,
+  "notebook_code_cells_executed_in_order": 3,
+  "notebook_execution_method": "standard Python exec, no IPython magics or kernel required",
+  "notebook_output": "routerbench-0shot-structural-v1\n{'rows': 36497, 'columns': 37, 'models_count': 11, 'evaluations': 86, 'duplicate_extra_rows': 16}\n{'ineligible_raw': 1505, 'eligible_raw': 34992, 'eligible_after_dedup': 34977}\n(36481, 14)\n{'train': {'all': 29157, 'eligible': 27964}, 'test': {'all': 7324, 'eligible': 7013}}\n",
+  "installed_skills_hashes_verified": [
+    "scikit-learn",
+    "scientific-critical-thinking",
+    "scientific-visualization",
+    "jupyter-notebook"
+  ],
+  "final_test_performance_evaluated": true,
+  "application_started_by_verifier": false,
+  "live_integration_evidence": "reports/live_smoke.json"
+}

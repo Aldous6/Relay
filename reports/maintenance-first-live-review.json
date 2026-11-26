@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-16T04:27:05.889780+00:00",
+  "kind": "real_maintenance_delivery_review",
+  "run_directory": "outputs\\maintenance\\20261116T042531066594Z",
+  "status": "ready_for_review",
+  "models": [
+    "groq/openai/gpt-oss-20b",
+    "groq/openai/gpt-oss-120b"
+  ],
+  "provider_calls_recorded": 2,
+  "reported_tokens": 5219,
+  "recorded_elapsed_seconds": 6.261214399999517,
+  "timing_scope": "flow interval recorded by harness, excluding credential entry and workspace preparation",
+  "baseline": {
+    "errors": 0,
+    "expected_failures": 0,
+    "failures": 3,
+    "passed": false,
+    "skipped": 0,
+    "tests_run": 5,
+    "unexpected_successes": 0
+  },
+  "proposal": {
+    "errors": 0,
+    "expected_failures": 0,
+    "failures": 0,
+    "passed": true,
+    "skipped": 0,
+    "tests_run": 5,
+    "unexpected_successes": 0
+  },
+  "inspection_adjusted": false,
+  "original_unchanged": true,
+  "diff_matches_staged_content": true,
+  "response_hashes_match": true,
+  "verified_content_hashes_match": true,
+  "applied": false,
+  "review": "Diff implements requested behavior for string labels; existing tests unchanged.",
+  "routing_scope": "configured activity policy, not a learned quality predictor",
+  "scope": "one real example; no comparative model-quality or savings claim",
+  "artifacts_sha256": {
+    "report.json": "4c3e608c4a48dc366468e1ea0db0090dbaeca1af3e9c9333284bf60e36867987",
+    "changes.diff": "1fd8c1f37a72ac03e7d96461e9fbbbbf6fc379c1c4c791d8b425748e0d1b9d47",
+    "verification.json": "6f3323c9d719ef381292e589c0be00a9952c7ad568401d573e0458c4c1c07971",
+    "workspace_snapshot.json": "45a845e33259b72ef115b9432a040bf664c3c698f6d27edb26689297ed552e2a"
+  }
+}

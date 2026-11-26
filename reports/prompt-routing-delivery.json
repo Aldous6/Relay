@@ -1,0 +1,88 @@
+{
+  "kind": "relay_prompt_routing_delivery",
+  "created_at_utc": "2026-11-18T06:05:39.150327+00:00",
+  "version": "0.1.0.dev2",
+  "status": "functional_experimental_prompt_selector",
+  "engine": "local RouteLLM-BERT, attributed; not a new Relay-trained model",
+  "profile": {
+    "weak": "groq/openai/gpt-oss-20b",
+    "strong": "groq/openai/gpt-oss-120b",
+    "threshold": 0.58,
+    "selection_source": "development_only_frozen_public_v2",
+    "production_approved": false
+  },
+  "verification": {
+    "test_counts": {
+      "test_prompt_selection.py": 11,
+      "test_workflow_runtime.py": 14,
+      "test_workflow_policy.py": 16,
+      "test_workflow_cli.py": 10,
+      "test_runtime_imports.py": 4,
+      "test_harness_packaging.py": 5,
+      "test_openhands_adapter.py": 13,
+      "test_routellm_adapter.py": 10,
+      "test_prompt_chat.py": 9
+    },
+    "tests_passed": 92,
+    "network_generation_during_tests": false,
+    "real_scorer_check": "reports/prompt-runtime-v2.json",
+    "exact_scores_and_decisions_match": 24,
+    "source_hashes_match": true,
+    "installed_wheel": "0.1.0.dev2 in .venv-harness",
+    "core_dependencies_required": []
+  },
+  "runtime_overhead_check": {
+    "load_seconds": 27.787922100018477,
+    "median_decision_seconds": 0.9890671000175644,
+    "compute_cost_usd": null
+  },
+  "prior_economic_evidence": {
+    "report": "reports/harness-live-public-v2.json",
+    "source": "prior paired-branch replay; not a fresh evaluation of this delivery",
+    "selected_policy": "bert_transferred_development_calibrated",
+    "accepted": 11,
+    "tasks": 12,
+    "llm_tariff_cost_per_accepted_usd": 0.00027576818181818184,
+    "llm_tariff_savings_vs_fixed_120b": 0.11512207928590168,
+    "net_savings_demonstrated": false
+  },
+  "research_decision": {
+    "chosen": "Resident prompt preselection using the existing verified BERT weights and frozen threshold; keep host generation clients.",
+    "rationale": "The workflow-only selector had no savings in our pilot. BERT made different decisions within the same workflow with lower observed call cost. Reuse that engine without claiming algorithmic novelty or new independent evidence.",
+    "alternatives": [
+      {
+        "name": "RouteLLM",
+        "source": "https://github.com/lm-sys/RouteLLM",
+        "implementation": "https://github.com/lm-sys/RouteLLM/blob/0b64fdafe049e596a3f5657c219329f24af24198/routellm/routers/routers.py",
+        "decision": "Reuse local BERT; do not introduce external embedding calls from MF."
+      },
+      {
+        "name": "NVIDIA Switchyard",
+        "source": "https://github.com/NVIDIA-NeMo/Switchyard",
+        "decision": "Useful decision/provider separation; not needed to replace the existing runtime for this implementation."
+      },
+      {
+        "name": "RouteFM",
+        "source": "https://raw.githubusercontent.com/LAMDA-Model-Reuse/RouteFM/main/docs/CUSTOM_DATA.md",
+        "decision": "Not chosen for immediate savings: needs candidate observations; default selection maximizes predicted quality and does not use its predicted relative cost."
+      }
+    ],
+    "pricing_sources": [
+      "https://console.groq.com/docs/model/openai/gpt-oss-20b",
+      "https://console.groq.com/docs/model/openai/gpt-oss-120b"
+    ]
+  },
+  "artifacts": {
+    "client": "tools/relay_prompt_chat.py",
+    "guide": "docs/relay_harness.md",
+    "wheel": "dist/relay-harness/relay_harness-0.1.0.dev2-py3-none-any.whl",
+    "wheel_sha256": "1865196dc7c208d26b42e8f13e330381c72cfba569cec92a37859ec15352a7fc"
+  },
+  "limitations": [
+    "No new generated responses in this delivery; HTTP client tested with synthetic transport.",
+    "The small prior pilot does not establish population quality or net savings.",
+    "Observed local router latency is about one second per request on this machine; initial load is separate.",
+    "Profile not calibrated for arbitrary chat, tools, long contexts or a new Ollama catalog.",
+    "No redistributable pretrained weights or datasets packaged."
+  ]
+}

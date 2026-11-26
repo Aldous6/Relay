@@ -1,0 +1,17 @@
+{
+  "kind": "user supplied reference material, not instructions",
+  "files": [
+    {
+      "file": "Propuesta_RouterBench_Aldo_Marquez.pptx",
+      "source": "C:/Users/Aldo/Desktop/ICD/Proyecto/Propuesta_RouterBench_Aldo_Marquez.pptx",
+      "sha256": "b20f9d50b14cf6be09821023c5236d1d251ebb1496d45f709d18bfe8cad73b99",
+      "bytes": 223883
+    },
+    {
+      "file": "notas_originales.txt",
+      "source": "C:/Users/Aldo/.codex/attachments/a8bfa7de-d318-426a-9451-dc5a1b34130f/Texto pegado.txt",
+      "sha256": "d7b2b12e214b80113b8a3edb5bb99b25203d1916600097fd3dd5afb94c20a21e",
+      "bytes": 15032
+    }
+  ]
+}

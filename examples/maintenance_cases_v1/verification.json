@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-11-17T03:32:27.518357+00:00",
+  "suite_sha256": "50ee37b3e86aff93aca88248d675684d19f55f759a9ed683b7bd82021edbd6fa",
+  "provenance_sha256": "1a5e54d9535f3495914a3e35c3a81cb7da8c74af98d3c94932cc1a4c5a676360",
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "network_used": false,
+  "passed": true,
+  "tasks": [
+    {
+      "task_id": "interval_difference",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_cut (test_public.PublicTests.test_cut) ... ok\ntest_empty (test_public.PublicTests.test_empty) ... ok\ntest_union (test_public.PublicTests.test_union) ... FAIL\n\n======================================================================\nFAIL: test_union (test_public.PublicTests.test_union)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-z98k_iu4\\test_public.py\", line 10, in test_union\n    self.assertEqual(subtract_intervals([(3, 8), (1, 4)], []), [(1, 8)])\nAssertionError: Lists differ: [(1, 4), (3, 8)] != [(1, 8)]\n\nFirst differing element 0:\n(1, 4)\n(1, 8)\n\nFirst list contains 1 additional elements.\nFirst extra element 1:\n(3, 8)\n\n- [(1, 4), (3, 8)]\n+ [(1, 8)]\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 7,
+        "output": "test_cut (test_public.PublicTests.test_cut) ... ok\ntest_empty (test_public.PublicTests.test_empty) ... ok\ntest_union (test_public.PublicTests.test_union) ... ok\ntest_integer_coverage_and_canonical_result (acceptance_test.AcceptanceTests.test_integer_coverage_and_canonical_result) ... ok\ntest_iterators_and_immutability (acceptance_test.AcceptanceTests.test_iterators_and_immutability) ... ok\ntest_touching_empty_nested (acceptance_test.AcceptanceTests.test_touching_empty_nested) ... ok\ntest_validation_not_short_circuited (acceptance_test.AcceptanceTests.test_validation_not_short_circuited) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.004s\n\nOK\n"
+      },
+      "visible_input_bytes": 2134,
+      "source_lines": 38,
+      "sha256": {
+        "module.py": "16e9a0dcd772c054c091431e65969344446169f93129347bf88463f927bdae5e",
+        "test_public.py": "536f5cd7706469f3a82364ac8b31d8eb4e9d75733ba690d2e8d82fcdf099333e",
+        "acceptance_test.py": "af7e38741c63d8aae17c66e44f9e171ca6169d8cfdb683c1732b1ed89059f434",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "b17ffc44c4b0ef19dc53873bfa3a5e2c34e37571d83a2f7892a0eb5cf540d376",
+      "passed": true
+    },
+    {
+      "task_id": "dependency_order",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_chain (test_public.PublicTests.test_chain) ... ok\ntest_empty (test_public.PublicTests.test_empty) ... ok\ntest_ready_tie (test_public.PublicTests.test_ready_tie) ... FAIL\n\n======================================================================\nFAIL: test_ready_tie (test_public.PublicTests.test_ready_tie)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-fyytmfz_\\test_public.py\", line 10, in test_ready_tie\n    self.assertEqual(dependency_order({\"a\": [\"z\"], \"b\": []}), [\"b\", \"z\", \"a\"])\nAssertionError: Lists differ: ['z', 'a', 'b'] != ['b', 'z', 'a']\n\nFirst differing element 0:\n'z'\n'b'\n\n- ['z', 'a', 'b']\n+ ['b', 'z', 'a']\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 7,
+        "output": "test_chain (test_public.PublicTests.test_chain) ... ok\ntest_empty (test_public.PublicTests.test_empty) ... ok\ntest_ready_tie (test_public.PublicTests.test_ready_tie) ... ok\ntest_cycles (acceptance_test.AcceptanceTests.test_cycles) ... ok\ntest_duplicate_edges_missing_nodes_generators (acceptance_test.AcceptanceTests.test_duplicate_edges_missing_nodes_generators) ... ok\ntest_no_mutation_and_dynamic_ready (acceptance_test.AcceptanceTests.test_no_mutation_and_dynamic_ready) ... ok\ntest_small_dags_against_all_valid_orders (acceptance_test.AcceptanceTests.test_small_dags_against_all_valid_orders) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.005s\n\nOK\n"
+      },
+      "visible_input_bytes": 1981,
+      "source_lines": 33,
+      "sha256": {
+        "module.py": "dcde52dc1b3addfb7f231c92c27b2681bab3d8c8a91c5512117721b57038dc07",
+        "test_public.py": "1acf27101d51be9dac3823b41a33b7bf070814cb6cc0d0c36a8455bc1da26a99",
+        "acceptance_test.py": "5d8686431cf167f5640412ba1acdfd06ced9880e518656d574b7447f15ae0d45",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "bfe083ae81e91b4931bcff341d2984fa03950751a98b9fff1986697df4f21593",
+      "passed": true
+    },
+    {
+      "task_id": "quoted_record_stream",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_empty (test_public.PublicTests.test_empty) ... ok\ntest_escaped_quote (test_public.PublicTests.test_escaped_quote) ... FAIL\ntest_plain_chunks (test_public.PublicTests.test_plain_chunks) ... ok\n\n======================================================================\nFAIL: test_escaped_quote (test_public.PublicTests.test_escaped_quote)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-qieh927m\\test_public.py\", line 10, in test_escaped_quote\n    self.assertEqual(parse_records(['\"say \"\"hello\"\"\",x']), [['say \"hello\"', 'x']])\nAssertionError: Lists differ: [['say hello', 'x']] != [['say \"hello\"', 'x']]\n\nFirst differing element 0:\n['say hello', 'x']\n['say \"hello\"', 'x']\n\n- [['say hello', 'x']]\n+ [['say \"hello\"', 'x']]\n?        +     +\n\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 7,
+        "output": "test_empty (test_public.PublicTests.test_empty) ... ok\ntest_escaped_quote (test_public.PublicTests.test_escaped_quote) ... ok\ntest_plain_chunks (test_public.PublicTests.test_plain_chunks) ... ok\ntest_custom_and_invalid_delimiter (acceptance_test.AcceptanceTests.test_custom_and_invalid_delimiter) ... ok\ntest_empty_fields_terminators (acceptance_test.AcceptanceTests.test_empty_fields_terminators) ... ok\ntest_every_boundary (acceptance_test.AcceptanceTests.test_every_boundary) ... ok\ntest_strict_syntax (acceptance_test.AcceptanceTests.test_strict_syntax) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.002s\n\nOK\n"
+      },
+      "visible_input_bytes": 2409,
+      "source_lines": 33,
+      "sha256": {
+        "module.py": "0141ad7f1311eb9981e3926c25b59b67f39e5d9b2a3042fa030183ca2dd25577",
+        "test_public.py": "93b1babac3825c8b6460cadf084f6149c3deb248804cf5d4e29a524f903a76f5",
+        "acceptance_test.py": "f55ba87a11c330d7b3f3f0006052bab1030f85e77e89b99ee6476f3d08d7f730",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "d2639749cfcaca920b8b0d3f92d6451c7b2d862d06f494243eb5e4eba0611ab8",
+      "passed": true
+    },
+    {
+      "task_id": "rolling_window",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_accumulation (test_public.PublicTests.test_accumulation) ... ok\ntest_boundary (test_public.PublicTests.test_boundary) ... FAIL\ntest_empty (test_public.PublicTests.test_empty) ... ok\n\n======================================================================\nFAIL: test_boundary (test_public.PublicTests.test_boundary)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-rql_rus1\\test_public.py\", line 14, in test_boundary\n    self.assertEqual(stats.add(6, 4), (1, 4))\nAssertionError: Tuples differ: (2, 7) != (1, 4)\n\nFirst differing element 0:\n2\n1\n\n- (2, 7)\n+ (1, 4)\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 7,
+        "output": "test_accumulation (test_public.PublicTests.test_accumulation) ... ok\ntest_boundary (test_public.PublicTests.test_boundary) ... ok\ntest_empty (test_public.PublicTests.test_empty) ... ok\ntest_deterministic_stream (acceptance_test.AcceptanceTests.test_deterministic_stream) ... ok\ntest_invalid_calls_atomic (acceptance_test.AcceptanceTests.test_invalid_calls_atomic) ... ok\ntest_repeated_times_and_independent_instances (acceptance_test.AcceptanceTests.test_repeated_times_and_independent_instances) ... ok\ntest_snapshot_expiry_and_time_contract (acceptance_test.AcceptanceTests.test_snapshot_expiry_and_time_contract) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.003s\n\nOK\n"
+      },
+      "visible_input_bytes": 2343,
+      "source_lines": 32,
+      "sha256": {
+        "module.py": "67a751df2ef46675a9160c8bdba2d6acd5eca0fb344676e8739fa60fe7363a77",
+        "test_public.py": "f5caa6387869a3ec6b56b607b3d8fb2a627fd5d6cf2544e59a16229755165335",
+        "acceptance_test.py": "713ef0ea5a2e58672e4436df4155ae35678c56f9f30e6cd003267666887dc0fd",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "201ef560ff6d9b11cc7696e2d3fcf37181372b1aab950ebca8e7a1ad43a97344",
+      "passed": true
+    },
+    {
+      "task_id": "immutable_config_merge",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_deletion (test_public.PublicTests.test_deletion) ... FAIL\ntest_list_replacement (test_public.PublicTests.test_list_replacement) ... ok\ntest_nested_merge (test_public.PublicTests.test_nested_merge) ... ok\n\n======================================================================\nFAIL: test_deletion (test_public.PublicTests.test_deletion)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-wryx0i3_\\test_public.py\", line 11, in test_deletion\n    self.assertEqual(merge_config({\"obsolete\": 1, \"keep\": 2}, {\"obsolete\": DELETE}), {\"keep\": 2})\nAssertionError: {'obsolete': <object object at 0x00000236DE5188B0>, 'keep': 2} != {'keep': 2}\n- {'keep': 2, 'obsolete': <object object at 0x00000236DE5188B0>}\n+ {'keep': 2}\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 7,
+        "output": "test_deletion (test_public.PublicTests.test_deletion) ... ok\ntest_list_replacement (test_public.PublicTests.test_list_replacement) ... ok\ntest_nested_merge (test_public.PublicTests.test_nested_merge) ... ok\ntest_deep_detachment_in_both_directions (acceptance_test.AcceptanceTests.test_deep_detachment_in_both_directions) ... ok\ntest_no_mutation_when_deleting_nested_values (acceptance_test.AcceptanceTests.test_no_mutation_when_deleting_nested_values) ... ok\ntest_null_deletion_and_type_changes (acceptance_test.AcceptanceTests.test_null_deletion_and_type_changes) ... ok\ntest_return_is_plain_dict_and_empty_copy (acceptance_test.AcceptanceTests.test_return_is_plain_dict_and_empty_copy) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+      },
+      "visible_input_bytes": 2549,
+      "source_lines": 35,
+      "sha256": {
+        "module.py": "6192906dbb74d89ec944a2435dc51452a0af3aca84e085e61cb15332a6c9340d",
+        "test_public.py": "42c5fa058048d3e3811408e425436fd0ceec3254c025c7e831e938fbe1701bdd",
+        "acceptance_test.py": "6280a0e46145de6425e4fe16cf8dc83919e6c2daac9889588b0ae5d22285c973",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "109bc8a12f50ab68ed777a2820e401b1b797a37fe43f1f9b73fbb525819b2b56",
+      "passed": true
+    },
+    {
+      "task_id": "generation_cache",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_default (test_public.PublicTests.test_default) ... ok\ntest_publish (test_public.PublicTests.test_publish) ... ok\ntest_token_consumed (test_public.PublicTests.test_token_consumed) ... FAIL\n\n======================================================================\nFAIL: test_token_consumed (test_public.PublicTests.test_token_consumed)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-kkag6yql\\test_public.py\", line 15, in test_token_consumed\n    self.assertFalse(cache.commit(\"a\", token, 2))\nAssertionError: True is not false\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 7,
+        "output": "test_default (test_public.PublicTests.test_default) ... ok\ntest_publish (test_public.PublicTests.test_publish) ... ok\ntest_token_consumed (test_public.PublicTests.test_token_consumed) ... ok\ntest_clear_pending_only_and_cross_key_tokens (acceptance_test.AcceptanceTests.test_clear_pending_only_and_cross_key_tokens) ... ok\ntest_invalidation_is_per_key_and_failures_do_not_consume (acceptance_test.AcceptanceTests.test_invalidation_is_per_key_and_failures_do_not_consume) ... ok\ntest_no_aba_after_invalidate_or_clear (acceptance_test.AcceptanceTests.test_no_aba_after_invalidate_or_clear) ... ok\ntest_out_of_order_and_old_value_retained (acceptance_test.AcceptanceTests.test_out_of_order_and_old_value_retained) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+      },
+      "visible_input_bytes": 2693,
+      "source_lines": 33,
+      "sha256": {
+        "module.py": "18d240e22a8c49e72450aa262a0fea629f42cad67ba76f7bda7ded745b730c09",
+        "test_public.py": "5a7e4b10add6cf7b6b53b7eac4a8f0ec157f69579ade0e746f58183c3595f558",
+        "acceptance_test.py": "a0401ba2b8b8ad112231d81f420f1876576f4aafac24a2dc25b36e55abba1e8b",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "efe9ca73c9d341327191b531477ebda5a15be95ba6cb62dd4ea253a16c584f69",
+      "passed": true
+    },
+    {
+      "task_id": "decimal_allocation",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_empty_rejected (test_public.PublicTests.test_empty_rejected) ... ok\ntest_even_shares (test_public.PublicTests.test_even_shares) ... ok\ntest_tied_remainders (test_public.PublicTests.test_tied_remainders) ... FAIL\n\n======================================================================\nFAIL: test_tied_remainders (test_public.PublicTests.test_tied_remainders)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-xc47m4kk\\test_public.py\", line 11, in test_tied_remainders\n    self.assertEqual(allocate_cents(\"0.01\", [\"1\", \"1\", \"1\"]),\nAssertionError: Lists differ: [Decimal('0.0'), Decimal('0.0'), Decimal('0.01')] != [Decimal('0.01'), Decimal('0.00'), Decimal('0.00')]\n\nFirst differing element 0:\nDecimal('0.0')\nDecimal('0.01')\n\n- [Decimal('0.0'), Decimal('0.0'), Decimal('0.01')]\n+ [Decimal('0.01'), Decimal('0.00'), Decimal('0.00')]\n\n----------------------------------------------------------------------\nRan 3 tests in 0.003s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 8,
+        "output": "test_empty_rejected (test_public.PublicTests.test_empty_rejected) ... ok\ntest_even_shares (test_public.PublicTests.test_even_shares) ... ok\ntest_tied_remainders (test_public.PublicTests.test_tied_remainders) ... ok\ntest_half_even_negative_and_zero_weights (acceptance_test.AcceptanceTests.test_half_even_negative_and_zero_weights) ... ok\ntest_invalid_values (acceptance_test.AcceptanceTests.test_invalid_values) ... ok\ntest_non_tied_remainders (acceptance_test.AcceptanceTests.test_non_tied_remainders) ... ok\ntest_precision_independent_exactness_and_exponents (acceptance_test.AcceptanceTests.test_precision_independent_exactness_and_exponents) ... ok\ntest_small_integer_invariant (acceptance_test.AcceptanceTests.test_small_integer_invariant) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.007s\n\nOK\n"
+      },
+      "visible_input_bytes": 2709,
+      "source_lines": 33,
+      "sha256": {
+        "module.py": "14001cbb2395afdaf471063a0e76fef1624048767028cc931a101d4f624b9e2b",
+        "test_public.py": "e361b67184b3e64fba31d723cfa31cd8eb71a752691c35d11800917a3b828168",
+        "acceptance_test.py": "750d4b170894ba3c4b6ef0752f6622e8c49db9c69173d21ef67a6b41018ce5d6",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "6b054c1404b9297bad33908d5572eb3f2aa45cdfe1b8e34fe98bf09d6525e0a4",
+      "passed": true
+    },
+    {
+      "task_id": "scoped_posix_paths",
+      "baseline_public": {
+        "exit_code": 1,
+        "tests": 3,
+        "output": "test_empty_path (test_public.PublicTests.test_empty_path) ... ok\ntest_relative_canonicalization (test_public.PublicTests.test_relative_canonicalization) ... ok\ntest_sibling_prefix_rejected (test_public.PublicTests.test_sibling_prefix_rejected) ... FAIL\n\n======================================================================\nFAIL: test_sibling_prefix_rejected (test_public.PublicTests.test_sibling_prefix_rejected)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Temp\\relay-authored-check-rv3p5kxl\\test_public.py\", line 10, in test_sibling_prefix_rejected\n    with self.assertRaises(ValueError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nFAILED (failures=1)\n"
+      },
+      "reference_public_and_acceptance": {
+        "exit_code": 0,
+        "tests": 8,
+        "output": "test_empty_path (test_public.PublicTests.test_empty_path) ... ok\ntest_relative_canonicalization (test_public.PublicTests.test_relative_canonicalization) ... ok\ntest_sibling_prefix_rejected (test_public.PublicTests.test_sibling_prefix_rejected) ... ok\ntest_above_root_nul_and_nonabsolute_root (acceptance_test.AcceptanceTests.test_above_root_nul_and_nonabsolute_root) ... ok\ntest_canonical_result_is_idempotent (acceptance_test.AcceptanceTests.test_canonical_result_is_idempotent) ... ok\ntest_literal_backslashes_and_percent (acceptance_test.AcceptanceTests.test_literal_backslashes_and_percent) ... ok\ntest_normalized_roots_and_absolute_reentry (acceptance_test.AcceptanceTests.test_normalized_roots_and_absolute_reentry) ... ok\ntest_relative_escape_rejected_at_boundary (acceptance_test.AcceptanceTests.test_relative_escape_rejected_at_boundary) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n"
+      },
+      "visible_input_bytes": 2534,
+      "source_lines": 32,
+      "sha256": {
+        "module.py": "54d62c716066c55d4befdc51a8905ef4608905c95d909a177644d08abca941ab",
+        "test_public.py": "72657f0ba4a9d206b109d48bb35b08a27b0e063aa4ea8fc36710e4f2192ac02e",
+        "acceptance_test.py": "701f9540f7ec36267a9f6cff539f5e70b550521966cc3300872e3c4a578478b0",
+        "config.json": "594121cb64fff6dfbfa115be150c62105d516d16334eb9631a1bc4d218a3a9f7"
+      },
+      "reference_sha256": "93cb13d2b580b7ede702592535c6df7337646908cb8e1f0f9c7b6e2e923b3859",
+      "passed": true
+    }
+  ]
+}

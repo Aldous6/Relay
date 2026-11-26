@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "artifact": "router.joblib",
+  "artifact_sha256": "ccdf3edf4c11959e86e6aa882092d12feceaacdfc11c77d58c71d15010dedca2",
+  "strong": "gpt-4-1106-preview",
+  "weak": "mistralai/mixtral-8x7b-chat",
+  "policy_mode": "guarded",
+  "max_harm": 0.1,
+  "min_weak_success": 0.5,
+  "scope": "reused historical development; no production or new-model validation",
+  "independent_validation": false,
+  "cost_unit": "historical_cost",
+  "model_identity_status": "historical_pair_only_not_validated_for_new_models"
+}

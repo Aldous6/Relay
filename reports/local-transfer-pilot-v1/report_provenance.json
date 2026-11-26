@@ -1,0 +1,16 @@
+{
+  "source_sha256": {
+    "evaluation/summary.json": "a4da58f1fdb2aae71aaad3a9041f3708073b9f4ccf434f660c6f1e3cc9cdc2fc",
+    "evaluation/routes.json": "57b233eca1d2aa73ded3a229b1e1833ec9c905c40e0a7c310165d068ee079e4e",
+    "evaluation/responses.json": "4da9dddd1015139e93184eb17e18a457b825789769914a087ecd9117c85fb36a",
+    "evaluation/freeze.json": "186e8d757949962120d43ebf4d0100876b36eb00639eb60a4391d41dfd658e67",
+    "cohort.jsonl": "9beab292ee21ccae941a6fac496a57aa7568144535472675dc1c17c79c7d0937",
+    "policy_lock.json": "75677315f23305300089563d9210596ef66f08f7bac882e8987c3598cb089692",
+    "execution_sources.zip": "f9d0c3430b0cd51fe4f64a16735c530129d80df0aaf7fd39c2bf8864dd98a19d",
+    "execution_sources.json": "342db2d239db983a8cf6ce9f6369e0a3c7f5409d8b7a57a73fa77a5dbc5847a0"
+  },
+  "report_sha256": "7578146b0ea6defcfc22a4bd48fd27a50459e3411cfd3212de73e614dc810e2d",
+  "script_sha256": "66399a0cac9d6caefebce45cc3eddbe90ad3f4ab68b24d253f86893413f39bbb",
+  "models_retrained_or_policy_reselected": false,
+  "production_validation": false
+}

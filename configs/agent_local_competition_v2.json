@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "run_id": "relay-agent-local-competition-v2",
+  "execution_mode": "external",
+  "evaluation_split": "development",
+  "independent_validation": false,
+  "primary_policy": "cheap_then_escalate",
+  "policy_order": "cyclic_by_task",
+  "models": {
+    "strong": "qwen2.5:1.5b",
+    "weak": "qwen2.5:0.5b"
+  },
+  "models_metadata": {
+    "qwen2.5:1.5b": {
+      "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+      "context_length": 32768
+    },
+    "qwen2.5:0.5b": {
+      "digest": "a8b0c51577010a279d933d14c2a8ab4b268079d44c5c8830c0a93900f1827c67",
+      "context_length": 32768
+    }
+  },
+  "generation_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 16384,
+    "num_predict": 192
+  },
+  "base_url": "http://127.0.0.1:11434",
+  "timeout_seconds": 90,
+  "max_calls": 8,
+  "pricing": {},
+  "compute_rates": {
+    "router_usd_per_second": null,
+    "verification_usd_per_second": null,
+    "tool_usd_per_second": null
+  },
+  "roi": {
+    "min_total_cost_saving": 0.3,
+    "max_success_rate_loss": 0.02,
+    "max_p95_router_seconds": 0.2
+  },
+  "bootstrap_replicates": 2000,
+  "seed": 20261112,
+  "per_family": 2,
+  "scope": "six new instances from three known synthetic task families; exploratory local transfer comparison; no MF/SW, independent adoption or monetary-saving claim",
+  "technical_predecessor": {
+    "run_directory": "reports/agent-local-competition-v1",
+    "manifest_sha256": "647a668abeafbeef90089e04a482fdf89df8f1180edfe1cae2e542b968f486e3",
+    "journal_sha256": "08b0c08866d410a214dfd3e666c3683f9f0e431d9df9cdb03c0114c422425751",
+    "reason": "Windows PermissionError WinError 5 replacing journal.json.tmp; actual lock source unconfirmed",
+    "same_tasks_models_parameters_thresholds": true,
+    "previous_durable_calls": 16,
+    "previous_pending_calls": 1,
+    "freeze_sha256": "30039eaa4e37a2761685783702dabc680fb718de403b297e169642b8e2973b05"
+  },
+  "protocol_document": {
+    "path": "docs/agent_local_competition_protocolo.md",
+    "sha256": "f4ceada582975605c59ca671dbf65d1033c936256076715839cc81f8473e8db8"
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "scope": "post-training diagnostics on reused development validation only; no refit or new selection",
+  "generated_at_utc": "2026-11-09T00:38:08.455071+00:00",
+  "source_summary_sha256": "da98fd7f2e952bb64c81d1eca8995527f337a82c11c91d4e9d43d952e57deb49",
+  "configuration_sha256": "e23c68f763a6b60ef1f88cb35817e695f613d48c0aec9cf4f778b428211b44ed",
+  "outer_test_evaluated_here": false,
+  "candidates": {
+    "absolute_hybrid_full": {
+      "objective": "absolute",
+      "model_sha256": "a0574bbb165a993f9b5296697c55d866c8775407e8eefb4a56b427340fcaf083",
+      "prediction_sha256": "19b04135a3c779e5be1f77f94ee18d9a8cb77d21654bc37a2f26ab7d9d00f3bc",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "calibration_notes": {
+        "WizardLM/WizardLM-13B-V1.2": "sigmoid fitted on disjoint calibration rows",
+        "claude-instant-v1": "sigmoid fitted on disjoint calibration rows",
+        "claude-v1": "sigmoid fitted on disjoint calibration rows",
+        "claude-v2": "sigmoid fitted on disjoint calibration rows",
+        "gpt-3.5-turbo-1106": "sigmoid fitted on disjoint calibration rows",
+        "gpt-4-1106-preview": "sigmoid fitted on disjoint calibration rows",
+        "meta/code-llama-instruct-34b-chat": "sigmoid fitted on disjoint calibration rows",
+        "meta/llama-2-70b-chat": "sigmoid fitted on disjoint calibration rows",
+        "mistralai/mistral-7b-chat": "sigmoid fitted on disjoint calibration rows",
+        "mistralai/mixtral-8x7b-chat": "sigmoid fitted on disjoint calibration rows",
+        "zero-one-ai/Yi-34B-Chat": "sigmoid fitted on disjoint calibration rows"
+      },
+      "all_models": {
+        "per_model": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "brier": 0.22612601619861278,
+            "log_loss": 0.6433662146642105,
+            "observed_success": 0.4212437585111212,
+            "mean_predicted_success": 0.4072066554288173
+          },
+          "claude-instant-v1": {
+            "brier": 0.21337599282235126,
+            "log_loss": 0.6152344114586359,
+            "observed_success": 0.6289151157512483,
+            "mean_predicted_success": 0.6017272383044899
+          },
+          "claude-v1": {
+            "brier": 0.20523145931527634,
+            "log_loss": 0.5974246940558069,
+            "observed_success": 0.6457103949160236,
+            "mean_predicted_success": 0.6427847740792613
+          },
+          "claude-v2": {
+            "brier": 0.20113598795475188,
+            "log_loss": 0.588639867613196,
+            "observed_success": 0.6584203359055832,
+            "mean_predicted_success": 0.6412000304537463
+          },
+          "gpt-3.5-turbo-1106": {
+            "brier": 0.21322596578011685,
+            "log_loss": 0.6145274672536897,
+            "observed_success": 0.6343622333182024,
+            "mean_predicted_success": 0.6071623730622325
+          },
+          "gpt-4-1106-preview": {
+            "brier": 0.15146133410526696,
+            "log_loss": 0.4717369670043805,
+            "observed_success": 0.7868815251929188,
+            "mean_predicted_success": 0.7759289791061363
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "brier": 0.11596435812144833,
+            "log_loss": 0.3549174616261707,
+            "observed_success": 0.18066273263731275,
+            "mean_predicted_success": 0.1817978650052434
+          },
+          "meta/llama-2-70b-chat": {
+            "brier": 0.15481246528559459,
+            "log_loss": 0.45146498475977975,
+            "observed_success": 0.3218338629142079,
+            "mean_predicted_success": 0.31424197588787994
+          },
+          "mistralai/mistral-7b-chat": {
+            "brier": 0.19184675980489513,
+            "log_loss": 0.5666262807045137,
+            "observed_success": 0.2834770767135724,
+            "mean_predicted_success": 0.28460312017524597
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.21282222767012582,
+            "log_loss": 0.6139132938131766,
+            "observed_success": 0.5483431684067182,
+            "mean_predicted_success": 0.5243374375436973
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "brier": 0.1937140229012298,
+            "log_loss": 0.5690227036200222,
+            "observed_success": 0.64911484339537,
+            "mean_predicted_success": 0.6310835098695391
+          }
+        },
+        "mean_brier": 0.18906514454178816,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 4057,
+            "mean_prediction": 0.033339176753569566,
+            "observed_success": 0.018240078876016762
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 1478,
+            "mean_prediction": 0.15767272663749743,
+            "observed_success": 0.19012178619756429
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 4731,
+            "mean_prediction": 0.25541119734247114,
+            "observed_success": 0.28302684421898117
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 4403,
+            "mean_prediction": 0.34821153008710465,
+            "observed_success": 0.34022257551669316
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 6547,
+            "mean_prediction": 0.452996607315717,
+            "observed_success": 0.45791965785856115
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 7199,
+            "mean_prediction": 0.5509005374421619,
+            "observed_success": 0.5588276149465203
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 7911,
+            "mean_prediction": 0.6510610212154009,
+            "observed_success": 0.6566805713563393
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 7752,
+            "mean_prediction": 0.747614824492692,
+            "observed_success": 0.7831527347781218
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 3993,
+            "mean_prediction": 0.8461758074084433,
+            "observed_success": 0.8822940145254194
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 395,
+            "mean_prediction": 0.9125042453127685,
+            "observed_success": 0.9417721518987342
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "common_pair": {
+        "per_model": {
+          "gpt-4-1106-preview": {
+            "brier": 0.15146133410526696,
+            "log_loss": 0.4717369670043805,
+            "observed_success": 0.7868815251929188,
+            "mean_predicted_success": 0.7759289791061363
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "brier": 0.21282222767012582,
+            "log_loss": 0.6139132938131766,
+            "observed_success": 0.5483431684067182,
+            "mean_predicted_success": 0.5243374375436973
+          }
+        },
+        "mean_brier": 0.1821417808876964,
+        "reliability_bins_pooled_diagnostic_only": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 24,
+            "mean_prediction": 0.08060656620586103,
+            "observed_success": 0.041666666666666664
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 27,
+            "mean_prediction": 0.15605262933163677,
+            "observed_success": 0.18518518518518517
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 429,
+            "mean_prediction": 0.26740189680464926,
+            "observed_success": 0.32867132867132864
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 720,
+            "mean_prediction": 0.3526369365764994,
+            "observed_success": 0.3277777777777778
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 1173,
+            "mean_prediction": 0.44717432653751726,
+            "observed_success": 0.47058823529411764
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 683,
+            "mean_prediction": 0.5525953636148809,
+            "observed_success": 0.5563689604685212
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 1625,
+            "mean_prediction": 0.656412706995907,
+            "observed_success": 0.6590769230769231
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 1552,
+            "mean_prediction": 0.7482749656734845,
+            "observed_success": 0.7854381443298969
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 2257,
+            "mean_prediction": 0.8552370158961492,
+            "observed_success": 0.8741692512184316
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 322,
+            "mean_prediction": 0.9130136219419906,
+            "observed_success": 0.9472049689440993
+          }
+        ],
+        "note": "Brier combines reliability and discrimination; fitted calibration does not guarantee reliability."
+      },
+      "target_supports": {
+        "fit": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "success": 8462,
+            "failure": 11906
+          },
+          "claude-instant-v1": {
+            "success": 12506,
+            "failure": 7862
+          },
+          "claude-v1": {
+            "success": 13202,
+            "failure": 7166
+          },
+          "claude-v2": {
+            "success": 13401,
+            "failure": 6967
+          },
+          "gpt-3.5-turbo-1106": {
+            "success": 12574,
+            "failure": 7794
+          },
+          "gpt-4-1106-preview": {
+            "success": 16043,
+            "failure": 4325
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "success": 3689,
+            "failure": 16679
+          },
+          "meta/llama-2-70b-chat": {
+            "success": 6615,
+            "failure": 13753
+          },
+          "mistralai/mistral-7b-chat": {
+            "success": 5666,
+            "failure": 14702
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "success": 10932,
+            "failure": 9436
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "success": 13063,
+            "failure": 7305
+          }
+        },
+        "calibration": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "success": 1772,
+            "failure": 2611
+          },
+          "claude-instant-v1": {
+            "success": 2622,
+            "failure": 1761
+          },
+          "claude-v1": {
+            "success": 2805,
+            "failure": 1578
+          },
+          "claude-v2": {
+            "success": 2803,
+            "failure": 1580
+          },
+          "gpt-3.5-turbo-1106": {
+            "success": 2646,
+            "failure": 1737
+          },
+          "gpt-4-1106-preview": {
+            "success": 3400,
+            "failure": 983
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "success": 794,
+            "failure": 3589
+          },
+          "meta/llama-2-70b-chat": {
+            "success": 1378,
+            "failure": 3005
+          },
+          "mistralai/mistral-7b-chat": {
+            "success": 1235,
+            "failure": 3148
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "success": 2283,
+            "failure": 2100
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "success": 2767,
+            "failure": 1616
+          }
+        },
+        "validation": {
+          "WizardLM/WizardLM-13B-V1.2": {
+            "success": 1856,
+            "failure": 2550
+          },
+          "claude-instant-v1": {
+            "success": 2771,
+            "failure": 1635
+          },
+          "claude-v1": {
+            "success": 2845,
+            "failure": 1561
+          },
+          "claude-v2": {
+            "success": 2901,
+            "failure": 1505
+          },
+          "gpt-3.5-turbo-1106": {
+            "success": 2795,
+            "failure": 1611
+          },
+          "gpt-4-1106-preview": {
+            "success": 3467,
+            "failure": 939
+          },
+          "meta/code-llama-instruct-34b-chat": {
+            "success": 796,
+            "failure": 3610
+          },
+          "meta/llama-2-70b-chat": {
+            "success": 1418,
+            "failure": 2988
+          },
+          "mistralai/mistral-7b-chat": {
+            "success": 1249,
+            "failure": 3157
+          },
+          "mistralai/mixtral-8x7b-chat": {
+            "success": 2416,
+            "failure": 1990
+          },
+          "zero-one-ai/Yi-34B-Chat": {
+            "success": 2860,
+            "failure": 1546
+          }
+        }
+      }
+    },
+    "pairwise_hybrid_a3": {
+      "objective": "pairwise",
+      "model_sha256": "20432f4fc581480c26105831b2913ea992e932f8204e12379ee91250a3161070",
+      "prediction_sha256": "90c7915723b7c1a7fabae1e4f056c21ffda5667b248eccd24b51ee4a7b78cf14",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "calibration_notes": {
+        "strong_only": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference",
+        "weak_only": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference",
+        "equal": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference"
+      },
+      "target_supports": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      },
+      "validation": {
+        "class_order": [
+          "strong_only",
+          "weak_only",
+          "equal"
+        ],
+        "validation_class_counts": {
+          "strong_only": 1337,
+          "weak_only": 286,
+          "equal": 2783
+        },
+        "multiclass_brier_sum_per_row": 0.4727407987832077,
+        "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+        "mean_one_vs_rest_brier": 0.15758026626106922,
+        "multiclass_log_loss": 0.782467618113119,
+        "per_class": {
+          "strong_only": {
+            "brier": 0.19516956049868764,
+            "observed_prevalence": 0.30344984112573764,
+            "mean_predicted_probability": 0.30612642046623734
+          },
+          "weak_only": {
+            "brier": 0.05938209499681018,
+            "observed_prevalence": 0.064911484339537,
+            "mean_predicted_probability": 0.05470281453958455
+          },
+          "equal": {
+            "brier": 0.21818914328770989,
+            "observed_prevalence": 0.6316386745347253,
+            "mean_predicted_probability": 0.639170764994178
+          }
+        },
+        "expected_quality_gain_mse": 0.2909141677032852,
+        "note": "Normalization after three one-vs-rest sigmoid calibrators need not preserve calibration. These diagnostics are not evidence of individual reliability or superiority."
+      }
+    },
+    "pairwise_hybrid_a4": {
+      "objective": "pairwise",
+      "model_sha256": "7d35e7c7b6466c6020ae812b0df1ca307bbbc018c03237e03afe4fcacb89e738",
+      "prediction_sha256": "e1d04c684e371d6548b5cf1d9e0edf3db47ba9a2dea60e154ca609d1eb8b2142",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "calibration_notes": {
+        "strong_only": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference",
+        "weak_only": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference",
+        "equal": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference"
+      },
+      "target_supports": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      },
+      "validation": {
+        "class_order": [
+          "strong_only",
+          "weak_only",
+          "equal"
+        ],
+        "validation_class_counts": {
+          "strong_only": 1337,
+          "weak_only": 286,
+          "equal": 2783
+        },
+        "multiclass_brier_sum_per_row": 0.46448751787287834,
+        "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+        "mean_one_vs_rest_brier": 0.15482917262429277,
+        "multiclass_log_loss": 0.7682564404973949,
+        "per_class": {
+          "strong_only": {
+            "brier": 0.19157510607258804,
+            "observed_prevalence": 0.30344984112573764,
+            "mean_predicted_probability": 0.3054946715558248
+          },
+          "weak_only": {
+            "brier": 0.0586764221611791,
+            "observed_prevalence": 0.064911484339537,
+            "mean_predicted_probability": 0.054829272776878366
+          },
+          "equal": {
+            "brier": 0.21423598963911122,
+            "observed_prevalence": 0.6316386745347253,
+            "mean_predicted_probability": 0.6396760556672969
+          }
+        },
+        "expected_quality_gain_mse": 0.28626706682842296,
+        "note": "Normalization after three one-vs-rest sigmoid calibrators need not preserve calibration. These diagnostics are not evidence of individual reliability or superiority."
+      }
+    },
+    "pairwise_hybrid_a5": {
+      "objective": "pairwise",
+      "model_sha256": "adaf619331c710f6cedc91b6ae06bda44070e3372071575fd55722d36d4cd7f4",
+      "prediction_sha256": "1d723ffd739a2aa5ffc680b2b7e37825faefcea65aeebb043563b4dadd1f8c64",
+      "fit_rows": 20368,
+      "calibration_rows": 4383,
+      "calibration_notes": {
+        "strong_only": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference",
+        "weak_only": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference",
+        "equal": "one-vs-rest sigmoid on disjoint calibration; normalized jointly at inference"
+      },
+      "target_supports": {
+        "fit": {
+          "strong_only": 6230,
+          "weak_only": 1119,
+          "equal": 13019
+        },
+        "calibration": {
+          "strong_only": 1356,
+          "weak_only": 239,
+          "equal": 2788
+        }
+      },
+      "validation": {
+        "class_order": [
+          "strong_only",
+          "weak_only",
+          "equal"
+        ],
+        "validation_class_counts": {
+          "strong_only": 1337,
+          "weak_only": 286,
+          "equal": 2783
+        },
+        "multiclass_brier_sum_per_row": 0.4705424500299168,
+        "multiclass_brier_definition": "mean over prompts of sum over three classes of squared probability error; range [0,2]",
+        "mean_one_vs_rest_brier": 0.1568474833433056,
+        "multiclass_log_loss": 0.7775578163709728,
+        "per_class": {
+          "strong_only": {
+            "brier": 0.19513573680189655,
+            "observed_prevalence": 0.30344984112573764,
+            "mean_predicted_probability": 0.30528845126182313
+          },
+          "weak_only": {
+            "brier": 0.05892598918647919,
+            "observed_prevalence": 0.064911484339537,
+            "mean_predicted_probability": 0.05427047993584244
+          },
+          "equal": {
+            "brier": 0.2164807240415411,
+            "observed_prevalence": 0.6316386745347253,
+            "mean_predicted_probability": 0.6404410688023344
+          }
+        },
+        "expected_quality_gain_mse": 0.29164272793521046,
+        "note": "Normalization after three one-vs-rest sigmoid calibrators need not preserve calibration. These diagnostics are not evidence of individual reliability or superiority."
+      }
+    }
+  },
+  "latency_evidence": {
+    "path": "latency_cpu.json",
+    "sha256": "01f16b7e51fcf9feb3fe34b5b358792466c4be7bda8c778276d84dff9251b972",
+    "selected_candidate": "pairwise_hybrid_a5",
+    "selected_artifact_sha256": "adaf619331c710f6cedc91b6ae06bda44070e3372071575fd55722d36d4cd7f4",
+    "latency": {
+      "relay": {
+        "n": 60,
+        "median_seconds": 0.022857349998957943,
+        "p95_seconds": 0.031427464993612375,
+        "min_seconds": 0.013802499990561046,
+        "max_seconds": 0.03764509999018628,
+        "total_seconds": 1.3949984999926528
+      },
+      "routellm_bert": {
+        "n": 60,
+        "median_seconds": 0.6410817500000121,
+        "p95_seconds": 1.0626874800080257,
+        "min_seconds": 0.1968944999971427,
+        "max_seconds": 1.2367475999926683,
+        "total_seconds": 34.90613860001031
+      }
+    },
+    "scope": "descriptive resident CPU latency on selected development prompts"
+  },
+  "source_files_sha256": {
+    "absolute_hybrid_full.joblib": "a0574bbb165a993f9b5296697c55d866c8775407e8eefb4a56b427340fcaf083",
+    "absolute_hybrid_full_development.json": "a7afcb12d4b52ddf0fb2d93f74a3b60e117548982d93f79549ba1407a6cf41f1",
+    "absolute_hybrid_full_observed_results.parquet": "1b1829244a50889d775263e04f5f4881ee0b6b3c2233d6f380f008df3bb0065a",
+    "absolute_hybrid_full_predicted_costs.parquet": "b47e982603d0cb9f6c4e481766da4eee2779b220e82e6a6f31ab7283124c1c9a",
+    "absolute_hybrid_full_predictions.parquet": "19b04135a3c779e5be1f77f94ee18d9a8cb77d21654bc37a2f26ab7d9d00f3bc",
+    "absolute_hybrid_full_selected_routes.parquet": "84f43207e258a5dba875433445426b61e2ed7283a33587da85537f1b488dd6f1",
+    "bert_selected_routes.parquet": "21a07a3b7a8c0b13d44fa11473ac3a248f3d4bea31a488a643f9d0f97aebcb1d",
+    "development_rows.parquet": "62783212de4e388946721bee6a59b8d6cccc413a356d4b786157d84aadde72f8",
+    "development_started.json": "183ecd6b44beaf1eb010a7894b59aab6e4f07930e582680579048bb763a13997",
+    "pairwise_hybrid_a3.joblib": "20432f4fc581480c26105831b2913ea992e932f8204e12379ee91250a3161070",
+    "pairwise_hybrid_a3_development.json": "8ad23a333bc39264a9f01f298820fb4d9ac9a62cc60f7c57c9924470cc554017",
+    "pairwise_hybrid_a3_observed_results.parquet": "2bf2d650c8811be03df0fb145b54597d2218416df6a3f09e7a301e05acd25a13",
+    "pairwise_hybrid_a3_predicted_costs.parquet": "e16b1043167bfceb5ea0a2b9e5eef7e2b152d1c77bb25728bb8648b2377494d8",
+    "pairwise_hybrid_a3_predictions.parquet": "90c7915723b7c1a7fabae1e4f056c21ffda5667b248eccd24b51ee4a7b78cf14",
+    "pairwise_hybrid_a3_selected_routes.parquet": "73065b1d8f7dcce45d8c5ccf334bac2cb2587054c543ccf2fd37c9b13e53b6b7",
+    "pairwise_hybrid_a4.joblib": "7d35e7c7b6466c6020ae812b0df1ca307bbbc018c03237e03afe4fcacb89e738",
+    "pairwise_hybrid_a4_development.json": "040c52305b70c7adbc19ed3fd190c17789025d78922ad3d477aadcc5ac1db817",
+    "pairwise_hybrid_a4_observed_results.parquet": "788fe7ec4acfddfe3191fcb195f73db380058a265c90a6ce2d85c19ee71ae687",
+    "pairwise_hybrid_a4_predicted_costs.parquet": "e16b1043167bfceb5ea0a2b9e5eef7e2b152d1c77bb25728bb8648b2377494d8",
+    "pairwise_hybrid_a4_predictions.parquet": "e1d04c684e371d6548b5cf1d9e0edf3db47ba9a2dea60e154ca609d1eb8b2142",
+    "pairwise_hybrid_a4_selected_routes.parquet": "a52af8d82c0153fac907a2f092a22ee16c5f68a7e1179c8400630829b0ac211e",
+    "pairwise_hybrid_a5.joblib": "adaf619331c710f6cedc91b6ae06bda44070e3372071575fd55722d36d4cd7f4",
+    "pairwise_hybrid_a5_development.json": "1ce12b862970ec40d580d33089d903679ae16226108208ab7662c945b9727932",
+    "pairwise_hybrid_a5_observed_results.parquet": "a2177cef4098e93aea24838e9f736a8f2d77a4ae6f165c72b0428643d668d718",
+    "pairwise_hybrid_a5_predicted_costs.parquet": "e16b1043167bfceb5ea0a2b9e5eef7e2b152d1c77bb25728bb8648b2377494d8",
+    "pairwise_hybrid_a5_predictions.parquet": "1d723ffd739a2aa5ffc680b2b7e37825faefcea65aeebb043563b4dadd1f8c64",
+    "pairwise_hybrid_a5_selected_routes.parquet": "5b8d08f38228878aa448df07115f201ada347bedd7fe124e5cab713bebf2d906",
+    "run_source_provenance.json": "561656e190d4ac310eb7a23bbe6c95eb81f76b300e5915aec168058770bfc90d"
+  },
+  "script_sha256": "95c01cc7be6990228976a5c0707cf12a20828341357d77d219788d7460ecc2ed"
+}

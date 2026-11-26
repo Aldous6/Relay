@@ -1,0 +1,60 @@
+{
+  "checked_at_utc": "2026-11-12T01:57:28.551779+00:00",
+  "scope": "Offline SDK inference replay on the first twelve reused-development validation rows in stored order; not a quality evaluation or provider integration test.",
+  "sample_selection": "first_12_validation_rows_in_existing_order_independent_of_outcomes",
+  "n_cases": 12,
+  "source_row_ids": [
+    2,
+    11,
+    16,
+    19,
+    34,
+    48,
+    50,
+    68,
+    84,
+    87,
+    90,
+    96
+  ],
+  "policy_mode": "guarded",
+  "selected_routes_equal": true,
+  "model_identities_preserved": {
+    "strong": "gpt-4-1106-preview",
+    "weak": "mistralai/mixtral-8x7b-chat"
+  },
+  "text_only_input": true,
+  "max_absolute_risk_difference": 0.0,
+  "max_absolute_predicted_cost_difference": 0.0,
+  "max_absolute_single_request_sdk_risk_difference": 0.0,
+  "numeric_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-10
+  },
+  "mock_generation_calls": 1,
+  "real_generation_calls": 0,
+  "outer_test_outcomes_evaluated": false,
+  "dataset_sha256_verified_before_pickle": true,
+  "artifact_sha256_verified_before_deserialization": true,
+  "sources_sha256": {
+    "summary.json": "9fe39436ef502145fdc404502f784168b558e9ef8ecb6618aa77bb89527e78e9",
+    "bundle.json": "978b4caaa5d430881355a94d9453f3839335c427a22f8df66d1e63c9e0875a3d",
+    "router.joblib": "ccdf3edf4c11959e86e6aa882092d12feceaacdfc11c77d58c71d15010dedca2",
+    "selected_routes.parquet": "39bcc6f32edd541a281659d4695b947197ee916c0e492061ff37020a39cca983",
+    "validation_probabilities.parquet": "f74a272abe03723756328d4950aa14002fac189eeefe435aab2aa605b2be3d18",
+    "validation_predicted_costs.parquet": "e16b1043167bfceb5ea0a2b9e5eef7e2b152d1c77bb25728bb8648b2377494d8",
+    "development_started.json": "164f2cb1d4424d75cd12da51efa152bbd6c476dcc411fecb33f2d3c36e71af77",
+    "source_bundle.zip": "33f44cd69bd507c7a3af2dc6052a1e37d24c0a98b884aa0a8be0c082e2ef2a53"
+  },
+  "prepared_files_sha256": {
+    "features.parquet": "fd6eb943f985f20606409a89b51538bdeb406eb529fa2c1e428e99995c366d4b",
+    "rows.parquet": "2f03770fe1dd95e18dd6eb2488b76795da5dca910cc3d814cfee33f22c0608ef",
+    "labels.parquet": "b85cd017de5de6f26fdb7ef7f870eb926ea0bf6c3c0c9716362d4d683212fa5c"
+  },
+  "raw_dataset_sha256": "ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d",
+  "source_code_sha256": {
+    "src/relay_router/client.py": "1269568dcdc1ea44007a437c5cd1cabb55e9f8e241f56c4f420b532979eb04bd",
+    "src/relay_router/__init__.py": "d4ae4eaf001e2bd6ab34a3b5e74d394a3786acf5e92c3bcfce8ef074cdc28f9d",
+    "src/routerbench/guarded.py": "f0ab0153b8b4abdcb27a961beb25df72c149514899d9c1fd70e7eb5bda2e46a9"
+  }
+}
