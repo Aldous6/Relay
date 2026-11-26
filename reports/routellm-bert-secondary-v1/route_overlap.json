@@ -1,0 +1,45 @@
+{
+  "source": "reports/routellm-bert-secondary-v1/summary.json",
+  "files_sha256": {
+    "relay_common_pair_observed_results.parquet": "e8f2a6118c55d892078d2acfa1e72388f0ca933d549ba86c409563c34ef7e880",
+    "routellm_bert_observed_results.parquet": "35d9a74d96300356a4bb8aacf83bdc4c756a952ce2edd0bbd0f0315cedaa5ae5"
+  },
+  "groups": [
+    {
+      "relay_selected_model": "gpt-4-1106-preview",
+      "bert_selected_model": "gpt-4-1106-preview",
+      "n": 6849,
+      "relay_successes": 5389,
+      "bert_successes": 5389,
+      "relay_total_usd": 22.16324,
+      "bert_total_usd": 22.16324
+    },
+    {
+      "relay_selected_model": "gpt-4-1106-preview",
+      "bert_selected_model": "mistralai/mixtral-8x7b-chat",
+      "n": 176,
+      "relay_successes": 134,
+      "bert_successes": 105,
+      "relay_total_usd": 0.78344,
+      "bert_total_usd": 0.0355476
+    },
+    {
+      "relay_selected_model": "mistralai/mixtral-8x7b-chat",
+      "bert_selected_model": "gpt-4-1106-preview",
+      "n": 193,
+      "relay_successes": 154,
+      "bert_successes": 169,
+      "relay_total_usd": 0.0121722,
+      "bert_total_usd": 0.27264
+    },
+    {
+      "relay_selected_model": "mistralai/mixtral-8x7b-chat",
+      "bert_selected_model": "mistralai/mixtral-8x7b-chat",
+      "n": 106,
+      "relay_successes": 83,
+      "bert_successes": 83,
+      "relay_total_usd": 0.0179004,
+      "bert_total_usd": 0.0179004
+    }
+  ]
+}

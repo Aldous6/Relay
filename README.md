@@ -1,5 +1,27 @@
 # Relay
 
+## Entrega de Introducción a la Ciencia de Datos
+
+El [notebook ejecutado del proyecto](notebooks/Relay_proyecto.ipynb) estudia si el texto de una consulta permite elegir un modelo de lenguaje más económico y qué pasa con los aciertos al hacerlo. Compara la predicción de tres niveles de precio, la elección directa entre once modelos y una comparación secundaria entre GPT-4 y Mixtral. Se puede leer con todas sus salidas guardadas sin instalar software. El enlace para la plataforma del curso es el del [repositorio personal de Aldo Santiago Márquez](https://github.com/Aldous6/Relay).
+
+**Datos.** Se utilizó el archivo de RouterBench sin ejemplos previos (*zero-shot*). Contiene 36 497 filas con puntajes y costos históricos para once modelos y ocupa 99 567 659 bytes. Supera los 50 MB y la ficha consultada no especifica una licencia de redistribución de los datos. Para trabajar con las filas originales, descarga el archivo de la revisión `784021482c3f320c6619ed4b3bb3b41a21424fcb` y guárdalo como `data/raw/routerbench_0shot.pkl`. Su SHA-256 debe ser `ba4f77f19517610a707c374e99322d7750c30fc4ae7ff5527888595a1e65d36d`. El cargador comprueba el hash antes de abrir el pickle. [Ficha oficial](https://huggingface.co/datasets/withmartian/routerbench) · [Descarga del archivo fijado](https://huggingface.co/datasets/withmartian/routerbench/resolve/784021482c3f320c6619ed4b3bb3b41a21424fcb/routerbench_0shot.pkl).
+
+**Ejecución.** Con el archivo original en la ruta indicada, el notebook se ejecuta en CPU desde un clon del repositorio. Reconstruye en memoria las particiones y las variables, ajusta modelos y compara sus decisiones con los resultados guardados. Para las variantes con un encoder y para la referencia BERT lee los resúmenes de las ejecuciones externas. En PowerShell, desde la raíz del repositorio, los siguientes comandos preparan el entorno de Python 3.12.10 y ejecutan las celdas en orden. Las versiones utilizadas se muestran también en el notebook. JupyterLab es opcional para editar el archivo de forma interactiva.
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-notebook.txt -e .
+.\.venv\Scripts\python.exe -m ipykernel install --sys-prefix --name relay-curso --display-name "Python (Relay)"
+$env:PYTHONUTF8 = "1"
+.\.venv\Scripts\jupyter-execute.exe --inplace --timeout=900 --kernel_name=relay-curso notebooks/Relay_proyecto.ipynb
+```
+
+**Código y resultados.** `src/routerbench/` contiene los métodos y `configs/`, las semillas, las particiones y los umbrales. Como alternativa a la preparación en memoria del notebook, el [script de preprocesamiento](src/routerbench/cli.py) puede escribir los datos preparados en una carpeta vacía con `.\.venv\Scripts\python.exe -m routerbench.cli prepare --output data/processed`. Los experimentos originales se implementaron en [clasificación de niveles e importancia por permutación](src/routerbench/tier_experiment.py), [evaluación por representantes](src/routerbench/tier_policy.py), [ajuste y calibración del selector directo](src/routerbench/development.py) y [evaluación final](src/routerbench/final_evaluation.py). Sus métricas se conservan en `reports/final-tiers/`, `reports/final-tier-policy-v1/` y `reports/final/`. [Protocolo original](docs/protocolo.md) · [Protocolo final](docs/protocolo_final.md).
+
+Los modelos externos se ejecutaron aparte. La [guía del encoder semántico](docs/relay_semantico.md) explica cómo reproducir sus representaciones. Para BERT se conservan el [adaptador de inferencia](src/routerbench/routellm_reference.py), la [configuración con revisión y hash de los pesos](configs/routellm_reference.json) y el [resumen de la comparación sobre el mismo par de candidatos](reports/routellm-bert-secondary-v1/summary.json). El notebook principal puede leer esos resultados sin descargar los modelos.
+
+## Aplicación y antecedentes de Relay
+
 Para abrir el chat de Relay en Windows, haz doble clic en **Abrir Relay.cmd**. El chat usa Next.js y un servicio Python local. En el ZIP la interfaz ya viene compilada. Escribe en el chat y envía tu mensaje. Relay elige un modelo de tu OpenCode y muestra la respuesta en la conversación. [Guía de Relay con OpenCode](docs/relay_opencode.md).
 
 Para desarrollar desde el repositorio, ejecuta `npm ci` una vez en la raíz y después `npm run dev`. Abre `http://127.0.0.1:3000`. El comando inicia Next.js con recarga de la interfaz y el servicio Python en la misma terminal. Ctrl+C detiene ambos.
